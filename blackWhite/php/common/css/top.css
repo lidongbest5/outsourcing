@@ -1,0 +1,33 @@
+a{
+	text-decoration:none
+}
+
+#my_top{
+	width:100%;
+	height:auto;
+}
+#mywork_title{font-size:2.5em;text-align:left;margin-top:0.5em;float:left;display:block;width:100%}
+#mywork_title a{color:#666;text-decoration:underline;}
+.normal_title {float:left;display:block;text-align:left;font-size:2.2em;margin-top:0.3em;}
+.normal_title a{color: #666;text-decoration:underline;}
+#group{
+	float:left;width:100%;
+}
+
+#mywork {float:left;display:block;margin-right:0.5em;text-align:left;font-size:2.2em;margin-top:0.3em;}
+#mywork a{color: #0957A7;text-decoration:underline;}
+#my_bt{
+	float:right;
+	margin-top:6px;
+	color: #666;
+}
+#normal_title input{
+	width:100px;
+}
+#my_bt input{
+	width:100px;
+}
+.mytips{color:#999;width:100%;font-size:14px;float:left;text-align:left;margin:0 auto;margin-top:0.5em;}
+
+
+

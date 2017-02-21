@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/productList.css">
+	</head>
+	<body>
+		{%include "header.html"%}
+		<section class="banner">
+			<img src="/static/images/banner.jpg">
+		</section>
+		{% if language != None and language == 'chinese' %}
+		<section class="type" id="type1" data="all">
+			<ul class="clearfix">
+				<li class="cur" data="type1" data-value="apparel">服装</li>
+				<li data="type1" data-value="footwear">鞋</li>
+				<li data="type1" data-value="equipment">装备</li>
+			</ul>
+			<div class="search">
+				<form action="/searchResult/" method="POST">
+					<input type="text" class="search-box" placeholder="search" name="query">
+					<input type="submit" class="search-btn" name="submit" value="">
+				</form>
+			</div>
+		</section>
+		<section class="main clearfix">
+			<div class="main-l" id="apparel">
+				<h3 id="type2" data="all">上衣</h3>
+				<div id="type3" data="all" style="display:none;"></div>
+				<ul>
+					<li class="cur" data="type2" data-value="clothing">全部</li>
+					<li data="type3" data-value="multi">三合一冲锋衣</li>
+					<li data="type3" data-value="hard">单冲锋衣</li>
+					<li data="type3" data-value="down">羽绒服</li>
+					<li data="type3" data-value="puff">棉服</li>
+					<li data="type3" data-value="soft">软壳</li>
+					<li data="type3" data-value="flee">抓绒</li>
+					<li data="type3" data-value="sweater">卫衣</li>
+					<li data="type3" data-value="shirt">衬衫</li>
+					<li data="type3" data-value="tshirt">T恤衫</li>
+				</ul>
+				<h3>裤装</h3>
+				<ul>
+					<li class="cur" data="type2" data-value="pants">全部</li>
+					<li data="type3" data-value="hiking">速干裤</li>
+					<li data="type3" data-value="climb">冲锋裤</li>
+					<li data="type3" data-value="droped">七分裤</li>
+					<li data="type3" data-value="shorts">短裤</li>
+					<li data="type3" data-value="skirt">裙装</li>
+				</ul>
+			</div>
+			<div class="main-l" id="footwear" style="display:none;">
+				<h3>鞋</h3>
+				<ul>
+					<li class="cur" data="type1" data-value="footwear">全部</li>
+					<li data="type3" data-value="climbboat">登山鞋</li>
+					<li data="type3" data-value="hikingshoe">徒步鞋</li>
+					<li data="type3" data-value="crossshoe">溯溪鞋</li>
+					<li data="type3" data-value="campingshoe">营地鞋</li>
+					<li data="type3" data-value="rockshoe">攀岩鞋</li>
+					<li data="type3" data-value="runningshoe">越野跑鞋</li>
+					<li data="type3" data-value="scandal">沙滩鞋</li>
+				</ul>
+			</div>
+			<div class="main-l" id="equipment" style="display:none;">
+				<h3>装备</h3>
+				<ul>
+					<li class="cur" data="type1" data-value="equipment">全部</li>
+					<li data="type3" data-value="back">背包</li>
+					<li data="type3" data-value="shoulder">单肩包</li>
+					<li data="type3" data-value="duffel">驮包</li>
+					<li data="type3" data-value="cap">帽子</li>
+					<li data="type3" data-value="socks">袜子</li>
+					<li data="type3" data-value="equipment">装备</li>
+				</ul>
+			</div>
+			<div class="main-r">
+				<div class="list1 list clearfix">
+					<span id="style" data="all">系列</span>
+					<ul>	
+						<li class="cur" data="style" data-value="all">全部</li>
+						<li data="style" data-value="limited">限量版</li>
+						<li data="style" data-value="lambada">兰博达系列</li>
+						<li data="style" data-value="delta">德尔塔系列</li>
+					</ul>
+				</div>
+				<div class="list2 list clearfix">
+					<span id="gender" data="all">性别</span>
+					<ul>	
+						<li class="cur" data="gender" data-value="all">全部</li>
+						<li data="gender" data-value="male">男</li>
+						<li data="gender" data-value="female">女</li>
+						<li data="gender" data-value="newter">中性</li>
+					</ul>
+				</div>
+				<div class="list3 list clearfix">
+					<span id="price" datalow="all" datahigh="all">价格</span>
+					<ul>	
+						<li class="cur" data="price" datalow="all" datahigh="all">全部</li>
+						<li data="price" datalow="0" datahigh="99">0-99</li>
+						<li data="price" datalow="100" datahigh="199">100-199</li>
+						<li data="price" datalow="200" datahigh="399">200-399</li>
+						<li data="price" datalow="400" datahigh="699">400-699</li>
+						<li data="price" datalow="700" datahigh="999">700-999</li>
+						<li data="price" datalow="1000" datahigh="1499">1000-1499</li>
+						<li data="price" datalow="1500" datahigh="1999">1500-1999</li>
+						<li data="price" datalow="2000" datahigh="2999">2000-2999</li>
+					</ul>
+				</div>
+				<div class="product-container">	
+					<div class="product">
+						<ul class="pro-list clearfix">
+							{% for item in items %}
+								<li>
+									<a href="/product/{{ item.id }}/">
+										<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+										<ul class="color-list clearfix">
+											{% if item.color1_name %}
+												<li style="background:{{ item.color1_name }}"></li>
+											{% endif %}
+											{% if item.color2_name %}
+												<li style="background:{{ item.color2_name }}"></li>
+											{% endif %}
+											{% if item.color3_name %}
+												<li style="background:{{ item.color3_name }}"></li>
+											{% endif %}
+											{% if item.color4_name %}
+												<li style="background:{{ item.color4_name }}"></li>
+											{% endif %}
+											{% if item.color5_name %}
+												<li style="background:{{ item.color5_name }}"></li>
+											{% endif %}
+											{% if item.color6_name %}
+												<li style="background:{{ item.color6_name }}"></li>
+											{% endif %}
+											{% if item.color7_name %}
+												<li style="background:{{ item.color7_name }}"></li>
+											{% endif %}
+											{% if item.color8_name %}
+												<li style="background:{{ item.color8_name }}"></li>
+											{% endif %}
+											{% if item.color9_name %}
+												<li style="background:{{ item.color9_name }}"></li>
+											{% endif %}
+											{% if item.color10_name %}
+												<li style="background:{{ item.color10_name }}"></li>
+											{% endif %}
+										</ul>
+										{% if language == None or language == 'chinese' %}
+											<h3>{{ item.name_ch }}</h3>
+										{% else %}
+											<h3>{{ item.name }}</h3>
+										{% endif %}
+										<h4>${{ item.price }}</h4>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					{% if page == 0 and total > 2 %}
+						<div class="pages">
+							<a class="page cur" href="javascript:;">1</a>
+							<a class="page" href="javascript:;">2</a>
+							<a class="page" href="javascript:;">3</a>
+						</div>
+					{% elif page|add:"1" == total and total > 2 %}
+						<div class="pages">
+							<a class="pre" href="javascript:;" data='{{ total|add:"-3" }}'><</a>
+							<a class="page" href="javascript:;" data='{{ total|add:"-2" }}'>{{ total|add:"-2" }}</a>
+							<a class="page" href="javascript:;" data='{{ total|add:"-1" }}'>{{ total|add:"-1" }}</a>
+							<a class="page cur" href="javascript:;" data='{{ total }}'>{{ total }}</a>
+						</div>
+					{% elif total > 2 %}
+						<div class="pages">
+							<a class="pre" href="javascript:;" data='{{ page|add:"-1" }}'><</a>
+							<a class="page cur" href="javascript:;" data='{{ page }}'>{{ page }}</a>
+							<a class="page" href="javascript:;" data='{{ page|add:"1" }}'>{{ page|add:"1" }}</a>
+							<a class="page" href="javascript:;" data='{{ page|add:"2" }}'>{{ page|add:"2" }}</a>
+							<a class="next" href="javascript:;" data='{{ page|add:"3" }}'>></a>
+						</div>
+					{% elif total > 1 %}
+					<div class="pages">
+						<a class="page {% if page == 0 %}cur{% endif %}" href="javascript:;" data="1">1</a>
+						<a class="page {% if page == 1 %}cur{% endif %}" href="javascript:;" data="2">2</a>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</section>
+		{% else %}
+		<section class="type" id="type1" data="all">
+			<ul class="clearfix">
+				<li class="cur" data="type1" data-value="apparel">APPAREL</li>
+				<li data="type1" data-value="footwear">FOOTWEAR</li>
+				<li data="type1" data-value="equipment">EQUIPMENT</li>
+			</ul>
+			<div class="search">
+				<form action="/searchResult/" method="POST">
+					<input type="text" class="search-box" placeholder="search" name="query">
+					<input type="submit" class="search-btn" name="submit" value="">
+				</form>
+			</div>
+		</section>
+		<section class="main clearfix">
+			<div class="main-l" id="apparel">
+				<h3 id="type2" data="all">CLOTHING</h3>
+				<div id="type3" data="all" style="display:none;"></div>
+				<ul>
+					<li class="cur" data="type2" data-value="clothing">all</li>
+					<li data="type3" data-value="multi">Multi hard shell jacket</li>
+					<li data="type3" data-value="hard">Hard Jacket</li>
+					<li data="type3" data-value="down">Down Jacket</li>
+					<li data="type3" data-value="puff">Puff jacket</li>
+					<li data="type3" data-value="soft">Soft shell jacket</li>
+					<li data="type3" data-value="flee">Fleece</li>
+					<li data="type3" data-value="sweater">Sweater</li>
+					<li data="type3" data-value="shirt">Shirt</li>
+					<li data="type3" data-value="tshirt">T Shirt</li>
+				</ul>
+				<h3>PANTS</h3>
+				<ul>
+					<li class="cur" data="type2" data-value="pants">all</li>
+					<li data="type3" data-value="hiking">Hiking pants</li>
+					<li data="type3" data-value="climb">climb pants</li>
+					<li data="type3" data-value="droped">dropped pants</li>
+					<li data="type3" data-value="shorts">shorts</li>
+					<li data="type3" data-value="skirt">skirt</li>
+				</ul>
+			</div>
+			<div class="main-l" id="footwear" style="display:none;">
+				<h3>FOOTWEAR</h3>
+				<ul>
+					<li class="cur" data="type1" data-value="footwear">all</li>
+					<li data="type3" data-value="climbboat">Climbing boats</li>
+					<li data="type3" data-value="hikingshoe">Hiking shoes</li>
+					<li data="type3" data-value="crossshoe">Cross shoes</li>
+					<li data="type3" data-value="campingshoe">Camping shoes</li>
+					<li data="type3" data-value="rockshoe">Rock shoes</li>
+					<li data="type3" data-value="runningshoe">Running shoes</li>
+					<li data="type3" data-value="scandal">Scandal</li>
+				</ul>
+			</div>
+			<div class="main-l" id="equipment" style="display:none;">
+				<h3>EQUIPMENT</h3>
+				<ul>
+					<li class="cur" data="type1" data-value="equipment">all</li>
+					<li data="type3" data-value="back">Back pack</li>
+					<li data="type3" data-value="shoulder">Shoulder bag</li>
+					<li data="type3" data-value="duffel">Duffel bag</li>
+					<li data="type3" data-value="cap">Cap</li>
+					<li data="type3" data-value="socks">Socks</li>
+					<li data="type3" data-value="equipment">Equipment</li>
+				</ul>
+			</div>
+			<div class="main-r">
+				<div class="list1 list clearfix">
+					<span id="style" data="all">STYLE</span>
+					<ul>	
+						<li class="cur" data="style" data-value="all">all</li>
+						<li data="style" data-value="limited">Limited</li>
+						<li data="style" data-value="lambada">Lambda</li>
+						<li data="style" data-value="delta">Delta</li>
+					</ul>
+				</div>
+				<div class="list2 list clearfix">
+					<span id="gender" data="all">GENDER</span>
+					<ul>	
+						<li class="cur" data="gender" data-value="all">all</li>
+						<li data="gender" data-value="male">Male</li>
+						<li data="gender" data-value="female">Female</li>
+						<li data="gender" data-value="newter">Neuter</li>
+					</ul>
+				</div>
+				<div class="list3 list clearfix">
+					<span id="price" datalow="all" datahigh="all">Price</span>
+					<ul>	
+						<li class="cur" data="price" datalow="all" datahigh="all">all</li>
+						<li data="price" datalow="0" datahigh="99">0-99</li>
+						<li data="price" datalow="100" datahigh="199">100-199</li>
+						<li data="price" datalow="200" datahigh="399">200-399</li>
+						<li data="price" datalow="400" datahigh="699">400-699</li>
+						<li data="price" datalow="700" datahigh="999">700-999</li>
+						<li data="price" datalow="1000" datahigh="1499">1000-1499</li>
+						<li data="price" datalow="1500" datahigh="1999">1500-1999</li>
+						<li data="price" datalow="2000" datahigh="2999">2000-2999</li>
+					</ul>
+				</div>
+				<div class="product-container">	
+					<div class="product">
+						<ul class="pro-list clearfix">
+							{% for item in items %}
+								<li>
+									<a href="/product/{{ item.id }}/" target="_blank">
+										<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+										<ul class="color-list clearfix">
+											{% if item.color1_name %}
+												<li style="background:{{ item.color1_name }}"></li>
+											{% endif %}
+											{% if item.color2_name %}
+												<li style="background:{{ item.color2_name }}"></li>
+											{% endif %}
+											{% if item.color3_name %}
+												<li style="background:{{ item.color3_name }}"></li>
+											{% endif %}
+											{% if item.color4_name %}
+												<li style="background:{{ item.color4_name }}"></li>
+											{% endif %}
+											{% if item.color5_name %}
+												<li style="background:{{ item.color5_name }}"></li>
+											{% endif %}
+											{% if item.color6_name %}
+												<li style="background:{{ item.color6_name }}"></li>
+											{% endif %}
+											{% if item.color7_name %}
+												<li style="background:{{ item.color7_name }}"></li>
+											{% endif %}
+											{% if item.color8_name %}
+												<li style="background:{{ item.color8_name }}"></li>
+											{% endif %}
+											{% if item.color9_name %}
+												<li style="background:{{ item.color9_name }}"></li>
+											{% endif %}
+											{% if item.color10_name %}
+												<li style="background:{{ item.color10_name }}"></li>
+											{% endif %}
+										</ul>
+										<h3>{{ item.name }}</h3>
+										<h4>${{ item.price }}</h4>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="pages">
+						<input type="hidden" class="page" value="{{ page }}">
+						<input type="hidden" class="total" value="{{ total }}">
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endif %}
+		{%include "footer.html"%}
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+		<script src="/static/js/productList.js"></script>
+	</body>
+</html>

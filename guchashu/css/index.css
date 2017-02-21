@@ -1,0 +1,202 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html{color:#000;background:#FFF;font-family: 'Microsoft Yahei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-size:medium;font-style:normal;font-weight:normal;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block;}
+
+/* =General
+-----------------------------------------------------------------------------*/
+/*** Location ***/
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin:0 auto;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+/* Class for clearing floats */
+.clearfix:after {content:"."; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix {display:inline-block;}
+* html .clear {height:1%;}
+.clearfix {display:block;}
+/* End clearing floats */
+.vm{vertical-align:middle;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.zoom{zoom:1;}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+a:link, a:visited{ text-decoration: none;}
+
+.image-scroll{
+	width: 100%;
+	height: 102%;
+	position: relative;
+	overflow-y: hidden;
+}
+/* nav */
+.nav{
+	width: 270px;
+	height: 100%;
+	background: #181616;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+.sl-slider-wrapper{
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+.slider-right{
+	left: 270px!important;
+}
+.nav-content{
+	overflow: hidden;
+}
+#nav{
+	width: 100%;
+	height: 95%;
+	overflow: hidden;
+}
+.hide{
+	left: -270px;
+}
+.nav h2{
+	font-size: 1.5em;
+	padding: 22px 0 22px 30px;
+	color: #999999;
+	height: 5%;
+	position:static;
+}
+.nav ul{
+	background: #1e1e1e;
+	padding: 10px 0 50px 10px;
+	font-size: 0;
+}
+.nav ul li{
+	width: 120px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+.nav ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.nav ul li img{
+	width: 100%;
+}
+.nav-btn{
+	width: 20px;
+	height: 42px;
+	position: absolute;
+	right: -20px;
+	top: 320px;
+	background: url(../images/slide.png) no-repeat;
+	background-size: 100%;
+}
+/* bottom */
+.bottom{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	background: url(../images/bottom_bg.png) repeat-x;
+	background-size: 100%;
+	z-index: 1001;
+}
+.bottom span{
+	display: inline-block;
+	margin: 10px 5px 0 10px;
+	color: #3d3600;
+	font-size: 0.9em;
+	vertical-align: top;
+	font-weight: 600;
+}
+.bottom .call{
+	width: 50px;
+	height: 23px;
+	background: url(../images/call.png) no-repeat;
+	background-size: 100%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 8px;
+}
+.bottom .gift{
+	width: 78px;
+	height: 55px;
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	background: url(../images/gift.png) no-repeat;
+	background-size: 100%;
+}
+.music{
+	width: 34px;
+	height: 34px;
+	background: url(../images/sound.png) no-repeat;
+	background-size: 100%;
+	position: fixed;
+	top: 50px;
+	right: 20px;
+	z-index: 9998;
+}
+.mute{
+	background: url(../images/nosound.png) no-repeat;
+	background-size: 100%;
+}
+.slide-btn{
+	width: 73px;
+	height: 46px;
+	background: url(../images/slide2.png) no-repeat;
+	background-size: 100%;
+	position: fixed;
+	top: 280px;
+	right: 0px;
+	z-index: 1001;
+	-webkit-animation: guide 2s infinite ease-in-out;
+}
+.audiojs{
+	display: none;
+}
+@-webkit-keyframes guide{
+	0%{
+	   opacity:0.5;
+	   right: -30px;
+	 }
+	100%{
+	   opacity:1;
+	   right: 0px;
+	}
+}
+
+
+

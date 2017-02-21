@@ -1,0 +1,270 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF;
+  font-family: 'Microsoft Yahei'; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.none {
+  display: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: url(http://news.sohu.com/upload/code_v120150430/images/loading.gif) center center no-repeat;
+  background-color: white; }
+
+.music {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100; }
+  .music.on {
+    -webkit-animation: reverseRotata 1.2s linear infinite; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+  html .page, body .page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+    html .page.page1, body .page.page1 {
+      z-index: 3; }
+      html .page.page1 .page1-img, body .page.page1 .page1-img {
+        width: 100%;
+        height: 100%; }
+      html .page.page1.animated, body .page.page1.animated {
+        -webkit-animation: zoomOut 2s 1s both; }
+    html .page.page2, body .page.page2 {
+      z-index: 2; }
+      html .page.page2 .page2-img, body .page.page2 .page2-img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: -6px; }
+      html .page.page2 .page2-img1, body .page.page2 .page2-img1 {
+        width: 134px;
+        height: 108px;
+        position: absolute;
+        background: url(http://news.sohu.com/upload/code_v120150430/images/map1.png) no-repeat;
+        background-size: 100%;
+        display: none; }
+        html .page.page2 .page2-img1.active, body .page.page2 .page2-img1.active {
+          -webkit-animation: pulse 1.5s infinite ease-in-out; }
+      html .page.page2 .page2-img2, body .page.page2 .page2-img2 {
+        width: 140px;
+        height: 125px;
+        position: absolute;
+        background: url(http://news.sohu.com/upload/code_v120150430/images/map2.png) no-repeat;
+        background-size: 100%;
+        display: none; }
+        html .page.page2 .page2-img2.active, body .page.page2 .page2-img2.active {
+          -webkit-animation: pulse 1.5s infinite ease-in-out; }
+      html .page.page2 .page2-img3, body .page.page2 .page2-img3 {
+        width: 130px;
+        height: 120px;
+        position: absolute;
+        background: url(http://news.sohu.com/upload/code_v120150430/images/map3.png) no-repeat;
+        background-size: 100%; }
+        html .page.page2 .page2-img3.active, body .page.page2 .page2-img3.active {
+          -webkit-animation: pulse 1.5s infinite ease-in-out; }
+      html .page.page2 .page2-container, body .page.page2 .page2-container {
+        width: 87.5%;
+        position: fixed;
+        left: 6.25%;
+        display: none; }
+        html .page.page2 .page2-container img, body .page.page2 .page2-container img {
+          width: 100%; }
+        html .page.page2 .page2-container .close, body .page.page2 .page2-container .close {
+          width: 10.8%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 99; }
+        html .page.page2 .page2-container.active, body .page.page2 .page2-container.active {
+          -webkit-animation: zoomOut 2s 1s both; }
+      html .page.page2.animated, body .page.page2.animated {
+        -webkit-animation: zoomOut 2s 1s both; }
+    html .page.page3, body .page.page3 {
+      z-index: 1; }
+      html .page.page3 .page3-img, body .page.page3 .page3-img {
+        width: 100%;
+        height: 100%; }
+      html .page.page3 .share-btn, body .page.page3 .share-btn {
+        position: absolute;
+        left: 50%;
+        margin-left: -108px;
+        bottom: 180px; }
+  html .share, body .share {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: none; }
+    html .share img, body .share img {
+      width: 164px;
+      position: absolute;
+      top: 0;
+      right: 0; }
+  html .tips, body .tips {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9; }
+    html .tips img, body .tips img {
+      width: 168px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -84px; }
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+@keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+@-webkit-keyframes reverseRotata {
+  0% {
+    -webkit-transform: rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(-360deg); } }
+@keyframes reverseRotata {
+  0% {
+    -webkit-transform: rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(-360deg); } }
+@media screen and (min-width: 370px) {
+  body .page.page3 .share-btn {
+    bottom: 200px; } }
+@media screen and (min-width: 410px) {
+  body .page.page3 .share-btn {
+    bottom: 220px; } }

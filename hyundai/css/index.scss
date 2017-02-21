@@ -1,0 +1,424 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html{color:#000;background:#FFF;font-family: 'Microsoft Yahei',Arial;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+html,body{width: 100%;height: 100%;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-size:medium;font-style:normal;font-weight:normal;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block;}
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {content:"."; height:0; visibility:hidden; display:block; clear:both;}
+* html .clear {height:1%;}
+.clearfix {display:block;}
+/* End clearing floats */
+.zoom{zoom:1;}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+a:link, a:visited{ text-decoration: none;}
+
+.loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background: url(../images/loading.gif) center center no-repeat;
+	background-color: white;
+}
+
+.red{
+	color: red;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
+	position: relative;
+    background: url(../images/bg.png) repeat;
+	
+	.top{
+		width: 100%;
+		display: block;
+	}
+
+	.container{
+		position: relative;
+		z-index: 9;
+		margin-top: -10px;
+
+		.rule-btn{
+			width: 83px;
+			position: absolute;
+			right: 0;
+			top: -20px;
+		}
+
+		p{
+			padding-left: 20px;
+			font-size: 12px;
+		}
+
+		.words{
+			width: 260px;
+			height: 140px;
+			margin: 0 auto;
+			margin-top: -10px;
+			position: relative;
+
+			a{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+			}
+
+			.words-select{
+				width: 100%;
+				height: 50px;
+				background: white;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				z-index: 9999;
+				box-shadow: 8px 8px 5px #a2a2a2;
+				display: none;
+
+				div.words-con{
+					margin-right: 60px;
+					text-align: center;
+				}
+
+				.select-word{
+					margin-top: 16px;
+					max-width: 205px;
+					margin-left: -8px;
+				}
+
+				div.num-con{
+					position: absolute;
+					right: 2px;
+					top: 11px;
+				}
+
+				.zan{
+					width: 30px;
+					margin-right: 3px;
+				}
+
+				.zan-num{
+					font-size: 20px;
+					font-weight: 600;
+					color: #414e9d;
+				}
+			}
+		}
+
+		.input{
+			width: 250px;
+			height: 37px;
+			background: url(../images/input.png) no-repeat;
+			background-size: 100%;
+			margin: 0 auto;
+			position: relative;
+			margin-bottom: 5px;
+
+			input{
+				background: none;
+				border: none;
+				outline: none;
+				position: absolute;
+				top: 6px;
+				left: 60px;
+				width: 120px;
+				height: 20px;
+				color: black;
+				font-size: 12px;
+			}
+
+			a{
+				width: 46px;
+				height: 25px;
+				position: absolute;
+				top: 5px;
+				right: 10px;
+			}
+		}
+
+		.icons{
+			padding-left: 20px;
+			img{
+				display: inline-block;
+				width: 52px;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.footer{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	.bottom{
+		width: 90%;
+		position: absolute;
+		bottom: 10px;
+		left: 5%;
+		border-bottom: 1px solid #919191;
+		text-align: right;
+
+		span{
+			display: inline-block;
+			font-size: 12px;
+			margin-left: 20px;
+		}
+	}
+
+	.bottom-logo{
+		width: 25%;
+		height: 50px;
+		position: absolute;
+		bottom: 30px;
+		right: 0;
+		z-index: 99;
+	}
+}
+
+.modal{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background: rgba(0,0,0,0.8);
+	display: none;
+
+	.modal-container{
+		width: 90%;
+		margin: 50px 5% 0 5%;
+		background: white;
+		border-radius: 5px;
+		position: relative;
+		padding: 50px 0 20px 0;
+
+		.logo{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+
+		.close{
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 10px;
+		}
+
+		.modal-con{
+			padding: 0 10px;
+			margin-bottom: 20px;
+			width: auto;
+			font-size: 12px;
+			line-height: 20px;
+			max-height: 250px;
+			overflow: hidden;
+
+			>div{
+				padding-bottom: 20px;
+			}
+
+			img{
+				width: 77px;
+				display: block;
+				margin: 0 auto 10px auto;
+
+				&.success{
+					width: 107px;
+					margin-top: 30px;
+				}
+
+				&.thanks{
+					width: 140px;
+				}
+
+				&.prize-img{
+					height: 250px;
+					width: auto;
+				}
+			}
+		}
+
+		.modal-btn{
+			width: 106px;
+			height: 24px;
+			background: #004086;
+			border-radius: 3px;
+			line-height: 24px;
+			text-align: center;
+			color: white;
+			font-size: 12px;
+			display: block;
+			margin: 10px auto 0px auto;
+		}
+	}
+
+	&.modal3{
+		text-align: center;
+
+		.modal-container{
+			.modal-con{
+				>div{
+					>div{
+						padding-top: 10px;
+
+						input{
+							outline: none;
+							border-radius: 3px;
+						}
+					}
+				}
+			}
+
+			.modal-btn{
+				display: inline-block;
+				margin: 0 8px;
+			}
+		}
+	}
+}
+
+.share{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	display: none;
+
+	img{
+		width: 164px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.signup{
+	background: url(../images/sign-bg.jpg) repeat;
+	background-size: 100%;
+
+	img{
+		width: 100%;
+
+		&.sign-bottom{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	>div{
+		text-align: center;
+		margin-top: 30px;
+		position: relative;
+		z-index: 99;
+
+		input{
+			width: 174px;
+			height: 24px;
+			margin-left: 5px; 
+			border: 2px solid #545454;
+			padding: 0 5px;
+			outline: none;
+			border-radius: 3px;
+		}
+
+		a.sign-btn{
+			width: 80px;
+			height: 28px;
+			border-radius: 3px;
+			background: #555555;
+			line-height: 28px;
+			text-align: center;
+			color: white;
+			font-size: 12px;
+			display: inline-block;
+		}
+	}
+
+	.back-index{
+		text-decoration: underline;
+		font-size: 16px;
+		display: block;
+		margin: 10px auto 0 auto;
+		color: #555555;
+		text-align: center;
+		position: relative;
+		z-index: 99;
+	}
+}
+
+.pt-page{
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pt-page-delay200{
+	-webkit-animation-delay: .5s;
+}
+
+.pt-page-current{
+	visibility: visible;
+}
+
+.pt-page-scaleDown {
+	-webkit-animation: scaleDown .7s ease both;
+	animation: scaleDown .7s ease both;
+}
+
+@-webkit-keyframes scaleDown {
+	from { }
+	to { opacity: 0; -webkit-transform: scale(.8); }
+}
+@keyframes scaleDown {
+	from { }
+	to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+
+.pt-page-moveFromBottom {
+	-webkit-animation: moveFromBottom .6s ease both;
+	animation: moveFromBottom .6s ease both;
+}
+
+@-webkit-keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); }
+}
+@keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}

@@ -1,0 +1,31 @@
+@charset "gb2312";
+/*翻页*/
+/*
+p.ie{ 
+height:60px;text-align:center;line-height:60px;border:1px dashed #bbb;background:#f7f7f7;font:15; 
+color:blue; // 所有浏览器 
+color:brown\9; // 所有IE浏览器 
++color:red; // IE7 
+_color:green; // IE6 
+} 
+
+*/
+.page{float:left; width:634px}
+.pagebar{height:17px; float:right; font-size:9px; margin-top:3px;}
+.pagebar img{position:relative; top:2px;}
+.pagebar a{display:block; float:left; margin:0 2px; color:#0066cc; text-decoration:none;}
+.pagebar a:hover{color:#ff5a6a; text-decoration:none;}
+.pagebar .page_now{display:block; float:left; margin:0 5px; color:#ff5a6a; font-weight:bold; background:#fff;}
+#pager a{color:#0066cc; text-decoration:none;}
+
+/*列表*/
+.lb{float:right;}
+.lb01{float:left;overflow: hidden;}
+.lb01 { float:left; margin-right: 5px;overflow: hidden;vertical-align: middle;}
+.f_r{float:right}
+.f_l{float:left;}
+.seach{height: 17px;line-height:17px;}
+.f01{font-size:9px; line-height:17px; float:left;height: 17px;}
+.B_input{width:84px;height: 17px;float:left; border: medium none;background:url(../images/s01.jpg) repeat-x}
+.go{border: medium none;background:url(../images/s02.jpg); width:17px; height:17px; }
+.mt05{ margin:0 3px;}

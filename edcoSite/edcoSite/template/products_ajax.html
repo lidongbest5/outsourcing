@@ -1,0 +1,55 @@
+<div class="product-container">	
+	<div class="product">
+		<ul class="pro-list clearfix">
+			{% for item in items %}
+				<li>
+					<a href="/product/{{ item.id }}/" target="_blank">
+						<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+						<ul class="color-list clearfix">
+											{% if item.color1_name %}
+												<li style="background:{{ item.color1_name }}"></li>
+											{% endif %}
+											{% if item.color2_name %}
+												<li style="background:{{ item.color2_name }}"></li>
+											{% endif %}
+											{% if item.color3_name %}
+												<li style="background:{{ item.color3_name }}"></li>
+											{% endif %}
+											{% if item.color4_name %}
+												<li style="background:{{ item.color4_name }}"></li>
+											{% endif %}
+											{% if item.color5_name %}
+												<li style="background:{{ item.color5_name }}"></li>
+											{% endif %}
+											{% if item.color6_name %}
+												<li style="background:{{ item.color6_name }}"></li>
+											{% endif %}
+											{% if item.color7_name %}
+												<li style="background:{{ item.color7_name }}"></li>
+											{% endif %}
+											{% if item.color8_name %}
+												<li style="background:{{ item.color8_name }}"></li>
+											{% endif %}
+											{% if item.color9_name %}
+												<li style="background:{{ item.color9_name }}"></li>
+											{% endif %}
+											{% if item.color10_name %}
+												<li style="background:{{ item.color10_name }}"></li>
+											{% endif %}
+										</ul>
+						{% if language != None and language == 'chinese' %}
+							<h3>{{ item.name_ch }}</h3>
+						{% else %}
+							<h3>{{ item.name }}</h3>
+						{% endif %}
+						<h4>${{ item.price }}</h4>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="pages">
+		<input type="hidden" class="page" value="{{ page }}">
+		<input type="hidden" class="total" value="{{ total }}">
+	</div>
+</div>

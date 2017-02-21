@@ -1,0 +1,240 @@
+.title{
+	width: auto;
+	height: 42px;
+	padding-top: 8px;
+	font-size: 24px;
+	padding-left: 15px;
+	background: url(../images/bg_red.png) repeat-y; 
+	position: relative;
+	color: white;
+	margin-bottom: 10px;
+}
+/* banner */
+.banner{
+	width: 100%;
+	overflow: hidden;
+	font-size: 0;
+	margin-bottom: 20px;
+	position: relative;
+}
+.banner-container{
+	width: 9999px;
+	position: relative;
+	left: 0;
+}
+.banner-container a{
+	display: inline-block;
+	vertical-align: top;
+	width: 990px;
+	height: 355px;
+}
+.banner-container a img{
+	width: 100%;
+	height: 100%;
+}
+.banner-dot{
+	position: absolute;
+	right: 18px;
+	bottom: 10px;
+}
+.banner-dot a{
+	display: inline-block;
+	vertical-align: top;
+	background: url(../images/dot.png) no-repeat;
+	margin-right: 10px;
+	width: 12px;
+	height: 12px;
+}
+.banner-dot a.selected, .banner-dot a:hover{
+	background: url(../images/dot_select.png) no-repeat;
+}
+/* dream */
+.dream .title{
+	background: #a0abe3;
+}
+.dream-container{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+.dream-container ul{
+	width: 99999px;
+	position: relative;
+	left: 0;
+}
+.dream-container ul li{
+	width: 240px;
+	height: 300px;
+	margin-right: 10px;
+	float: left;
+}
+.dream-container ul li img{
+	width: 240px;
+	height: 300px;
+}
+.dream-dot{
+	width: 100%;
+	text-align: center;
+	padding-top: 15px; 
+}
+.dream-dot a{
+	display: inline-block;
+	vertical-align: top;
+	background: url(../images/dot.png) no-repeat;
+	margin-right: 10px;
+	width: 12px;
+	height: 12px;
+}
+.dream-dot a.selected, .dream-dot a:hover{
+	background: url(../images/dot_select.png) no-repeat;
+}
+.dream-list{
+	margin: 20px 0 40px 0;
+	font-size: 0;
+	position: relative;
+	border-top: 1px solid #dadada;
+	border-left: 1px solid #dadada;
+}
+.dream-list a{
+	width: 163.8px;
+	height: 57px;
+	display: inline-block;
+	vertical-align: middle;
+	border-right: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+	font-size: 18px;
+	line-height: 54px;
+	color: #4d4d4d;
+	text-align: center;
+}
+.dream-list a:hover{
+	background: #f7f7f7;
+}
+/* radio */
+.radio{
+	width: 100%;
+	height: 141px;
+	background: url(../images/radio-bg.jpg) no-repeat;
+	position: relative;
+	margin-bottom: 40px;
+}
+.radio-enter{
+	width: 135px;
+	height: 40px;
+	display: block;
+	position: absolute;
+	top: 92px;
+	left: 174px;
+}
+.radio-list{
+	position: absolute;
+	top: 15px;
+	right: 60px;
+}
+.radio-container,.radio-container ul li{
+	width: 387px;
+	overflow: hidden;
+	position: relative;
+}
+.radio-container ul{
+	width: 99999px;
+}
+.radio-container ul li a{
+	width: 157px;
+	height: 31px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 18px;
+	margin-bottom: 8px;
+	padding-left: 16px;
+	border-radius: 10px;
+	line-height: 30px;
+}
+.radio-container ul li a span{
+	margin-left: 12px;
+}
+.radio-container ul li a.purple{
+	background: #a0abe3;
+}
+.radio-container ul li a.pink{
+	background: #f28fc2;
+}
+.radio-container ul li a.red{
+	background: #f87978;
+}
+.radio-container ul li a.yellow{
+	background: #f9d06d;
+}
+.radio-container ul li a.green{
+	background: #70e7be;
+}
+.radio-container ul li a.blue{
+	background: #7fcceb;
+}
+.radio-left, .radio-right{
+	width: 53px;
+	height: 53px;
+	display: block;
+	position: absolute;
+	top: 30px;
+}
+.radio-left{
+	background: url(../images/arrow-left.png) no-repeat;
+	left: -65px;
+}
+.radio-right{
+	background: url(../images/arrow-right.png) no-repeat;
+	right: -45px;
+}
+/* hot */
+.hot{
+	font-size: 0;
+	margin-bottom: 30px;
+}
+.hot .title{
+	background: #70e7be;
+}
+.hot .pic,.review .pic{
+	width: 490px;
+	height: 220px;
+	margin: 0 10px 10px 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+.hot .pic img,.review .pic img{
+	width: 100%;
+	height: 100%;
+}
+.hot .pic.odd,.review .pic.odd, .review .pic.last{
+	margin-right: 0px;
+}
+.image-title{
+	padding: 10px;
+	width: 470px;
+	color: white;
+	font-size: 16px;
+	background: rgba(10,10,10,0.4);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.image-title p{
+	font-size: 14px;
+	margin-top: 6px;
+}
+/* review */
+.review{
+	font-size: 0;
+}
+.review .title{
+	background: #7dc4e9;
+}
+.review .pic-t{
+	width: 323px;
+}
+.review .pic-t .image-title{
+	width: 303px;
+	font-size: 14px;
+}

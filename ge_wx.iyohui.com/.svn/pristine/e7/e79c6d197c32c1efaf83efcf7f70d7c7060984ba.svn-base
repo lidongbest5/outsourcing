@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-size: 62.5%;background:url(../images/bg.gif) no-repeat;background-position:right bottom;}
+.clear{clear:both}
+*{margin:0px;padding:0px;border:0px;font-family:"GE汉仪中圆简";}
+#pagewrap{width:100%;height:auto;}
+#page{width:93%;margin:0 auto;}
+
+#my{width:100%;margin:0 auto;margin-bottom:2em}
+#my_show{width:100%;border:0.1em solid #E8E7E8;border-radius:0.5em;-moz-border-radius:0.5em;margin-top:1em;background-color:#FFFFFF;}
+#my_tu{width:95%;margin:0 auto;margin-top:1.2em;position:relative}
+#my_tu_img{width:100%}
+#my_back_img{position:absolute;top:0.3em;right:0.3em}
+
+#my_text{width:96%;text-align: center;margin: 0 auto;color:#000000;font-size: 1.4em;margin-top: 1em;}
+#ren{float: left;}
+#zan{float: right;}
+.xin{width: 1em;float:right; cursor:pointer;}
+.my_text_s{width: 95%;text-align: left;margin: 0 auto;color:#000000;font-size: 1.4em;margin-top: 0.7em}
+
+
+#button{width: 50%;margin:0 auto;margin-top: 1.7em;margin-bottom:1.7em}
+#left_bt{widows:40%;float:left}
+.left_img{width:100%; cursor:pointer;}
+#right_bt{widows:40%;float:right}
+.right_img{width:100%; cursor:pointer;}
+
+

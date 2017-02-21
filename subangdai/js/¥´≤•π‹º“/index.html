@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>传播管家-个人管理界面-基本信息</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/refer-to.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+				$(function() {
+					var num = 0;
+					$('li').click(function() {
+			
+						if ($(this).attr('name') == 'checked') {
+							if (num <= 0) {
+								num = 0;
+							} else {
+								num--;
+							}
+							$(this).css('background-color', '');
+							$(this).css('color','#000000');
+							$(this).attr('name', '');
+						} else {
+							if (num >= 6) {
+								$('#red').css('color', 'red');
+							} else {
+								$(this).css('background-color', '#FF9434');
+								$(this).css('color','#ffffff');
+								$(this).attr('name', 'checked');
+								num++;
+							}
+						}
+					})
+				})
+				function sub() {
+					var values = new Array();
+					var names = new Array();
+					$("li[name='checked']").each(function() {
+						var val = $(this).attr("value");
+						
+						values.push(val);
+						var name = $(this).attr("id");
+						
+						names.push(name);
+						
+					});
+					window.location.href="http://www.spreadManager.com?values="+values+"&names="+names;
+				}
+			</script>
+		<style type="text/css">
+			.theme-popover {
+				    z-index: 9999;
+				    position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    width: 640px;
+				    height: auto;
+				    margin: -180px 0 0 -330px;
+				    border-radius: 10px;
+				    border: solid 2px #666;
+				    background-color: #fff;
+				    display: none;
+				    box-shadow: 0 0 10px #666;
+				}
+			.details{
+				width: 640px;
+			
+			}
+			.detailsa{
+				margin-top: 13px;
+			}
+			.detailss{
+				width: 540px;
+				height: 50px;
+			}
+			.detailss p {
+				    margin-bottom: 0px;
+				    width: 535px;
+				    height: 50px;
+				    line-height: 50px;
+				}
+			.detail{
+				float: right;
+			}
+			.bt{
+				margin-top: 13px;
+				margin-right: 20px;
+				width: 27px;
+				height: 27px;
+				background: url(img/gou.png) no-repeat;
+				border: none;
+			}
+			.fransnan{
+				width: 100%;
+				height: 40%;
+				border-bottom:1px solid #E4E9F1;
+				margin-bottom: 10px;
+			}
+			.fransnana{
+				width: 600px;
+				
+			}
+			.fransnana p{
+				width: 600px;
+				height: 35px;
+				line-height: 35px;
+				margin-left: 15px;
+				font-size: 14px;
+				color: #e2e3e6;
+				margin-bottom: 0px;
+			}
+			
+			.fransnana ul li{
+				float: left;
+				width: auto;
+				height: auto;
+				padding: 10px 10px;
+				margin:10px;
+				border: 1px solid  #E4E9F1;
+				border-radius: 10px;
+				color: #3A4453;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="wrapper">
+				<div class="left logo">
+					<h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
+					<p>品牌传播第一众包平台</p>
+				</div>
+				<div class="right out">
+						<p><a href="#">18476544567</a></p>
+						<p class="outd"><img src="img/out.png" /></p>
+						<p><a href="#2">退出</a></p>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="left basic">
+				<div class="basict">
+					<div class="basicd basics">
+						<a href="index.html">基本信息</a>
+					</div>
+					<div class="basicd">
+						<a href="serve.html">服务信息</a>
+					</div>
+					<div class="basicd">
+						<a href="case.html">案例库</a>
+					</div>
+				</div>
+			</div>
+				<div class="left hard">
+					<div id="preview">
+					    <img id="imghead"  border=0 src="" width="180" height="180" />
+					</div>
+					<a class="hardc" href="#"><input type="file" class="file" onchange="previewImage(this)" style="width: 70px; height: 40px; "/></a>
+				</div>
+			<div class="left">
+			    <form id="signupForm" method="post" action="" class="zcform" name="a">
+			        <p class="clearfix">
+			        	<label class="one" >真实姓名<span>*</span></label>
+			        	<input type="text" class="name"/>
+			        </p>
+			        <p class="clearfix">
+			        	<label class="one" >笔名<span>*</span></label>
+			           <input type="text" class="name"/>
+			        </p>
+			        <p class="clearfix">
+			         	<label class="one">职业<span>*</span></label>
+			        	<input type="text" class="name"/>
+			        </p>
+			        <p class="clearfix">
+			        	<label class="one">从业时间<span>*</span></label>
+			        	<input type="text" class="name"/>
+			        </p>
+			        <p class="clearfix">
+			        	<label class="one">涉及类型</label>
+			        	<input type="text" class="name theme-login"/>
+			        	<div class="g">
+						<div class="theme-popover">
+						    <div class="details">
+						    	<div class="detailsa">
+						    		<input type="button" class="bd" value="" />
+						    	</div>
+						    	<div class="detailss">
+						    		<p>选择涉及领域（最多选6项）</p>
+						    	</div>
+						    	<div class="detail">
+						    		<input type="button" class="bt" value="" />
+						    	</div>
+						    </div>
+						    
+						   <div class="fransnan clearfix">
+							    <div class="fransnana">
+							    	<p>母婴</p>
+							    	<ul>
+							    		<li>育儿话题</li>
+							    		<li>育儿话题</li>
+							    		<li>育儿话题</li>
+							    	</ul>
+							    </div>
+						    </div>
+						     <div class="fransnan clearfix">
+							    <div class="fransnana">
+							    	<p>能源/化工/环保/农业</p>
+							    	<ul>
+							    		<li>石油化工</li>
+							    		<li>太阳能</li>
+							    		<li>新能源</li>
+							    		<li>其他能源</li>
+							    		<li>农业</li>
+							    	</ul>
+							    </div>
+						    </div>
+						     <div class="fransnan clearfix">
+							    <div class="fransnana">
+							    	<p>汽车</p>
+							    	<ul>
+							    		<li>新车</li>
+							    		<li>二手车</li>
+							    		<li>汽车服务</li>
+							    		<li>电动车</li>
+							    	</ul>
+							    </div>
+						    </div>
+						    <div class="fransnan clearfix">
+							    <div class="fransnana">
+							    	<p>体育</p>
+							    	<ul>
+							    		<li>蓝足排</li>
+							    		<li>羽毛球/乒乓球</li>
+							    		<li>其他运动项目</li>
+							    		<li>健身</li>
+							    		<li>体育产业</li>
+							    	</ul>
+							    </div>
+						    </div>
+						    <div class="fransnan clearfix">
+							    <div class="fransnana">
+							    	<p>医疗/健康</p>
+							    	<ul>
+							    		<li>医疗服务</li>
+							    		<li>在线医疗</li>
+							    		<li>医疗产业</li>
+							    		<li>美容保健</li>
+							    		<li>制药生物工程</li>
+							    		<li>医疗器械设备</li>
+							    	</ul>
+							    </div>
+						    </div>
+						</div>
+						<div class="theme-popover-mask"></div>
+					</div>
+			        </p>
+			        <p class="clearfix">
+			        	<label class="one">所在城市</label>
+			        	<select name="cars" class="cry">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+						<select name="cars" class="cry">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+			        </p>
+			          <p class="clearfix">
+			        	<label class="one">邮箱</label>
+						<input type="text" class="name"/>
+			        </p>
+			         <p class="clearfix">
+			        	<label class="one">微信号</label>
+						<input type="text" class="name"/>
+			        </p>
+			         <p class="clearfix txt">
+			        	<label class="one">经验描述</label>
+						<textarea name="b" cols="40" wrap="VIRTUAL" rows="6" onsubmit="return test()"  class="text"></textarea>
+			        </p>
+			       	<p class="clearfix"><input class="submit" type="submit" value="保存"/></p> 
+			    </form>
+			</div>
+			
+		</div>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+						$('.theme-login').click(function(){
+							$('.theme-popover-mask').fadeIn(0);
+							$('.theme-popover').slideDown(0);
+						})
+						$('.theme-poptit .close').click(function(){
+							$('.theme-popover-mask').fadeOut(0);
+							$('.theme-popover').slideUp(0);
+						})
+					})
+				$(".bd").click(function(){ $(".g").hide(); });
+				$(".theme-login").click(function(){$(".g").show();})
+				$(".bt").click(function(){
+					$(".g").show();
+					$(".name").append()
+				})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}黑鹿角西餐 - 详情页{% endblock %}
+{% block content %}
+	<section class="detail-container">
+		<div class="container">
+			<div class="detail-left">
+				<p>全部</p>
+				<a class="month" href="/menu/month/">本月<br/>推荐</a>
+				<a class="popular" href="/menu/popular/">最受<br/>欢迎</a>
+				<a class="main{% if item.dealType == 1 %} cur{% endif %}" href="/menu/main/">主餐</a>
+				<a class="salad{% if item.dealType == 2 %} cur{% endif %}" href="/menu/salad/">沙拉</a>
+				<a class="deal{% if item.dealType == 3 %} cur{% endif %}" href="/menu/deal/">小食</a>
+				<i></i>
+			</div>
+			<div class="detail-right">
+				<div class="detail-top">
+					{{ item.name }}
+					{% if item.extra == 0 %}
+						<i class="menu-type1"></i>
+					{% elif item.extra == 1 %}
+						<img src="/static/images/spicy.png" class="icon">
+					{% else %}
+						<img src="/static/images/vegetable.png" class="icon">
+					{% endif %} 
+					<span>首次订购免运费 / 每份订单消费108元以上免运费</span>
+				</div>
+				<img src="/static/upload/{{ item.img }}" class="detail-img">
+				<div class="detail-info">
+					<div class="detial-info-top">
+						<span>时长</span>{{ item.time }}分钟
+						<span class="hard" data-value="{{ item.hard }}">难度</span><ul><li></li><li></li><li></li><li></li><li></li></ul>
+						<span>厨具</span>{{ item.tool }}
+					</div>
+					<div class="detial-info-tip">
+						<p>温馨提示</p>
+						<ul>
+							{{ tip|safe }}
+						</ul>
+					</div>
+					<div class="detial-info-button">
+						<span class="price">￥{{ item.price }}</span>
+						<span class="count"><span>份数</span>
+							<a class="minus">-</a>
+							<input type="text" value="{{ item.count }}" data-value="{{ item.count }}">
+							<a class="plus active">+</a>
+						</span>
+						<span class="btn">
+							<a class="return" href="/menu/">返回菜单页</a>
+							<a class="addCart" data-id="{{ item.id }}">加入购物车</a>
+							<a class="buy" data-id="{{ item.id }}">立即购买</a>
+						</span>
+					</div>
+				</div>
+				<div class="detail-desc">
+					{% if item.story %}
+					<div class="desc-block">
+						<div class="block-left">故事</div>
+						<div class="block-right">
+							{{ item.story|safe }}
+						</div>
+					</div>
+					{% endif %}
+					{% if item.material %}
+					<div class="desc-block">
+						<div class="block-left">食材</div>
+						<div class="block-right">
+							{{ item.material|safe }}
+						</div>
+					</div>
+					{% endif %}
+					{% if item.recipe %}
+					<div class="desc-block">
+						<div class="block-left">食谱</div>
+						<div class="block-right">
+							{{ item.recipe|safe }}
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="popup">已加入购物车</div>
+{% endblock %}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/root/css/index.css">
+		<link rel="stylesheet" type="text/css" href="/static/root/datepicker/css/default.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/root/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="hasSession">
+		<header>
+			<span class="mobile-nav"></span>
+			<div>
+				<i></i>欢迎<a class="user">{{ user.name }}</a><a class="logout" href="/root/logout/">退出</a>
+			</div>
+		</header>
+		<nav>
+			<a href="/root/"><img src="/static/root/images/main_logo.png" class="main-logo"></a>
+			<ul>
+				<li class="border"></li>
+				<li class="nav1 nav cur"><a href="/root/"><i></i>接单汇总表</a></li>
+				<li class="border"></li>
+				<li class="nav2 nav"><a href="/root/add/"><i></i>添加表单</a></li>
+				<li class="border"></li>
+				<li class="nav3 nav"><a href="/root/changePwd/"><i></i>管理员密码修改</a></li>
+				<li class="border"></li>
+				<li class="nav1 nav"><a href="/root/user/"><i></i>查看所有用户</a></li>
+				<li class="border"></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<section class="index">
+				<div class="break"><a href="/root/">联盟成员收入管理系统</a>&gt;<a>接单汇总表</a></div>
+				<div class="main">
+					<div class="main-header">
+						接单汇总表
+					</div>
+					<div class="main-container">
+						<div class="actions">
+							<form action="/root/search/" method="get">
+								<div class="actions-left">
+									<div class="wechat"><span>个人微信ID：</span><input type="text" id="wechat" name="wechat"></div>
+									<div class="name"><span>自媒体人姓名：</span><input type="text" id="name" name="name"></div>
+									<div class="project"><span>项目名称：</span><input type="text" id="project" name="project"></div>
+									<div class="date"><span>执行时间：</span><input type="text" id="starttime" name="starttime">-<input type="text" id="endtime" name="endtime"></div>
+									<div class="back"><span>是否回款：</span><input type="radio" name="a" value="1">是<input type="radio" name="a" value="0">否</div>
+								</div>
+								<div class="actions-right">
+									合作形式：
+									<ul>
+										<li><input type="checkbox" id="type1" name="type1">头条文章撰写与发布</li>
+										<li><input type="checkbox" id="type2" name="type2">内容页头图广告</li>
+										<li><input type="checkbox" id="type3" name="type3">定制文章与内容页图片</li>
+										<li><input type="checkbox" id="type4" name="type4">二条文章转发</li>
+										<li><input type="checkbox" id="type5" name="type5">内容页插图广告</li>
+										<li><input type="checkbox" id="type6" name="type6">朋友圈转发</li>
+										<li><input type="checkbox" id="type7" name="type7">内容页文末广告</li>
+									</ul>
+								</div>
+								<div class="actions-bottom">
+									<input type="submit" class="search" value="查询"><span>输入任意查询项，即可查询相关数据。</span>
+								<!-- <a class="download">下载表格</a> -->
+								</div>
+							</form>
+						</div>
+						<a class="handle">批量操作</a>
+						<a class="select-all">全选</a>
+						<table>
+							<thead>
+								<tr>
+									<th>个人微信ID</th>
+									<th>姓名</th>
+									<th>客户名称</th>
+									<th>公众账号</th>
+									<th>项目名称</th>
+									<th>合作形式</th>
+									<th>开户银行</th>
+									<th>银行卡信息</th>
+									<th>合作金额(元)</th>
+									<th>执行时间</th>
+									<th>执行状态</th>
+									<th>提交结案状态</th>
+									<th>客户评价</th>
+									<th>打款时间</th>
+									<th>汇款凭证(截图)</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for item in items %}
+									<tr {% if forloop.counter|divisibleby:2 %}class="dark"{% endif %}>
+										<td>{{ item.wechat }}</td>
+										<td>{{ item.name }}</td>
+										<td>{{ item.custom }}</td>
+										<td>{{ item.account }}</td>
+										<td>{{ item.project }}</td>
+										<td>
+											{% if item.type1 %}
+												头条文章撰写与发布<br/>
+											{% endif %}
+											{% if item.type2 %}
+												内容页头图广告<br/>
+											{% endif %}
+											{% if item.type3 %}
+												定制文章与内容页图片<br/>
+											{% endif %}
+											{% if item.type4 %}
+												二条文章转发<br/>
+											{% endif %}
+											{% if item.type5 %}
+												内容页插图广告<br/>
+											{% endif %}
+											{% if item.type6 %}
+												朋友圈转发<br/>
+											{% endif %}
+											{% if item.type7 %}
+												内容页文末广告<br/>
+											{% endif %}
+										</td>
+										<td>{{ item.bankinfo }}</td>
+										<td>{{ item.banknumber }}</td>
+										<td>{{ item.count }}</td>
+										<td>
+											{% if item.executetime|date:"Y-m-d" != "1979-01-01" %}
+												{{ item.executetime|date:"Y-m-d" }}
+											{% endif %}
+										</td>
+										<td>
+											{% if item.executestatus == 1 %}
+												已完成
+											{% endif %}
+											{% if item.executestatus == 2 %}
+												未执行
+											{% endif %}
+											{% if item.executestatus == 3 %}
+												执行中
+											{% endif %}
+										</td>
+										<td>
+											{% if item.submitstatus == 1 %}
+												已提交
+											{% endif %}
+											{% if item.submitstatus == 2 %}
+												未提交
+											{% endif %}
+										</td>
+										<td>
+											{% if item.comment == 1 %}
+												满意
+											{% endif %}
+											{% if item.comment == 2 %}
+												一般
+											{% endif %}
+											{% if item.comment == 3 %}
+												不满意
+											{% endif %}
+										</td>
+										<td>
+											{% if item.backtime|date:"Y-m-d" != "1979-01-01" %}
+												{{ item.backtime|date:"Y-m-d" }}
+											{% endif %}
+										</td>
+										<td>
+											{% if item.img %}
+												<img src="/static/upload/{{ item.img }}" width="50" class="img"></td>
+											{% endif %}
+										<td><a class="edit" href="/root/change/{{ item.id }}/"></a><a class="delete" data="{{ item.id }}"></a><a href="/root/add/{{ item.id }}/" style="display:block;">复制</a><input type="checkbox" class="select" data-id="{{ item.id }}"></td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+						{% if page == 1 and total > 2 %}
+							<div class="pagination">
+								<span>共{{ total }}页</span>
+								<a class="page cur" href="/root/1/">1</a>
+								<a class="page" href="/root/2/">2</a>
+								<a class="page" href="/root/3/">3</a>
+							</div>
+						{% elif page|add:"1" == total and total > 2 %}
+							<div class="pagination">
+								<span>共{{ total }}页</span>
+								<a class="pre" href='/root/{{ total|add:"-3" }}/'>上一页</a>
+								<a class="page" href='/root/{{ total|add:"-2" }}/'>{{ total|add:"-2" }}</a>
+								<a class="page" href='/root/{{ total|add:"-1" }}/'>{{ total|add:"-1" }}</a>
+								<a class="page cur" href='/root/{{ total }}/'>{{ total }}</a>
+							</div>
+						{% elif total > 2 %}
+							<div class="pagination">
+								<span>共{{ total }}页</span>
+								<a class="pre" href='/root/{{ page|add:"-1" }}/'>上一页</a>
+								<a class="page cur" href='/root/{{ page }}/'>{{ page }}</a>
+								<a class="page" href='/root/{{ page|add:"1" }}/'>{{ page|add:"1" }}</a>
+								<a class="page" href='/root/{{ page|add:"2" }}/'>{{ page|add:"2" }}</a>
+								<a class="next" href='/root/{{ page|add:"3" }}/'>下一页</a>
+							</div>
+						{% elif total > 1 %}
+						<div class="pagination">
+							<span>共{{ total }}页</span>
+							<a class="page {% if page == 0 %}cur{% endif %}" href="/root/1/" data="1">1</a>
+							<a class="page {% if page == 1 %}cur{% endif %}" href="/root/2/" data="2">2</a>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+			<div class="modal">
+				<img src="/static/root/images/delete-icon.png">
+				<div>
+					<p>确定删除此单？<br/>
+订单删除将无法恢复，请三思啊！</p>
+					<a class="delete-button">确认删除</a>
+					<a class="cancel-button">取消</a>
+				</div>
+			</div>
+			<div class="handle-modal">
+				打款时间<input type="text">
+				<div>
+					<a class="sub">确认</a>
+					<a class="handle-close">关闭</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				京ICP备13045368号-2 /北京市公安局朝阳分局 Copyright@2006-2015
+			</div>
+		</footer>
+		<script src="/static/root/js/jquery.js"></script>
+		<script src="/static/root/datepicker/js/zebra_datepicker.js"></script>
+		<script src="/static/root/js/min/index-min.js"></script>
+		<script src="/static/root/js/placeholders.min.js"></script>
+	</body>
+</html>

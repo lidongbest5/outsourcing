@@ -1,0 +1,102 @@
+.tip404{
+	width: 100%;
+	padding: 30px 0;
+	background: #a0abe3;
+	color: white;
+	margin-bottom: 20px;
+}
+.tip404 .container404{
+	width: 990px;
+	margin: 0 auto;
+	position: relative;
+}
+.tip404 .container404 span{
+	margin-right: 80px;
+	font-size: 24px;
+}
+.tip404 .container404 span:first-child{
+	font-size: 20px;
+}
+.main404{
+	padding-left: 125px;
+}
+.main404 >div{
+	width: 358px;
+	margin-right: 17px;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+.main404 >div h2{
+	width: 338px;
+	padding-left: 20px;
+	height: 50px;
+	color: white;
+	font-size: 26px;
+	line-height: 46px;
+	margin-bottom: 10px;
+}
+.red{
+	background: #f35d58;
+}
+.blue{
+	background: #8a9ceb;
+}
+.yellow{
+	background: #f9d568;
+}
+.green{
+	background: #4edfca;
+}
+.main404 >div .item404{
+	border: 1px solid #dadada;
+	padding: 20px;
+	width: auto;
+}
+.main404 >div .item404 a{
+	color: #4d4d4d;
+	font-size: 16px;
+	margin-bottom: 15px;
+	display: block;
+}
+.main404 >div .item404 a:hover{
+	color: #e21e1f;
+}
+
+.item404 .pic{
+	width: 100%;
+	height: 147px;
+	position: relative;
+}
+.item404 .pic img{
+	width: 100%;
+	height: 100%;
+}
+.image-title {
+	padding: 10px;
+	width: 276px;
+	color: white;
+	font-size: 16px;
+	background: rgba(10,10,10,0.4);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.item404 .pic .image-title{
+	width: 296px;
+}
+.item404 ul{
+	padding: 18px 0 0 25px;
+	font-size: 16px;
+}
+.item404 ul li{
+	margin-bottom: 8px;
+}
+.main404 >div .item404 ul li a{
+	margin-bottom: 5px;
+}
+.item404 ul li p{
+	margin-top: 2px;
+	font-size: 14px;
+	color: #969696;
+}

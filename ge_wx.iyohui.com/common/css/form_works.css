@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-size: 62.5%;}
+.clear{clear:both}
+*{margin:0px;padding:0px;border:0px; font-family:"GE汉仪中圆简";}
+#pagewrap{width:100%;height:auto;}
+#page{width:93%;margin:0 auto;}
+#work_show{width:100%;margin:0 auto;}
+#my{width:100%;position:relative}
+.close{width:4em;position:absolute;top:0px;right:0px}
+#img{width:100%}
+#tu_title{width:100%;color:#000;font-size:20px;margin-top:1.5em;text-align:left}
+#tu_tishi{width:100%;color:#898989;font-size:14px;margin-top:0.5em;text-align:left}
+#tu_des{width:100%;border:0px}
+.tu_des_t{width:98%;margin:0 auto;height:8em;border:0.1em solid #E8E7E8;border-radius:0.5em;-moz-border-radius:0.5em;margin-top:1em;font-size:1.5em}
+#tu_bt{width:100%;text-align:center;margin-top:1.2em}
+.input_bt{width:8em;margin:0 auto;}
+

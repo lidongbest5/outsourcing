@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/root/css/index.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/root/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="hasSession">
+		<header>
+			<span class="mobile-nav"></span>
+			<div>
+				<i></i>欢迎<a class="user">{{ user.name }}</a><a class="logout" href="/root/logout/">退出</a>
+			</div>
+		</header>
+		<nav>
+			<a href="/root/"><img src="/static/root/images/main_logo.png" class="main-logo"></a>
+			<ul>
+				<li class="border"></li>
+				<li class="nav1 nav"><a href="/root/"><i></i>接单汇总表</a></li>
+				<li class="border"></li>
+				<li class="nav2 nav"><a href="/root/add/"><i></i>添加表单</a></li>
+				<li class="border"></li>
+				<li class="nav3 nav cur"><a href="/root/changePwd/"><i></i>管理员密码修改</a></li>
+				<li class="border"></li>
+				<li class="nav1 nav"><a href="/root/user/"><i></i>查看所有用户</a></li>
+				<li class="border"></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<section class="account">
+				<div class="break"><a href="/root/">联盟成员收入管理系统</a>&gt;<a>密码修改</a></div>
+				<div class="main">
+					<div class="main-header">
+						密码修改
+					</div>
+					<div class="main-container changepwd-con">
+						<div><span>旧密码：</span><input type="text" placeholder="" class="long"></div>
+						<div><span>新密码：</span><input type="text" placeholder="密码长度8~20位，必须同时包含字母和数字" class="long"></div>
+						<div><span>确认新密码：</span><input type="text" placeholder="请与新密码保持一致" class="long"></div>
+						<a class="submit changepwd-btn">确认修改</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="container">
+				京ICP备13045368号-2 /北京市公安局朝阳分局 Copyright@2006-2015
+			</div>
+		</footer>
+		<script src="/static/root/js/jquery.js"></script>
+		<script src="/static/root/js/min/index-min.js"></script>
+		<script src="/static/root/js/placeholders.min.js"></script>
+	</body>
+</html>

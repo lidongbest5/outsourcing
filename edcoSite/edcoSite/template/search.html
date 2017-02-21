@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>search result for {{ query }} - EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/productList.css">
+		<style>
+			.main{width: 65%;margin: 0 auto;}
+		</style>
+	</head>
+	<body>
+		{%include "header.html"%}
+		<section class="banner">
+			<img src="/static/images/banner.jpg">
+		</section>
+		{% if language != None and language == 'chinese' %}
+		<section class="main clearfix">
+			<div class="product-container">	
+				<div class="product">
+					<ul class="pro-list clearfix">
+						{% for item in items %}
+							<li>
+								<a href="/product/{{ item.id }}/">
+									<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+									<ul class="color-list clearfix">
+										{% if item.color1_name %}
+											<li style="background:{{ item.color1_name }}"></li>
+										{% endif %}
+										{% if item.color2_name %}
+											<li style="background:{{ item.color2_name }}"></li>
+										{% endif %}
+										{% if item.color3_name %}
+											<li style="background:{{ item.color3_name }}"></li>
+										{% endif %}
+										{% if item.color4_name %}
+											<li style="background:{{ item.color4_name }}"></li>
+										{% endif %}
+										{% if item.color5_name %}
+											<li style="background:{{ item.color5_name }}"></li>
+										{% endif %}
+										{% if item.color6_name %}
+											<li style="background:{{ item.color6_name }}"></li>
+										{% endif %}
+										{% if item.color7_name %}
+											<li style="background:{{ item.color7_name }}"></li>
+										{% endif %}
+										{% if item.color8_name %}
+											<li style="background:{{ item.color8_name }}"></li>
+										{% endif %}
+										{% if item.color9_name %}
+											<li style="background:{{ item.color9_name }}"></li>
+										{% endif %}
+										{% if item.color10_name %}
+											<li style="background:{{ item.color10_name }}"></li>
+										{% endif %}
+									</ul>
+									{% if language == None or language == 'chinese' %}
+										<h3>{{ item.name_ch }}</h3>
+									{% else %}
+										<h3>{{ item.name }}</h3>
+									{% endif %}
+									<h4>${{ item.price }}</h4>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				{% if page == 1 and total > 2 %}
+					<div class="pages">
+						<a class="page cur" href="javascript:;">1</a>
+						<a class="page" href="javascript:;">2</a>
+						<a class="page" href="javascript:;">3</a>
+					</div>
+				{% elif page == total and total > 2 %}
+					<div class="pages">
+						<a class="pre" href="javascript:;" data='{{ total|add:"-3" }}'><</a>
+						<a class="page" href="javascript:;" data='{{ total|add:"-2" }}'>{{ total|add:"-2" }}</a>
+						<a class="page" href="javascript:;" data='{{ total|add:"-1" }}'>{{ total|add:"-1" }}</a>
+						<a class="page cur" href="javascript:;" data='{{ total }}'>{{ total }}</a>
+					</div>
+				{% elif total > 2 %}
+					<div class="pages">
+						<a class="pre" href="javascript:;" data='{{ page|add:"-2" }}'><</a>
+						<a class="page" href="javascript:;" data='{{ page|add:"-1" }}'>{{ page|add:"-1" }}</a>
+						<a class="page cur" href="javascript:;" data='{{ page }}'>{{ page }}</a>
+						<a class="page" href="javascript:;" data='{{ page|add:"1" }}'>{{ page|add:"1" }}</a>
+						<a class="next" href="javascript:;" data='{{ page|add:"2" }}'>></a>
+					</div>
+				{% elif total > 1 %}
+				<div class="pages">
+					<a class="page {% if page == 1 %}cur{% endif %}" href="javascript:;" data="1">1</a>
+					<a class="page" {% if page == 2 %}cur{% endif %} href="javascript:;" data="2">2</a>
+				</div>
+				{% endif %}
+			</div>
+		</section>
+		{% else %}
+		<section class="main clearfix">
+			<div class="product-container">	
+				<div class="product">
+					<ul class="pro-list clearfix">
+						{% for item in items %}
+							<li>
+								<a href="/product/{{ item.id }}/">
+									<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+									<ul class="color-list clearfix">
+										{% if item.color1_name %}
+											<li style="background:{{ item.color1_name }}"></li>
+										{% endif %}
+										{% if item.color2_name %}
+											<li style="background:{{ item.color2_name }}"></li>
+										{% endif %}
+										{% if item.color3_name %}
+											<li style="background:{{ item.color3_name }}"></li>
+										{% endif %}
+										{% if item.color4_name %}
+											<li style="background:{{ item.color4_name }}"></li>
+										{% endif %}
+										{% if item.color5_name %}
+											<li style="background:{{ item.color5_name }}"></li>
+										{% endif %}
+										{% if item.color6_name %}
+											<li style="background:{{ item.color6_name }}"></li>
+										{% endif %}
+										{% if item.color7_name %}
+											<li style="background:{{ item.color7_name }}"></li>
+										{% endif %}
+										{% if item.color8_name %}
+											<li style="background:{{ item.color8_name }}"></li>
+										{% endif %}
+										{% if item.color9_name %}
+											<li style="background:{{ item.color9_name }}"></li>
+										{% endif %}
+										{% if item.color10_name %}
+											<li style="background:{{ item.color10_name }}"></li>
+										{% endif %}
+									</ul>
+									<h3>{{ item.name }}</h3>
+									<h4>${{ item.price }}</h4>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				{% if page == 1 and total > 2 %}
+					<div class="pages">
+						<a class="page cur" href="javascript:;">1</a>
+						<a class="page" href="javascript:;">2</a>
+						<a class="page" href="javascript:;">3</a>
+					</div>
+				{% elif page == total and total > 2 %}
+					<div class="pages">
+						<a class="pre" href="javascript:;" data='{{ total|add:"-3" }}'><</a>
+						<a class="page" href="javascript:;" data='{{ total|add:"-2" }}'>{{ total|add:"-2" }}</a>
+						<a class="page" href="javascript:;" data='{{ total|add:"-1" }}'>{{ total|add:"-1" }}</a>
+						<a class="page cur" href="javascript:;" data='{{ total }}'>{{ total }}</a>
+					</div>
+				{% elif total > 2 %}
+					<div class="pages">
+						<a class="pre" href="javascript:;" data='{{ page|add:"-2" }}'><</a>
+						<a class="page" href="javascript:;" data='{{ page|add:"-1" }}'>{{ page|add:"-1" }}</a>
+						<a class="page cur" href="javascript:;" data='{{ page }}'>{{ page }}</a>
+						<a class="page" href="javascript:;" data='{{ page|add:"1" }}'>{{ page|add:"1" }}</a>
+						<a class="next" href="javascript:;" data='{{ page|add:"2" }}'>></a>
+					</div>
+				{% elif total > 1 %}
+				<div class="pages">
+					<a class="page {% if page == 1 %}cur{% endif %}" href="javascript:;" data="1">1</a>
+					<a class="page" {% if page == 2 %}cur{% endif %} href="javascript:;" data="2">2</a>
+				</div>
+				{% endif %}
+			</div>
+		</section>
+		{% endif %}
+		{%include "footer.html"%}
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+		<script src="/static/js/productList.js"></script>
+	</body>
+</html>

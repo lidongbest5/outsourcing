@@ -1,0 +1,74 @@
+.user-header{
+	width: 100%;
+	padding-top: 250px;
+	border-bottom: 1px solid #d2d2d2;
+	padding-bottom: 15px;
+	font-size:0.85em; 
+}
+.user-header div,.user-main{
+	width: 70%;
+	margin: 0 auto;
+}
+.user-header a{
+	margin: 0 5px;
+	color: black;
+}
+.user-l{
+	float: left;
+	width: 15%;
+	padding-top: 30px;
+}
+.user-l li{
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	font-size: 1em;
+	line-height: 2em;
+	color: #666666;
+}
+.user-l li.cur,.user-l li:hover{
+	background: #191919;
+	color: white;
+}
+.user-r{
+	width: 80%;
+	float: left;
+	border-left: 1px solid #d2d2d2;
+	padding: 60px 2%;
+}
+.user-r h3{
+	font-size: 1em;
+	margin-bottom: 0.8em;
+	color: #333333;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid #dedede;
+}
+span.info{
+	font-size: 0.8em;
+	color: #999999;
+}
+.user-submit{
+	width: 130px;
+	height: 36px;
+	background: #454545;
+	color: white;
+	font-family: 'Microsoft Yahei';
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+	display: inline-block;
+}
+.img-preload{
+	width: 300px;
+	height: 300px;
+	background: #f9f8f8;
+	border: 1px solid #e2e2e2;
+	margin: 20px 0;
+}
+.img-preload img{
+	width: 100%;
+	display: none;
+}

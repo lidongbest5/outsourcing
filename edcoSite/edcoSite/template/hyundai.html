@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>北现9代索纳塔活动后台统计</title>
+		<style>
+			td{padding: 10px;}
+			tr{border: 1px solid #ececec;}
+			#p2, #p3{
+				display: none;
+			}
+			li a{cursor: pointer;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li data="1"><a>1.统计</a></li>
+			<li data="2"><a>2.热词</a></li>
+			<li data="3"><a>3.自媒体报名</a></li>
+		</ul>
+		<div id="p1">
+			<h1>统计</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>阅读量</th>
+						<th>点赞量</th>
+						<th>历9而新</th>
+						<th>一点一滴的好</th>
+						<th>我回老家上堂课</th>
+						<th>且行且珍惜</th>
+						<th>对爱不要吝啬</th>
+						<th>不服老的小苹果</th>
+						<th>乐享极致才是王道</th>
+						<th>感恩长9</th>
+						<th>心之所向的一路向前</th>
+						<th>绝不中庸的坚持</th>
+						<th>中国好男人</th>
+						<th>红包满天飞</th>
+						<th>IT男们的历久而新</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in h3 %}
+						<tr>
+							<td>{{ item.num1 }}</td>
+		                    <td>{{ item.num2 }}</td>
+		                    <td>{{ item.w1 }}</td>
+		                    <td>{{ item.w2 }}</td>
+		                    <td>{{ item.w3 }}</td>
+		                    <td>{{ item.w4 }}</td>
+		                    <td>{{ item.w5 }}</td>
+		                    <td>{{ item.w6 }}</td>
+		                    <td>{{ item.w7 }}</td>
+		                    <td>{{ item.w8 }}</td>
+		                    <td>{{ item.w9 }}</td>
+		                    <td>{{ item.w10 }}</td>
+		                    <td>{{ item.w11 }}</td>
+		                    <td>{{ item.w12 }}</td>
+		                    <td>{{ item.w13 }}</td>
+		                </tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<div id="p2">
+			<h1>热词</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>姓名</th>
+						<th>电话</th>
+						<th>热词</th>
+						<th>时间</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in h1 %}
+						<tr>
+							<td>{{ item.id }}</td>
+		                    <td>{{ item.name }}</td>
+		                    <td>{{ item.phone }}</td>
+		                    <td>{{ item.word }}</td>
+		                    <td>{{ item.date|date:"Y - n - j" }}</td>
+		                </tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<div id="p3">
+				<h1>自媒体报名</h1>
+				<table>
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>自媒体id</th>
+							<th>时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in h2 %}
+						<tr>
+							<td>{{ item.id }}</td>
+		                    <td>{{ item.id1 }}</td>
+		                    <td>{{ item.date|date:"Y - n - j" }}</td>
+		                 </tr>
+						{% endfor %}
+					</tbody>
+				</table>
+		</div>
+		<script src="/static/js/jquery.js"></script>
+		<script>
+			$('ul li').on('click',function(){
+				$('#p1,#p2,#p3').hide();
+				$('#p'+$(this).attr('data')).fadeIn();
+			});
+		</script>
+	</body>
+</html>

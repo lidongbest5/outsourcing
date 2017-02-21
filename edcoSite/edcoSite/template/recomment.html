@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Change indexproduct | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script>
+    {% if status == 1 %}
+        alert("保存成功");
+    {% endif %}
+</script>
+</head>
+
+
+<body class="edco-indexproduct change-form">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">Django administration</h1>
+
+        </div>
+        
+    </div>
+    <!-- END Header -->
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Change indexproduct</h1>
+        <div id="content-main">
+
+
+  <ul class="object-tools">
+    
+    <li>
+        
+        <a href="/admin/edco/indexproduct/1/history/" class="historylink">History</a>
+    </li>
+    
+    
+  </ul>
+
+
+<form enctype="multipart/form-data" action="/root/saveRecomment/" method="post" id="indexproduct_form"><input type='hidden' name='csrfmiddlewaretoken' value='cORHKPJaUNGW0ulf2iRldcVNZLlSN7Bf' />
+<div>
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-pro1">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_pro1">Pro1:</label>
+                        
+                            <input class="vIntegerField" id="id_pro1" name="pro1" type="text" value="{{ item.pro1 }}" />
+                            <a href="/product/{{ item.pro1 }}/" target="_blank">preview</a>    
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-pro2">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_pro2">Pro2:</label>
+                        
+                            <input class="vIntegerField" id="id_pro2" name="pro2" type="text" value="{{ item.pro2 }}" />
+                            <a href="/product/{{ item.pro2 }}/" target="_blank">preview</a>   
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-pro3">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_pro3">Pro3:</label>
+                        
+                            <input class="vIntegerField" id="id_pro3" name="pro3" type="text" value="{{ item.pro3 }}" />
+                            <a href="/product/{{ item.pro3 }}/" target="_blank">preview</a>   
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-pro4">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_pro4">Pro4:</label>
+                        
+                            <input class="vIntegerField" id="id_pro4" name="pro4" type="text" value="{{ item.pro4 }}" />
+                            <a href="/product/{{ item.pro4 }}/" target="_blank">preview</a>   
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+<input type="submit" value="Save" class="default" name="_save" />
+</div>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+<script src="/static/js/jquery.js"></script>
+<script>
+    (function($){
+        $('.form-row input').on('keyup',function(){
+            var ele = $(this).next();
+            ele.attr("href",'/product/'+ $(this).val() +'/')
+        })
+    })(jQuery)
+</script>
+</body>
+</html>

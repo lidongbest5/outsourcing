@@ -1,0 +1,70 @@
+body {
+	padding:0;
+	margin:0;	
+	background:url(../images/bg_mini.jpg);	
+	background-repeat:no-repeat;
+	background-position:100% 100%;
+	background-size:102px 90px;
+	padding-bottom:102px;
+}
+#pagewrap {
+	margin:0 auto; 
+	width:80%;	
+}
+.prize_header {
+	margin:10px auto;
+	padding-top:30px;
+}
+.prize_h1 {
+	text-align:center;
+	color:#356db5;
+	margin:0;
+	font: bold 1.5em/120% "宋体";
+	line-height:35px;
+}
+.prize_code_box {
+	margin:0 auto;
+	padding:8px;
+	border:1px solid #dddddd;
+	-webkit-border-radius:6px; 
+	-moz-border-radius:6px; 
+	border-radius:6px;
+	width:280px;
+	height:96px;	
+}
+.prize_code_main {
+	background:#eeeeee;
+	width:280px;
+	height:80px;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:6px;
+}
+.prize_code_text {
+	margin:0;
+	line-height:40px;
+	color:#356db5;
+	font: bold 1.8em/120% "宋体";
+}
+.prize_code_number {
+	margin:0;
+	line-height:40px;
+	color:#356db5;
+	font: bold 2.2em/120% "宋体";
+}
+.prize_notice {
+	margin-top:40px;	
+}
+.notice_title {
+	font: bold 1.2em/120% "宋体";
+	color:#356db5;
+	margin:0;
+	margin-bottom:10px;
+}
+.notice_p {
+	margin:0;
+	line-height:22px;
+	margin-bottom:6px;
+	font: normal 1em/120% "宋体";
+	color:#356db5;
+}

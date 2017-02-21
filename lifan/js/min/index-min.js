@@ -1,0 +1,1 @@
+!function(){var n=$(".image-container img"),i=function(){t(),o(),f()},t=function(){n.each(function(){$(this).height($(this).width())})},o=function(){$(".fancybox").fancybox({})},c=function(){var n=$(this).closest(".news-container");n.find(".cutoff").hide(),n.find(".full").show(),$(this).remove()},f=function(){$(".news-container a").on("touchend",c)};$(i)}();

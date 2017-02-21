@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<div class="wind978" style="_width:973px;">  
+  <!-- {if $category > 0} -->
+  <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+  <!-- {/if} -->
+    <!-- {if $pager.display == 'list'} -->
+    	<li class="l01"><img src="/images/ad/ad_small_{$category}.jpg" /></li>
+        <!--{foreach name=goods_list from=$goods_list item=goods}-->
+        <li class="l01"><a href="{$goods.url}" title="{$goods.goods_name}" target="_blank">
+        <img src="{$goods.goods_thumb}" onmousemove="javascript:document.images['img_small_{$goods.goods_id}'].src='{$goods.goods_img}';"
+      onmouseout="javascript:document.images['img_small_{$goods.goods_id}'].src='{$goods.goods_thumb}'; return true;"
+      name="img_small_{$goods.goods_id}" alt="{$goods.goods_name}"onload="mSize(this,322,344);"/></a></li>
+        <!--{/foreach}-->
+    <!-- {else} -->
+    	<li class="l02"><img src="/images/ad/ad_big_{$category}.jpg" /></li>
+        <!--{foreach from=$goods_list item=goods}-->
+            <!-- {if $goods.goods_id} -->
+            <li class="l02"><a href="{$goods.url}" title="{$goods.goods_name}" target="_blank">
+            <img src="{$goods.goods_thumb}" onmousemove="javascript:document.images['img_big_{$goods.goods_id}'].src='{$goods.goods_img}';"
+      onmouseout="javascript:document.images['img_big_{$goods.goods_id}'].src='{$goods.goods_thumb}'; return true;"
+      name="img_big_{$goods.goods_id}" alt="{$goods.goods_name}" /></a></li>
+            <!--{/if}-->
+        <!--{/foreach}-->
+    <!-- {/if} -->
+
+  <!-- {if $category > 0} -->
+  </form>
+  <!-- {/if} -->
+
+</div>
+<div class="blank5"></div>

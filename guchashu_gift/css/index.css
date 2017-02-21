@@ -1,0 +1,166 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html{color:#000;background:#FFF;font-family: 'Microsoft Yahei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-size:medium;font-style:normal;font-weight:normal;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block;}
+
+/* =General
+-----------------------------------------------------------------------------*/
+/*** Location ***/
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin:0 auto;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+/* Class for clearing floats */
+.clearfix:after {content:"."; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix {display:inline-block;}
+* html .clear {height:1%;}
+.clearfix {display:block;}
+/* End clearing floats */
+.vm{vertical-align:middle;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.zoom{zoom:1;}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+a:link, a:visited{ text-decoration: none;}
+
+.main{
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+.loading{
+	width: 48px;
+	height: 48px;
+	background: url(../images/loading.gif) no-repeat;
+	margin: 0 auto;
+	position: relative;
+	top: 200px;
+}
+.status1,.status2,.status3,.form{
+	display: none;
+}
+.status1 h2,.status2 h2,.status3 h2,.form h2{
+	font-size: 1.6em;
+	font-weight: 600;
+	padding: 30px 0 10px 0;
+}
+.status1 p,.status2 p,.status3 p,.form p{
+	font-size: 1em;
+	line-height: 1.8em;
+}
+.status1 p span,.form p span{
+	color: #ba2a00;
+}
+.btn{
+	width: 140px;
+	height: 34px;
+	background: url(../images/btn.png) no-repeat;
+	background-size: 100%;
+	color: #f0cf25;
+	font-size: 1.2em;
+	text-align: center;
+	padding-top: 6px;
+	display: block;
+	margin: 0 auto;
+}
+.btn1{
+	width: 140px;
+	height: 34px;
+	background: url(../images/btn1.png) no-repeat;
+	background-size: 100%;
+	color: #f0cf25;
+	font-size: 1.2em;
+	text-align: center;
+	padding-top: 6px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.status1 h3,.status2 h3{
+	font-size: 1.1em;
+	line-height: 1.4em;
+	margin-top: 10px;
+}
+.status1 img,.status2 img,.status3 img{
+	width: 65%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.status2 img,.status3 img{
+	width: 80%;
+}
+
+.share-page{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background: rgba(106,106,106,0.7);
+	display: none;
+}
+.share-page img{
+	width: 60%;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.input{
+	margin: 30px 0;
+}
+.input input{
+	width: 70%;
+	padding: 5px;
+	border: 1px solid #04471c;
+	border-radius: 3px;
+	margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

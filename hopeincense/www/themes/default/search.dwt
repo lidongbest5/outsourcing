@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="/themes/default/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/themes/default/css/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/themes/default/js/mSize.js"></script>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="listtop mtop10">
+
+<!--分页-->
+<div class="page">
+<span style="float:left">搜索结果：</span>
+<!-- #BeginLibraryItem "/library/pages_category.lbi" --><!-- #EndLibraryItem -->
+</div>
+<!--列表-->
+<div class="lb">
+
+	<div class="lb01">
+        <form method="GET" name="listform">
+        <font class="f01">{$lang.btn_display}：</font>
+        <a href="javascript:;" onClick="javascript:display_mode('list')"><img class="mt05" src="images/btn-imageSizeMedium<!-- {if $pager.display == 'list'} -->_act<!-- {/if} -->.gif" alt="{$lang.display.list}"></a>
+        <a href="javascript:;" onClick="javascript:display_mode('grid')"><img class="mt05" src="images/btn-imageSizeLarge<!-- {if $pager.display == 'grid'} -->_act<!-- {/if} -->.gif" alt="{$lang.display.grid}"></a>
+        <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.goods_id}"></a>
+        <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"></a>
+        
+        <input type="hidden" name="category" value="{$category}" />
+        <input type="hidden" name="display" value="{$pager.display}" id="display" />
+        <input type="hidden" name="brand" value="{$brand_id}" />
+        <input type="hidden" name="price_min" value="{$price_min}" />
+        <input type="hidden" name="price_max" value="{$price_max}" />
+        <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+        <input type="hidden" name="page" value="{$pager.page}" />
+        <input type="hidden" name="sort" value="{$pager.sort}" />
+        <input type="hidden" name="order" value="{$pager.order}" />
+        </form>
+    </div>
+    <!--搜索-->	    
+    <div class="f_r seach">
+           <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"  >
+           <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="B_input" >
+           <input name="imageField" type="submit" value="" class="go"  />
+           </form>
+    </div> 
+</div>
+
+
+
+
+</div>
+
+<div class="clr"></div>
+<!--产品列表-->
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<div class="wind978" style="_width:973px;">  
+  <!-- {if $category > 0} -->
+  <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+  <!-- {/if} -->
+    <!-- {if $pager.display == 'list'} -->
+        <!--{foreach name=goods_list from=$goods_list item=goods}-->
+        <li class="l01"><a href="{$goods.url}" title="{$goods.goods_name}" target="_blank">
+        <img src="{$goods.goods_thumb}" onmousemove="javascript:document.images['img_small_{$goods.goods_id}'].src='{$goods.goods_img}';"
+      onmouseout="javascript:document.images['img_small_{$goods.goods_id}'].src='{$goods.goods_thumb}'; return true;"
+      name="img_small_{$goods.goods_id}" alt="{$goods.goods_name}"onload="mSize(this,322,344);"/></a></li>
+        <!--{/foreach}-->
+    <!-- {else} -->
+        <!--{foreach from=$goods_list item=goods}-->
+            <!-- {if $goods.goods_id} -->
+            <li class="l02"><a href="{$goods.url}" title="{$goods.goods_name}" target="_blank">
+            <img src="{$goods.goods_thumb}" onmousemove="javascript:document.images['img_big_{$goods.goods_id}'].src='{$goods.goods_img}';"
+      onmouseout="javascript:document.images['img_big_{$goods.goods_id}'].src='{$goods.goods_thumb}'; return true;"
+      name="img_big_{$goods.goods_id}" alt="{$goods.goods_name}" /></a></li>
+            <!--{/if}-->
+        <!--{/foreach}-->
+    <!-- {/if} -->
+
+  <!-- {if $category > 0} -->
+  </form>
+  <!-- {/if} -->
+
+</div>
+<div class="blank5"></div>
+
+
+<div class="clr"></div>
+<div class="listbottom"></div>
+<!--网页底部-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+

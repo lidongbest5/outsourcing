@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/media/css/index.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/media/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="hasSession">
+		<header>
+			<span class="mobile-nav"></span>
+			<div>
+				<i></i>欢迎<a class="user">{{ user.name }}</a><a class="logout" href="/media/logout/">退出</a>
+			</div>
+		</header>
+		<nav>
+			<a href="/media/"><img src="/static/media/images/main_logo.png" class="main-logo"></a>
+			<ul>
+				<li class="border"></li>
+				<li class="nav1 nav cur"><a href="/media/"><i></i>接单汇总表</a></li>
+				<li class="border"></li>
+				<li class="nav2 nav"><a href="/media/change/"><i></i>账户信息修改</a></li>
+				<li class="border"></li>
+				<li class="nav3 nav"><a href="/media/changePwd/"><i></i>密码修改</a></li>
+				<li class="border"></li>
+				<li class="nav4 nav"><a href="/media/bank/"><i></i>银行卡信息</a></li>
+				<li class="border"></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<section class="{% if len == 0 %}goToBank{% else %}index{% endif %}">
+				<div class="break"><a href="/media/">联盟成员收入管理系统</a>&gt;<a>接单汇总表</a></div>
+				<div class="main">
+					<div class="main-header">
+						接单汇总表
+					</div>
+					<div class="main-container">
+						{% if len == 0 %}
+							<img src="/static/media/images/logo2.png">
+							<div>
+								<p class="middle">您还没有任何收入记录，快努努力吧！</p>
+							</div>
+						{% else %}
+							<h2>您从WeMedia联盟获得了<span>{{ count }}</span>元收入，可以犒劳一下自己了！</h2>
+							<table>
+								<thead>
+									<tr>
+										<th>姓名</th>
+										<th>客户名称</th>
+										<th>合作形式</th>
+										<th>合作金额(元)</th>
+										<th>执行时间</th>
+										<th>执行状态</th>
+										<th>提交结案状态</th>
+										<th>客户评价</th>
+										<th>回款时间</th>
+										<th>汇款凭证(截图)</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for item in items %}
+									<tr {% if forloop.counter|divisibleby:2 %}class="dark"{% endif %}>
+										<td>{{ item.name }}</td>
+										<td>{{ item.custom }}</td>
+										<td>
+											{% if item.type1 %}
+												头条文章撰写与发布<br/>
+											{% endif %}
+											{% if item.type2 %}
+												内容页头图广告<br/>
+											{% endif %}
+											{% if item.type3 %}
+												定制文章与内容页图片<br/>
+											{% endif %}
+											{% if item.type4 %}
+												二条文章转发<br/>
+											{% endif %}
+											{% if item.type5 %}
+												内容页插图广告<br/>
+											{% endif %}
+											{% if item.type6 %}
+												朋友圈转发<br/>
+											{% endif %}
+											{% if item.type7 %}
+												内容页文末广告<br/>
+											{% endif %}
+										</td>
+										<td>{{ item.count }}</td>
+										<td>
+											{% if item.executetime|date:"Y-m-d" != '1979-01-01' %}
+												{{ item.executetime|date:"Y-m-d" }}
+											{% endif %}
+										</td>
+										<td>
+											{% if item.executestatus == 1 %}
+												已完成
+											{% endif %}
+											{% if item.executestatus == 2 %}
+												未执行
+											{% endif %}
+											{% if item.executestatus == 3 %}
+												执行中
+											{% endif %}
+										</td>
+										<td>
+											{% if item.submitstatus == 1 %}
+												已提交
+											{% endif %}
+											{% if item.submitstatus == 2 %}
+												未提交
+											{% endif %}
+										</td>
+										<td>
+											{% if item.comment == 1 %}
+												满意
+											{% endif %}
+											{% if item.comment == 2 %}
+												一般
+											{% endif %}
+											{% if item.comment == 3 %}
+												不满意
+											{% endif %}
+										</td>
+										<td>
+											{% if item.backtime|date:"Y-m-d" != '1979-01-01' %}
+												{{ item.backtime|date:"Y-m-d" }}
+											{% endif %}
+										</td>
+										<td>
+											{% if item.img %}
+												<img src="/static/upload/{{ item.img }}" width="50" class="img">
+											{% endif %}
+										</td>
+									</tr>
+								{% endfor %}
+								</tbody>
+							</table>
+							{% if page == 1 and total > 2 %}
+								<div class="pagination">
+									<a class="page cur" href="/root/1/">1</a>
+									<a class="page" href="/root/2/">2</a>
+									<a class="page" href="/root/3/">3</a>
+								</div>
+							{% elif page|add:"1" == total and total > 2 %}
+								<div class="pagination">
+									<a class="pre" href='/root/{{ total|add:"-3" }}/'>上一页</a>
+									<a class="page" href='/root/{{ total|add:"-2" }}/'>{{ total|add:"-2" }}</a>
+									<a class="page" href='/root/{{ total|add:"-1" }}/'>{{ total|add:"-1" }}</a>
+									<a class="page cur" href='/root/{{ total }}/'>{{ total }}</a>
+								</div>
+							{% elif total > 2 %}
+								<div class="pagination">
+									<a class="pre" href='/root/{{ page|add:"-1" }}/'>上一页</a>
+									<a class="page cur" href='/root/{{ page }}/'>{{ page }}</a>
+									<a class="page" href='/root/{{ page|add:"1" }}/'>{{ page|add:"1" }}</a>
+									<a class="page" href='/root/{{ page|add:"2" }}/'>{{ page|add:"2" }}</a>
+									<a class="next" href='/root/{{ page|add:"3" }}/'>下一页</a>
+								</div>
+							{% elif total > 1 %}
+							<div class="pagination">
+								<a class="page {% if page == 0 %}cur{% endif %}" href="'/root/1/" data="1">1</a>
+								<a class="page {% if page == 1 %}cur{% endif %}" href="'/root/2/" data="2">2</a>
+							</div>
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="container">
+				京ICP备13045368号-2 /北京市公安局朝阳分局 Copyright@2006-2015
+			</div>
+		</footer>
+		<script src="/static/media/js/jquery.js"></script>
+		<script src="/static/media/js/min/index-min.js"></script>
+		<script src="/static/media/js/placeholders.min.js"></script>
+	</body>
+</html>

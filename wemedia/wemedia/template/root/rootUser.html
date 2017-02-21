@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/root/css/index.css">
+		<link rel="stylesheet" type="text/css" href="/static/root/datepicker/css/default.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/root/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="hasSession">
+		<header>
+			<span class="mobile-nav"></span>
+			<div>
+				<i></i>欢迎<a class="user">{{ user.name }}</a><a class="logout" href="/root/logout/">退出</a>
+			</div>
+		</header>
+		<nav>
+			<a href="/root/"><img src="/static/root/images/main_logo.png" class="main-logo"></a>
+			<ul>
+				<li class="border"></li>
+				<li class="nav1 nav"><a href="/root/"><i></i>接单汇总表</a></li>
+				<li class="border"></li>
+				<li class="nav2 nav"><a href="/root/add/"><i></i>添加表单</a></li>
+				<li class="border"></li>
+				<li class="nav3 nav"><a href="/root/changePwd/"><i></i>管理员密码修改</a></li>
+				<li class="border"></li>
+				<li class="nav1 nav cur"><a href="/root/user/"><i></i>查看所有用户</a></li>
+				<li class="border"></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<section class="index">
+				<div class="break"><a href="/root/">联盟成员收入管理系统</a>&gt;<a>查看所有用户</a></div>
+				<div class="main">
+					<div class="main-header">
+						查看所有用户
+					</div>
+					<div class="main-container">
+						<table>
+							<thead>
+								<tr>
+									<th>个人微信ID</th>
+									<th>邮箱</th>
+									<th>姓名</th>
+									<th>公众号名称</th>
+									<th>自媒体账号定位</th>
+									<th>自媒体介绍</th>
+									<th>用户属性介绍</th>
+									<th>运营者介绍</th>
+									<th>粉丝数</th>
+									<th>朋友圈通讯录</th>
+									<th>开户银行</th>
+									<th>银行全称</th>
+									<th>银行卡号</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for item in items %}
+									<tr {% if forloop.counter|divisibleby:2 %}class="dark"{% endif %}>
+										<td>{{ item.wechat }}</td>
+										<td>{{ item.mail }}</td>
+										<td>{{ item.name }}</td>
+										<td>{{ item.account }}</td>
+										<td>{{ item.mediatype }}</td>
+										<td>{{ item.mediapeople }}</td>
+										<td>{{ item.mediaattribute }}</td>
+										<td>{{ item.desc }}</td>
+										<td>{{ item.fans }}</td>
+										<td>{{ item.social }}</td>
+										<td>{{ item.bank }}</td>
+										<td>{{ item.bankname }}</td>
+										<td>{{ item.banknumber }}</td>
+										<td><a class="user-edit" href="/root/changeUser/{{ item.id }}/" target="_blank"></a><a class="user-delete" data="{{ item.id }}"></a></td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<div class="modal">
+				<img src="/static/root/images/delete-icon.png">
+				<div>
+					<p>确定删除此用户？<br/>
+用户删除将无法恢复，请三思啊！</p>
+					<a class="delete-user">确认删除</a>
+					<a class="cancel-button">取消</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				京ICP备13045368号-2 /北京市公安局朝阳分局 Copyright@2006-2015
+			</div>
+		</footer>
+		<script src="/static/root/js/jquery.js"></script>
+		<script src="/static/root/datepicker/js/zebra_datepicker.js"></script>
+		<script src="/static/root/js/min/index-min.js"></script>
+		<script src="/static/root/js/placeholders.min.js"></script>
+	</body>
+</html>

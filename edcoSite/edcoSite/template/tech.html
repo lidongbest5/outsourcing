@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Change tech | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/uploadify.css">
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script>
+    {% if status == 1 %}
+        alert("保存成功");
+    {% endif %}
+</script>
+</head>
+
+
+<body class="edco-tech change-form">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">Django administration</h1>
+
+        </div>
+        
+    </div>
+    <!-- END Header -->
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Change tech</h1>
+        <div id="content-main">
+            <input type="file" id="upload" name="upload"/>
+
+
+<form enctype="multipart/form-data" action="/root/saveTech/" method="post" id="tech_form"><input type='hidden' name='csrfmiddlewaretoken' value='cORHKPJaUNGW0ulf2iRldcVNZLlSN7Bf' />
+<div>
+
+
+
+
+
+
+    <fieldset class="module aligned ">
+        
+        
+        
+            <div class="form-row field-tech1">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech1">Tech1:</label>
+                            
+                                <input class="vTextField" id="id_tech1" maxlength="100" name="tech1" type="text" value="{{ item.tech1 }}"/>
+                                <a href="/static/upload/images/{{ item.tech1 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech1_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech1_ch">Tech1 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech1_ch" maxlength="100" name="tech1_ch" type="text"  value="{{ item.tech1_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech1_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech2">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech2">Tech2:</label>
+                            
+                                <input class="vTextField" id="id_tech2" maxlength="100" name="tech2" type="text"  value="{{ item.tech2 }}"/>
+                                <a href="/static/upload/images/{{ item.tech2 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech2_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech2_ch">Tech2 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech2_ch" maxlength="100" name="tech2_ch" type="text"  value="{{ item.tech2_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech2_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech3">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech3">Tech3:</label>
+                            
+                                <input class="vTextField" id="id_tech3" maxlength="100" name="tech3" type="text"  value="{{ item.tech3 }}"/>
+                                <a href="/static/upload/images/{{ item.tech3 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech3_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech3_ch">Tech3 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech3_ch" maxlength="100" name="tech3_ch" type="text"  value="{{ item.tech3_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech3_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech4">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech4">Tech4:</label>
+                            
+                                <input class="vTextField" id="id_tech4" maxlength="100" name="tech4" type="text"  value="{{ item.tech4 }}"/>
+                                <a href="/static/upload/images/{{ item.tech4 }}" target="_blank">preview</a>
+                            
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech4_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech4_ch">Tech4 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech4_ch" maxlength="100" name="tech4_ch" type="text"  value="{{ item.tech4_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech4_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech5">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech5">Tech5:</label>
+                            
+                                <input class="vTextField" id="id_tech5" maxlength="100" name="tech5" type="text"  value="{{ item.tech5 }}"/>
+                                <a href="/static/upload/images/{{ item.tech5 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech5_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech5_ch">Tech5 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech5_ch" maxlength="100" name="tech5_ch" type="text"  value="{{ item.tech5_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech5_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech6">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech6">Tech6:</label>
+                            
+                                <input class="vTextField" id="id_tech6" maxlength="100" name="tech6" type="text"  value="{{ item.tech6 }}"/>
+                                <a href="/static/upload/images/{{ item.tech6 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech6_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech6_ch">Tech6 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech6_ch" maxlength="100" name="tech6_ch" type="text"  value="{{ item.tech6_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech6_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech7">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech7">Tech7:</label>
+                            
+                                <input class="vTextField" id="id_tech7" maxlength="100" name="tech7" type="text"  value="{{ item.tech7 }}"/>
+                                <a href="/static/upload/images/{{ item.tech7 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech7_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech7_ch">Tech7 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech7_ch" maxlength="100" name="tech7_ch" type="text"  value="{{ item.tech7_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech7_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech8">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech8">Tech8:</label>
+                            
+                                <input class="vTextField" id="id_tech8" maxlength="100" name="tech8" type="text"  value="{{ item.tech8 }}"/>
+                                <a href="/static/upload/images/{{ item.tech8 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech8_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech8_ch">Tech8 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech8_ch" maxlength="100" name="tech8_ch" type="text"  value="{{ item.tech8_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech8_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech9">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech9">Tech9:</label>
+                            
+                                <input class="vTextField" id="id_tech9" maxlength="100" name="tech9" type="text"  value="{{ item.tech9 }}"/>
+                                <a href="/static/upload/images/{{ item.tech9 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech9_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech9_ch">Tech9 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech9_ch" maxlength="100" name="tech9_ch" type="text"  value="{{ item.tech9_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech9_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech10">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech10">Tech10:</label>
+                            
+                                <input class="vTextField" id="id_tech10" maxlength="100" name="tech10" type="text"  value="{{ item.tech10 }}"/>
+                                <a href="/static/upload/images/{{ item.tech10 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech10_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech10_ch">Tech10 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech10_ch" maxlength="100" name="tech10_ch" type="text"  value="{{ item.tech10_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech10_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech11">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech11">Tech11:</label>
+                            
+                                <input class="vTextField" id="id_tech11" maxlength="100" name="tech11" type="text"  value="{{ item.tech11 }}"/>
+                                <a href="/static/upload/images/{{ item.tech11 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech11_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech11_ch">Tech11 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech11_ch" maxlength="100" name="tech11_ch" type="text"  value="{{ item.tech11_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech11_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech12">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech12">Tech12:</label>
+                            
+                                <input class="vTextField" id="id_tech12" maxlength="100" name="tech12" type="text"  value="{{ item.tech12 }}"/>
+                                <a href="/static/upload/images/{{ item.tech12 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech12_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech12_ch">Tech12 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech12_ch" maxlength="100" name="tech12_ch" type="text"  value="{{ item.tech12_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech12_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech13">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech13">Tech13:</label>
+                            
+                                <input class="vTextField" id="id_tech13" maxlength="100" name="tech13" type="text"  value="{{ item.tech13 }}"/>
+                                <a href="/static/upload/images/{{ item.tech13 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech13_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech13_ch">Tech13 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech13_ch" maxlength="100" name="tech13_ch" type="text"  value="{{ item.tech13_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech13_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech14">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech14">Tech14:</label>
+                            
+                                <input class="vTextField" id="id_tech14" maxlength="100" name="tech14" type="text"  value="{{ item.tech14 }}"/>
+                                <a href="/static/upload/images/{{ item.tech14 }}" target="_blank">preview</a>  
+                            
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech14_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech14_ch">Tech14 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech14_ch" maxlength="100" name="tech14_ch" type="text"  value="{{ item.tech14_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech14_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech15">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech15">Tech15:</label>
+                            
+                                <input class="vTextField" id="id_tech15" maxlength="100" name="tech15" type="text"  value="{{ item.tech15 }}"/>
+                                <a href="/static/upload/images/{{ item.tech15 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech15_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech15_ch">Tech15 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech15_ch" maxlength="100" name="tech15_ch" type="text"  value="{{ item.tech15_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech15_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech16">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech16">Tech16:</label>
+                            
+                                <input class="vTextField" id="id_tech16" maxlength="100" name="tech16" type="text"  value="{{ item.tech16 }}"/>
+                                <a href="/static/upload/images/{{ item.tech16 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech16_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech16_ch">Tech16 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech16_ch" maxlength="100" name="tech16_ch" type="text"  value="{{ item.tech16_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech16_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech17">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech17">Tech17:</label>
+                            
+                                <input class="vTextField" id="id_tech17" maxlength="100" name="tech17" type="text"  value="{{ item.tech17 }}"/>
+                                <a href="/static/upload/images/{{ item.tech17 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech17_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech17_ch">Tech17 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech17_ch" maxlength="100" name="tech17_ch" type="text"  value="{{ item.tech17_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech17_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech18">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech18">Tech18:</label>
+                            
+                                <input class="vTextField" id="id_tech18" maxlength="100" name="tech18" type="text"  value="{{ item.tech18 }}"/>
+                                <a href="/static/upload/images/{{ item.tech18 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech18_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech18_ch">Tech18 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech18_ch" maxlength="100" name="tech18_ch" type="text"  value="{{ item.tech18_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech18_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech19">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech19">Tech19:</label>
+                            
+                                <input class="vTextField" id="id_tech19" maxlength="100" name="tech19" type="text"  value="{{ item.tech19 }}"/>
+                                <a href="/static/upload/images/{{ item.tech19 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech19_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech19_ch">Tech19 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech19_ch" maxlength="100" name="tech19_ch" type="text"  value="{{ item.tech19_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech19_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech20">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech20">Tech20:</label>
+                            
+                                <input class="vTextField" id="id_tech20" maxlength="100" name="tech20" type="text"  value="{{ item.tech20 }}"/>
+                                <a href="/static/upload/images/{{ item.tech20 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-tech20_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_tech20_ch">Tech20 ch:</label>
+                            
+                                <input class="vTextField" id="id_tech20_ch" maxlength="100" name="tech20_ch" type="text"  value="{{ item.tech20_ch }}"/>
+                                <a href="/static/upload/images/{{ item.tech20_ch }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+    </fieldset>
+
+
+<div class="submit-row">
+<input type="submit" value="Save" class="default" name="_save" />
+</div>
+
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/uploadify.js"></script>
+<script>
+    (function($){
+        $('#upload').uploadify ({
+            'swf'       : '/static/js/uploadify.swf',
+            'uploader'  : '/upload/', 
+            'cancelImage' : '/static/images/cancel.png',
+            'buttonClass' : 'btn',
+            'removeCompleted': true,
+            'fileTypeExts'   : '*.jpg;*.gif;*.png',
+            'multi'     : true,
+            'auto'    : true,
+            'buttonText': '上传图片',
+            'onUploadSuccess' : function (file, data, response) {
+                for(var i = 0;i < 20;i++){
+                    if($('.form-row input').eq(i).val() == ""){
+                        $('.form-row input').eq(i).val(data);
+                        $('.form-row a').eq(i).attr("href","/static/upload/images/"+data);
+                        break;
+                    }
+                }
+            }
+        });
+    })(jQuery)
+</script>
+</body>
+</html>

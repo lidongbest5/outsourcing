@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/root/css/index.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/root/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="noSession">
+		<header>
+			<div class="container">
+				<a class="logo" href="/root/"><img src="/static/root/images/logo.png"></a>
+				<span><i></i>400 817 9869 转 999</span>
+			</div>
+		</header>
+		<div class="wrapper">
+			<section class="register-success">
+				<img src="/static/root/images/success.png">
+				<p>
+					恭喜您注册成功，请等待<span>3</span>秒跳转首页登录<br/>
+					如无跳转，请点击<a href="/root/logout/">首页</a>
+				</p>
+			</section>
+		</div>
+		<footer>
+			<div class="container">
+				京ICP备13045368号-2 /北京市公安局朝阳分局 Copyright@2006-2015
+			</div>
+		</footer>
+		<script src="/static/root/js/jquery.js"></script>
+		<script src="/static/root/js/min/index-min.js"></script>
+		<script>
+			window.setTimeout(function(){
+				window.location.href = '/root/logout/';
+			},3000);
+		</script>
+	</body>
+</html>

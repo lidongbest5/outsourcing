@@ -1,0 +1,26 @@
+body {
+	padding:0;
+	margin:0;	
+	background:url(../images/bg_no.jpg);	
+	background-repeat:no-repeat;
+	background-position:100% 100%;
+	background-size:45%;
+}
+#pagewrap {
+	margin:0 auto; 
+	width:80%;
+	padding-top:60px;
+	padding-bottom:200px;
+}
+.notice_text {
+	width:280px; 
+	height:75px; 
+	line-height:50px;
+	padding-top:20px; 
+	text-align:center; 
+	font: bold 1em/100% "宋体";
+	color:#356db5;
+	background:url(../images/notice_bg.png) no-repeat; 
+	background-size:100%;
+	margin:0 auto;	
+}

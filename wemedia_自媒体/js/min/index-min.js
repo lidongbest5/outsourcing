@@ -1,0 +1,1 @@
+!function(){var n=$(".mobile-nav"),s=$("nav"),o=function(){a()},t=function(){var n=$(this);n.hasClass("toggle")?(n.removeClass("toggle"),s.css("left",-245)):(n.addClass("toggle"),s.css("left",0))},a=function(){n.on("touchend",t)};$(o)}();

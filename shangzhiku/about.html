@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>关于我们 - 尚智库管理顾问有限公司</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<a href="index.html"  class="logo"></a>
+				<div class="header-right">
+					<a class="home" href="index.html" ></a>
+					<a class="teacher" href="teacher.html" >师资力量</a>
+					<a class="company" href="enterprise.html" >公司介绍</a>
+					<a class="hire" href="hire1.html" >诚聘英才</a>
+					<a class="about current" href="about.html" >关于我们</a>
+				</div>
+			</div>
+		</header>
+		<div class="about-detail">
+			<div class="container">
+				<h2>About Us <span>关于我们</span></h2>
+				<div class="map" id="map"></div>
+				<div class="address">
+					地址：北京市昌平区回龙观育知东路30号院首开智慧社1号楼1单元1208.  <br/>
+					邮编：102209<br/>
+					传真：010-84477790
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				尚智库管理顾问有限公司   010-8447 7790   京ICP证 0129384
+			</div>
+		</footer>
+		<script src="js/jquery.js"></script>
+		<script src="js/min/index-min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+		<script type="text/javascript">
+		    var map = new BMap.Map("map");        
+		    var point = new BMap.Point(116.343634, 40.078618);    
+		    map.centerAndZoom(point,15);                    
+		    map.enableScrollWheelZoom();                          
+		    
+		    map.addControl(new BMap.NavigationControl());  
+		    map.addControl(new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}));  
+		    map.addControl(new BMap.NavigationControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT, type: BMAP_NAVIGATION_CONTROL_PAN}));  
+		    map.addControl(new BMap.NavigationControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT, type: BMAP_NAVIGATION_CONTROL_ZOOM}));  
+
+		    var marker = new BMap.Marker(point);  
+		    map.addOverlay(marker);              
+		    marker.setAnimation(BMAP_ANIMATION_BOUNCE); 
+
+		    var label = new BMap.Label("北京尚智库管理顾问有限公司<br/>邮编：102209<br/>传真：010-84477790",{offset:new BMap.Size(20,-30)});
+		    marker.setLabel(label);
+		</script>
+	</body>
+</html>

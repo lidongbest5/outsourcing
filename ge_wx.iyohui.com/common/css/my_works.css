@@ -1,0 +1,39 @@
+
+body{font-size: 62.5%;background:url(../images/bg.gif) no-repeat;background-position:right bottom;}
+.clear{clear:both}
+*{margin:0px;padding:0px;border:0px; font-family:"GE汉仪中圆简";}
+#pagewrap{width:100%;height:auto;}
+#page{width:93%;margin:0 auto;}
+#top{width:100%;height:auto;}
+
+
+#seanson{width:100%;margin-bottom: 2em}
+.show{width:100%;border:0.1em solid #E8E7E8;border-radius:0.5em;-moz-border-radius:0.5em;margin-top:1em;background-color:#FFFFFF}
+
+.my{width:95%;position:relative;margin: 0 auto;margin-top:1.2em }
+.my_tus{width:100%;position:relative;}
+.my_tu{width:100%;}
+.my_text{
+	width:100%;
+	position:absolute;
+	bottom:0.3em;
+	background: #000000;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+	padding:1em  0em 1em 0em;
+}
+.my_text_c{width:65%;color:#fff;text-align:left;height: 100%;float: left;margin-left:1em;font-size:1.1em  }
+.my_date{width:25%;float: right;color:#fff;text-align: center;font-size:1.1em}
+
+.close{width:4em;position:absolute;top:0px;right:0.1em}
+
+.img{width:100%}
+
+.suoshu{width: 95%;text-align: center;margin: 0 auto;color:#A7A3A1;font-size: 1.3em;margin-top: 0.5em}
+.ren{float: left;margin-left:0.3em}
+.zan{float: right;margin-right:0.3em }
+.xin{width: 1em;float: right;margin-left: 1em}
+
+.del_bt{margin: 10px auto; width:180px;}

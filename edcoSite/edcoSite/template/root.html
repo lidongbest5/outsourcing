@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Change promotion | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+
+
+<body class="edco-promotion change-form">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">Django administration</h1>
+
+        </div>
+        
+        
+    </div>
+    <!-- END Header -->
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Root select</h1>
+        <div id="content-main">
+        <ul>
+            <li><a href="/root/addProduct/" target="_blank">添加产品</a></li>
+            <li>修改产品,请输入产品id<input type="text" class="pro" style="margin-left:10px;"><a href="" target="_blank" class="go" style="margin-left:10px;">go</a></li>
+        	<li>删除产品,请输入产品id<input type="text" class="pro_del" style="margin-left:10px;"><a href="" target="_blank" class="go_del" style="margin-left:10px;">go</a></li>
+        	<li><a href="/root/setSlide/" target="_blank">设置首页slide</a></li>
+        	<li><a href="/root/setIndexProduct/" target="_blank">设置首页8个展示产品(输入产品id,产品最终页的url的最后一个参数就是产品id)</a></li>
+        	<li><a href="/root/setRecomment/" target="_blank">设置产品页下4个推荐产品(输入产品id)</a></li>
+        	<li><a href="/root/setTech/" target="_blank">设置科技类型图片(按列表顺序上传）</a></li>
+        	<li><a href="/root/setColor/" target="_blank">设置产品颜色(写入相应的色值即可）</a></li>
+        	<li><a href="/root/setPromotion/" target="_blank">设置品牌推广页信息</a></li>
+        </ul>
+
+</div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+<script src="/static/js/jquery.js"></script>
+<script>
+    (function($){
+        $('.pro').on('keyup',function(){
+            $('.go').attr("href",'/root/changeProduct/'+$(this).val()+'/');
+        });
+        $('.pro_del').on('keyup',function(){
+            $('.go_del').attr("href",'/root/deleteProduct/'+$(this).val()+'/');
+        });
+    })(jQuery)
+</script>
+</body>
+</html>

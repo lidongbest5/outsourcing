@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}黑鹿角西餐 - 首页{% endblock %}
+{% block content %}
+	<section class="banner">
+		<div class="banner-container">
+			<div>
+				{% if slide.slide1 != 'None' %}
+					<img src="{{ slide.slide1 }}">
+				{% endif %}
+				{% if slide.slide2 != 'None' %}
+					<img src="{{ slide.slide2 }}">
+				{% endif %}
+				{% if slide.slide3 != 'None' %}
+					<img src="{{ slide.slide3 }}">
+				{% endif %}
+				{% if slide.slide4 != 'None' %}
+					<img src="{{ slide.slide4 }}">
+				{% endif %}
+				{% if slide.slide5 != 'None' %}
+					<img src="{{ slide.slide5 }}">
+				{% endif %}
+				{% if slide.slide6 != 'None' %}
+					<img src="{{ slide.slide6 }}">
+				{% endif %}
+				{% if slide.slide7 != 'None' %}
+					<img src="{{ slide.slide7 }}">
+				{% endif %}
+				{% if slide.slide8 != 'None' %}
+					<img src="{{ slide.slide8 }}">
+				{% endif %}
+				{% if slide.slide9 != 'None' %}
+					<img src="{{ slide.slide9 }}">
+				{% endif %}
+				{% if slide.slide10 != 'None' %}
+					<img src="{{ slide.slide10 }}">
+				{% endif %}
+			</div>
+		</div>
+		<div class="banner-dots">
+			{% for item in num %}
+				<a {% if forloop.counter == 1 %}class="cur"{% endif %} data-id="{{ forloop.counter }}"></a>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="tips1">
+		<div class="container">
+			<p>我们倡导“慢食”<br/>希望大家可以在，慢慢的烹饪时光中，细细的享受美食慰籍</p>
+			<p>慢一点<br/>让我们学会放松，让生活恢复平衡</p>
+			<h2>“用心制作，慢享生活”</h2>
+		</div>
+	</section>
+	<section class="tips2">
+		<img src="/static/images/index1.jpg">
+	</section>
+	<section class="tips3">
+		<div class="container">
+			<ul>
+				<li><img src="/static/images/tip-img1.png"><span>探寻全球美食<br/>每月更新精选</span></li>
+				<li><img src="/static/images/tip-img2.png"><span>提供新鲜食材<br/>无需费时采购</span></li>
+				<li><img src="/static/images/tip-img3.png"><span>附赠详细食谱<br/>没压力轻松烹饪</span></li>
+				<li><img src="/static/images/tip-img4.png"><span>网上简单订购<br/>快递送货上门</span></li>
+				<li><img src="/static/images/tip-img5.png"><span>多种支付<br/>方式方便消费</span></li>
+			</ul>
+		</div>
+	</section>
+	<section class="tips4">
+		<img src="/static/images/index2.jpg">
+	</section>
+	<section class="tips5">
+		<div class="container">
+			<img src="/static/images/index-tip2.png">
+		</div>
+	</section>
+	<section class="tips6">
+		<div class="container">
+			<img src="/static/images/index-tip3.jpg">
+			<!-- <div class="footer-tip1">
+				<h3><span>01</span>Every Order, We donate a Meal</h3>
+				<p>When you order, we provide a <br/>meal for someone in need.</p>
+			</div>
+			<div class="footer-tip2">
+				<h3><span>02</span>Food by the Best Local Chefs</h3>
+				<p>A vast variety of restaurant-quality <br/>prepared meals, handmade fresh each<br/>day using the finest, natural ingreddients.</p>
+			</div>
+			<div class="footer-tip3">
+				<h3><span>03</span>Amazing fresh Beverages</h3>
+				<p>We can't reinvent the weeknight dinner<br/> without something to wash it down.</p>
+			</div>
+			<div class="footer-tip4">
+				<h3><span>04</span>Echo-frendly Everything</h3>
+				<p>We are greeting our footprint in every<br/> way, even down to our 100% recycled<br/> fiber bag.</p>
+			</div>
+			<div class="footer-tip5">
+				<h3><span>05</span>Innovative Sustainable Packaging</h3>
+				<p>Our trays are made from all natural and<br/> renewable plant fibers(bamboo &<br/> sugarcane). They're compostable and<br/> blodegradables as well as oven and<br/> microwave safe.</p>
+			</div> -->
+		</div>
+	</section>
+{% endblock %}

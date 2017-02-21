@@ -1,0 +1,328 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html{color:#000;background:#FFF;font-family: 'Microsoft Yahei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-size:medium;font-style:normal;font-weight:normal;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block;}
+
+/* =General
+-----------------------------------------------------------------------------*/
+/*** Location ***/
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin:0 auto;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+/* Class for clearing floats */
+.clearfix:after {content:"."; height:0; visibility:hidden; display:block; clear:both;}
+* html .clear {height:1%;}
+.clearfix {display:block;}
+/* End clearing floats */
+.vm{vertical-align:middle;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.zoom{zoom:1;}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+a:link, a:visited{ text-decoration: none;}
+
+body{
+	overflow: hidden;
+	background-color: #c9c6c5;
+}
+.main{
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg.png) center bottom no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+}
+header{
+	width: 100%;
+	background: url(../images/header.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+.content-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.content{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+}
+.row{
+	font-size: 0;
+}
+.row-block{
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+}
+.row-block img{
+	width: 98%;
+	height: 98%;
+	box-shadow: 3px 3px 3px #b4aaab;
+}
+.time, .point{
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	color: #1f70b9;
+	font-size: 1.4em;
+	font-weight: 600;
+	z-index: 10000;
+	text-shadow: 1px 1px white;
+}
+.point{
+	top: 85px;
+	right: 24px;
+}
+.failure-modal{
+	width: 200px;
+	padding: 20px 0;
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 10000;
+	text-align: center;
+	border: 1px solid black;
+	background: white;
+	display: none;
+}
+.failure-modal a{
+	padding: 10px;
+	border: 1px solid black;
+	display: block;
+	width: 66px;
+	margin: 10px auto 0 auto;
+}
+.minus-account, .plus-account, .multi-account{
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	color: white;
+	font-size: 1.4em;
+	font-weight: 600;
+}
+.minus-account{
+	top: 20px;
+	left: 58px;
+}
+.plus-account{
+	top: 20px;
+	left: 167px;
+}
+.multi-account{
+	top: 20px;
+	left: 271px;
+}
+
+.index-page{
+	width: 100%;
+	height: 100%;
+	background: url(../images/loading.jpg) no-repeat;
+	background-size: cover;
+}
+.index-main{
+	width: 100%;
+	height: 100%;
+	background: url(../images/index_bg.jpg) no-repeat;
+	background-size: cover;
+	display: none;
+	text-align: center;
+}
+.index-info{
+	padding-top: 9em;
+	font-size: 1.1em;
+	color: #2266be;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.index-info span{
+	display: inline-block;
+	margin: 0 2px;
+	font-weight: 600;
+	font-size: 1.2em;
+}
+.index-btn{
+	padding: 20px 0;
+	width: 152px;
+	margin: 0 auto;
+}
+.index-btn a{
+	display: block;
+	margin-bottom: 10px;
+	width: 150px;
+	color: #2266be;
+	border: 1px solid #c0bfbf;
+	border-radius: 4px;
+	padding: 5px 0;
+	font-size: 1.2em;
+	background: #e6e6e6;
+}
+.modal{
+	width: 180px;
+	border: 2px solid #920783;
+	border-radius: 5px;
+	background: #fff;
+	position: absolute;
+	z-index: 99;
+	top: 100px;
+	left: 50%;
+	margin-left: -90px;
+	font-size: 1.2em;
+	display: none;
+}
+.modal h3{
+	color: #920783;
+	margin: 10px 0;
+}
+.modal li{
+	margin-bottom: 10px;
+}
+.dep1{
+	color: #e60012;
+}
+.dep2{
+	color: #2266be;
+}
+.dep3{
+	color: #90c31f;
+}
+.dep4{
+	color: #c39a1f;
+}
+.dep5{
+	color: #626262;
+}
+
+.rule{
+	width: 100%;
+	height: 100%;
+	background: url(../images/score_bg.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+	background-color: #d4d2d1;
+}
+.rule img{
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 4em;
+}
+
+.score{
+	width: 100%;
+	height: 100%;
+	background: url(../images/score_bg.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+	background-color: #d4d2d1;
+}
+.score-index{
+	padding-top: 8em;
+	font-size: 1.1em;
+	color: #2266be;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.score-index p:first-child{
+	border-bottom: 1px solid #2266be;
+	padding-bottom: 10px;
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.fail{
+	width: 100%;
+	height: 100%;
+	background: url(../images/score_bg.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+	background-color: #d4d2d1;
+}
+.fail-index{
+	padding-top: 8em;
+	font-size: 1.1em;
+	color: #2266be;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.fail-index h2{
+	color: #626262;
+	font-size: 1.3em;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.invite{
+	width: 100%;
+	height: 100%;
+	background: url(../images/score_bg.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+	background-color: #d4d2d1;
+}
+.invite-index{
+	padding-top: 8em;
+	font-size: 1.1em;
+	color: #2266be;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.invite-index p{
+	margin-bottom: 15px;
+}
+.invite-index input{
+	width: 60%;
+	margin: 0 auto;
+	height: 26px;
+	padding: 2px;
+	border-radius: 4px;
+	border: 1px solid #626262;
+}
+.ad{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	height: 20px;
+	z-index: 99999;
+	font-size: 1em;
+}
+.ad-wrapper{
+	width: 99999px;
+	height: 20px;
+	background: rgba(34, 39, 41, 0.5);
+	color: white;
+}
+.ad-con{
+	display: inline-block;
+}

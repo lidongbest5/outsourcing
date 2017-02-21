@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  font-size: 14px;
+  font-family: Microsoft Yahei;
+}
+li{
+  list-style: none;
+}
+img{
+  border:none;
+  outline:none;
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+}
+input, textarea {
+  outline: none;
+  font-family: Microsoft Yahei;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; 
+}
+.clearfix{
+  zoom:1;
+}

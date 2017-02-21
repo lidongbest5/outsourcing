@@ -1,0 +1,10 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+{insert_scripts files='utils.js'}
+<link rel="stylesheet" type="text/css" href="../themes/default/css/index.css">
+{insert name='header'}
+
+
+

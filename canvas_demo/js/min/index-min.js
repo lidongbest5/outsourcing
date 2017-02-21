@@ -1,0 +1,1 @@
+!function(){var n=function(){t(),a()},t=function(){var n=$(".canvas")[0];if(null==n)return!1;var t=n.getContext("2d");t.beginPath(),t.arc(250,250,100,Math.PI,2*Math.PI,!0),t.closePath(),t.fillStyle="rgba(0,255,0,0.25)",t.fill()},a=function(){};$(n)}();

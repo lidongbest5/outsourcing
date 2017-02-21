@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/uploadify.css">
+	</head>
+	<body>
+		<input type="file" id="id_upload" name="upload"/>
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/uploadify.js"></script>
+		<script>
+			$(document).ready(function(){
+			    //批量上传按钮
+			    $('#id_upload').uploadify ({
+			        'swf'		: '/static/js/uploadify.swf',
+			        'uploader' 	: '/upload/', 
+			        'cancelImage' : '/static/images/cancel.png',
+			        'buttonClass' : 'btn',
+			        'removeCompleted': true,
+			        'fileTypeExts'   : '*.jpg;*.gif;*.png',
+			        'multi'		: true,
+			        'auto'    : true,
+			        'buttonText': '添加图片',
+			        'onUploadSuccess' : function (file, data, response) {
+			            $("#instructions").before("<img src='/media/{{request.user.id}}/"+data+"' />")
+			        }
+			    });
+			})
+		</script>
+	</body>
+</html>

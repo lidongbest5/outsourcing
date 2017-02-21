@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-size: 62.5%;
+	background:url(/common/images/bg1.gif) no-repeat;
+	background-position:100% 80%;
+}
+a{ text-decoration:none;}
+.clear{clear:both}
+*{margin:0px;padding:0px;border:0px; font-family:"GE汉仪中圆简";}
+#pagewrap{width:100%;height:auto;}
+#page{width:93%;margin:0 auto;}
+#top{width:100%;height:auto;}
+
+#ground{float:left;width:100%;}	
+#bold_title{font-size:2.5em;text-align:left;margin-top:0.5em;float:left;display:block;width:100%}
+#bold_title a{color:#0957A7;text-decoration:underline;}
+.normal_title {float:left;display:block;margin-right:0.5em;text-align:left;font-size:2.2em;margin-top:0.3em;}
+.normal_title a{color: #666;text-decoration:underline;}
+#descript{color:#999;width:100%;font-size:14px;float:left;text-align:left;margin:0 auto;margin-top:0.5em;}
+#content{width:100%;border:1px solid #E8E7E8;border-radius:0.5em;-moz-border-radius:0.5em;margin:0 auto;padding-top:1em;margin-bottom:1em;background-color:#FFF}
+/*.show{float:left;width:46%;margin:1.2em;margin-right:0;margin-top:0em}*/
+
+
+.show_text{width:100%;text-align:left;font-size:1.5em; color:#6C6563; margin-bottom:10px;}
+
+.zan{ cursor:pointer;width:0.9em;vertical-align:top;display:black;padding-top:0.15em}
+
+.my_bt {float:right;margin-top:6px;}
+.my_bt input{ width:100px;}

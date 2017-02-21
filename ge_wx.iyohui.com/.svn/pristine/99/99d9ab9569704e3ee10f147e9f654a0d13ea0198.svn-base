@@ -1,0 +1,54 @@
+@charset "utf-8";
+body {
+	font-size: 0.8em/80%;
+	font-family: "微软雅黑";
+	margin:0;
+	background:#fafafa;
+}
+.clear {
+	clear:left;	
+}
+
+@media screen and (min-width:320px) {
+	#pagewrap {
+		width:320px;
+		height:auto;
+		min-height:480px;
+		margin:0 auto;
+		background-size:100% 100%;
+		background:#ffffff;
+		background:url(../images/bg_1.png) bottom right no-repeat #ffffff;
+	}
+	#top {
+		width:320px;
+		height:50px;
+	}
+	#content {
+		margin:0 auto;
+		width:290px;
+		height:350px;
+		border:1px solid #ccc;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+	}
+	#title{
+		height:50px;
+		line-height:50px;
+		text-align:center;
+		font-size:14px;
+		font-weight:bold;
+		font-family:"微软雅黑";
+	}
+	#detail{
+		height:200px;
+	}
+	.detail_img{
+		width:272px;
+		height:152px;
+		margin:0 auto;
+	}
+	
+	
+}
+/*max-width  小于359宽度*/

@@ -1,0 +1,35 @@
+<footer>
+	<div class="footer-container">
+		{% if language != None and language == 'chinese' %}
+			<ul class="footer-list clearfx ch">
+				<a href="/"><li class="cur">主页</li></a>
+				<a href="/products/"><li>产品</li></a>
+				<a href="/brandStory/"><li>品牌故事</li></a>
+				<a href="/culture/"><li>品牌文化</li></a>
+				<a href="/technology/"><li>产品科技</li></a>
+				<a href="/brandPromotion/"><li>品牌推广</li></a>
+				<a href="/contact/"><li>联系我们</li></a>
+				<a href="/member/"><li>会员</li></a>
+			</ul>
+		{% else %}
+			<ul class="footer-list clearfx">
+				<a href="/"><li class="cur">HOME</li></a>
+				<a href="/products/"><li>PRODUCTS</li></a>
+				<a href="/brandStory/"><li>BRAND STORY</li></a>
+				<a href="/culture/"><li>CULTURE</li></a>
+				<a href="/technology/"><li>TECHNOLOGY</li></a>
+				<a href="/brandPromotion/"><li>BRAND PROMOTION</li></a>
+				<a href="/contact/"><li>CONTACT US</li></a>
+				<a href="/member/"><li>MEMBER</li></a>
+			</ul>
+		{% endif %}
+		<ul class="footer-share">
+			<img src="/static/images/share.png">
+		</ul>
+		{% if language != None and language == 'chinese' %}
+		<p>艾德克（北京）户外用品有限公司 营业执照号：110101015781739  京ICP备13050349号 Copyright © 2013-2014 <span>EDCO</span> edco.cn All Rights Reserved</p>
+		{% else %}
+		<p>EDCO(Beijing) outdoor products co., ltd Enterprise Entity Business License: 110101015781739  京ICP备13050349号 Copyright © 2013-2014 <span>EDCO</span> edco.cn All Rights Reserved</p>
+		{% endif %}
+	</div>
+</footer>

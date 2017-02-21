@@ -1,0 +1,63 @@
+header{
+	width: 100%;
+	height: 20px;
+	font-size: 1.25em;
+	text-align: center;
+	line-height: 1.25em;
+}
+.loading{
+	text-align: center;
+	margin-top: 20px;
+	/*display: none;*/
+}
+.main{
+	display: none;
+	width: 100%;
+	overflow: hidden;
+}
+.info{
+	width: 100%;
+	height: 40px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.info .remain{
+	width: 75%;
+	height: 100%;
+	float: left;
+	line-height: 38px;
+}
+.info .game-button{
+	width: 24%;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+	border: 1px solid black;
+	line-height: 38px;
+}
+.container{
+	width: 100%;
+	position: relative;
+}
+.items{
+	border: 1px solid black;
+	padding: 5px;
+	display: inline-block;
+	position: absolute;
+	width: 43px;
+	top: 0;
+	left: 0;
+}
+.rewards{
+	width: 100%;
+	height: 50px;
+	overflow: auto;
+	position: relative;
+}
+.tips{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: red;
+}

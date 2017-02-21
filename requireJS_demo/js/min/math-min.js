@@ -1,0 +1,1 @@
+define(["jquery"],function($){function n(){alert("1")}return{foo:n}});

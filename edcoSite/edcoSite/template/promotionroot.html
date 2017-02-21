@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Change promotion | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/uploadify.css">
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script>
+    {% if status == 1 %}
+        alert("保存成功");
+    {% endif %}
+</script>
+</head>
+
+
+<body class="edco-promotion change-form">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">Django administration</h1>
+
+        </div>
+        
+        
+    </div>
+    <!-- END Header -->
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Change promotion</h1>
+        <div id="content-main">
+
+
+<form enctype="multipart/form-data" action="/root/savePromotion/" method="post" id="promotion_form"><input type='hidden' name='csrfmiddlewaretoken' value='cORHKPJaUNGW0ulf2iRldcVNZLlSN7Bf' />
+<div>
+
+
+
+
+<input type="file" id="upload" name="upload"/>
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-img1">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img1">Img1:</label>
+                        
+                            <input class="vTextField" id="id_img1" maxlength="100" name="img1" type="text" value="{{ item.img1 }}"/>
+                            <a href="/static/upload/images/{{ item.img1 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img2">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img2">Img2:</label>
+                        
+                            <input class="vTextField" id="id_img2" maxlength="100" name="img2" type="text"  value="{{ item.img2 }}"/>
+                            <a href="/static/upload/images/{{ item.img2 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img3">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img3">Img3:</label>
+                        
+                            <input class="vTextField" id="id_img3" maxlength="100" name="img3" type="text"  value="{{ item.img3 }}"/>
+                            <a href="/static/upload/images/{{ item.img3 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img4">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img4">Img4:</label>
+                        
+                            <input class="vTextField" id="id_img4" maxlength="100" name="img4" type="text"  value="{{ item.img4 }}"/>
+                            <a href="/static/upload/images/{{ item.img4 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img5">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img5">Img5:</label>
+                        
+                            <input class="vTextField" id="id_img5" maxlength="100" name="img5" type="text"  value="{{ item.img5 }}"/>
+                            <a href="/static/upload/images/{{ item.img5 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img6">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img6">Img6:</label>
+                        
+                            <input class="vTextField" id="id_img6" maxlength="100" name="img6" type="text"  value="{{ item.img6 }}"/>
+                            <a href="/static/upload/images/{{ item.img6 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img7">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img7">Img7:</label>
+                        
+                            <input class="vTextField" id="id_img7" maxlength="100" name="img7" type="text"  value="{{ item.img7 }}"/>
+                            <a href="/static/upload/images/{{ item.img7 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img8">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_img8">Img8:</label>
+                        
+                            <input class="vTextField" id="id_img8" maxlength="100" name="img8" type="text"  value="{{ item.img8 }}"/>
+                            <a href="/static/upload/images/{{ item.img8 }}" target="_blank">preview</a>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity1_title">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity1_title">Activity1 title:</label>
+                        
+                            <input class="vTextField" id="id_activity1_title" maxlength="256" name="activity1_title" type="text"  value="{{ item.activity1_title }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity1_content">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity1_content">Activity1 content:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_activity1_content" name="activity1_content" rows="10"  value="{{ item.activity1_content }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity1_title_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity1_title_ch">Activity1 title ch:</label>
+                        
+                            <input class="vTextField" id="id_activity1_title_ch" maxlength="256" name="activity1_title_ch" type="text" value="{{ item.activity1_title_ch }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity1_content_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity1_content_ch">Activity1 content ch:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_activity1_content_ch" name="activity1_content_ch" rows="10"value="{{ item.activity1_content_ch }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity2_title">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity2_title">Activity2 title:</label>
+                        
+                            <input class="vTextField" id="id_activity2_title" maxlength="256" name="activity2_title" type="text" value="{{ item.activity2_title }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity2_content">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity2_content">Activity2 content:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_activity2_content" name="activity2_content" rows="10" value="{{ item.activity2_content }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity2_title_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity2_title_ch">Activity2 title ch:</label>
+                        
+                            <input class="vTextField" id="id_activity2_title_ch" maxlength="256" name="activity2_title_ch" type="text" value="{{ item.activity2_title_ch }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity2_content_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity2_content_ch">Activity2 content ch:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_activity2_content_ch" name="activity2_content_ch" rows="10" value="{{ item.activity2_content_ch }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity3_title">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity3_title">Activity3 title:</label>
+                        
+                            <input class="vTextField" id="id_activity3_title" maxlength="256" name="activity3_title" type="text" value="{{ item.activity3_title }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity3_content">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity3_content">Activity3 content:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_activity3_content" name="activity3_content" rows="10" value="{{ item.activity3_content }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity3_title_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity3_title_ch">Activity3 title ch:</label>
+                        
+                            <input class="vTextField" id="id_activity3_title_ch" maxlength="256" name="activity3_title_ch" type="text" value="{{ item.activity3_title_ch }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-activity3_content_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_activity3_content_ch">Activity3 content ch:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_activity3_content_ch" name="activity3_content_ch" rows="10" value="{{ item.activity3_content_ch }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public1_title">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public1_title">Public1 title:</label>
+                        
+                            <input class="vTextField" id="id_public1_title" maxlength="256" name="public1_title" type="text" value="{{ item.public1_title }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public1_content">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public1_content">Public1 content:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_public1_content" name="public1_content" rows="10" value="{{ item.public1_content }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public1_title_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public1_title_ch">Public1 title ch:</label>
+                        
+                            <input class="vTextField" id="id_public1_title_ch" maxlength="256" name="public1_title_ch" type="text" value="{{ item.public1_title_ch }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public1_content_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public1_content_ch">Public1 content ch:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_public1_content_ch" name="public1_content_ch" rows="10" value="{{ item.public1_content_ch }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public2_title">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public2_title">Public2 title:</label>
+                        
+                            <input class="vTextField" id="id_public2_title" maxlength="256" name="public2_title" type="text" value="{{ item.public2_title }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public2_content">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public2_content">Public2 content:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_public2_content" name="public2_content" rows="10" value="{{ item.public2_content }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public2_title_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public2_title_ch">Public2 title ch:</label>
+                        
+                            <input class="vTextField" id="id_public2_title_ch" maxlength="256" name="public2_title_ch" type="text" value="{{ item.public2_title_ch }}"/>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public2_content_ch">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_public2_content_ch">Public2 content ch:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_public2_content_ch" name="public2_content_ch" rows="10" value="{{ item.public2_content_ch }}">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+<input type="submit" value="Save" class="default" name="_save" />
+</div>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/uploadify.js"></script>
+<script>
+    (function($){
+        $('#upload').uploadify ({
+            'swf'       : '/static/js/uploadify.swf',
+            'uploader'  : '/upload/', 
+            'cancelImage' : '/static/images/cancel.png',
+            'buttonClass' : 'btn',
+            'removeCompleted': true,
+            'fileTypeExts'   : '*.jpg;*.gif;*.png',
+            'multi'     : true,
+            'auto'    : true,
+            'buttonText': '上传图片',
+            'onUploadSuccess' : function (file, data, response) {
+                for(var i = 0;i < 20;i++){
+                    if($('.form-row input').eq(i).val() == ""){
+                        $('.form-row input').eq(i).val(data);
+                        $('.form-row a').eq(i).attr("href","/static/upload/images/"+data);
+                        break;
+                    }
+                }
+            }
+        });
+    })(jQuery)
+</script>
+</body>
+</html>

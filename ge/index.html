@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+        <div class="loading"></div>
+        <div class="page1 pt-page">
+        	<img src="images/logo.png" class="logo" width="82">
+        	<img src="images/slogan.png" class="slogan" width="105"> 
+        	<img src="images/index-title.png" class="title" width="238">
+        	<div class="index-map">
+        		<div class="index-data">
+        			<div>总公里数:<span id="count1">2323</span>公里</div>
+        			<div>参与人数:<span id="count2">2323</span>人</div>
+        			<div>传递跨越:<span id="count3">2323</span>个省市</div>
+        		</div>
+        	</div>
+        	<img src="images/index-bottom.png" class="bottom" width="155">
+        </div>
+        <div class="page2 pt-page">
+            <div class="map">
+                <div id="map_container"></div>
+            </div>
+            <div class="map_controller">
+                <span>放大地图点击相应地区查看传递详情</span>
+                <div>
+                    <a class="map-zoomin"></a>
+                    <i></i>
+                    <a class="map-zoomout"></a>
+                </div>
+            </div>
+            <div class="info-holder">
+                <div class="blue-block"></div>
+                <img src="images/people.png" class="people" width="16">
+                <span>被点名人SSO: 341343454</span>
+                <div class="info-right">
+                    倒计时<span id="count4">23</span>天
+                </div>
+            </div>
+            <div class="info-btn">
+                <a class="btn1">查看所有<br/>非凡故事</a>
+                <a class="btn2">活动<br/>介绍</a>
+                <a class="btn3">我要<br/>参与传递</a>
+            </div>
+            <div class="info-bottom">
+                <a class="back-to-home"><i></i>返回主页</a> 
+                <a class="back-to-prev"><i></i>返回上一页</a> 
+            </div>
+        </div>
+        <div class="page3 pt-page">
+            <div class="detail-holder">
+                <div class="detail">
+                    <img src="images/hebei.jpg" width="272">
+                    <div class="detail-info">
+                        <div class="detail-left">
+                            总公里数:<span id="count5">2323</span>公里
+                        </div>
+                        <div class="detail-right">
+                            参与人数:<span id="count6">2323</span>人
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-func">
+                <a><img src="images/location.png" width="68" class="location"><span>查看当地<br/>非凡故事</span></a>
+                <a><img src="images/pass.png" width="68" class="pass"><span>我要<br/>参与传递</span></a>
+                <a><img src="images/submits.png" width="68" class="submits"><span>查看<br/>我的提交</span></a>
+            </div>
+            <div class="info-bottom">
+                <a class="back-to-home"><i></i>返回主页</a> 
+                <a class="back-to-prev"><i></i>返回上一页</a> 
+            </div>
+        </div>
+        <script src="js/zepto.min.js"></script>
+        <script src="js/raphael-min.js"></script>
+        <script src="js/countUp.min.js"></script>
+        <script src="js/min/map-min.js"></script>
+        <script src="js/min/index-min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    <head>
+        <title>
+            Add product | Django site admin
+        </title>
+        <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css"
+        />
+        <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css"
+        />
+        <link rel="stylesheet" type="text/css" href="/static/css/uploadify.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/add.css">
+        <!--[if lte IE 7]>
+            <link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css"
+            />
+        <![endif]-->
+        <script type="text/javascript">
+            window.__admin_media_prefix__ = "/static/admin/";
+            {% if status = 1 %}
+                alert("添加成功");
+            {% endif %}
+        </script>
+        <meta name="robots" content="NONE,NOARCHIVE" />
+    </head>
+    
+    <body class="edco-product change-form">
+        <!-- Container -->
+        <div id="container">
+            <!-- Header -->
+            <div id="header">
+                <div id="branding">
+                    <h1 id="site-name">
+                        Django administration
+                    </h1>
+                </div>
+            </div>
+            <!-- END Header -->
+            <!-- Content -->
+            <div id="content" class="colM">
+                <h1>
+                    Add product
+                </h1>
+                <div id="content-main">
+                    <div class="color">
+                        <h3>选择产品颜色</h3>
+                        <ul class="color-list clearfix">
+                            {% if color.color1 %}
+                            <li data="{{ color.color1 }}" style="background:{{ color.color1 }}"></li>
+                            {% endif %}
+                            {% if color.color2 %}
+                            <li data="{{ color.color2 }}" style="background:{{ color.color2 }}"></li>
+                            {% endif %}
+                            {% if color.color3 %}
+                            <li data="{{ color.color3 }}" style="background:{{ color.color3 }}"></li>
+                            {% endif %}
+                            {% if color.color4 %}
+                            <li data="{{ color.color4 }}" style="background:{{ color.color4 }}"></li>
+                            {% endif %}
+                            {% if color.color5 %}
+                            <li data="{{ color.color5 }}" style="background:{{ color.color5 }}"></li>
+                            {% endif %}
+                            {% if color.color6 %}
+                            <li data="{{ color.color6 }}" style="background:{{ color.color6 }}"></li>
+                            {% endif %}
+                            {% if color.color7 %}
+                            <li data="{{ color.color7 }}" style="background:{{ color.color7 }}"></li>
+                            {% endif %}
+                            {% if color.color8 %}
+                            <li data="{{ color.color8 }}" style="background:{{ color.color8 }}"></li>
+                            {% endif %}
+                            {% if color.color9 %}
+                            <li data="{{ color.color9 }}" style="background:{{ color.color9 }}"></li>
+                            {% endif %}
+                            {% if color.color10 %}
+                            <li data="{{ color.color10 }}" style="background:{{ color.color10 }}"></li>
+                            {% endif %}
+                            {% if color.color11 %}
+                            <li data="{{ color.color11 }}" style="background:{{ color.color11 }}"></li>
+                            {% endif %}
+                            {% if color.color12 %}
+                            <li data="{{ color.color12 }}" style="background:{{ color.color12 }}"></li>
+                            {% endif %}
+                            {% if color.color13 %}
+                            <li data="{{ color.color13 }}" style="background:{{ color.color13 }}"></li>
+                            {% endif %}
+                            {% if color.color14 %}
+                            <li data="{{ color.color14 }}" style="background:{{ color.color14 }}"></li>
+                            {% endif %}
+                            {% if color.color15 %}
+                            <li data="{{ color.color15 }}" style="background:{{ color.color15 }}"></li>
+                            {% endif %}
+                            {% if color.color16 %}
+                            <li data="{{ color.color16 }}" style="background:{{ color.color16 }}"></li>
+                            {% endif %}
+                            {% if color.color17 %}
+                            <li data="{{ color.color17 }}" style="background:{{ color.color17 }}"></li>
+                            {% endif %}
+                            {% if color.color18 %}
+                            <li data="{{ color.color18 }}" style="background:{{ color.color18 }}"></li>
+                            {% endif %}
+                            {% if color.color19 %}
+                            <li data="{{ color.color19 }}" style="background:{{ color.color19 }}"></li>
+                            {% endif %}
+                            {% if color.color20 %}
+                            <li data="{{ color.color20 }}" style="background:{{ color.color20 }}"></li>
+                            {% endif %}
+                        </ul>
+                        <div class="show-list"></div>
+                    </div>
+                    <div class="type pro">
+                        <h3>选择产品类型</h3>
+                        <ul class="type-list clearfix">
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="multi" type3_name="三合一冲锋衣">三合一冲锋衣</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="hard" type3_name="单冲锋衣">单冲锋衣</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="down" type3_name="羽绒服">羽绒服</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="puff" type3_name="棉服">棉服</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="soft" type3_name="软壳">软壳</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="flee" type3_name="抓绒">抓绒</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="sweater" type3_name="卫衣">卫衣</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="shirt" type3_name="衬衫">衬衫</li>
+                            <li type1="apparel" type1_name="服装" type2="clothing" type2_name="上衣" type3="tshirt" type3_name="T恤衫">T恤衫</li>
+                            <li type1="apparel" type1_name="服装" type2="pants" type2_name="裤装" type3="hiking" type3_name="速干裤">速干裤</li>
+                            <li type1="apparel" type1_name="服装" type2="pants" type2_name="裤装" type3="climb" type3_name="冲锋裤">冲锋裤</li>
+                            <li type1="apparel" type1_name="服装" type2="pants" type2_name="裤装" type3="droped" type3_name="七分裤">七分裤</li>
+                            <li type1="apparel" type1_name="服装" type2="pants" type2_name="裤装" type3="shorts" type3_name="短裤">短裤</li>
+                            <li type1="apparel" type1_name="服装" type2="pants" type2_name="裤装" type3="skirt" type3_name="裙装">裙装</li>
+                            <li type1="footwear" type1_name="鞋" type2="" type2_name="" type3="climbboat" type3_name="登山鞋">登山鞋</li>
+                            <li type1="footwear" type1_name="鞋" type2="" type2_name="" type3="hikingshoe" type3_name="徒步鞋">徒步鞋</li>
+                            <li type1="footwear" type1_name="鞋" type2="" type2_name="" type3="crossshoe" type3_name="溯溪鞋">溯溪鞋</li>
+                            <li type1="footwear" type1_name="鞋" type2="" type2_name="" type3="campingshoe" type3_name="营地鞋">营地鞋</li>
+                            <li type1="footwear" type1_name="鞋" type2="" type2_name="" type3="rockshoe" type3_name="攀岩鞋">攀岩鞋</li>
+                            <li type1="footwear" type1_name="鞋" type2="" type2_name="" type3="runningshoe" type3_name="越野跑鞋">越野跑鞋</li>
+                            <li type1="footwear" type1_name="鞋" type2="" type2_name="" type3="scandal" type3_name="沙滩鞋">沙滩鞋</li>
+                            <li type1="equipment" type1_name="装备" type2="" type2_name="" type3="back" type3_name="背包">背包</li>
+                            <li type1="equipment" type1_name="装备" type2="" type2_name="" type3="shoulder" type3_name="单肩包">单肩包</li>
+                            <li type1="equipment" type1_name="装备" type2="" type2_name="" type3="duffel" type3_name="驮包">驮包</li>
+                            <li type1="equipment" type1_name="装备" type2="" type2_name="" type3="cap" type3_name="帽子">帽子</li>
+                            <li type1="equipment" type1_name="装备" type2="" type2_name="" type3="socks" type3_name="袜子">袜子</li>
+                            <li type1="equipment" type1_name="装备" type2="" type2_name="" type3="equipment" type3_name="装备">装备</li>
+                        </ul>
+                    </div>
+                    <div class="se pro">
+                        <h3>选择产品系列</h3>
+                        <ul class="se-list clearfix">
+                            <li type="limited" typename="限量版">限量版</li>
+                            <li type="lambada" typename="兰博达系列">兰博达系列</li>
+                            <li type="delta" typename="德尔塔系列">德尔塔系列</li>
+                        </ul>
+                    </div>
+                    <div class="gender pro">
+                        <h3>选择产品男女</h3>
+                        <ul class="gender-list clearfix">
+                           <li gender="male" gendername="男">男</li>
+                           <li gender="female" gendername="女">女</li>
+                           <li gender="newter" gendername="中性">中性</li>
+                        </ul>
+                    </div>
+                    <div class="tech">
+                        <h3>选择产品科技</h3>
+                        <ul class="color-list clearfix">
+                            {% if tech.tech1 %}
+                            <li data="{{ tech.tech1 }}"><img src="/static/images/{{ tech.tech1 }}"></li>
+                            {% endif %}
+                             {% if tech.tech2 %}
+                            <li data="{{ tech.tech2 }}"><img src="/static/images/{{ tech.tech2 }}"></li>
+                            {% endif %}
+                             {% if tech.tech3 %}
+                            <li data="{{ tech.tech3 }}"><img src="/static/images/{{ tech.tech3 }}"></li>
+                            {% endif %}
+                             {% if tech.tech4 %}
+                            <li data="{{ tech.tech4 }}"><img src="/static/images/{{ tech.tech4 }}"></li>
+                            {% endif %}
+                             {% if tech.tech5 %}
+                            <li data="{{ tech.tech5 }}"><img src="/static/images/{{ tech.tech5 }}"></li>
+                            {% endif %}
+                             {% if tech.tech6 %}
+                            <li data="{{ tech.tech6 }}"><img src="/static/images/{{ tech.tech6 }}"></li>
+                            {% endif %}
+                             {% if tech.tech7 %}
+                            <li data="{{ tech.tech7 }}"><img src="/static/images/{{ tech.tech7 }}"></li>
+                            {% endif %}
+                             {% if tech.tech8 %}
+                            <li data="{{ tech.tech8 }}"><img src="/static/images/{{ tech.tech8 }}"></li>
+                            {% endif %}
+                             {% if tech.tech9 %}
+                            <li data="{{ tech.tech9 }}"><img src="/static/images/{{ tech.tech9 }}"></li>
+                            {% endif %}
+                             {% if tech.tech10 %}
+                            <li data="{{ tech.tech10 }}"><img src="/static/images/{{ tech.tech10 }}"></li>
+                            {% endif %}
+                             {% if tech.tech11 %}
+                            <li data="{{ tech.tech11 }}"><img src="/static/images/{{ tech.tech11 }}"></li>
+                            {% endif %}
+                             {% if tech.tech12 %}
+                            <li data="{{ tech.tech12 }}"><img src="/static/images/{{ tech.tech12 }}"></li>
+                            {% endif %}
+                             {% if tech.tech13 %}
+                            <li data="{{ tech.tech13 }}"><img src="/static/images/{{ tech.tech13 }}"></li>
+                            {% endif %}
+                             {% if tech.tech14 %}
+                            <li data="{{ tech.tech14 }}"><img src="/static/images/{{ tech.tech14 }}"></li>
+                            {% endif %}
+                             {% if tech.tech15 %}
+                            <li data="{{ tech.tech15 }}"><img src="/static/images/{{ tech.tech15 }}"></li>
+                            {% endif %}
+                             {% if tech.tech16 %}
+                            <li data="{{ tech.tech16 }}"><img src="/static/images/{{ tech.tech16 }}"></li>
+                            {% endif %}
+                             {% if tech.tech17 %}
+                            <li data="{{ tech.tech17 }}"><img src="/static/images/{{ tech.tech17 }}"></li>
+                            {% endif %}
+                             {% if tech.tech18 %}
+                            <li data="{{ tech.tech18 }}"><img src="/static/images/{{ tech.tech18 }}"></li>
+                            {% endif %}
+                             {% if tech.tech19 %}
+                            <li data="{{ tech.tech19 }}"><img src="/static/images/{{ tech.tech19 }}"></li>
+                            {% endif %}
+                             {% if tech.tech20 %}
+                            <li data="{{ tech.tech20 }}"><img src="/static/images/{{ tech.tech20 }}"></li>
+                            {% endif %}
+                        </ul>
+                        <div class="show-list"></div>
+                    </div>
+                    <form enctype="multipart/form-data" action="/addProduct/" method="post" id="product_form">
+                        <div>
+                            <fieldset class="module aligned ">
+                                <input type="file" id="product_upload" name="upload"/>
+                                <input type="file" id="color_upload" name="upload"/>
+                                <div class="form-row field-name">
+                                    <div>
+                                        <label class="required" for="id_name">
+                                            Name(产品名称):
+                                        </label>
+                                        <input class="vTextField" id="id_name" maxlength="128" name="name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                 <div class="form-row field-name_ch">
+                                    <div>
+                                        <label for="id_name_ch">
+                                            Name ch(名称中文):
+                                        </label>
+                                        <input class="vTextField" id="id_name_ch" maxlength="256" name="name_ch"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-price">
+                                    <div>
+                                        <label class="required" for="id_price">
+                                            Price(产品价格):
+                                        </label>
+                                        <input class="vIntegerField" id="id_price" name="price" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-function">
+                                    <div>
+                                        <label class="required" for="id_function">
+                                            Function(产品功能，加&lt;br/&gt;换行):
+                                        </label>
+                                        <textarea class="vLargeTextField" cols="40" id="id_function" name="function"
+                                        rows="10">
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row field-function_ch">
+                                    <div>
+                                        <label for="id_function_ch">
+                                            Function ch(功能中文):
+                                        </label>
+                                        <textarea class="vLargeTextField" cols="40" id="id_function_ch" name="function_ch"
+                                        rows="10">
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row field-is_index">
+                                    <div>
+                                        <label class="required" for="id_is_index">
+                                            Is index(顺序值，默认为0，数字越大，展示越前):
+                                        </label>
+                                        <input class="vIntegerField" id="id_is_index" name="is_index" type="text"
+                                        value="0" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-is_show">
+                                    <div>
+                                        <label class="required" for="id_is_show">
+                                            Is show(是否下架):
+                                        </label>
+                                        <input class="vIntegerField" id="id_is_show" name="is_show" type="text"
+                                        value="1" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-url">
+                                    <div>
+                                        <label for="id_url">
+                                            Url(淘宝链接):
+                                        </label>
+                                        <input class="vTextField" id="id_url" maxlength="256" name="url" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-type1">
+                                    <div>
+                                        <label for="id_type1">
+                                            Type1(类型1):
+                                        </label>
+                                        <input class="vTextField" id="id_type1" maxlength="32" name="type1" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-type1_ch">
+                                    <div>
+                                        <label for="id_type1_ch">
+                                            Type1 ch(类型1中文):
+                                        </label>
+                                        <input class="vTextField" id="id_type1_ch" maxlength="64" name="type1_ch"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-type2">
+                                    <div>
+                                        <label for="id_type2">
+                                            Type2(类型2):
+                                        </label>
+                                        <input class="vTextField" id="id_type2" maxlength="32" name="type2" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-type2_ch">
+                                    <div>
+                                        <label for="id_type2_ch">
+                                            Type2 ch(类型2中文):
+                                        </label>
+                                        <input class="vTextField" id="id_type2_ch" maxlength="64" name="type2_ch"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-type3">
+                                    <div>
+                                        <label for="id_type3">
+                                            Type3(类型3):
+                                        </label>
+                                        <input class="vTextField" id="id_type3" maxlength="32" name="type3" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-type3_ch">
+                                    <div>
+                                        <label for="id_type3_ch">
+                                            Type3 ch(类型3中文):
+                                        </label>
+                                        <input class="vTextField" id="id_type3_ch" maxlength="64" name="type3_ch"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-style">
+                                    <div>
+                                        <label for="id_style">
+                                            Style(款式):
+                                        </label>
+                                        <input class="vTextField" id="id_style" maxlength="32" name="style" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-style_ch">
+                                    <div>
+                                        <label for="id_style_ch">
+                                            Style ch(款式中文):
+                                        </label>
+                                        <input class="vTextField" id="id_style_ch" maxlength="64" name="style_ch"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-gender">
+                                    <div>
+                                        <label for="id_gender">
+                                            Gender(男/女装):
+                                        </label>
+                                        <input class="vTextField" id="id_gender" maxlength="32" name="gender"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-gender_ch">
+                                    <div>
+                                        <label for="id_gender_ch">
+                                            Gender ch(男/女装中文):
+                                        </label>
+                                        <input class="vTextField" id="id_gender_ch" maxlength="64" name="gender_ch"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-price_ch">
+                                    <div>
+                                        <label for="id_price_ch">
+                                            Price ch(价格中文):
+                                        </label>
+                                        <input class="vIntegerField" id="id_price_ch" name="price_ch" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img1">
+                                    <div>
+                                        <label for="id_img1">
+                                            Img1(产品图片1):
+                                        </label>
+                                        <input class="vTextField" id="id_img1" maxlength="100" name="img1" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img2">
+                                    <div>
+                                        <label for="id_img2">
+                                            Img2(产品图片2):
+                                        </label>
+                                        <input class="vTextField" id="id_img2" maxlength="100" name="img2" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img3">
+                                    <div>
+                                        <label for="id_img3">
+                                            Img3(产品图片3):
+                                        </label>
+                                        <input class="vTextField" id="id_img3" maxlength="100" name="img3" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img4">
+                                    <div>
+                                        <label for="id_img4">
+                                            Img4(产品图片4):
+                                        </label>
+                                        <input class="vTextField" id="id_img4" maxlength="100" name="img4" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img5">
+                                    <div>
+                                        <label for="id_img5">
+                                            Img5(产品图片5):
+                                        </label>
+                                        <input class="vTextField" id="id_img5" maxlength="100" name="img5" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img6">
+                                    <div>
+                                        <label for="id_img6">
+                                            Img6(产品图片6):
+                                        </label>
+                                        <input class="vTextField" id="id_img6" maxlength="100" name="img6" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img7">
+                                    <div>
+                                        <label for="id_img7">
+                                            Img7(产品图片7):
+                                        </label>
+                                        <input class="vTextField" id="id_img7" maxlength="100" name="img7" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img8">
+                                    <div>
+                                        <label for="id_img8">
+                                            Img8(产品图片8):
+                                        </label>
+                                        <input class="vTextField" id="id_img8" maxlength="100" name="img8" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img9">
+                                    <div>
+                                        <label for="id_img9">
+                                            Img9(产品图片9):
+                                        </label>
+                                        <input class="vTextField" id="id_img9" maxlength="100" name="img9" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-img10">
+                                    <div>
+                                        <label for="id_img10">
+                                            Img10(产品图片10):
+                                        </label>
+                                        <input class="vTextField" id="id_img10" maxlength="100" name="img10" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech1">
+                                    <div>
+                                        <label for="id_tech1">
+                                            Tech1(科技类型1):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech1" name="tech1" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech2">
+                                    <div>
+                                        <label for="id_tech2">
+                                            Tech2(科技类型2):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech2" name="tech2" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech3">
+                                    <div>
+                                        <label for="id_tech3">
+                                            Tech3(科技类型3):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech3" name="tech3" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech4">
+                                    <div>
+                                        <label for="id_tech4">
+                                            Tech4(科技类型4):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech4" name="tech4" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech5">
+                                    <div>
+                                        <label for="id_tech5">
+                                            Tech5(科技类型5):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech5" name="tech5" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech6">
+                                    <div>
+                                        <label for="id_tech6">
+                                            Tech6(科技类型6):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech6" name="tech6" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech7">
+                                    <div>
+                                        <label for="id_tech7">
+                                            Tech7(科技类型7):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech7" name="tech7" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech8">
+                                    <div>
+                                        <label for="id_tech8">
+                                            Tech8(科技类型8):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech8" name="tech8" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech9">
+                                    <div>
+                                        <label for="id_tech9">
+                                            Tech9(科技类型9):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech9" name="tech9" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-tech10">
+                                    <div>
+                                        <label for="id_tech10">
+                                            Tech10(科技类型10):
+                                        </label>
+                                        <input class="vIntegerField" id="id_tech10" name="tech10" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color1">
+                                    <div>
+                                        <label for="id_color1">
+                                            Color1(颜色图片1):
+                                        </label>
+                                        <input class="vTextField" id="id_color1" maxlength="100" name="color1"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color1_name">
+                                    <div>
+                                        <label for="id_color1_name">
+                                            Color1 name(颜色名称1):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color1_name" name="color1_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color2">
+                                    <div>
+                                        <label for="id_color2">
+                                            Color2(颜色图片2):
+                                        </label>
+                                        <input class="vTextField" id="id_color2" maxlength="100" name="color2"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color2_name">
+                                    <div>
+                                        <label for="id_color2_name">
+                                            Color2 name(颜色名称2):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color2_name" name="color2_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color3">
+                                    <div>
+                                        <label for="id_color3">
+                                            Color3(颜色图片3):
+                                        </label>
+                                        <input class="vTextField" id="id_color3" maxlength="100" name="color3"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color3_name">
+                                    <div>
+                                        <label for="id_color3_name">
+                                            Color3 name(颜色名称3):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color3_name" name="color3_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color4">
+                                    <div>
+                                        <label for="id_color4">
+                                            Color4(颜色图片4):
+                                        </label>
+                                        <input class="vTextField" id="id_color4" maxlength="100" name="color4"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color4_name">
+                                    <div>
+                                        <label for="id_color4_name">
+                                            Color4 name(颜色名称4):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color4_name" name="color4_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color5">
+                                    <div>
+                                        <label for="id_color5">
+                                            Color5(颜色图片5):
+                                        </label>
+                                        <input class="vTextField" id="id_color5" maxlength="100" name="color5"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color5_name">
+                                    <div>
+                                        <label for="id_color5_name">
+                                            Color5 name(颜色名称5):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color5_name" name="color5_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color6">
+                                    <div>
+                                        <label for="id_color6">
+                                            Color6(颜色图片6):
+                                        </label>
+                                        <input class="vTextField" id="id_color6" maxlength="100" name="color6"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color6_name">
+                                    <div>
+                                        <label for="id_color6_name">
+                                            Color6 name(颜色名称6):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color6_name" name="color6_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color7">
+                                    <div>
+                                        <label for="id_color7">
+                                            Color7(颜色图片7):
+                                        </label>
+                                        <input class="vTextField" id="id_color7" maxlength="100" name="color7"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color7_name">
+                                    <div>
+                                        <label for="id_color7_name">
+                                            Color7 name(颜色名称7):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color7_name" name="color7_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color8">
+                                    <div>
+                                        <label for="id_color8">
+                                            Color8(颜色图片8):
+                                        </label>
+                                        <input class="vTextField" id="id_color8" maxlength="100" name="color8"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color8_name">
+                                    <div>
+                                        <label for="id_color8_name">
+                                            Color8 name(颜色名称8):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color8_name" name="color8_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color9">
+                                    <div>
+                                        <label for="id_color9">
+                                            Color9(颜色图片9):
+                                        </label>
+                                        <input class="vTextField" id="id_color9" maxlength="100" name="color9"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color9_name">
+                                    <div>
+                                        <label for="id_color9_name">
+                                            Color9 name(颜色名称9):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color9_name" name="color9_name" type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color10">
+                                    <div>
+                                        <label for="id_color10">
+                                            Color10(颜色图片10):
+                                        </label>
+                                        <input class="vTextField" id="id_color10" maxlength="100" name="color10"
+                                        type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-row field-color10_name">
+                                    <div>
+                                        <label for="id_color10_name">
+                                            Color10 name(颜色名称10):
+                                        </label>
+                                        <input class="vIntegerField" id="id_color10_name" name="color10_name"
+                                        type="text" />
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="submit-row">
+                                <input type="submit" value="Save" class="default" name="_save" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br class="clear" />
+            </div>
+            <!-- END Content -->
+            <div id="footer">
+            </div>
+        </div>
+        <!-- END Container -->
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/uploadify.js"></script>
+        <script src="/static/js/add.js"></script>
+    </body>
+
+</html>

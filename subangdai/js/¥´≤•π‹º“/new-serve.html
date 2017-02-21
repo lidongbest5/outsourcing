@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>传播管家-个人管理界面-修改服务信息</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/bottom.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<style>
+			.Involving-the-type{
+				width: 640px;
+				height: 500px;
+			}
+			.Involving-the-typ{
+				width: 640px;
+				height: 60px;
+				border-bottom: 5px solid #FF9434;
+			}
+			.Involving-the-ty{
+				float: left;
+				
+				font-size: 20px;
+				line-height: 40px;
+				
+			}
+			.Involving-the-ty p{
+				float: left;
+				width: 540px;
+				text-align: center;
+			}
+			.Involving-the{
+				width: 640px;
+				height: 350px;
+			}
+			.Involving-th {
+				width: 640px;
+				height: 40px;
+				border-bottom: 1px solid #E4E9F1;
+			}
+			.Involving-th p{
+				float: left;
+				margin: 10px;
+				width: 4px;
+				height: 22px;
+				border-left:4px solid #FF9434 ;
+			}
+			.Involving-th span{
+				float: left;
+				margin-top: 10px;
+				font-size: 18px;
+			}
+			.Involving-t{
+				width: 640px;
+				margin-top: 20px;
+			}
+			.Involving-t ul{
+				margin: 0px 10px;
+			}
+			.Involving-t li{
+				float: left;
+				width: 204px;
+				height: 125px;
+				border: 1px solid #E4E9F1;
+			}
+			.Involving-t li div img{
+				width: 80px;
+				height: 80px;
+				padding: 10px 60px;
+			}
+			.Involving-t li div{
+				text-align: center;
+				font-size: 16px;
+			}
+			.Involving-t li {
+				border-top: none;
+				border-right:none ;
+			}
+			ul > li:first-child{border-left: none;}
+			ul.Involving-td li{border-bottom: none;}
+			.rig{
+				height: auto;
+			}
+			.tian{
+				margin-left: 255px;
+			}
+			.figure{
+				height: auto;
+			}
+			.theme-popover1{
+				    z-index: 9999;
+				    position: absolute;
+				    top: 90%;
+				    left: 50%;
+				    width: 520px;
+				    height: auto;
+				    margin: -180px 0 0 -330px;
+				    border-radius: 10px;
+				    border: solid 2px #666;
+				    background-color: #fff;
+				    display: none;
+				    box-shadow: 0 0 10px #666;
+				}
+				.theme-popover-mask1{
+					z-index: 9998;
+				    position: fixed;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+				    background: #000;
+				    opacity: 0.4;
+				    filter: alpha(opacity=40);
+				    display: none;
+				}
+		</style>
+		<script type="text/javascript">
+			function setCurrent(i){
+					var parentElement = document.getElementById("test").getElementsByTagName("li");
+					for (var j=0;j<parentElement.children.length;j++){
+						parentElement.children[j].className = (i==j)?:".checkt":"";   //"center"是class名称
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="wrapper">
+				<div class="left logo">
+					<h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
+					<p>品牌传播第一众包平台</p>
+				</div>
+				<div class="right out">
+						<p><a href="#">18476544567</a></p>
+						<p class="outd"><img src="img/out.png" /></p>
+						<p><a href="#2">退出</a></p>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+				<div class="return">
+					<p><a href="serve.html"><&nbsp;&nbsp;返回上一页</a></p>
+				</div>
+				<div class="tt">
+			    <form id="signupForm" method="post" action="" class="zcform" name="a">
+			        <p class="clearfix">
+			        	<label class="one lei">类型</label>
+						<input type="text" class="name theme-login">
+						<div class="textt">
+						<div class="theme-popover Involving-the-type">
+						    <div class="Involving-the-typ">
+						    	<div class="detailsa" style="width: 27px; float: left;">
+						    		<input type="button" class="bd" value="" />
+						    	</div>
+						    	<div class="Involving-the-ty">
+						    		<p>涉及类型</p>
+						    	</div>
+						    </div>
+						    <div class="Involving-the">
+						    	<div class="Involving-th clearfix">
+						    		<p></p>
+						    		<span>撰写</span>
+						    	</div>
+						    	<div class="Involving-t">
+						    		<ul>
+						    			<li>
+						    				<div>
+						    					<img src="img/homeicon04@3x.png" />
+						    				</div>
+						    				<div>
+						    					新闻稿
+						    				</div>
+						    			</li>
+						    			<li>
+						    				<div>
+						    					<img src="img/homeicon04@3x.png" />
+						    				</div>
+						    				<div>
+						    					新闻稿
+						    				</div>
+						    			</li>
+						    			<li>
+						    				<div>
+						    					<img src="img/homeicon04@3x.png" />
+						    				</div>
+						    				<div>
+						    					新闻稿
+						    				</div>
+						    			</li>
+						    		</ul>
+						    		<ul  class="Involving-td">
+						    			<li>
+						    				<div>
+						    					<img src="img/homeicon04@3x.png" />
+						    				</div>
+						    				<div>
+						    					新闻稿
+						    				</div>
+						    			</li>
+						    			<li>
+						    				<div>
+						    					<img src="img/homeicon04@3x.png" />
+						    				</div>
+						    				<div>
+						    					新闻稿
+						    				</div>
+						    			</li>
+						    			<li>
+						    				<div>
+						    					<img src="img/homeicon04@3x.png" />
+						    				</div>
+						    				<div>
+						    					新闻稿
+						    				</div>
+						    			</li>
+						    		</ul>
+						    	</div>
+						    </div>
+						</div>
+						<div class="theme-popover-mask"></div>
+					</div>
+			        </p>
+			        <p class="clearfix">
+			        	<label class="one">金额</label>
+			        	<select name="cars" class="cry">
+							<option value="1000">1000</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+						<select name="cars" class="cry">
+							<option value="1500">1500</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+			        </p>
+			         <p class="clearfix">
+			        	<label class="one">稿件字数</label>
+			        	<select name="cars" class="name">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+			        </p>
+			         <p class="clearfix">
+			        	<label class="one">修改次数</label>
+			        	<select name="cars" class="name">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+			        </p>
+			         <p class="clearfix">
+			        	<label class="one">交稿周期</label>
+			        	<select name="cars" class="name">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+			        </p>
+			    
+			    </form>
+			</div>
+			<div class="wrapper">
+					<div class="figur" style="line-height: 0;">
+						<div class="left figu" style="margin-top: 10px;">
+							<p>配图</p>
+						</div>
+						<div class="right"><input type="checkbox" id="checkbox-10-2" checked /><label for="checkbox-10-2"></label></label></div>
+					</div>
+			</div>
+			
+			<div class="wrapper">
+				<div class="figure">
+					<div class="rig"  id="contentid">
+						<div class="case3">
+							<div class="cass">
+								<h3><a href="#2">远程优化BP梳理战略找战略找到BP梳战略略找找BP梳理战战略发展放...</a></h3>
+							</div>
+							<div class="cas">
+								<img src="img/c.png" width="80" height="80" alt="cass" />
+							</div>
+						</div>
+						<div class="case3">
+							<div class="cass">
+								<span></span>
+								<h3><a href="#2">远程优化BP梳理战略找战略找到BP梳战略略找找BP梳理战战略发展放...</a></h3>
+							</div>
+							<div class="cas">
+								<img src="img/c.png" width="80" height="80" alt="cass" />
+							</div>
+						</div>
+					</div>
+					
+				</div>
+		</div>
+		</div>	
+		<div class="wrapper">
+			<div class="tian">
+							<p class="showdiv">+添加案例</p>
+							<div class="cos">
+								<div class="theme-popover1 showbox">
+									<div class="show">
+										<p class="left"><a class="close" href="javascript:"><span></span></a></p>
+										<p class=" left an">案例库</p>
+										<p class="right" style="margin-top: 20px; margin-right:20px;">
+											<a class="gou" href="javascript:"><img src="img/gou.png" /></a>
+										</p>
+									</div>
+								
+								   <div class="mainlist">
+								     <div class="documentation">
+											<div class="left check">
+												<li></li>			
+											</div>	
+								     	<div class="documentat">
+								     		<h3>
+								     			<a href="#">远程优化BP梳理战略找战略找到BP梳理战战略略找找BP梳理战战略发展放...</a>
+								     		</h3>
+								     	</div>
+								     	<div class="document">
+								     		<img src="img/c.png" width="80" height="80" />
+								     	</div>
+								     </div>
+								     <div class="documentation">
+								     	 <div class="left">
+											<li class="check"></li>			
+										</div>	
+								    
+								     	<div class="documentat">
+								     		<h3>
+								     			<a href="#">远程优化BP梳理战略找战略找到BP梳理战战略略找找BP梳理战战略发展放...</a>
+								     		</h3>
+								     	</div>
+								     	<div class="document">
+								     		<img src="img/c.png" width="80" height="80" />
+								     	</div>
+								     </div>
+								     <div class="documentation">
+										<div class="left check">
+											<li></li>			
+										</div>	
+								     	<div class="documentat">
+								     		<h3>
+								     			<a href="#">远程优化BP梳理战略找战略找到BP梳理战战略略找找BP梳理战战略发展放...</a>
+								     		</h3>
+								     	</div>
+								     	<div class="document">
+								     		<img src="img/c.png" width="80" height="80" />
+								     	</div>
+								     </div>
+								   </div>
+								</div>
+								<div class="theme-popover-mask1"></div>
+							</div>
+							</div>
+		</div>
+		
+		
+		
+		
+		
+		<p class="clearfix sub">
+			<input class="submit12" type="submit" value="隐藏"/>
+			<input class="submit13" type="submit" value="保存"/>
+		</p>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+						$('.theme-login').click(function(){
+							$('.theme-popover-mask').fadeIn(100);
+							$('.theme-popover').slideDown(200);
+						})
+						$('.theme-poptit .close').click(function(){
+							$('.theme-popover-mask').fadeOut(100);
+							$('.theme-popover').slideUp(200);
+						})
+					})
+				$(".bd").click(function(){ $(".textt").hide(); });
+				$(".theme-login").click(function(){$(".textt").show();})
+		</script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+						$('.showdiv').click(function(){
+							$('.theme-popover-mask1').fadeIn(100);
+							$('.theme-popover1').slideDown(200);
+						})
+						$('.show .close').click(function(){
+							$('.theme-popover-mask1').fadeOut(100);
+							$('.theme-popover1').slideUp(200);
+						})
+					})
+				$(".gou").click(function(){ $(".cos").hide(); });
+				$(".showdiv").click(function(){$(".cos").show();})
+		</script>
+	</body>
+</html>
+

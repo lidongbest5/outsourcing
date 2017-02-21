@@ -1,0 +1,261 @@
+body{
+	padding: 10px;
+}
+header .right img{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 25px;
+}
+header .right .language{
+	font-size: 0.9em;
+	color: #004c90;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 25px;
+	background: url(../images/phone-arrow.png) 28px 5px no-repeat;
+	position: relative;
+}
+.languageDown{
+	width: 100%;
+	position: absolute;
+	top: 0.9em;
+	left: 0;
+	display: none;
+}
+.languageDown a{
+	display: block;
+	padding: 3px 0;
+	text-align: center;
+}
+header .logo{
+	clear: both;
+}
+header .logo span{
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 1.8em;
+	color: #ff6b6b;
+}
+nav{
+	margin-top: 30px;
+}
+nav a{
+	float: left;
+	width: 48%;
+	background: #ff6b6b;
+	text-align: center;
+	height: 42px;
+	padding-top: 20px;
+	font-size: 0.9em;
+	color: white;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+nav a:nth-child(2n+1){
+	margin-right: 2%;
+}
+.summary h2{
+	color: #ff6b6b;
+	font-weight: 700;
+	font-size: 1.4em;
+	margin-bottom: 5px;
+}
+.summary p{
+	font-size: 0.9em;
+	line-height: 1.6em;
+}
+.register{
+	width: 60%;
+	height: 42px;
+	display: block;
+	background: #ff6b6b;
+	color: white;
+	font-size: 1.8em;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 6px;
+	margin: 10px auto;
+}
+.speaker{
+	clear: both;
+}
+.speaker h2{
+	font-size: 1.4em;
+	margin-bottom: 8px;
+}
+.speaker-item{
+	margin-bottom: 8px;
+	min-height: 70px;
+}
+.speaker-item img{
+	width: 90px;
+	float: left;
+}
+.speaker-item .speaker-detail{
+	margin-left: 100px;
+	width: auto;
+}
+.speaker-item .speaker-detail h3{
+	font-size: 1.2em;
+	margin: 6px 0;
+	color: black;
+}
+.speaker-item .speaker-detail p{
+	font-size: 0.9em;
+	line-height: 1.2em;
+	color: black;
+}
+.agenda{
+	padding: 10px 0;
+	background: url(../images/phone_bg.png) 33px 0 repeat-y;
+}
+.agenda-item{
+	margin-bottom: 12px;
+	padding-left: 20px;
+}
+.agenda-date span{
+	display: inline-block;
+	color: white;
+	font-size: 1.1em;
+	width: 26px;
+	padding-top: 2px;
+	height: 24px;
+	border-radius: 13px;
+	text-align: center;
+	background: #008fd5;
+	margin-right: 8px;
+}
+.agenda-list{
+	padding-left: 35px;
+}
+.agenda-list h3{
+	font-size: 0.9em;
+	color: #ff6b6b;
+}
+.agenda-list p{
+	font-size: 0.9em;
+}
+footer{
+	margin-top: 15px;
+	font-size: 0.7em;
+}
+/* file */
+.file{
+	clear: both;
+}
+.file ul li{
+	border: 1px solid #ff6b6b;
+	color: black;
+	width: 98%;
+	padding: 1em 0;
+	border-radius: 4px;
+	margin-bottom: 0.6em;
+	font-size: 1.5em;
+}
+.file ul li i{
+	width: 20px;
+	height: 26px;
+	display: inline-block;
+	background: url(../images/file_phone.png) no-repeat;
+	margin: 0 1.5em;
+}
+.file ul li span{
+	vertical-align: top;
+	display: inline-block;
+}
+.file ul li a{
+	margin-right: 1.5em;
+	width: 17px;
+	height: 20px;
+	display: block;
+	background: url(../images/file_arrow_phone.png) no-repeat;
+}
+/* tickets */
+.tickets{
+	clear: both;
+}
+.tickets-top{
+	background: #f6f0e5;
+	padding: 1em 0;
+	width: 100%;
+	position: relative;
+	border-radius: 2px;
+	margin-bottom: 1.5em;
+}
+.tickets-top h3{
+	font-size: 1em;
+	font-weight: 700;
+	margin-bottom: 1em;
+	padding-left: 1.5em;
+}
+.tickets-top p, .currency{
+	padding-left: 1.5em;
+}
+.currency{
+	margin-top: 1em;
+}
+.currency b{
+	font-size: 1em;
+	margin-bottom: 10px;
+	display: inline-block;
+	text-align: right;
+}
+.tickets table{
+	width: 100%;
+	text-align: right;
+}
+.tickets table thead th{
+	font-size: 1em;
+	font-weight: 700;
+	text-align: right;
+}
+.tickets table thead th:first-child{
+	text-align: left;
+}
+.tickets table tbody tr{
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+.tickets table tbody tr td{
+	padding: 1em 0;
+}
+.tickets table tbody tr td:first-child{
+	text-align: left;
+}
+.tickets-total{
+	text-align: right;
+	font-size: 1em;
+	margin-bottom: 1.5em;
+}
+.tickets-register{
+	color: white;
+	padding: 0 1.5em;
+	height: 1.8em;
+	padding-top: 0.6em;
+	background: #ff6b6b;
+	border-radius: 4px;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

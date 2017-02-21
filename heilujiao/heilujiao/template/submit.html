@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}黑鹿角西餐 - 提交页{% endblock %}
+{% block content %}
+	<section class="submit-container">
+		<div class="container clearfix">
+			<h3>提交订单</h3>
+			<div class="address">
+				<div class="submit-left">
+					<img src="/static/images/address.png">地址
+				</div>
+				{% if address %}
+				<div class="address-info">
+					<p class="address-title">{{ address.name }}   {{ address.phone }}<a href="/changeAddress/{{ address.id }}/">修改</a></p>
+					<p class="address-full">（默认地址）北京市{{ address.district }}{{ address.address }}</p>
+				</div>
+				{% endif %}
+				<a href="/address/" class="address-add"><img src="/static/images/add.png">添加地址</a>
+			</div>
+			<div class="date">
+				<div class="submit-left">
+					<img src="/static/images/date.png">日期
+				</div>
+				<div class="date-info">
+					<select>
+						<option value="2015">2015</option>
+					</select>年
+					<select>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>月
+					<select>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>日
+				</div>
+				<span class="date-tip">每日订单截止时间16:00，第二日为采购日，第三日安排快递</span>
+			</div>
+			<div class="list clearfix">
+				<div class="submit-left">
+					<img src="/static/images/list.png">清单
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>商品信息</th>
+							<th>单价(元)</th>
+							<th>数量</th>
+							<th>金额(元)</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<p class="coupon-title"><img src="/static/images/tip.png">使用优惠券</p>
+			<div class="coupon">
+				<input type="text" placeholder="输入优惠券号码">
+				<a class="coupon-btn">确认</a>
+			</div>
+			<div class="actions">
+				<a class="payment">在线支付</a>
+				<a class="cart" href="/cart/">返回购物车</a>
+			</div>
+		</div>
+	</section>
+	<script>
+		var order_length =	{{ order }};
+		var cart_items 	=	[
+			{% for item in items %}
+				{"id":{{ item.id }},"name":"{{ item.name }}","img":"{{ item.img }}","price":{{ item.price }}},
+			{% endfor %}
+			{}
+		];
+	</script>
+{% endblock %}

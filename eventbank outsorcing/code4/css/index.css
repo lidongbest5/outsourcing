@@ -1,0 +1,354 @@
+/* common */
+.main{
+	width: 80%;
+	margin: 0 auto;
+}
+.inner{
+	width: 95%;
+	margin: 0 auto;
+}
+/* nav */
+.main-nav{
+	width: 80%;
+	background: #004c90;
+	position: fixed;
+	z-index: 10000;
+}
+.main-nav a{
+	color: white;
+	padding: 15px;
+	font-size: 18px;
+	display: inline-block;
+	font-weight: 500;
+}
+.main-nav a.selected, .main-nav a:hover{
+	background: #004582;
+}
+.main-nav a.register{
+	position: absolute;
+	right: 10px;
+	top: 7px;
+	font-size: 16px;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 8px 15px 8px 35px;
+	background: url(../images/register-bg.png) 5px 5px no-repeat;
+	background-size: 13%;
+}
+/* banner */
+.banner{
+	background: #e9e9ea;
+	min-height: 380px;
+	padding-top: 75px;
+}
+.title{
+	margin-left: 20px;
+	background: #747475;
+	display: table;
+	position: relative;
+}
+.logo-con{
+	width: 120px;
+	height: 100%;
+	display: table-cell;
+	background: url(../images/org-logo.png) no-repeat;
+	background-size: contain;
+}
+.title-con{
+	padding: 15px;
+	color: white;
+}
+.title-con h1{
+	font-size: 46px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.title-con h2{
+	font-size: 24px;
+	font-weight: 500;
+}
+/* summary */
+.summary{
+	background: #004c90;
+	color: white;
+	padding: 25px 0;
+}
+.summary h2, .speaker h2, .agenda h2, .ticket h2, .document h2, .sponsor h2{
+	font-size: 26px;
+	font-weight: 600;
+	padding-bottom: 5px;
+	border-bottom: 1px solid white;
+	margin-bottom: 20px;
+}
+.summary-main p.desc{
+	width: 60%;
+	margin-right: 10%;
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 22px;
+}
+.summary-main .data{
+	width: 28%;
+	display: inline-block;
+	vertical-align: top;
+}
+.date{
+	margin-bottom: 20px;
+	font-size: 22px;
+	font-weight: 500;
+	padding-left: 40px;
+	background: url(../images/time-bg.png) left top no-repeat;
+	background-size: 30px;
+}
+.location{
+	font-size: 18px;
+	padding-left: 40px;
+	background: url(../images/location-bg.png) left top no-repeat;
+	background-size: 25px;
+	position: relative;
+}
+/* speakers */
+.speaker{
+	background: #f5f5f6;
+	color: #33547a;
+	padding: 25px 0;
+}
+.speaker h2{
+	border-bottom: 1px solid #33547a; 
+}
+.speaker ul{
+	font-size: 0;
+}
+.speaker li{
+	width: 17%;
+	margin: 0 1.5%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	cursor: pointer;
+}
+.speaker li img, .speaker-modal img{
+	width: 60%;
+	border-radius: 60%;
+	margin-bottom: 15px;
+}
+.speaker li h3, .speaker-modal h3{
+	font-size: 20px;
+	font-weight: 500;
+}
+.speaker li h4, .speaker-modal h4{
+	font-size: 17px;
+}
+.speaker-modal h4{
+	margin-bottom: 10px;
+}
+.speaker-modal{
+	width: 200px;
+	padding: 20px;
+	position: fixed;
+	top: 300px;
+	left: 50%;
+	margin-left: -120px;
+	background: white;
+	border: 1px solid #33547a;
+	text-align: center;
+	color: #33547a;
+}
+.modal-close{
+	position: absolute;
+	top: 2px;
+	right: 4px;
+	font-size: 18px;
+	font-weight: 700;
+}
+/* agenda */
+.agenda{
+	padding: 25px 0;
+	color: #33547a;
+}
+.agenda h2{
+	border-bottom: 1px solid #33547a;
+}
+.dayNavigation{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	overflow: hidden;
+	background: #004c90;
+	color: white;
+	margin-bottom: 14px;
+	font-weight: 600;
+}
+.dayName{
+	display: inline-block;
+	padding: 0 20px 0 10px;
+}
+.dayNavigation > a {
+	height: 100%;
+	width: 30px;
+	display: inline-block;
+	text-align: center;
+	border-left: white 1px solid;
+	color: white;
+}
+.agenda dl, .ticket dl{
+	width: 31%;
+	margin-right: 3%;
+	display: inline-block;
+	vertical-align: top;
+}
+.agenda dl:nth-child(3n), .ticket dl:nth-child(3n+1){
+	margin-right: 0;
+}
+.agenda dl dt, .agenda dl dd .agenda-content, .agenda-more-top, .agenda-more-speaker, .ticket dt, .ticket dd{
+	padding: 8px 14px;
+}
+.agenda dl dt, .ticket dt{
+	font-size: 18px;
+	font-weight: 600;
+	color: #004c90;
+}
+.agenda dl dd .agenda-time{
+	display: block;
+	font-weight: 600;
+}
+.agenda dl dd .agenda-content, .ticket dt{
+	overflow: hidden;
+	background: #ccdbe9;
+	border-bottom: white 1px solid;
+	min-height: 1em;
+}
+.agenda dl dd .agenda-more{
+	margin-bottom: 10px;
+}
+.agenda-more-top, .agenda-more-speaker, .ticket dd{
+	background: #f5f5f6;
+	border: 1px solid #ebeceb;
+}
+.agenda-more-speaker img{
+	width: 10%;
+	border-radius: 100%;
+	margin-right: 3%;
+}
+.agenda-more{
+	display: none;
+}
+.agenda dl dd .agenda-content{
+	cursor: pointer;
+}
+.agenda-container{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.agenda-container ul{
+	font-size: 0;
+	width: 999999px;
+	position: relative;
+	left: 0;
+}
+.agenda-container ul li{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+}
+/* ticket */
+.ticket{
+	padding: 25px 0;
+	color: #33547a;
+	font-size: 16px;
+}
+.ticket h2{
+	border-bottom: 1px solid #33547a;
+}
+/* document */
+.document{
+	padding: 25px 0;
+	color: #33547a;
+	font-size: 16px;
+}
+.document h2{
+	border-bottom: 1px solid #33547a;
+}
+.document-item{
+	width: 31%;
+	margin-right: 3%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+.document-item:nth-child(3n+1){
+	margin-right: 0;
+}
+.document-content{
+	border: 1px solid #ebeceb;
+	padding: 8px 14px 8px 30px;
+	background: url(../images/file-bg.png) 5px 6px no-repeat;
+	background-size: 17px;
+	background-color: #f5f5f6;
+}
+.document-down{
+	width: 20px;
+	height: 21px;
+	background: url(../images/download-bg.png) no-repeat;
+	background-size: 100%;
+}
+/* sponsor */
+.sponsor{
+	padding: 25px 0;
+	color: #33547a;
+	font-size: 16px;
+}
+.sponsor h2{
+	border-bottom: 1px solid #33547a;
+}
+.grounp-title{
+	width: auto;
+	background: #f5f5f6;
+	border: 1px solid #ebeceb;
+	padding: 15px 20px;
+	font-size: 18px;
+	font-weight: 500;
+}
+.sponsor ul li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	margin: 30px 40px 30px 0;
+	text-align: center;
+}
+.sponsor ul li h3 {
+	line-height: 90px;
+	font-weight: 600;
+	margin: 0;
+}
+.sponsor ul li img {
+	width: 100%;
+}
+.map-container {
+	width: 380px;
+	height: auto;
+	position: absolute;
+	top: -200px;
+	left: 0px;
+	border: 1px solid #efefef;
+	background: white;
+	padding: 10px;
+	display: none;
+	z-index: 10;
+}
+.showmap-btn{
+	display: block;
+	font-size: 15px;
+	text-decoration: underline;
+	margin-top: 5px;
+}
+/* footer */
+footer{
+	padding-bottom: 10px;
+}
+
+
+

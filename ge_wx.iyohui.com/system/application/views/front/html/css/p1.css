@@ -1,0 +1,57 @@
+body {
+	background:url(../images/bg_p0.png);	
+	background-repeat:no-repeat;
+	background-position:100% 100%;
+	background-size:65%;	
+}
+#pagewrap {
+	margin:0 auto; 
+	width:80%; 
+}
+.sso_header {
+	margin-top:60px; 
+	margin-bottom:15px;
+}
+.sso_h1 {
+	color:#356db5;
+	margin:0;
+	padding:0;
+	font: bold 1.2em/120% "宋体";
+	line-height:25px;	
+}
+.red_span {
+	color:#e60012;
+}
+.sso_img {
+	margin:0 auto;
+}
+.sso_img img {
+	border:none;
+	height:auto;
+	max-width:100%;
+}
+.sso_main {
+	text-align:center; 
+	margin:25px auto
+}
+.sso_btn input {
+	width:110px;
+	height:35px;
+	margin:0 auto;
+}
+.sso_code {
+	font: bold 0.8em/120% "宋体";
+	color:#356db5;
+	margin:0 auto;
+	margin-top:5px;	
+}
+.sso_code a {
+	color:#356db5;
+	text-decoration:none;
+}
+@media screen and (min-width: 639px) {
+	.sso_btn input {
+		width:216px;
+		height:69px;
+	}
+}

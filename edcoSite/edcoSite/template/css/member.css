@@ -1,0 +1,141 @@
+.main{
+	width: 100%;
+	position: relative;
+	margin-bottom: -4px;
+}
+.member-img{
+	width: 100%;
+}
+.member{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+.member-login,.member-register{
+	width: 155px;
+	height: 45px;
+	float: left;
+	background: #191919;
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+	font-family: 'Microsoft Yahei';
+	display: block;
+	color: #898989;
+	cursor: pointer;
+}
+.member .cur{
+	background: white;
+	color: #333333;
+}
+.member-login{
+	border-right: 2px solid #3c4954; 
+}
+.member-main{
+	width: 460px;
+	padding: 35px 0 35px 45px;
+	background: white;
+}
+.input-text{
+	width: 240px;
+	height: 40px;
+	border: 1px solid #d2d2d2;
+	margin: 0 15px 15px 15px;
+	font-size: 14px;
+	padding-left: 20px; 
+}
+.member-captcha .input-text{
+	width: 120px;
+}
+.member-name i{
+	width: 16px;
+	height: 15px;
+	background: url(/static/images/member-name.png) no-repeat;
+	display: inline-block;
+}
+.member-password i{
+	width: 15px;
+	height: 15px;
+	background: url(/static/images/member-password.png) no-repeat;
+	display: inline-block;
+}
+.member-mail i{
+	width: 18px;
+	height: 14px;
+	background: url(/static/images/member-mail.png) no-repeat;
+	display: inline-block;
+}
+.member-repassword i{
+	width: 17px;
+	height: 15px;
+	background: url(/static/images/member-repassword.png) no-repeat;
+	display: inline-block;
+}
+.member-captcha i{
+	width: 16px;
+	height: 15px;
+	background: url(/static/images/member-captcha.png) no-repeat;
+	display: inline-block;
+}
+.member-password input{
+	margin-left: 17px;
+}
+.member-password a{
+	font-size: 13px;
+	color: #505050;
+}
+.member-submit{
+	width: 130px;
+	height: 36px;
+	background: #454545;
+	color: white;
+	font-family: 'Microsoft Yahei';
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+	border: none;
+	cursor: pointer;
+	margin-left: 30px;
+}
+.new-reg{
+	margin-left: 30px;
+	font-size: 13px;
+	color: #505050;
+}
+.new-reg i{
+	display: inline-block;
+	width: 7px;
+	height: 10px;
+	background: url(/static/images/member-arrow.png) no-repeat;
+	margin-left: 5px;
+}
+.register span{
+	font-size: 13px;
+	color: #999999;
+}
+.register p{
+	padding-left: 30px;
+	color: #666666;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+.register p input{
+	margin-right: 5px;
+}
+.code-container{
+	position: relative;
+	top: 10px;
+	margin-right: 20px;
+}
+.code-change{
+	color: #0197dd;
+	font-size: 0.8em;
+}
+.errors{
+	margin-bottom: 15px;
+}
+.errors p{
+	font-size: 0.8em;
+	color: #eb6060;
+	margin-bottom: 5px;
+}

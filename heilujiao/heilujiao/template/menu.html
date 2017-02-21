@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}黑鹿角西餐 - 菜单{% endblock %}
+{% block content %}
+	<section class="menu-container">
+		<div class="container">
+			<div class="detail-left">
+				<p>全部</p>
+				<a class="month{% if menuType == 4 %} cur{% endif %}" href="/menu/month/">本月<br/>推荐</a>
+				<a class="popular{% if menuType == 5 %} cur{% endif %}" href="/menu/popular/">最受<br/>欢迎</a>
+				<a class="main{% if menuType == 1 %} cur{% endif %}" href="/menu/main/">主餐</a>
+				<a class="salad{% if menuType == 2 %} cur{% endif %}" href="/menu/salad/">沙拉</a>
+				<a class="deal{% if menuType == 3 %} cur{% endif %}" href="/menu/deal/">小食</a>
+				<i></i>
+			</div>
+			<div class="menu-right">
+				<h3>首次订购免运费 / 每份订单消费108元以上免运费</h3>
+				<div class="menu-con">
+					<div class="menu-slide clearfix">
+						{% for item in items %}
+							<li><a href="/detail/{{ item.id }}/">
+								<img src="/static/upload/{{ item.img }}">
+								<p>{{ item.name }} 
+									{% if item.extra == 0 %}
+										<i class="menu-type1"></i>
+									{% elif item.extra == 1 %}
+										<img src="/static/images/spicy.png" class="icon">
+									{% else %}
+										<img src="/static/images/vegetable.png" class="icon">
+									{% endif %} 
+								</p>
+								<span>￥{{ item.price }}</span>
+							</a></li>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="menu-dot">
+					{% for item in range %}
+						<a {% if forloop.counter == 1 %}class="cur"{% endif %} data-id="{{ forloop.counter }}"></a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="tips6">
+		<div class="container">
+			<img src="/static/images/index-tip3.jpg">
+		</div>
+	</section>
+{% endblock %}

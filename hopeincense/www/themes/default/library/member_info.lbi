@@ -1,0 +1,15 @@
+<div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+{if $user_info}
+{$lang.hello}，<font class="f4_b">{$user_info.username}</font>, {$lang.welcome_return}！
+<a href="user.php">{$lang.user_center}</a>|
+<a href="user.php?act=logout">{$lang.user_logout}</a>
+{else}
+ 你好，欢迎 Welcome&nbsp;|&nbsp;
+ <a href="user.php">登录 Sign In </a>&nbsp;|&nbsp;
+ <a href="user.php?act=register">注册 Register </a>&nbsp;|&nbsp;
+ <img src="images/top_01.gif" align="absmiddle" />
+ <a href="/flow.php">购物袋 Shopping Bag</a>&nbsp;|&nbsp;
+ <img src="images/top_2.gif" width="17" height="17" align="absmiddle" />
+ <a href="/message.php">留言板 Online Talk </a>
+{/if}

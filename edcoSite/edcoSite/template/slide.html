@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Change slide | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/uploadify.css">
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script>
+    {% if status == 1 %}
+        alert("保存成功");
+    {% endif %}
+</script>
+</head>
+
+
+<body class="edco-slide change-form">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">Django administration</h1>
+
+        </div>
+    
+        
+        
+    </div>
+    <!-- END Header -->   
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Change slide</h1>
+        <div id="content-main">
+
+
+
+<form enctype="multipart/form-data" action="/root/saveSlide/" method="post" id="slide_form"><input type='hidden' name='csrfmiddlewaretoken' value='cORHKPJaUNGW0ulf2iRldcVNZLlSN7Bf' />
+<div>
+    <input type="file" id="upload">
+    <fieldset class="module aligned ">
+        
+        
+        
+            <div class="form-row field-img1">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img1">Img1:</label>
+                            
+                                <input class="vTextField img" id="id_img1" maxlength="100" name="img1" type="text" value="{{ item.img1 }}"/>
+                                <a href="/static/upload/images/{{ item.img1 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img1_des">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img1_des">Img1 des:</label>
+                            
+                                <input class="vTextField" id="id_img1_des" maxlength="100" name="img1_des" type="text" value="{{ item.img1_des }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img1_des_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img1_des_ch">Img1 des ch:</label>
+                            
+                                <input class="vTextField" id="id_img1_des_ch" maxlength="100" name="img1_des_ch" type="text" value="{{ item.img1_des_ch }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img2">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img2">Img2:</label>
+                            
+                                <input class="vTextField img" id="id_img2" maxlength="100" name="img2" type="text" value="{{ item.img2 }}"/>
+                                <a href="/static/upload/images/{{ item.img2 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img2_des">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img2_des">Img2 des:</label>
+                            
+                                <input class="vTextField" id="id_img2_des" maxlength="100" name="img2_des" type="text" value="{{ item.img2_des }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img2_des_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img2_des_ch">Img2 des ch:</label>
+                            
+                                <input class="vTextField" id="id_img2_des_ch" maxlength="100" name="img2_des_ch" type="text" value="{{ item.img2_des_ch }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img3">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img3">Img3:</label>
+                            
+                                <input class="vTextField img" id="id_img3" maxlength="100" name="img3" type="text" value="{{ item.img3 }}"/>
+                                <a href="/static/upload/images/{{ item.img3 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img3_des">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img3_des">Img3 des:</label>
+                            
+                                <input class="vTextField" id="id_img3_des" maxlength="100" name="img3_des" type="text" value="{{ item.img3_des }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img3_des_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img3_des_ch">Img3 des ch:</label>
+                            
+                                <input class="vTextField" id="id_img3_des_ch" maxlength="100" name="img3_des_ch" type="text" value="{{ item.img3_des_ch }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img4">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img4">Img4:</label>
+                            
+                                <input class="vTextField img" id="id_img4" maxlength="100" name="img4" type="text" value="{{ item.img4 }}"/>
+                                <a href="/static/upload/images/{{ item.img4 }}" target="_blank">preview</a>
+                            
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img4_des">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img4_des">Img4 des:</label>
+                            
+                                <input class="vTextField" id="id_img4_des" maxlength="100" name="img4_des" type="text" value="{{ item.img4_des }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img4_des_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img4_des_ch">Img4 des ch:</label>
+                            
+                                <input class="vTextField" id="id_img4_des_ch" maxlength="100" name="img4_des_ch" type="text" value="{{ item.img4_des_ch }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img5">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img5">Img5:</label>
+                            
+                                <input class="vTextField img" id="id_img5" maxlength="100" name="img5" type="text" value="{{ item.img5 }}"/>
+                                <a href="/static/upload/images/{{ item.img5 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img5_des">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img5_des">Img5 des:</label>
+                            
+                                <input class="vTextField" id="id_img5_des" maxlength="100" name="img5_des" type="text" value="{{ item.img5_des }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img5_des_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img5_des_ch">Img5 des ch:</label>
+                            
+                                <input class="vTextField" id="id_img5_des_ch" maxlength="100" name="img5_des_ch" type="text" value="{{ item.img5_des_ch }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img6">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img6">Img6:</label>
+                            
+                                <input class="vTextField img" id="id_img6" maxlength="100" name="img6" type="text" value="{{ item.img6 }}"/>
+                                <a href="/static/upload/images/{{ item.img6 }}" target="_blank">preview</a>
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img6_des">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img6_des">Img6 des:</label>
+                            
+                                <input class="vTextField" id="id_img6_des" maxlength="100" name="img6_des" type="text" value="{{ item.img6_des }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="form-row field-img6_des_ch">
+                
+                
+                    <div>
+                        
+                        
+                            <label for="id_img6_des_ch">Img6 des ch:</label>
+                            
+                                <input class="vTextField" id="id_img6_des_ch" maxlength="100" name="img6_des_ch" type="text" value="{{ item.img6_des_ch }}"/>
+                            
+                        
+                        
+                    </div>
+                
+            </div>
+        
+    </fieldset>
+<div class="submit-row">
+<input type="submit" value="Save" class="default" name="_save" />
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+</script>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/uploadify.js"></script>
+<script>
+    (function($){
+        $('#upload').uploadify ({
+            'swf'       : '/static/js/uploadify.swf',
+            'uploader'  : '/upload/', 
+            'cancelImage' : '/static/images/cancel.png',
+            'buttonClass' : 'btn',
+            'removeCompleted': true,
+            'fileTypeExts'   : '*.jpg;*.gif;*.png',
+            'multi'     : true,
+            'auto'    : true,
+            'buttonText': 'slide1图片',
+            'onUploadSuccess' : function (file, data, response) {
+                for(var i = 0;i < 6;i++){
+                    if($('.img').eq(i).val() == ""){
+                        $('.img').eq(i).val(data);
+                        $('.img').eq(i).next().attr("href","/static/upload/images/"+data);
+                        break;
+                    }
+                }
+            }
+        });
+    })(jQuery)
+</script>
+</body>
+</html>

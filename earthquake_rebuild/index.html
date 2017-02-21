@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<div class="loading"></div>
+		<div class="share">
+		    <img src="images/share-modal.png">
+		</div>
+		<div class="tips">
+		    <img src="images/tips.png">
+		</div>
+		<img src="images/music.png" class="music on">
+        <div class="page page1">
+        	<div class="page1-container" id="page1"></div>
+        	<img src="images/index1.jpg" class="page1-img">
+        </div>
+        <div class="page page2" id="page2">
+    		<a class="page2-img1 page2-img active" data-value="1"></a>
+    		<a class="page2-img2 page2-img active" data-value="2"></a>
+    		<a class="page2-img3 page2-img active" data-value="3"></a>
+    		<img src="images/map.jpg" class="page2-img">
+    		<div class="page2-container1 page2-container">
+    			<img src="images/Everest1.jpg">
+    			<img src="images/close.jpg" class="close" data-value="1">
+    			<div class="map-container" id="map1"></div>
+    		</div>
+    		<div class="page2-container2 page2-container">
+    			<img src="images/Tibet1.jpg">
+    			<img src="images/close.jpg" class="close" data-value="2">
+    			<div class="map-container" id="map2"></div>
+    		</div>
+    		<div class="page2-container3 page2-container">
+    			<img src="images/Nepal1.jpg">
+    			<img src="images/close.jpg" class="close" data-value="3">
+    			<div class="map-container" id="map3"></div>
+    		</div>
+        </div>
+        <div class="page page3">
+        	<div class="page3-container" id="page3"></div>
+        	<img src="images/bottom1.jpg" class="page3-img">
+        	<img class="share-btn" src="images/share.png">
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/Lottery.js"></script>
+        <script src="js/min/index-min.js"></script>
+        <script>
+        	var dataForWeixin={
+        	    appId:"",
+        	    MsgImg:"",
+        	    TLImg:"",
+        	    url:'',
+        	    title:'',
+        	    desc:"",
+        	    fakeid:"",
+        	    callback:function(){}
+        	};
+        	var onBridgeReady=function(){
+        	    WeixinJSBridge.on('menu:share:appmessage', function(argv){
+        	        WeixinJSBridge.invoke('sendAppMessage',{
+        	            "appid":dataForWeixin.appId,
+        	            "img_url":dataForWeixin.MsgImg,
+        	            "img_width":"120",
+        	            "img_height":"120",
+        	            "link":dataForWeixin.url,
+        	            "desc":dataForWeixin.desc,
+        	            "title":dataForWeixin.title
+        	        }, function(res){(dataForWeixin.callback)();});
+        	    });
+        	    WeixinJSBridge.on('menu:share:timeline', function(argv){
+        	        (dataForWeixin.callback)();
+        	        WeixinJSBridge.invoke('shareTimeline',{
+        	            "img_url":dataForWeixin.TLImg,
+        	            "img_width":"120",
+        	            "img_height":"120",
+        	            "link":dataForWeixin.url,
+        	            "desc":dataForWeixin.desc,
+        	            "title":dataForWeixin.title
+        	        }, function(res){});
+        	    });
+        	    WeixinJSBridge.on('menu:share:weibo', function(argv){
+        	        WeixinJSBridge.invoke('shareWeibo',{
+        	            "content":dataForWeixin.title,
+        	            "url":dataForWeixin.url
+        	        }, function(res){(dataForWeixin.callback)();});
+        	    });
+        	    WeixinJSBridge.on('menu:share:facebook', function(argv){
+        	        (dataForWeixin.callback)();
+        	        WeixinJSBridge.invoke('shareFB',{
+        	            "img_url":dataForWeixin.TLImg,
+        	            "img_width":"120",
+        	            "img_height":"120",
+        	            "link":dataForWeixin.url,
+        	            "desc":dataForWeixin.desc,
+        	            "title":dataForWeixin.title
+        	        }, function(res){});
+        	    });
+        	    WeixinJSBridge.call('hideToolbar');
+        	};
+        	if(document.addEventListener){
+        	    document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        	}else if(document.attachEvent){
+        	    document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+        	    document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        	}
+        </script>
+	</body>
+</html>

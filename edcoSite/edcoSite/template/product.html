@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/product.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/cloudzoom.css">
+	</head>
+	<body>
+		{%include "header.html"%}
+		{% if language != None and language == 'chinese' %}
+		<div class="pro-nav">
+			<a href="/">主页</a>/<a href="/products/">{{ item.type1_ch }}</a>/<a href="/product/{{ item.id }}">{{ item.name_ch }}</a>
+		</div>
+		<section class="main">
+			<div class="pro-detail clearfix">
+				<div class="main-l">
+					<div class="main-img">
+						<img src="/static/upload/images/m_{{ item.img1 }}" class="cloudzoom" data-cloudzoom = "zoomImage: '/static/upload/images/{{ item.img1 }}'" id="zoom">
+					</div>
+					<ul>
+						{% if item.img1 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img1 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img1 }}',zoomImage:'/static/upload/images/{{ item.img1 }}'"></li>
+						{% endif %}
+						{% if item.img2 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img2 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img2 }}',zoomImage:'/static/upload/images/{{ item.img2 }}'"></li>
+						{% endif %}
+						{% if item.img3 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img3 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img3 }}',zoomImage:'/static/upload/images/{{ item.img3 }}'"></li>
+						{% endif %}
+						{% if item.img4 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img4 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img4 }}',zoomImage:'/static/upload/images/{{ item.img4 }}'"></li>
+						{% endif %}
+						{% if item.img5 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img5 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img5 }}',zoomImage:'/static/upload/images/{{ item.img5 }}'"></li>
+						{% endif %}
+						{% if item.img6 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img6 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img6 }}',zoomImage:'/static/upload/images/{{ item.img6 }}'"></li>
+						{% endif %}
+						{% if item.img7 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img7 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img7 }}',zoomImage:'/static/upload/images/{{ item.img7 }}'"></li>
+						{% endif %}
+						{% if item.img8 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img8 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img8 }}',zoomImage:'/static/upload/images/{{ item.img8 }}'"></li>
+						{% endif %}
+						{% if item.img9 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img9 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img9 }}',zoomImage:'/static/upload/images/{{ item.img9 }}'"></li>
+						{% endif %}
+						{% if item.img10 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img10 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img10 }}',zoomImage:'/static/upload/images/{{ item.img10 }}'"></li>
+						{% endif %}
+					</ul>
+				</div>
+				<div class="main-r">
+					<h3>{{ item.name_ch }}</h3>
+					<p><span>名称:</span>{{ item.name_ch }}</p>
+					<p><span>价格:</span>${{ item.price }}</p>
+					<p><span>功能:</span>{{ item.function_ch }}</p>
+					<ul class="main-tech clearfix">
+						{% if item.tech1 %}
+							<li><img src="/static/images/{{ item.tech1 }}"></li>
+						{% endif %}
+						{% if item.tech2 %}
+							<li><img src="/static/images/{{ item.tech2 }}"></li>
+						{% endif %}
+						{% if item.tech3 %}
+							<li><img src="/static/images/{{ item.tech3 }}"></li>
+						{% endif %}
+						{% if item.tech4 %}
+							<li><img src="/static/images/{{ item.tech5 }}"></li>
+						{% endif %}
+						{% if item.tech6 %}
+							<li><img src="/static/images/{{ item.tech6 }}"></li>
+						{% endif %}
+						{% if item.tech7 %}
+							<li><img src="/static/images/{{ item.tech7 }}"></li>
+						{% endif %}
+						{% if item.tech8 %}
+							<li><img src="/static/images/{{ item.tech8 }}"></li>
+						{% endif %}
+						{% if item.tech9 %}
+							<li><img src="/static/images/{{ item.tech9 }}"></li>
+						{% endif %}
+						{% if item.tech10 %}
+							<li><img src="/static/images/{{ item.tech10 }}"></li>
+						{% endif %}
+					</ul>
+					<ul class="main-color clearfix">
+						{% if item.color1 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color1 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color1 }}',zoomImage:'/static/upload/images/{{ item.color1 }}'"></li>
+						{% endif %}
+						{% if item.color2 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color2 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color2 }}',zoomImage:'/static/upload/images/{{ item.color2 }}'"></li>
+						{% endif %}
+						{% if item.color3 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color3 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color3 }}',zoomImage:'/static/upload/images/{{ item.color3 }}'"></li>
+						{% endif %}
+						{% if item.color4 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color4 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color4 }}',zoomImage:'/static/upload/images/{{ item.color4 }}'"></li>
+						{% endif %}
+						{% if item.color5 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color5 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color5 }}',zoomImage:'/static/upload/images/{{ item.color5 }}'"></li>
+						{% endif %}
+						{% if item.color6 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color6 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color6 }}',zoomImage:'/static/upload/images/{{ item.color6 }}'"></li>
+						{% endif %}
+						{% if item.color7 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color7 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color7 }}',zoomImage:'/static/upload/images/{{ item.color7 }}'"></li>
+						{% endif %}
+						{% if item.color8 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color8 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color8 }}',zoomImage:'/static/upload/images/{{ item.color8 }}'"></li>
+						{% endif %}
+						{% if item.color9 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color9 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color9 }}',zoomImage:'/static/upload/images/{{ item.color9 }}'"></li>
+						{% endif %}
+						{% if item.color10 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color10 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color10 }}',zoomImage:'/static/upload/images/{{ item.color10 }}'"></li>
+						{% endif %}
+					</ul>
+					<a href="{{ item.url }}" class="buy"><img src="/static/images/buy-btn.png"></a>
+				</div>
+			</div>
+			<div class="comment">
+				<h3>发表评论</h3>
+				<ul>
+					{% for com in comment %}
+						<li>
+							<div class="avatar">
+								<img src="/static/upload/avatar/m_{{ com.avatar }}">
+							</div>
+							<div class="comment-main">
+								<i></i>
+								<div class="comment-head clearfix">
+									<div class="comment-star">
+										<span data-rate="5" class="stars-rate stars-rate{{ com.rate }}"></span>
+									</div>
+									<div class="comment-rate">
+										<a class="comment-up" href="javascript:;">{{ com.up }}</a>
+										<a class="comment-down" href="javascript:;">{{ com.down }}</a>
+									</div>
+								</div>
+								<p>{{ com.content }}</p>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+				{% if comment_length > 6 %}
+				<div class="pages">
+					<a class="pre" href="javascript:;"><</a>
+					<a class="page cur" href="javascript:;">1</a>
+					<a class="page" href="javascript:;">2</a>
+					<a class="page" href="javascript:;">3</a>
+					<a class="next" href="javascript:;">></a>
+				</div>
+				{% elif comment_length > 3 %}
+				<div class="pages">
+					<a class="pre" href="javascript:;"><</a>
+					<a class="page cur" href="javascript:;">1</a>
+					<a class="page" href="javascript:;">2</a>
+					<a class="next" href="javascript:;">></a>
+				</div>
+				{% endif %}
+				<div class="comment-post">
+					<div class="post-head">
+						{% if user != None %}
+							<img src="/static/upload/avatar/m_{{ user.avatar }}"><span class="comment-name">{{ user.name }}</span>
+						{% else %}
+							<img src="/static/images/avatar.png"><span class="comment-name">your name(Please login first)</span>
+						{% endif %}
+						<textarea></textarea>
+						<p>
+						<span class="comment-star-rate" rating="0">
+							<a index="1"></a><a index="2"></a><a index="3"></a><a index="4"></a><a index="5"></a>
+						</span>
+						{% if user != None %}
+							<a href="javascript:;" class="comment-send islogin">发表</a>
+						{% else %}
+							<a href="javascript:;" class="comment-send">发表</a>
+						{% endif %}		
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="recomment">
+			<div class="recomment-container product">
+				<h3>推荐产品</h3>
+				<ul class="pro-list clearfix">
+					{% for item in rec %}
+						<li>
+							<a href="/product/{{ item.id }}/">
+								<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+								<ul class="color-list clearfix">
+									{% if item.color1_name %}
+										<li style="background:{{ item.color1_name }}"></li>
+									{% endif %}
+									{% if item.color2_name %}
+										<li style="background:{{ item.color2_name }}"></li>
+									{% endif %}
+									{% if item.color3_name %}
+										<li style="background:{{ item.color3_name }}"></li>
+									{% endif %}
+									{% if item.color4_name %}
+										<li style="background:{{ item.color4_name }}"></li>
+									{% endif %}
+									{% if item.color5_name %}
+										<li style="background:{{ item.color5_name }}"></li>
+									{% endif %}
+									{% if item.color6_name %}
+										<li style="background:{{ item.color6_name }}"></li>
+									{% endif %}
+									{% if item.color7_name %}
+										<li style="background:{{ item.color7_name }}"></li>
+									{% endif %}
+									{% if item.color8_name %}
+										<li style="background:{{ item.color8_name }}"></li>
+									{% endif %}
+									{% if item.color9_name %}
+										<li style="background:{{ item.color9_name }}"></li>
+									{% endif %}
+									{% if item.color10_name %}
+										<li style="background:{{ item.color10_name }}"></li>
+									{% endif %}
+								</ul>
+								{% if language == None or language == 'chinese' %}
+									<h3>{{ item.name_ch }}</h3>
+								{% else %}
+									<h3>{{ item.name }}</h3>
+								{% endif %}
+								<h4>${{ item.price }}</h4>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</section>
+		{% else %}
+		<div class="pro-nav">
+			<a href="/">HOME</a>/<a href="/products/">PRODUCTS</a>/<a href="/product/{{ item.id }}">jacket</a>
+		</div>
+		<section class="main">
+			<div class="pro-detail clearfix">
+				<div class="main-l">
+					<div class="main-img">
+						<img src="/static/upload/images/m_{{ item.img1 }}" class="cloudzoom" data-cloudzoom = "zoomImage: '/static/upload/images/{{ item.img1 }}'" id="zoom">
+					</div>
+					<ul>
+						{% if item.img1 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img1 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img1 }}',zoomImage:'/static/upload/images/{{ item.img1 }}'"></li>
+						{% endif %}
+						{% if item.img2 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img2 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img2 }}',zoomImage:'/static/upload/images/{{ item.img2 }}'"></li>
+						{% endif %}
+						{% if item.img3 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img3 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img3 }}',zoomImage:'/static/upload/images/{{ item.img3 }}'"></li>
+						{% endif %}
+						{% if item.img4 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img4 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img4 }}',zoomImage:'/static/upload/images/{{ item.img4 }}'"></li>
+						{% endif %}
+						{% if item.img5 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img5 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img5 }}',zoomImage:'/static/upload/images/{{ item.img5 }}'"></li>
+						{% endif %}
+						{% if item.img6 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img6 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img6 }}',zoomImage:'/static/upload/images/{{ item.img6 }}'"></li>
+						{% endif %}
+						{% if item.img7 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img7 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img7 }}',zoomImage:'/static/upload/images/{{ item.img7 }}'"></li>
+						{% endif %}
+						{% if item.img8 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img8 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img8 }}',zoomImage:'/static/upload/images/{{ item.img8 }}'"></li>
+						{% endif %}
+						{% if item.img9 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img9 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img9 }}',zoomImage:'/static/upload/images/{{ item.img9 }}'"></li>
+						{% endif %}
+						{% if item.img10 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.img10 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.img10 }}',zoomImage:'/static/upload/images/{{ item.img10 }}'"></li>
+						{% endif %}
+					</ul>
+				</div>
+				<div class="main-r">
+					<h3>{{ item.name }}</h3>
+					<p><span>Name:</span>{{ item.name }}</p>
+					<p><span>Price:</span>${{ item.price }}</p>
+					<p><span>Function:</span>{{ item.function }}</p>
+					<ul class="main-tech clearfix">
+						{% if item.tech1 %}
+							<li><img src="/static/images/{{ item.tech1 }}"></li>
+						{% endif %}
+						{% if item.tech2 %}
+							<li><img src="/static/images/{{ item.tech2 }}"></li>
+						{% endif %}
+						{% if item.tech3 %}
+							<li><img src="/static/images/{{ item.tech3 }}"></li>
+						{% endif %}
+						{% if item.tech4 %}
+							<li><img src="/static/images/{{ item.tech5 }}"></li>
+						{% endif %}
+						{% if item.tech6 %}
+							<li><img src="/static/images/{{ item.tech6 }}"></li>
+						{% endif %}
+						{% if item.tech7 %}
+							<li><img src="/static/images/{{ item.tech7 }}"></li>
+						{% endif %}
+						{% if item.tech8 %}
+							<li><img src="/static/images/{{ item.tech8 }}"></li>
+						{% endif %}
+						{% if item.tech9 %}
+							<li><img src="/static/images/{{ item.tech9 }}"></li>
+						{% endif %}
+						{% if item.tech10 %}
+							<li><img src="/static/images/{{ item.tech10 }}"></li>
+						{% endif %}
+					</ul>
+					<ul class="main-color clearfix">
+						{% if item.color1 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color1 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color1 }}',zoomImage:'/static/upload/images/{{ item.color1 }}'"></li>
+						{% endif %}
+						{% if item.color2 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color2 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color2 }}',zoomImage:'/static/upload/images/{{ item.color2 }}'"></li>
+						{% endif %}
+						{% if item.color3 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color3 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color3 }}',zoomImage:'/static/upload/images/{{ item.color3 }}'"></li>
+						{% endif %}
+						{% if item.color4 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color4 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color4 }}',zoomImage:'/static/upload/images/{{ item.color4 }}'"></li>
+						{% endif %}
+						{% if item.color5 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color5 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color5 }}',zoomImage:'/static/upload/images/{{ item.color5 }}'"></li>
+						{% endif %}
+						{% if item.color6 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color6 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color6 }}',zoomImage:'/static/upload/images/{{ item.color6 }}'"></li>
+						{% endif %}
+						{% if item.color7 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color7 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color7 }}',zoomImage:'/static/upload/images/{{ item.color7 }}'"></li>
+						{% endif %}
+						{% if item.color8 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color8 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color8 }}',zoomImage:'/static/upload/images/{{ item.color8 }}'"></li>
+						{% endif %}
+						{% if item.color9 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color9 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color9 }}',zoomImage:'/static/upload/images/{{ item.color9 }}'"></li>
+						{% endif %}
+						{% if item.color10 %}
+							<li><img class="cloudzoom-gallery" src="/static/upload/images/m_{{ item.color10 }}" data-cloudzoom="useZoom:'#zoom',image:'/static/upload/images/m_{{ item.color10 }}',zoomImage:'/static/upload/images/{{ item.color10 }}'"></li>
+						{% endif %}
+					</ul>
+					<a href="{{ item.url }}" class="buy"><img src="/static/images/buy-btn.png"></a>
+				</div>
+			</div>
+			<div class="comment">
+				<h3>Post Comment</h3>
+				<ul>
+					{% for com in comment %}
+						<li>
+							<div class="avatar">
+								<img src="/static/upload/avatar/m_{{ com.avatar }}">
+							</div>
+							<div class="comment-main">
+								<i></i>
+								<div class="comment-head clearfix">
+									<div class="comment-star">
+										<span data-rate="5" class="stars-rate stars-rate{{ com.rate }}"></span>
+									</div>
+									<div class="comment-rate">
+										<a class="comment-up" href="javascript:;">{{ com.up }}</a>
+										<a class="comment-down" href="javascript:;">{{ com.down }}</a>
+									</div>
+								</div>
+								<p>{{ com.content }}</p>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+				{% if comment_length > 6 %}
+				<div class="pages">
+					<a class="pre" href="javascript:;"><</a>
+					<a class="page cur" href="javascript:;">1</a>
+					<a class="page" href="javascript:;">2</a>
+					<a class="page" href="javascript:;">3</a>
+					<a class="next" href="javascript:;">></a>
+				</div>
+				{% elif comment_length > 3 %}
+				<div class="pages">
+					<a class="pre" href="javascript:;"><</a>
+					<a class="page cur" href="javascript:;">1</a>
+					<a class="page" href="javascript:;">2</a>
+					<a class="next" href="javascript:;">></a>
+				</div>
+				{% endif %}
+				<div class="comment-post">
+					<div class="post-head">
+						{% if user != None %}
+							<img src="/static/upload/avatar/m_{{ user.avatar }}"><span class="comment-name">{{ user.name }}</span>
+						{% else %}
+							<img src="/static/images/avatar.png"><span class="comment-name">your name(Please login first)</span>
+						{% endif %}
+						<textarea></textarea>
+						<p>
+						<span class="comment-star-rate" rating="0">
+							<a index="1"></a><a index="2"></a><a index="3"></a><a index="4"></a><a index="5"></a>
+						</span>
+						{% if user != None %}
+							<a href="javascript:;" class="comment-send islogin">send</a>
+						{% else %}
+							<a href="javascript:;" class="comment-send">send</a>
+						{% endif %}		
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="recomment">
+			<div class="recomment-container product">
+				<h3>recommend comodities</h3>
+				<ul class="pro-list clearfix">
+					{% for item in rec %}
+						<li>
+							<a href="/product/{{ item.id }}/" target="_blank">
+								<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+								<ul class="color-list clearfix">
+									{% if item.color1_name %}
+										<li style="background:{{ item.color1_name }}"></li>
+									{% endif %}
+									{% if item.color2_name %}
+										<li style="background:{{ item.color2_name }}"></li>
+									{% endif %}
+									{% if item.color3_name %}
+										<li style="background:{{ item.color3_name }}"></li>
+									{% endif %}
+									{% if item.color4_name %}
+										<li style="background:{{ item.color4_name }}"></li>
+									{% endif %}
+									{% if item.color5_name %}
+										<li style="background:{{ item.color5_name }}"></li>
+									{% endif %}
+									{% if item.color6_name %}
+										<li style="background:{{ item.color6_name }}"></li>
+									{% endif %}
+									{% if item.color7_name %}
+										<li style="background:{{ item.color7_name }}"></li>
+									{% endif %}
+									{% if item.color8_name %}
+										<li style="background:{{ item.color8_name }}"></li>
+									{% endif %}
+									{% if item.color9_name %}
+										<li style="background:{{ item.color9_name }}"></li>
+									{% endif %}
+									{% if item.color10_name %}
+										<li style="background:{{ item.color10_name }}"></li>
+									{% endif %}
+								</ul>
+								<h3>{{ item.name }}</h3>
+								<h4>${{ item.price }}</h4>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</section>
+		{% endif %}
+		{%include "footer.html"%}
+		<script>
+			var product_id = {{ item.id }};
+		</script>
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+		<script src="/static/js/cloudzoom.js"></script>
+		<script src="/static/js/product.js"></script>
+	</body>
+</html>

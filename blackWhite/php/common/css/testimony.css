@@ -1,0 +1,64 @@
+body{
+	font-size: 62.5%;
+	background:url(../images/bg.gif) no-repeat;
+	background-position:right bottom;
+	margin:0;
+	padding:0;
+}
+.clear{clear:both}
+*{margin:0px;padding:0px;border:0px; font-family:"GE汉仪中圆简";}
+#pagewrap{width:100%;height:auto; margin:0 auto;}
+.top{
+	height:50px;
+	line-height:50px;
+	color:#0958a8;
+	font-size:30px;
+	font-weight:bold;
+	padding-left:20px;
+}
+.textimony_menu{
+	min-width:300px;
+	float:left;
+	font-size:16px;
+	background:#eaeaea;
+	margin:5px 0;
+	padding:5px 2px;
+	line-height:20px;
+	color:#8d8f8f;
+	font-weight:bold;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.testimony_info{
+	width:85%;
+	height:auto;
+	margin:10px auto;
+	padding:15px;
+	background:#eeeeee;
+	border:1px solid #bababa;
+	-moz-border-radius: 10px;      /* Gecko browsers */
+    -webkit-border-radius: 10px;   /* Webkit browsers */
+    border-radius:10px;            /* W3C syntax */
+}
+.testimony_title{
+	font-weight:bold;
+	font-size:18px;
+	line-height:22px;
+}
+.testimony_content{
+	font-size:18px;
+	line-height:22px;
+}
+.testimony_zan{
+	width:90%;
+	margin:0 auto;
+	text-align:right;
+	font-size:16px;
+	line-height:22px;
+	padding-bottom:10px;
+	color:#0096d6;
+}
+.zan_click{
+	cursor:pointer;
+}

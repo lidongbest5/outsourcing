@@ -1,0 +1,1086 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF;
+  font-family: 'Microsoft Yahei', Arial;
+  font-size: 14px; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.none {
+  display: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+.container {
+  width: 1000px;
+  position: relative;
+  margin: 0 auto; }
+
+body.noSession header {
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  background: #404040;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  text-align: right; }
+  body.noSession header .logo {
+    float: left;
+    margin-top: 5px; }
+  body.noSession header span {
+    color: white; }
+    body.noSession header span i {
+      display: inline-block;
+      vertical-align: middle;
+      width: 18px;
+      height: 17px;
+      margin-right: 8px;
+      background: url(../images/icon_phone.png) no-repeat; }
+body.noSession .wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  margin: 0 0 -160px 0;
+  padding-top: 90px;
+  overflow: hidden; }
+  body.noSession .wrapper .login {
+    width: 521px;
+    height: 521px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    margin-top: -260px;
+    margin-left: -260px;
+    color: #404040;
+    background: url(../images/round.png) no-repeat; }
+    body.noSession .wrapper .login .login-con {
+      width: 360px;
+      margin: 100px auto 0 auto; }
+    body.noSession .wrapper .login h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 35px; }
+    body.noSession .wrapper .login p {
+      font-size: 20px;
+      margin-bottom: 10px; }
+      body.noSession .wrapper .login p a {
+        float: right;
+        padding-left: 28px;
+        font-size: 16px;
+        background: url(../images/icon_arrow.png) no-repeat;
+        color: #404040; }
+    body.noSession .wrapper .login .user, body.noSession .wrapper .login .password {
+      width: 100%;
+      height: 45px;
+      margin-bottom: 10px;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 3px 3px 3px #bbc3ca; }
+      body.noSession .wrapper .login .user i, body.noSession .wrapper .login .password i {
+        width: 40px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        background: url(../images/icon_user.png) center center no-repeat; }
+      body.noSession .wrapper .login .user input, body.noSession .wrapper .login .password input {
+        width: 315px;
+        height: 100%;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: top;
+        border: none;
+        outline: none; }
+    body.noSession .wrapper .login .password i {
+      background-image: url(../images/icon_password.png); }
+    body.noSession .wrapper .login .code {
+      width: 100%;
+      height: 45px;
+      margin-bottom: 10px; }
+      body.noSession .wrapper .login .code .code-con {
+        width: 175px;
+        padding-left: 10px;
+        height: 100%;
+        line-height: 45px;
+        background: white;
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px #bbc3ca;
+        display: inline-block;
+        vertical-align: top; }
+        body.noSession .wrapper .login .code .code-con input {
+          width: 105px;
+          height: 100%;
+          border-radius: 4px;
+          display: inline-block;
+          vertical-align: top;
+          border: none;
+          outline: none;
+          margin-left: 10px; }
+      body.noSession .wrapper .login .code img {
+        display: inline-block;
+        vertical-align: top;
+        margin: 5px 0 0 20px; }
+    body.noSession .wrapper .login .login-action {
+      text-align: center;
+      margin-top: 20px; }
+      body.noSession .wrapper .login .login-action .login-btn {
+        width: 90px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        color: white;
+        background: #6a8dd4;
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px #bbc3ca;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px; }
+  body.noSession .wrapper .register {
+    width: 360px;
+    padding: 20px;
+    background: white;
+    box-shadow: 3px 3px 3px #bbc3ca;
+    position: relative;
+    margin: 0 auto;
+    top: 40px;
+    margin-bottom: 230px;
+    color: #404040; }
+    body.noSession .wrapper .register .register-container h2 {
+      font-size: 20px;
+      margin-bottom: 20px; }
+    body.noSession .wrapper .register .register-container > div {
+      font-size: 12px;
+      color: #646464;
+      margin-bottom: 20px; }
+      body.noSession .wrapper .register .register-container > div input {
+        width: 98%;
+        border: 1px solid #d6d6d6;
+        font-size: 14px;
+        display: block;
+        margin-top: 5px;
+        height: 35px;
+        padding-left: 2%;
+        outline: none; }
+      body.noSession .wrapper .register .register-container > div textarea {
+        width: 98%;
+        border: 1px solid #d6d6d6;
+        font-size: 14px;
+        display: block;
+        margin-top: 5px;
+        height: 70px;
+        padding-top: 5px;
+        padding-left: 2%;
+        outline: none; }
+    body.noSession .wrapper .register .register-container .register-button {
+      width: 90px;
+      height: 33px;
+      line-height: 33px;
+      text-align: center;
+      color: white;
+      background: #79849b;
+      border-radius: 4px;
+      box-shadow: 3px 3px 3px #bbc3ca;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 25px; }
+    body.noSession .wrapper .register .register-container > span {
+      font-size: 12px;
+      color: #919191; }
+      body.noSession .wrapper .register .register-container > span a {
+        color: #3778ba;
+        text-decoration: underline; }
+  body.noSession .wrapper .email-validation {
+    width: 385px;
+    height: 162px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -270px;
+    background: white;
+    box-shadow: 3px 3px 3px #bbc3ca;
+    padding: 43px 0 0 155px; }
+    body.noSession .wrapper .email-validation img {
+      position: absolute;
+      top: 45px;
+      left: 60px; }
+    body.noSession .wrapper .email-validation p {
+      color: #404040;
+      line-height: 30px; }
+      body.noSession .wrapper .email-validation p a {
+        color: #76829a;
+        display: inline-block; }
+    body.noSession .wrapper .email-validation .email-button {
+      width: 175px;
+      height: 33px;
+      line-height: 33px;
+      text-align: center;
+      color: white;
+      background: #609ac4;
+      border-radius: 4px;
+      box-shadow: 3px 3px 3px #bbc3ca;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 25px; }
+  body.noSession .wrapper .register-success {
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -268px;
+    background: white;
+    box-shadow: 3px 3px 3px #bbc3ca;
+    padding: 50px 0 0 186px; }
+    body.noSession .wrapper .register-success img {
+      position: absolute;
+      top: 60px;
+      left: 75px; }
+    body.noSession .wrapper .register-success p {
+      color: #404040;
+      line-height: 30px; }
+      body.noSession .wrapper .register-success p a {
+        color: #76829a;
+        text-decoration: underline;
+        display: inline-block; }
+    body.noSession .wrapper .register-success .email-button {
+      width: 175px;
+      height: 33px;
+      line-height: 33px;
+      text-align: center;
+      color: white;
+      background: #609ac4;
+      border-radius: 4px;
+      box-shadow: 3px 3px 3px #bbc3ca;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 25px; }
+  body.noSession .wrapper .assignment {
+    width: 850px;
+    padding: 20px;
+    background: white;
+    box-shadow: 3px 3px 3px #bbc3ca;
+    position: relative;
+    margin: 0 auto;
+    top: 40px;
+    margin-bottom: 230px;
+    color: #404040; }
+    body.noSession .wrapper .assignment .assignment-container h2 {
+      font-size: 20px;
+      margin-bottom: 20px; }
+    body.noSession .wrapper .assignment .assignment-container h3 {
+      font-size: 18px;
+      margin-bottom: 12px; }
+    body.noSession .wrapper .assignment .assignment-container ul {
+      margin-bottom: 35px;
+      padding-left: 20px; }
+      body.noSession .wrapper .assignment .assignment-container ul li {
+        color: #646464;
+        line-height: 20px;
+        list-style-type: disc;
+        margin-bottom: 5px; }
+body.noSession footer {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background: #404040;
+  font-size: 12px;
+  color: #a2a2a2;
+  text-align: center; }
+body.hasSession header {
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background: url(../images/main_bg_dark.png) repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9; }
+  body.hasSession header > div {
+    float: right;
+    padding-right: 50px;
+    color: white;
+    font-size: 12px; }
+    body.hasSession header > div i {
+      width: 2px;
+      height: 55px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 50px;
+      background: url(../images/border-left.png) repeat; }
+    body.hasSession header > div .user {
+      margin: 0 30px 0 8px;
+      text-decoration: underline; }
+    body.hasSession header > div .logout {
+      text-decoration: underline; }
+body.hasSession nav {
+  position: fixed;
+  width: 245px;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: url(../images/main_bg_dark.png) repeat; }
+  body.hasSession nav .main-logo {
+    display: block;
+    margin: 45px auto 30px auto; }
+  body.hasSession nav ul li.nav {
+    padding: 15px 0;
+    padding-left: 65px;
+    width: auto;
+    text-align: left;
+    color: white; }
+    body.hasSession nav ul li.nav i {
+      width: 15px;
+      height: 16px;
+      background: url(../images/icons.png) no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px; }
+    body.hasSession nav ul li.nav.nav1 i {
+      background-position: 0 0; }
+    body.hasSession nav ul li.nav.nav2 i {
+      background-position: 0 -51px; }
+    body.hasSession nav ul li.nav.nav3 i {
+      background-position: 0 -103px; }
+    body.hasSession nav ul li.nav.nav4 i {
+      background-position: 0 -153px; }
+  body.hasSession nav ul li.border {
+    width: 100%;
+    height: 2px;
+    background: url(../images/border-top.png) repeat; }
+  body.hasSession nav ul li:hover, body.hasSession nav ul li.cur {
+    background: url(../images/main_bg_dark_hover.png) repeat; }
+body.hasSession .wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  background: url(../images/main_bg.png) repeat;
+  margin: 0 0 -125px 0;
+  padding-top: 55px;
+  padding-left: 245px;
+  overflow: hidden; }
+  body.hasSession .wrapper .modal {
+    width: 500px;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -250px;
+    text-align: center;
+    background: white;
+    padding-top: 30px;
+    box-shadow: 3px 3px 3px #bbc3ca; }
+    body.hasSession .wrapper .modal img {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 35px; }
+    body.hasSession .wrapper .modal > div {
+      display: inline-block;
+      vertical-align: top; }
+      body.hasSession .wrapper .modal > div p {
+        color: #404040;
+        line-height: 30px;
+        text-align: left; }
+        body.hasSession .wrapper .modal > div p.middle {
+          margin-top: 50px; }
+      body.hasSession .wrapper .modal > div .bank-button {
+        width: 175px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        color: white;
+        background: #79849b;
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px #bbc3ca;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 25px; }
+  body.hasSession .wrapper > section {
+    padding: 15px;
+    padding-bottom: 140px;
+    overflow: auto; }
+    body.hasSession .wrapper > section .break {
+      padding-left: 12px;
+      background: url(../images/location.png) 0 1px no-repeat;
+      font-size: 12px;
+      color: #3e3e3d;
+      margin-bottom: 10px;
+      text-align: left; }
+      body.hasSession .wrapper > section .break a {
+        margin: 0 5px;
+        display: inline-block;
+        vertical-align: top; }
+    body.hasSession .wrapper > section .main-header {
+      width: 98%;
+      padding-left: 2%;
+      height: 48px;
+      line-height: 48px;
+      color: white;
+      font-size: 16px;
+      background: url(../images/header_bg.png) repeat;
+      border-radius: 4px;
+      text-align: left; }
+    body.hasSession .wrapper > section .main-container {
+      border: 1px solid #bcbcbc;
+      background: #f2f2f2;
+      position: relative;
+      padding: 25px;
+      margin-top: -2px; }
+    body.hasSession .wrapper > section.bank-info .main-container {
+      background: white; }
+      body.hasSession .wrapper > section.bank-info .main-container > div {
+        margin-bottom: 15px; }
+        body.hasSession .wrapper > section.bank-info .main-container > div span {
+          width: 85px;
+          margin-right: 10px;
+          display: inline-block;
+          vertical-align: top;
+          text-align: right;
+          color: #505151;
+          line-height: 38px; }
+        body.hasSession .wrapper > section.bank-info .main-container > div input[type="text"] {
+          width: 480px;
+          height: 38px;
+          line-height: 38px;
+          padding: 0 10px;
+          border: 1px solid #d6d6d6;
+          outline: none; }
+        body.hasSession .wrapper > section.bank-info .main-container > div.bank-list ul {
+          display: inline-block;
+          vertical-align: top;
+          width: 660px; }
+          body.hasSession .wrapper > section.bank-info .main-container > div.bank-list ul li {
+            width: 160px;
+            margin-bottom: 35px;
+            display: inline-block;
+            vertical-align: top; }
+            body.hasSession .wrapper > section.bank-info .main-container > div.bank-list ul li input {
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 8px; }
+            body.hasSession .wrapper > section.bank-info .main-container > div.bank-list ul li img {
+              display: inline-block;
+              vertical-align: middle; }
+        body.hasSession .wrapper > section.bank-info .main-container > div.actions {
+          padding-left: 100px;
+          font-size: 12px;
+          color: #8a8989;
+          line-height: 33px;
+          margin-top: 30px; }
+          body.hasSession .wrapper > section.bank-info .main-container > div.actions .submit {
+            width: 115px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            color: white;
+            background: #79849b;
+            border-radius: 4px;
+            box-shadow: 3px 3px 3px #bbc3ca;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 25px;
+            font-size: 14px; }
+    body.hasSession .wrapper > section.index .main-container .actions .actions-left {
+      display: inline-block;
+      vertical-align: top; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-left > div span {
+        width: 100px;
+        text-align: right;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 5px;
+        margin-bottom: 15px; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-left > div.name input {
+        outline: none;
+        width: 240px;
+        padding: 0 5px; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-left > div.date input {
+        outline: none;
+        width: 110px;
+        padding: 0 5px; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-left > div.back input {
+        margin: 0 5px 0 15px; }
+    body.hasSession .wrapper > section.index .main-container .actions .actions-right {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 20px; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-right ul {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 480px; }
+        body.hasSession .wrapper > section.index .main-container .actions .actions-right ul li {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 15px;
+          margin-bottom: 8px; }
+          body.hasSession .wrapper > section.index .main-container .actions .actions-right ul li input {
+            margin-right: 3px; }
+    body.hasSession .wrapper > section.index .main-container .actions .actions-bottom {
+      margin: 30px 0; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-bottom a {
+        width: 115px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        color: white;
+        background: #79849b;
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px #bbc3ca;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 25px;
+        font-size: 14px; }
+        body.hasSession .wrapper > section.index .main-container .actions .actions-bottom a.download {
+          background: #e59a39;
+          float: right; }
+    body.hasSession .wrapper > section.index .main-container table {
+      width: 100%;
+      border: 1px solid #cccccc;
+      background: white; }
+      body.hasSession .wrapper > section.index .main-container table thead th {
+        background: #eeeeee;
+        padding: 10px 0;
+        text-align: center;
+        border: 1px solid #cccccc;
+        color: #494949;
+        font-size: 12px; }
+      body.hasSession .wrapper > section.index .main-container table tbody tr.dark {
+        background: #f2f2f2; }
+      body.hasSession .wrapper > section.index .main-container table tbody tr td {
+        padding: 10px 0;
+        text-align: center;
+        border-right: 1px dashed #cccccc;
+        color: #494949;
+        font-size: 12px; }
+        body.hasSession .wrapper > section.index .main-container table tbody tr td .edit {
+          display: inline-block;
+          vertical-align: middle;
+          width: 18px;
+          height: 19px;
+          background: url(../images/edit.png) no-repeat;
+          margin-right: 5px; }
+        body.hasSession .wrapper > section.index .main-container table tbody tr td .delete {
+          display: inline-block;
+          vertical-align: middle;
+          width: 17px;
+          height: 17px;
+          background: url(../images/delete.png) no-repeat; }
+    body.hasSession .wrapper > section.index .main-container .pagination {
+      margin-top: 10px;
+      text-align: right;
+      color: #666666;
+      font-size: 12px; }
+      body.hasSession .wrapper > section.index .main-container .pagination a {
+        margin-right: 5px;
+        cursor: pointer; }
+        body.hasSession .wrapper > section.index .main-container .pagination a:hover {
+          color: #4691e4;
+          text-decoration: underline; }
+    body.hasSession .wrapper > section.account .main-container {
+      background: white;
+      padding-bottom: 40px; }
+      body.hasSession .wrapper > section.account .main-container > div {
+        margin-bottom: 25px;
+        color: #3a3c3e; }
+        body.hasSession .wrapper > section.account .main-container > div span {
+          display: inline-block;
+          vertical-align: middle;
+          width: 120px;
+          text-align: right;
+          margin-right: 10px; }
+        body.hasSession .wrapper > section.account .main-container > div textarea {
+          display: inline-block;
+          vertical-align: top;
+          width: 340px;
+          height: 75px;
+          padding: 5px;
+          border: 1px solid #d6d6d6;
+          outline: none; }
+        body.hasSession .wrapper > section.account .main-container > div input {
+          display: inline-block;
+          vertical-align: middle;
+          width: 170px;
+          height: 35px;
+          padding: 0 5px;
+          border: 1px solid #d6d6d6;
+          outline: none;
+          margin-right: 10px; }
+          body.hasSession .wrapper > section.account .main-container > div input.long {
+            width: 400px; }
+      body.hasSession .wrapper > section.account .main-container .submit {
+        width: 115px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        color: white;
+        background: #79849b;
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px #bbc3ca;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 25px;
+        font-size: 14px;
+        margin-left: 130px; }
+    body.hasSession .wrapper > section.form .main-container {
+      background: white;
+      color: #505151; }
+      body.hasSession .wrapper > section.form .main-container > div {
+        padding: 10px 0;
+        border-bottom: 1px solid #ededed; }
+        body.hasSession .wrapper > section.form .main-container > div span {
+          width: 100px;
+          text-align: right;
+          margin-right: 5px;
+          display: inline-block;
+          vertical-align: middle; }
+        body.hasSession .wrapper > section.form .main-container > div input[type="text"] {
+          width: 290px;
+          height: 32px;
+          outline: none;
+          padding: 0 5px;
+          margin-right: 5px; }
+        body.hasSession .wrapper > section.form .main-container > div input[type="radio"] {
+          margin-right: 5px;
+          margin-left: 10px; }
+        body.hasSession .wrapper > section.form .main-container > div ul {
+          display: inline-block;
+          vertical-align: top;
+          max-width: 500px; }
+          body.hasSession .wrapper > section.form .main-container > div ul li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 15px 5px 0; }
+            body.hasSession .wrapper > section.form .main-container > div ul li input {
+              margin-right: 5px; }
+        body.hasSession .wrapper > section.form .main-container > div p {
+          padding-left: 105px;
+          color: #8a8989;
+          font-size: 12px;
+          margin-top: 5px; }
+      body.hasSession .wrapper > section.form .main-container .upload, body.hasSession .wrapper > section.form .main-container .submit {
+        width: 115px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        color: white;
+        background: #79849b;
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px #bbc3ca;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 25px;
+        font-size: 14px; }
+      body.hasSession .wrapper > section.form .main-container .upload {
+        background: #84a757;
+        margin-top: 0; }
+body.hasSession footer {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background: #404040;
+  font-size: 12px;
+  color: #a2a2a2;
+  text-align: center;
+  position: relative;
+  z-index: 99; }
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 95%;
+    position: relative;
+    margin: 0 auto; }
+
+  body.noSession header {
+    height: 40px;
+    line-height: 40px; }
+    body.noSession header .logo {
+      float: left;
+      margin: 0; }
+      body.noSession header .logo img {
+        width: 150px; }
+    body.noSession header span {
+      font-size: 12px; }
+      body.noSession header span i {
+        width: 12px;
+        height: 13px;
+        background-size: 12px;
+        margin-right: 2px; }
+  body.noSession .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+    margin: 0 0 -140px 0;
+    padding-top: 90px;
+    overflow: hidden; }
+    body.noSession .wrapper .login {
+      width: 80%;
+      height: auto;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      color: #404040;
+      margin: 0;
+      background: none; }
+      body.noSession .wrapper .login .login-con {
+        width: auto;
+        margin: 0; }
+      body.noSession .wrapper .login h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 15px; }
+      body.noSession .wrapper .login p {
+        font-size: 16px;
+        margin-bottom: 10px; }
+      body.noSession .wrapper .login .user input, body.noSession .wrapper .login .password input {
+        width: 80%; }
+      body.noSession .wrapper .login .code .code-con {
+        width: 50%; }
+        body.noSession .wrapper .login .code .code-con input {
+          width: 50%; }
+      body.noSession .wrapper .login .code img {
+        width: 44%;
+        margin: 10px 0 0 0; }
+    body.noSession .wrapper .register {
+      width: 80%;
+      top: -30px;
+      margin: 0 auto;
+      margin-bottom: 130px; }
+      body.noSession .wrapper .register .register-container .register-button {
+        margin-right: 15px; }
+    body.noSession .wrapper .email-validation {
+      width: 70%;
+      height: auto;
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      margin: 0;
+      background: white;
+      box-shadow: 3px 3px 3px #bbc3ca;
+      padding: 15px 5%; }
+      body.noSession .wrapper .email-validation img {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin: 0 auto; }
+      body.noSession .wrapper .email-validation .email-button {
+        display: block;
+        margin: 25px auto 0 auto; }
+    body.noSession .wrapper .register-success {
+      width: 70%;
+      height: auto;
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      margin: 0;
+      background: white;
+      box-shadow: 3px 3px 3px #bbc3ca;
+      padding: 15px 5%; }
+      body.noSession .wrapper .register-success img {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin: 0 auto; }
+      body.noSession .wrapper .register-success .email-button {
+        display: block;
+        margin: 25px auto 0 auto; }
+    body.noSession .wrapper .assignment {
+      width: 80%;
+      padding: 20px 5%;
+      background: white;
+      box-shadow: 3px 3px 3px #bbc3ca;
+      position: relative;
+      margin: 0 auto;
+      top: -30px;
+      margin-bottom: 150px;
+      color: #404040; }
+  body.noSession footer {
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+    line-height: 16px;
+    background: #404040;
+    font-size: 12px;
+    color: #a2a2a2;
+    text-align: center; }
+  body.hasSession header {
+    width: 100%;
+    height: 35px;
+    line-height: 35px; }
+    body.hasSession header > div {
+      float: left; }
+      body.hasSession header > div i {
+        height: 35px;
+        margin-right: 15px; }
+    body.hasSession header .mobile-nav {
+      width: 35px;
+      height: 35px;
+      background: url(../images/mobile-navigation.png) center center no-repeat;
+      float: right; }
+  body.hasSession nav {
+    left: -245px;
+    -webkit-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s; }
+  body.hasSession .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    background: url(../images/main_bg.png) repeat;
+    margin: 0 0 -85px 0;
+    padding-top: 35px;
+    padding-left: 0;
+    overflow: hidden; }
+    body.hasSession .wrapper .modal {
+      width: 80%;
+      height: 230px;
+      position: absolute;
+      top: 100px;
+      left: 10%;
+      margin: 0;
+      text-align: center;
+      background: white;
+      padding-top: 30px;
+      box-shadow: 3px 3px 3px #bbc3ca; }
+      body.hasSession .wrapper .modal img {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 35px; }
+      body.hasSession .wrapper .modal > div {
+        display: inline-block;
+        vertical-align: top; }
+        body.hasSession .wrapper .modal > div p {
+          color: #404040;
+          line-height: 30px;
+          text-align: left; }
+          body.hasSession .wrapper .modal > div p.middle {
+            margin-top: 50px; }
+        body.hasSession .wrapper .modal > div .bank-button {
+          width: 175px;
+          height: 33px;
+          line-height: 33px;
+          text-align: center;
+          color: white;
+          background: #79849b;
+          border-radius: 4px;
+          box-shadow: 3px 3px 3px #bbc3ca;
+          display: inline-block;
+          vertical-align: middle;
+          margin-top: 25px; }
+    body.hasSession .wrapper > section.goToBank .main-container p {
+      width: 90%;
+      margin: 0 auto; }
+    body.hasSession .wrapper > section.bank-info .main-container {
+      background: white; }
+      body.hasSession .wrapper > section.bank-info .main-container > div {
+        margin-bottom: 15px; }
+        body.hasSession .wrapper > section.bank-info .main-container > div span {
+          width: auto; }
+        body.hasSession .wrapper > section.bank-info .main-container > div input[type="text"] {
+          width: 94%;
+          height: 38px;
+          line-height: 38px;
+          padding: 0 3%;
+          border: 1px solid #d6d6d6;
+          outline: none; }
+        body.hasSession .wrapper > section.bank-info .main-container > div.bank-list ul {
+          display: inline-block;
+          vertical-align: top;
+          width: 100%; }
+          body.hasSession .wrapper > section.bank-info .main-container > div.bank-list ul li {
+            width: 100%;
+            margin-bottom: 15px;
+            display: block;
+            vertical-align: top; }
+        body.hasSession .wrapper > section.bank-info .main-container > div.actions {
+          padding-left: 0px; }
+    body.hasSession .wrapper > section.index .main-container .actions .actions-left {
+      display: inline-block;
+      vertical-align: top; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-left > div {
+        margin-bottom: 10px; }
+        body.hasSession .wrapper > section.index .main-container .actions .actions-left > div span {
+          width: auto;
+          text-align: left;
+          display: block;
+          vertical-align: top;
+          margin-right: 5px;
+          margin-bottom: 5px; }
+        body.hasSession .wrapper > section.index .main-container .actions .actions-left > div.name input {
+          outline: none;
+          width: 94%;
+          padding: 0 3%; }
+        body.hasSession .wrapper > section.index .main-container .actions .actions-left > div.date input {
+          outline: none;
+          width: 41%;
+          padding: 0 3%; }
+    body.hasSession .wrapper > section.index .main-container .actions .actions-right {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0px; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-right ul {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 480px; }
+        body.hasSession .wrapper > section.index .main-container .actions .actions-right ul li {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 15px;
+          margin-bottom: 8px; }
+          body.hasSession .wrapper > section.index .main-container .actions .actions-right ul li input {
+            margin-right: 3px; }
+    body.hasSession .wrapper > section.index .main-container .actions .actions-bottom {
+      margin: 10px 0; }
+      body.hasSession .wrapper > section.index .main-container .actions .actions-bottom a {
+        margin: 5px 0;
+        display: block; }
+        body.hasSession .wrapper > section.index .main-container .actions .actions-bottom a.download {
+          background: #e59a39;
+          float: none; }
+    body.hasSession .wrapper > section.account .main-container {
+      background: white;
+      padding-bottom: 40px; }
+      body.hasSession .wrapper > section.account .main-container > div span {
+        width: auto;
+        margin-bottom: 5px; }
+      body.hasSession .wrapper > section.account .main-container > div textarea {
+        display: inline-block;
+        vertical-align: top;
+        width: 94%;
+        height: 75px;
+        padding: 5px 3%;
+        border: 1px solid #d6d6d6;
+        outline: none; }
+      body.hasSession .wrapper > section.account .main-container > div input {
+        display: inline-block;
+        vertical-align: middle;
+        width: 94%;
+        height: 35px;
+        padding: 0 3%;
+        border: 1px solid #d6d6d6;
+        outline: none;
+        margin-right: 10px; }
+        body.hasSession .wrapper > section.account .main-container > div input.long {
+          width: 94%; }
+    body.hasSession .wrapper > section.form .main-container > div span {
+      width: auto;
+      text-align: left;
+      display: block;
+      margin-bottom: 3px; }
+    body.hasSession .wrapper > section.form .main-container > div input[type="text"] {
+      width: 90%;
+      height: 32px;
+      outline: none;
+      padding: 0 3%; }
+    body.hasSession .wrapper > section.form .main-container > div input[type="radio"] {
+      margin-right: 5px;
+      margin-left: 10px; }
+    body.hasSession .wrapper > section.form .main-container > div ul li {
+      display: block;
+      vertical-align: top;
+      margin: 0 15px 5px 0; }
+      body.hasSession .wrapper > section.form .main-container > div ul li input {
+        margin-right: 5px; }
+    body.hasSession .wrapper > section.form .main-container > div p {
+      padding-left: 0px;
+      color: #8a8989;
+      font-size: 12px;
+      margin-top: 5px; }
+  body.hasSession footer {
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+    line-height: 16px;
+    background: #404040;
+    font-size: 12px;
+    color: #a2a2a2;
+    text-align: center; } }

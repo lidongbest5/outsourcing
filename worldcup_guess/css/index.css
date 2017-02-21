@@ -1,0 +1,383 @@
+.team div.t,.team div.t,.unselect,.champion,.third,.team div.t a.unchoose{
+	background: url(../images/cssSprite.png) no-repeat;
+}
+.main{
+	width: 100%;
+	height: 100%;
+	background: #f2d666;
+}
+.wrapper{
+	width: 1282px;
+	height: 800px;
+	background: url(../images/background.jpg) no-repeat;
+	margin: 0 auto;
+}
+.container{
+	width: 1000px;
+	height: 100%;
+	position: relative;
+	margin-left: 177px;
+}
+.tips{
+	position: absolute;
+	top: 57px;
+	left: 463px;
+	width: 350px;
+	color: white;
+	font-family: 'Microsoft Yahei';
+}
+.tips h2{
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+.tips p{
+	font-size: 14px;
+	line-height: 20px;
+	text-shadow: 0px 0px 3px #3c3622;
+}
+.team div.t1{
+	background-position: -5px -106px;
+}
+.team div.t2{
+	background-position: -5px -608px;
+}
+.team div.t3{
+	background-position: -5px -675px;
+}
+.team div.t4{
+	background-position: -5px -541px;
+}
+.team div.t5{
+	background-position: -421px -876px;
+}
+.team div.t6{
+	background-position: -421px -440px;
+}
+.team div.t7{
+	background-position: -421px -1043px;
+}
+.team div.t8{
+	background-position: -421px -71px;
+}
+.team div.t9{
+	background-position: -5px -340px;
+}
+.team div.t10{
+	background-position: -5px -909px;
+}
+.team div.t11{
+	background-position: -5px -574px;
+}
+.team div.t12{
+	background-position: -5px -775px;
+}
+.team div.t13{
+	background-position: -421px -842px;
+}
+.team div.t14{
+	background-position: -421px -374px;
+}
+.team div.t15{
+	background-position: -421px -1009px;
+}
+.team div.t16{
+	background-position: -421px -976px;
+}
+.team div.t17{
+	background-position: -5px -809px;
+}
+.team div.t18{
+	background-position: -5px -273px;
+}
+.team div.t19{
+	background-position: -5px -307px;
+}
+.team div.t20{
+	background-position: -5px -474px;
+}
+.team div.t21{
+	background-position: -421px -38px;
+}
+.team div.t22{
+	background-position: -421px -172px;
+}
+.team div.t23{
+	background-position: -421px -943px;
+}
+.team div.t24{
+	background-position: -421px -708px;
+}
+.team div.t25{
+	background-position: -5px -206px;
+}
+.team div.t26{
+	background-position: -5px -741px;
+}
+.team div.t27{
+	background-position: -5px -507px;
+}
+.team div.t28{
+	background-position: -5px -641px;
+}
+.team div.t29{
+	background-position: -421px -140px;
+}
+.team div.t30{
+	background-position: -421px -5px;
+}
+.team div.t31{
+	background-position: -421px -240px;
+}
+.team div.t32{
+	background-position: -421px -407px;
+}
+.teams1-l{
+	position: absolute;
+	top: 144px;
+	left: -6px;
+}
+.teams1-r{
+	position: absolute;
+	top: 144px;
+	right: 0;
+}
+.teams1-l h3,.teams1-r h3{
+	color: white;
+	font-size: 12px;
+	text-shadow: 0px 0px 3px #3c3622;
+}
+.team div.t{
+	width: 60px;
+	height: 27px;
+	padding-left: 20px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 26px;
+	cursor: pointer;
+	position: relative;
+}
+.team div.t a.unchoose{
+	width: 11px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: -5px;
+	background-position: -209px -261px;
+}
+.teams1-l .team div.t a.unchoose,.teams1-r .team div.t a.unchoose{
+	display: none;
+}
+.team div.t5,.team div.t6,.team div.t7,.team div.t8,.team div.t21,.team div.t22,.team div.t23,.team div.t24,.team div.t13,.team div.t14,.team div.t15,.team div.t16,.team div.t29,.team div.t30,.team div.t31,.team div.t32{
+	padding-left: 0;
+	padding-right: 20px;
+}
+.teams1-r .team div{
+	padding-left: 0;
+	padding-right: 20px;
+}
+.teams2-l{
+	position: absolute;
+	top: 190px;
+	left: 97px;
+}
+.teams2-r{
+	position: absolute;
+	top: 190px;
+	right: 100px;
+}
+.teams2-l .team,.teams2-r .team{
+	margin-bottom: 51px;
+}
+.teams2-l .team>div,.teams2-r .team>div{
+	margin-bottom: 9px;
+	height: 30px;
+}
+.unselect{
+	width: 52px;
+	padding-left: 28px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 26px;
+	height: 30px;
+	background-position: -216px -10px;
+}
+.hide{
+	display: none;
+}
+.choose .unselect{
+	display: none;
+}
+.teams2-r .unselect,.teams3-r .unselect,.teams4-r .unselect,.four2 .unselect,.four3 .unselect{
+	padding-left: 0;
+	padding-right: 28px;
+	background-position: -216px -47px;
+}
+.teams3-l{
+	position: absolute;
+	top: 205px;
+	left: 195px;
+}
+.teams3-r{
+	position: absolute;
+	top: 205px;
+	right: 200px;
+}
+.teams3-l .team>div,.teams3-r .team>div{
+	margin-bottom: 87px;
+	height: 30px;
+}
+.teams3-l .team,.teams3-r .team{
+	margin-bottom: 97px;
+}
+.teams4-l{
+	position: absolute;
+	top: 260px;
+	left: 300px;
+}
+.teams4-r{
+	position: absolute;
+	top: 260px;
+	right: 306px;
+}
+.teams4-l .team>div,.teams4-r .team>div{
+	margin-bottom: 218px;
+	height: 30px;
+}
+.four1{
+	position: absolute;
+	top: 364px;
+	left: 400px;
+}
+.four2{
+	position: absolute;
+	top: 364px;
+	left: 516px;
+}
+.four3{
+	position: absolute;
+	top: 480px;
+	left: 413px;
+}
+.four4{
+	position: absolute;
+	top: 480px;
+	left: 505px;
+}
+.champion{
+	width: 120px;
+	height: 100px;
+	position: absolute;
+	top: 230px;
+	left: 425px;
+	background-position: -193px -144px;
+}
+.champion .team{
+	position: absolute;
+	top: 52px;
+	left: -29px;
+}
+.third{
+	width: 107px;
+	height: 54px;
+	position: absolute;
+	top: 540px;
+	left: 436px;
+	background-position: -199px -87px;
+}
+.third .team{
+	position: absolute;
+	top: 12px;
+	left: -32px;
+}
+.info{
+	position: absolute;
+	top: 670px;
+	left: 25px;
+}
+.info h3{
+	color: #ff8a00;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.info span{
+	font-size: 14px;
+	color: white;
+	text-shadow: 0px 0px 3px #3c3622;
+}
+.info input{
+	border: none;
+	outline: none;
+	background: #d6d6d6;
+	width: 128px;
+	height: 18px;
+	margin-right: 18px;
+	margin-bottom: 6px;
+}
+.btn{
+	position: absolute;
+	top: 700px;
+	left: 519px;
+}
+.btn a{
+	display: inline-block;
+	margin-right: 20px;
+}
+.popup{
+	width: 100%;
+	height: 100%;
+	background: url(../images/pop-bg.png) repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.pop-container{
+	width: 677px;
+	height: 282px;
+	background: url(../images/popup.png) no-repeat;
+	margin: 250px auto;
+	position: relative;
+}
+.close{
+	width: 50px;
+	height: 20px;
+	position: absolute;
+	top: 34px;
+	right: 46px;
+}
+.rr{
+	width: 46px;
+	height: 46px;
+	position: absolute;
+	bottom: 52px;
+	left: 240px;
+}
+.kaixin{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	bottom: 60px;
+	left: 300px;
+}
+.weibo{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	bottom: 60px;
+	left: 354px;
+}
+.qq{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	bottom: 60px;
+	left: 407px;
+}
+.douban{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	bottom: 60px;
+	left: 462px;
+}

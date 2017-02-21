@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/root/css/index.css">
+		<link rel="stylesheet" type="text/css" href="/static/root/css/uploadify.css">
+		<link rel="stylesheet" type="text/css" href="/static/root/datepicker/css/default.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/root/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="hasSession">
+		<header>
+			<span class="mobile-nav"></span>
+			<div>
+				<i></i>欢迎<a class="user">{{ user.name }}</a><a class="logout" href="/root/logout/">退出</a>
+			</div>
+		</header>
+		<nav>
+			<a href="/root/"><img src="/static/root/images/main_logo.png" class="main-logo"></a>
+			<ul>
+				<li class="border"></li>
+				<li class="nav1 nav"><a href="/root/"><i></i>接单汇总表</a></li>
+				<li class="border"></li>
+				<li class="nav2 nav cur"><a href="/root/add/"><i></i>添加表单</a></li>
+				<li class="border"></li>
+				<li class="nav3 nav"><a href="/root/changePwd/"><i></i>管理员密码修改</a></li>
+				<li class="border"></li>
+				<li class="nav1 nav"><a href="/root/user/"><i></i>查看所有用户</a></li>
+				<li class="border"></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<section class="form">
+				<div class="break"><a href="/root/">联盟成员收入管理系统</a>&gt;<a>添加表单</a></div>
+				<div class="main">
+					<div class="main-header">
+						添加表单
+					</div>
+					<div class="main-container"{% if status %} data="{{ item.id }}"{% endif %}>
+						<div><span>个人微信ID(必填)：</span><input type="text" id="wechat"{% if status %} value="{{ item.wechat }}"{% endif %}></div>
+						<div><span>姓名(必填)：</span><input type="text" id="name"{% if status %} value="{{ item.name }}"{% endif %}></div>
+						<div><span>客户名称(必填)：</span><input type="text" id="custom"{% if status %} value="{{ item.custom }}"{% endif %}></div>
+						<div><span>公众账号(必填)：</span><input type="text" id="account"{% if status %} value="{{ item.account }}"{% endif %}></div>
+						<div><span>项目名称(必填)：</span><input type="text" id="project"{% if status %} value="{{ item.project }}"{% endif %}></div>
+						<div><span>合作形式：</span>
+							<ul>
+								<li><input type="checkbox" id="type1"{% if status and item.type1 %} checked{% endif %}>头条文章撰写与发布</li>
+								<li><input type="checkbox" id="type2"{% if status and item.type2 %} checked{% endif %}>内容页头图广告</li>
+								<li><input type="checkbox" id="type3"{% if status and item.type3 %} checked{% endif %}>定制文章与内容页图片</li>
+								<li><input type="checkbox" id="type4"{% if status and item.type4 %} checked{% endif %}>二条文章转发</li>
+								<li><input type="checkbox" id="type5"{% if status and item.type5 %} checked{% endif %}>内容页插图广告</li>
+								<li><input type="checkbox" id="type6"{% if status and item.type6 %} checked{% endif %}>朋友圈转发</li>
+								<li><input type="checkbox" id="type7"{% if status and item.type7 %} checked{% endif %}>内容页文末广告</li>
+							</ul>
+						</div>
+						<div><span>银行卡信息：</span><input type="text" placeholder="例如：中国工商银行山东省潍坊市分行奎文支行" id="bankinfo"{% if status %} value="{{ item.bankinfo }}"{% endif %}></div>
+						<div><span>银行卡卡号：</span><input type="text" id="banknumber"{% if status %} value="{{ item.banknumber }}"{% endif %}></div>
+						<div><span>合作金额：</span><input type="text" id="count"{% if status %} value="{{ item.count }}"{% endif %}>元</div>
+						<div><span>执行时间：</span><input type="text" id="executetime"{% if status and item.executetime|date:"Y-m-d" != "1979-01-01" %} value="{{ item.executetime|date:"Y-m-d" }}"{% endif %}></div>
+						<div><span>执行状态：</span><input type="radio" name="a" value="1"{% if status and item.executestatus == 1 %} checked{% endif %}>已完成<input type="radio" name="a" value="2"{% if status and item.executestatus == 2 %} checked{% endif %}>未执行<input type="radio" name="a" value="3"{% if status and item.executestatus == 3 %} checked{% endif %}>执行中</div>
+						<div><span>提交结案状态：</span><input type="radio" name="b" value="1"{% if status and item.submitstatus == 1 %} checked{% endif %}>已提交<input type="radio" name="b" value="2"{% if status and item.submitstatus == 2 %} checked{% endif %}>未提交</div>
+						<div><span>客户评价：</span><input type="radio" name="c" value="1"{% if status and item.comment == 1 %} checked{% endif %}>满意<input type="radio" name="c" value="2"{% if status and item.comment == 2 %} checked{% endif %}>一般<input type="radio" name="c" value="3"{% if status and item.comment == 3 %} checked{% endif %}>不满意</div>
+						<div><span>打款时间：</span><input type="text" id="backtime"{% if status and item.backtime|date:"Y-m-d" != "1979-01-01" %} value="{{ item.backtime|date:"Y-m-d" }}"{% endif %}></div>
+						<div><span>回款凭证：</span><input type="file" id="img-upload" name="upload"/><p>图片大小勿超过5MB；<br/>图片格式为：jpg、png、bmp、gif；</p><img {% if status and item.img %} src="/static/upload/{{ item.img }}"{% endif %}class="img-preload" data="{% if status %}{{ item.img }}{% endif %}"></div>
+						<a class="submit {% if status %}change-submit{% else %}add-submit{% endif %}">确认提交</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="container">
+				京ICP备13045368号-2 /北京市公安局朝阳分局 Copyright@2006-2015
+			</div>
+		</footer>
+		<script src="/static/root/js/jquery.js"></script>
+		<script src="/static/root/js/uploadify.js"></script>
+		<script src="/static/root/datepicker/js/zebra_datepicker.js"></script>
+		<script src="/static/root/js/min/index-min.js"></script>
+		<script src="/static/root/js/placeholders.min.js"></script>
+	</body>
+</html>

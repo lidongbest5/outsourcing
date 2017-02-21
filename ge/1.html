@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>尼泊尔震殇</title>
+  <meta name="description" content="尼泊尔震殇" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script>
+        (function(){
+                var phoneWidth = parseInt(window.screen.width);
+				var phoneScale = phoneWidth/640;
+				var ua = navigator.userAgent;
+				if (/Android (\d+\.\d+)/.test(ua)){
+					var version = parseFloat(RegExp.$1);
+					// andriod 2.3
+					if(version>2.3){
+						document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+						// andriod 2.3以上
+					}else{
+						document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+					}
+					// 其他系统
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');}
+		})();
+	</script>
+	<script type="text/javascript" language="javascript" src="http://news.survey.sohu.com/api/poll_json.php?poll_id=87728" ></script> 
+	<link rel="stylesheet" href="http://news.sohu.com/upload/zhengyufeng/ligy/style.css">
+	<style type="text/css">
+		.page1{background:#282828 url(http://i0.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_10.jpg) no-repeat; background-size: 100% 100%;}
+		.page2{background:#282828 url(http://i0.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_9.jpg) no-repeat;background-size: 100% 100%;}
+		.page3{background:#282828 url(http://i1.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_8.jpg) no-repeat;background-size: 100% 100%;}
+		.page4{background:#282828 url(http://i2.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_7.jpg) no-repeat;background-size: 100% 100%;}
+		.page5{background:#282828 url(http://i2.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_6.jpg) no-repeat;background-size: 100% 100%;}
+		.page6{background:#282828 url(http://i3.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_5.jpg) no-repeat;background-size: 100% 100%;}
+		.page7{background:#282828 url(http://i3.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_4.jpg) no-repeat;background-size: 100% 100%;}
+		.page8{background:#282828 url(http://i1.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_3.jpg) no-repeat;background-size: 100% 100%;}
+		.page9{background:#282828 url(http://i1.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_2.jpg) no-repeat;background-size: 100% 100%;}
+		.page10{background:#282828 url(http://i3.itc.cn/20150426/213_23a4e923_bc14_9f1c_1f3f_13a4dab5f0e7_1.jpg) no-repeat;background-size: 100% 100%;}
+
+		.page11{background:#282828}
+		.page12{background:#282828 url(http://i0.itc.cn/20150426/213_f18d59d8_43c1_625a_7828_7afde1d383ea_1.jpg) no-repeat;background-size: 100% 100%;}
+		.page13{background:#282828 url(http://i2.itc.cn/20150426/779_8e49c5d6_a696_ecbd_8695_0fa3f8811a7e_1.jpg) no-repeat;background-size: 100% 100%;}
+		.showAll{-webkit-animation:showAll 15s ease-in forwards;animation:showAll 15s ease-in forwards}
+		#img {width:100%;height: 0; overflow: hidden;text-align: center}
+		#img img {width: 90%;margin: 0 auto;}
+		@keyframes showAll{0%{height:0}8.3%{height:14%}16.6%{height:24%}24.9%{height:31%}33.2%{height:46%}41.5%{height:53%}49.8%{height:60%}58.1%{height:68%}66.4%{height:76%}74.4%{height:84%}82.7%{height:92%}91%{height:100%}100%{height:100%}}
+		@-webkit-keyframes showAll{0%{height:0}8.3%{height:14%}16.6%{height:24%}24.9%{height:31%}33.2%{height:46%}41.5%{height:53%}49.8%{height:60%}58.1%{height:68%}66.4%{height:76%}74.4%{height:84%}82.7%{height:92%}91%{height:100%}100%{height:100%}}
+		.sq{display:none}
+		.txt_con{font-size:30px}
+		.choose {width: 129px;height: 180px;background: url(http://news.sohu.com/upload/zhengyufeng/ligy/images/t1.png) center bottom no-repeat;position: absolute;top: 646px;left: 76px;}     
+        </style>
+    <script src="http://news.sohu.com/upload/zhengyufeng/jquery-2.1.1.min.js"></script>
+    <script src="http://news.sohu.com/upload/zhengyufeng/jm-1.4.3.js"></script>
+	<script>
+	$(window).ready(function(){
+    $(function(){
+        //swipeUp swipeDown
+        var f = $.support.touch, d = "touchmove scroll", a = f ? "touchstart" : "mousedown", g = f ? "touchend" : "mouseup", b = f ? "touchmove" : "mousemove";
+        $.event.special.swipeupdown = {setup: function () {
+            var h = this;
+            var i = $(h);
+            i.bind(a, function (k) {
+                var m = k.originalEvent.touches ? k.originalEvent.touches[0] : k, n = {time: (new Date).getTime(), coords: [m.pageX, m.pageY], origin: $(k.target)}, j;
+
+                function l(o) {
+                    if (!n) {
+                        return
+                    }
+                    var p = o.originalEvent.touches ? o.originalEvent.touches[0] : o;
+                    j = {time: (new Date).getTime(), coords: [p.pageX, p.pageY]};
+                    if (Math.abs(n.coords[1] - j.coords[1]) > 10) {
+                        o.preventDefault()
+                    }
+                }
+
+                i.bind(b, l).one(g, function (o) {
+                    i.unbind(b, l);
+                    if (n && j) {
+                        if (j.time - n.time < 1000 && Math.abs(n.coords[1] - j.coords[1]) > 30 && Math.abs(n.coords[0] - j.coords[0]) < 975) {
+                            n.origin.trigger("swipeupdown").trigger(n.coords[1] > j.coords[1] ? "swipeup" : "swipedown")
+                        }
+                    }
+                    n = j = undefined
+                })
+            })
+        }};
+        $.each({swipedown: "swipeupdown", swipeup: "swipeupdown"}, function (i, h) {
+            $.event.special[i] = {setup: function () {
+                $(this).bind(h, $.noop)
+            }}
+        });
+
+		var SH = $(window).height();
+		var SW = $(window).width();
+		var _SC = $('.swiper-container');
+		var _SS = $('.swiper-slide');
+		var _SW = $('.swiper-wrapper');
+		var _layer = $('.page');
+		_layer.css({'height': SH, 'width': '100%'});
+		_SC.css({'height': SH, 'width': '100%'});
+		_SS.css({'height': SH, 'width': '100%'});
+
+		var pageIdx = 0;
+		var pl = $('.page').length;
+		$('.page').on('swipeup', function(event) {
+		   pageIdx = pageIdx + 1;
+		   if(pageIdx >= pl - 1){
+		     pageIdx = pl - 1;
+		   }
+		   ctrl()
+		});
+
+		$('.page').on('swipedown', function(event) {
+		   pageIdx = pageIdx - 1;
+		   if(pageIdx <= 0){
+		     pageIdx = 0;
+		   }
+		   ctrl()
+		});
+
+		function ctrl(){
+			if(pageIdx==12){
+				// alert(12);
+				$('#img').addClass("showAll");
+			}else {
+				$('#img').removeClass('showAll');
+			}
+			if(pageIdx==1){
+				$.ajax({
+                        url:'http://news.survey.sohu.com/poll/single.php?p=87728&i=868189&t=164884&c=2&s=43e0dae7a0cf62bb2e47'
+                    })
+				
+			}
+			$('.page').eq(pageIdx).fadeIn().siblings('.page').fadeOut('slow')
+			$('.tips li').eq(pageIdx).addClass('th').siblings('li').removeClass()			
+		}
+
+function is_weixin(){var e=navigator.userAgent.toLowerCase();if(e.match(/MicroMessenger/i)=="micromessenger"){return true}else{return false}}
+
+if(is_weixin()){$("#weixin").show();$("#weixin").click(function(){$(".share").show()})}$(".share").click(function(){$(this).toggle()});
+
+
+		})
+	})
+	</script>
+</head>
+<body>
+
+
+	
+<!--背景音乐播放区-->
+	<aside class="media-wrap" style="display: block;">
+		<span id="musicBtnTxt" style="display: none;">关闭</span>
+		<i id="musicBtn" class="music-btn on" style="background: url('http://news.sohu.com/upload/2014_mob_among/img/music-icon.png'); background-size: cover "></i>
+	
+    </aside>
+	<div style="display: none;"><audio src="http://news.sohu.com/upload/liguangyaoyinyue.mp3" autoplay="autoplay" loop id="autoplay"></audio></div>
+	<!--背景音乐播放区-->
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+
+<div class="swiper-slide page page1" style="background:url(http://i3.itc.cn/20150426/779_29e9024d_8048_8d72_cf91_34d7140ab458_1.jpg) no-repeat;background-size:100% 100%">
+			
+		    <div id="arrow"></div>
+		</div>
+		<div class="swiper-slide page page1" style="background:url(http://i0.itc.cn/20150426/779_07934be3_4e28_ee28_e6b6_1d77ed0681cd_1.jpg) no-repeat;background-size:100% 100%">
+			<div class="page-con">
+				<img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t2.gif" style="display:none;">
+				<div class="choose" data-href="http://news.survey.sohu.com/poll/single.php?p=87728&i=868189&t=164884&c=2&s=43e0dae7a0cf62bb2e47"></div>
+				
+				<div style="width:100%;bottom:100px;right:0;position:absolute;text-align: right;padding-right:100px;font-size: 28px; line-height: 1.4">
+					
+                    
+                    <p class="tp" style="font-size:30px; line-height: 1.6; color:#fff">点燃一缕烛光，祭奠遇难者。</p>
+					<p class="tp" style=" color:#c69d57">已有<script type="text/javascript">document.write(title["164884"]["item"]["868189"]["ballot"]);</script>人悼念</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="swiper-slide page page1">
+				<div class="txt">
+				<div class="txt_con">达拉哈拉塔 ( 地震前 )
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+		    <div id="arrow"></div>
+		</div>
+		<div class="swiper-slide page page2">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">达拉哈拉塔 ( 地震后 )
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page3">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">杜巴广场 ( 地震前 )
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page4">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">杜巴广场 ( 地震后 )</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page5">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">Pushupati神庙 ( 地震前 )
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page6">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">Pushupati神庙 ( 地震后 )
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page7">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">卡凯喜瓦寺庙(Kakeshwar Temple) ( 地震前 )
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page8">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">卡凯喜瓦寺庙(Kakeshwar Temple) ( 地震后 )
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page9">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">加德满都倒塌的神庙
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		<div class="swiper-slide page page10">
+			<div class="page-con">
+				<div class="txt">
+				<div class="txt_con">加德满都的一对母女在躲避余震，愿逝者安息生者坚强！
+				</div>
+				</div>
+				<div class="sq"><img src="http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png" alt=""></div>
+			</div>
+		</div>
+		
+		<div class="swiper-slide page page11">
+			<div id="img">
+				<img src="http://i0.itc.cn/20150426/779_188fc1b6_cfa8_36e4_cfae_f9dabd36a09d_1.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="swiper-slide page page12">
+			<div id="myshare" style="padding-top: 670px; text-align: center; display:none">
+				<img src="http://i0.itc.cn/20150426/213_0e553f52_4437_2be8_6b2c_989c563bd255_1.jpg" alt="" style="margin-right: 10px;">
+				<img src="http://i1.itc.cn/20150426/213_0e553f52_4437_2be8_6b2c_989c563bd255_2.jpg" alt="" id="weixin">
+			</div>
+		</div>
+        
+        <div class="swiper-slide page page13">
+			
+		</div>
+	</div>
+	<!-- <div class="pagination animate"></div> -->
+        <div class="tips">
+            <ul>
+                <li class="th">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+<li>14</li>
+            </ul>
+        </div>
+</div>
+<style type="text/css">
+	.share{ position:absolute;top:0;left:0;width:100%; height:100%; background:rgba(0,0,0,.8) url("http://i0.itc.cn/20150426/213_0e553f52_4437_2be8_6b2c_989c563bd255_3.png")  center 137px no-repeat;background-size:84%; display:none; z-index:999;}
+	#weixin{ display:none}
+</style>
+<div class="share"></div>
+	<div id="wx-mask" style="background: rgba(0,0,0,.5) url(http://i1.itc.cn/20150311/3131_fc7d264a_ffb2_be83_f1c3_6b9e6c84fc75_1.png) 0 0 no-repeat;"></div>
+	<div id="orChange-mask">竖屏下体验更好...</div>
+	<!--<div id="play-again">再看一次</div>-->
+
+	<script>
+            // function shareFriend(){WeixinJSBridge.invoke("sendAppMessage",{appid:appid,img_url:imgUrl,img_width:"200",img_height:"200",link:lineLink,desc:descContent,title:shareTitle},function(b){})}function shareTimeline(){WeixinJSBridge.invoke("shareTimeline",{img_url:imgUrl,img_width:"200",img_height:"200",link:lineLink,desc:descContent,title:descContent},function(b){})}function shareWeibo(){WeixinJSBridge.invoke("shareWeibo",{content:descContent,url:lineLink},function(b){})}document.addEventListener("WeixinJSBridgeReady",function onBridgeReady(){WeixinJSBridge.on("menu:share:appmessage",function(b){shareFriend()});WeixinJSBridge.on("menu:share:timeline",function(b){shareTimeline()});WeixinJSBridge.on("menu:share:weibo",function(b){shareWeibo()})},false);
+
+		var imgUrl = 'http://i1.itc.cn/20150426/213_fbd8a4fe_2d32_35a5_42a7_2edd739e73b3_1.jpg';
+		var lineLink = document.location.href;
+		var shareTitle = '';
+		var descContent = '尼泊尔震殇';
+		var appid = '';
+			//内容定义
+		var iSliderOption = {
+				audio:function(){
+					var audio = document.getElementById('autoplay');
+					var controller = document.getElementById('musicBtn');
+					var controllerHint = document.getElementById('musicBtnTxt');
+					var audioAside = document.getElementsByTagName('aside')[0];
+					var audioSrc = audio.src;
+					if(audioSrc === document.location.href || audioSrc === null || audioSrc === '' || audioSrc === 'undefined'){
+						var _playArea = document.getElementsByClassName('media-wrap')[0];
+						_playArea.style.display = 'none';
+						return;
+					}else{
+						document.getElementById('musicBtn').addEventListener('touchstart', function() {
+							controllerHint.style.display = '';
+							if (audio.paused) {
+								audio.play();
+								controller.className = 'music-btn on';
+								controllerHint.innerHTML = '\u64AD\u653E';
+							} else {
+								audio.pause();
+								controller.className = 'music-btn';
+								controllerHint.innerHTML = '\u6682\u505C';
+							}
+
+							setTimeout(function() {
+								controllerHint.style.display = 'none';
+							},1500);
+						}, false);
+						setTimeout(function(){
+							audioAside.style.display = 'block'
+						},2000)
+					}
+				},
+				ua:function(){
+					function UA(){
+						var userAgent = navigator.userAgent.toLowerCase();
+						return {
+							ipad: /ipad/.test(userAgent),
+							iphone: /iphone/.test(userAgent),
+							android: /android/.test(userAgent),
+							wx: /micromessenger/.test(userAgent),
+							qq:/qq/.test(userAgent)
+						};
+					}
+					var ua = UA();
+    				if(ua.wx){
+    					document.getElementById('wx-share-btn').style.display = 'block';
+					}                  
+				},
+				wxShare:function(){
+					//隐藏分享按钮
+					var wxMask = document.getElementById('wx-mask');
+					wxMask.style.display = 'block';
+					wxMask.addEventListener('click',function(){
+						wxMask.style.display = ''
+					});
+				},
+			orChange:function(){
+				var orChangeMask = document.getElementById('orChange-mask');
+				var supportsOrientation = (typeof window.orientation == 'number' && typeof window.onorientationchange == 'object');
+				var HTMLNode = document.body.parentNode;
+				var updateOrientation = null;
+				if(supportsOrientation && orChangeMask) {
+					updateOrientation = function() {
+						var orientation = window.orientation;
+						switch(orientation) {
+							case 90:case -90:
+							orientation = 'landscape';
+							orChangeMask.style.display = 'block';
+							window.preventDefault();
+							break;
+							default:
+								orientation = 'portrait';
+								orChangeMask.style.display = 'none';
+						}
+						//HTMLNode.setAttribute('class', orientation);
+					}
+				} else {
+					updateOrientation = function() {
+						var orientation = (document.body.clientWidth > document.body.clientHeight) ? 'landscape': 'portrait';
+						if(orientation === 'landscape' && orChangeMask){
+							HTMLNode.setAttribute('class', orientation);
+							orChangeMask.className = 'animateMode';
+						}else{
+							HTMLNode.setAttribute('class', orientation);
+						}
+					}
+				}
+				if(supportsOrientation) {
+					window.addEventListener('orientationchange', updateOrientation, false);
+				} else {
+					setInterval(updateOrientation, 100);
+				}
+			},
+			showTicket:function(){
+				// $('.choose').each(function(i) {
+				// 	$(this).on('click', function() {
+				// 		// event.preventDefault();
+				// 		$(this).css('background', 'url(http://news.sohu.com/upload/zhengyufeng/ligy/images/t2.gif) no-repeat');
+				// 	});
+				// });
+				$('.choose').on('touchstart', function(){
+					var $this 		=	$(this);
+					if( !$this.attr('data-active') ){
+						$this.css('background', 'url(http://news.sohu.com/upload/zhengyufeng/ligy/images/t2.gif) no-repeat').attr('data-active', 'true');
+					}
+				});
+			},
+			vote:function(){
+				$('.choose').click(function() {
+					var urll = $(this).attr('data-href');
+					// alert('投票成功')
+					$.ajax({
+                        url:urll
+                    })
+				});
+			},
+			showHide:function(){
+				$('.sq').each(function(i) {
+					$(this).on('click', function(event) {
+			            if($('.txt').is(':visible')){
+			            	$('.sq').eq(i).find('img').attr('src', 'http://news.sohu.com/upload/zhengyufeng/ligy/images/t8.png');
+			            	$('.txt').eq(i).hide()
+			            }else{
+			            	$('.sq').eq(i).find('img').attr('src', 'http://news.sohu.com/upload/zhengyufeng/ligy/images/t7.png');
+			            	$('.txt').eq(i).show();
+			            }
+					});
+				});
+			}
+		};
+		// iSliderOption.ua();
+		iSliderOption.orChange();
+		iSliderOption.showTicket();
+		iSliderOption.vote();
+		iSliderOption.audio();	
+		iSliderOption.showHide();	
+	</script>
+
+<!-- START WRating v1.0 -->
+<script type="text/javascript" src="http://sohu.wrating.com/a1.js">
+</script>
+<script type="text/javascript">
+var vjAcc="860010-0603050000";
+var wrUrl="http://sohu.wrating.com/";
+vjTrack("");
+</script>
+<noscript><img src="http://sohu.wrating.com/a.gif?a=&c=860010-0603050000" width="1" height="1"/></noscript>
+<!-- END WRating v1.0 -->
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c154d502f02b12a996c34a02281a3bff";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>
+                                    

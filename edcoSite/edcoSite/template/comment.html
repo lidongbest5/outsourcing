@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/comment.css">
+	</head>
+	<body>
+		{%include "header.html"%}
+		{% if language != None and language == 'chinese' %}
+		<section class="user-header">
+			<div><a href="/member/">会员</a>/<a href="/member/">个人资料</a></div>
+		</section>
+		<section class="user-main">
+			<div class="user-container clearfix">
+				<div class="user-l">
+					<ul>
+						<a href="/member/"><li>个人资料</li></a>
+						<a href="/member/comment/"><li class="cur">我的评论</li></a>
+					</ul>
+				</div>
+				<div class="user-r">
+					<h3>我的评论</h3>
+					<div class="user-r-main clearfix">
+						<ul>
+							{% for item in items %}
+								<li>
+									<div class="comment-star clearfix">
+										<span data-rate="5" class="stars-rate stars-rate{{ item.rate }}"></span>
+									</div>
+									<p>{{ item.content }}</p>
+									<p><span>{{ item.date }}</span><a href="">djskdjaksd</a></p>
+									<i></i>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% else %}
+		<section class="user-header">
+			<div><a href="/member/">Member</a>/<a href="/member/">Personal Information</a></div>
+		</section>
+		<section class="user-main">
+			<div class="user-container clearfix">
+				<div class="user-l">
+					<ul>
+						<a href="/member/"><li>My Information</li></a>
+						<a href="/member/comment/"><li class="cur">My Comment</li></a>
+					</ul>
+				</div>
+				<div class="user-r">
+					<h3>My Comment</h3>
+					<div class="user-r-main clearfix">
+						<ul>
+							{% for item in items %}
+								<li>
+									<div class="comment-star clearfix">
+										<span data-rate="5" class="stars-rate stars-rate{{ item.rate }}"></span>
+									</div>
+									<p>{{ item.content }}</p>
+									<p><span>{{ item.date }}</span><a href="">djskdjaksd</a></p>
+									<i></i>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endif %}
+		{%include "footer.html"%}
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+		<script src="/static/js/user.js"></script>
+	</body>
+</html>

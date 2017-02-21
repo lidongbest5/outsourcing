@@ -1,0 +1,67 @@
+from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, include, url
+from django.conf import settings
+from django.conf.urls.static import static
+from media.views import *
+
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'wemedia.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^root/$', root),
+    url(r'^root/(\d+)/$', rootPage),
+    url(r'^root/login/$', rootLogin),
+    url(r'^root/logout/$', rootLogout),
+    url(r'^root/register/$', rootRegister),
+    url(r'^root/registerValidate/$', rootRegisterValidate),
+    url(r'^root/rootValidation/$', rootValidation),
+    url(r'^root/rootActivation/$', rootActivation),
+    url(r'^root/rootSuccess/$', rootSuccess),
+    url(r'^root/add/$', rootAdd),
+    url(r'^root/add/(\d+)/$', rootDuplicateAdd),
+    url(r'^root/delete/$', rootDelete),
+    url(r'^root/search/$', rootSearch),
+    url(r'^root/change/(\d+)/$', rootChange),
+    url(r'^root/addValidate/$', rootAddValidate),
+    url(r'^root/changeValidate/$', rootChangeValidate),
+    url(r'^root/upload/$', rootUpload),
+    url(r'^code/$', code),
+    url(r'^root/rootLoginValidate/$', rootLoginValidate),
+    url(r'^root/changePwd/$', rootChangePwd),
+    url(r'^root/changePwdValidate/$', rootChangePwdValidate),
+    url(r'^media/login/$', mediaLogin),
+    url(r'^media/mediaLoginValidate/$', mediaLoginValidate),
+    url(r'^media/logout/$', mediaLogout),
+    url(r'^media/register/$', mediaRegister),
+    url(r'^media/registerValidate/$', mediaRegisterValidate),
+    url(r'^media/sign/$', mediaSign),
+    url(r'^media/mediaValidation/$', mediaValidation),
+    url(r'^media/$', media),
+    url(r'^media/change/$', mediaChange),
+    url(r'^media/changeValidate/$', mediaChangeValidate),
+    url(r'^media/changePwd/$', mediaChangePwd),
+    url(r'^media/changePwdValidate/$', mediaChangePwdValidate),
+    url(r'^media/bank/$', mediaBank),
+    url(r'^media/bankValidate/$', mediaBankValidate),
+    url(r'^media/mediaActivation/$', mediaActivation),
+    url(r'^media/mediaSuccess/$', mediaSuccess),
+    url(r'^media/guide/$', mediaGuide),
+    url(r'^media/mail/$', mediaMail),
+    url(r'^root/mail/$', rootMail),
+    url(r'^root/resetPwd/$', rootReset),
+    url(r'^root/resetPwdValidation/$', rootResetValidation),
+    url(r'^media/resetPwd/$', mediaReset),
+    url(r'^media/resetPwdValidation/$', mediaResetValidation),
+    url(r'^test/$', test),
+    url(r'^root/user/$', rootUser),
+    url(r'^root/deleteUser/$', rootdeleteUser),
+    url(r'^root/changeUser/(\d+)/$', rootChangeUser),
+    url(r'^root/changeUserValidate/$', rootChangeUserValidate),
+    url(r'^root/checkName/$', rootCheckName),
+    url(r'^root/handle/$', rootHandle),
+)

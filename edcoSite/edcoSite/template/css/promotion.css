@@ -1,0 +1,62 @@
+body{
+	background: url(/static/images/grey-bg.png) repeat;
+}
+.img,.activity{
+	padding-top: 250px;
+	width: 80%;
+	margin: 0 auto;
+}
+.activity{
+	padding-top: 1em;
+}
+.img h3,.activity h3{
+	font-size: 2em;
+	color: #ff4e50;
+	margin-bottom: 0.5em;
+}
+.img li{
+	width: 32%;
+	margin-right: 2%;
+	margin-bottom: 1%;
+	float: left;
+}
+.img li:nth-child(3n){
+	margin-right: 0;
+}
+.img li img{
+	width: 100%;
+}
+.activity-l{
+	width: 65%;
+	float: left;
+	margin-right: 5%;
+}
+.activity-r{
+	width: 30%;
+	float: left;
+}
+.activity-r img,.activity-l img{
+	width: 100%;
+}
+.activity-l h4{
+	color: #7f7f7f;
+	font-size: 1em;
+	margin-bottom: 0.5em;
+}
+.activity-l p{
+	color: #7f7f7f;
+	font-size: 0.8em;
+	margin-bottom: 0.8em;
+	line-height: 1.5em;
+}
+.activity-l p a{
+	float: right;
+	color: #4edcff;
+	margin-bottom: 1em;
+}
+.public img{
+	margin-bottom: 1em;
+}
+.public p{
+	margin-bottom: 1.5em;
+}

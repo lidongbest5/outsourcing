@@ -1,0 +1,65 @@
+body {
+	background:url(../images/bg_p0.png);	
+	background-repeat:no-repeat;
+	background-position:100% 100%;
+	background-size:65%;	
+}
+#pagewrap {
+	margin:0 auto; 
+	width:95%; 
+	border:1px solid #dddddd; 
+	-webkit-border-radius:5px; 
+	-moz-border-radius:5px; 
+	border-radius:5px;
+	background:#ffffff;
+	margin-bottom:100px;
+	margin-top:60px;
+}
+#content {
+	padding:5px 10px;	
+}
+.apple_title {
+	margin:10px 0;
+	padding:0;
+	font: bold 1.2em/120% "宋体";
+}
+.apple_img {
+	margin:0;
+}
+.apple_img img {
+	border:none;
+	height:auto;
+	max-width:100%;
+}
+.apple_text {	
+	font: normal 1em/120% "宋体";
+	color:#898989;
+	/*line-height:24x;*/
+	line-height:32x;
+	margin:3px 0;
+}
+.stress_span {
+	color:#356db5;
+}
+.arrow {
+	float:right; 
+}
+.arrow img {
+	border:none;
+	height:auto;
+	max-width:100%;
+}
+.enter_div {
+	border-top:1px solid #dddddd; 
+	height:32px; 
+}
+.read_all {
+	float:left;
+	padding-left:10px;
+	font: normal 1em/120% "宋体";
+	line-height:32px;
+}
+.arrow {
+	margin-right:10px;
+	margin-top:7px;	
+}

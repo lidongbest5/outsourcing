@@ -1,0 +1,493 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.none {
+  display: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: url(../images/loading.gif) center center no-repeat;
+  background-color: white; }
+
+.arrow {
+  width: 30px;
+  height: 31px;
+  display: block;
+  background: url(../images/arrow.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: 15px;
+  z-index: 99;
+  -webkit-animation: twinkling 1.5s infinite ease-in-out; }
+
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 0;
+    bottom: 15px; }
+  100% {
+    opacity: 1;
+    bottom: 25px; } }
+.sound {
+  width: 35px;
+  height: 35px;
+  display: block;
+  background: url(../images/sound.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+  .sound.nosound {
+    background: url(../images/nosound.png) no-repeat;
+    background-size: 100%; }
+
+.dragend-container {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .dragend-container .dragend-page {
+    position: relative; }
+    .dragend-container .dragend-page .logo {
+      position: absolute;
+      bottom: 15px;
+      right: 10px; }
+    .dragend-container .dragend-page.page1 {
+      background: url(../images/page1.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page1 .page11 {
+        position: absolute;
+        top: 10px;
+        right: 8px; }
+      .dragend-container .dragend-page.page1 .page12 {
+        width: 85%;
+        margin: 80px auto 10px auto;
+        display: block; }
+      .dragend-container .dragend-page.page1 p {
+        margin-right: 35px;
+        float: right;
+        text-align: right;
+        font-size: 14px;
+        line-height: 20px; }
+      .dragend-container .dragend-page.page1 .sound {
+        right: none;
+        left: 10px; }
+      .dragend-container .dragend-page.page1.animated .page11 {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page1.animated .page12 {
+        -webkit-animation: zoomIn 1s 1s both; }
+      .dragend-container .dragend-page.page1.animated p {
+        -webkit-animation: fadeInUp 1s 2s both; }
+    .dragend-container .dragend-page.page2 {
+      background: url(../images/page2.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page2 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page2 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page2 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page2.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page2.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page2.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page3 {
+      background: url(../images/page3.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page3 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page3 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page3 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page3.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page3.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page3.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page4 {
+      background: url(../images/page4.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page4 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page4 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page4 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page4.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page4.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page4.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page5 {
+      background: url(../images/page5.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page5 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 36%;
+        top: 38%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page5 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page5 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page5.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page5.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page5.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page6 {
+      background: url(../images/page6.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page6 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 36%;
+        top: 38%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page6 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page6 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page6.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page6.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page6.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page7 {
+      background: url(../images/page7.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page7 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 50%;
+        top: 38%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page7 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page7 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page7.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page7.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page7.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page8 {
+      background: url(../images/page8.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page8 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page8 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page8 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page8.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page8.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page8.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page9 {
+      background: url(../images/page9.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page9 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page9 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page9 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page9.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page9.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page9.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+    .dragend-container .dragend-page.page10 {
+      background: url(../images/page10.jpg) no-repeat;
+      background-size: 100%;
+      background-color: black; }
+      .dragend-container .dragend-page.page10 .text {
+        width: 184px;
+        height: 95px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -92px;
+        margin-top: -48px; }
+      .dragend-container .dragend-page.page10 p {
+        position: absolute;
+        top: 40px;
+        left: 28px;
+        color: white;
+        font-size: 16px; }
+        .dragend-container .dragend-page.page10 p b {
+          font-size: 30px;
+          margin-bottom: 4px;
+          display: block; }
+      .dragend-container .dragend-page.page10.animated p {
+        -webkit-animation: fadeInDown 1s 0 both; }
+      .dragend-container .dragend-page.page10.animated .logo {
+        -webkit-animation: fadeInUp 1s 0 both; }
+      .dragend-container .dragend-page.page10.animated .text {
+        -webkit-animation: zoomIn 1s 1s both; }
+
+@media screen and (min-width: 370px) {
+  .text {
+    width: 240px !important;
+    height: 124px !important;
+    margin-left: -120px !important;
+    margin-top: -62px !important; } }
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="/themes/default/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/themes/default/css/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/themes/default/js/mSize.js"></script>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="main">
+<div class="cate-banner">
+    <div class="container">
+        <h3>线 香</h3>
+        <p>活放情前、種而又解積苦生：響活中不賽給間可到式失花細；把示否密們眾張院計現異中媽命原能線？
+服決中義名升照全過不的己量方就然怕小眾家始高個，大老行速，表全要至更照果，道式黃</p>
+    </div>
+</div>
+<div class="listtop mtop10">
+
+<!--分页-->
+<div class="page">
+<!-- #BeginLibraryItem "/library/pages_category.lbi" --><!-- #EndLibraryItem -->
+</div>
+<!--列表-->
+<div class="lb">
+
+	<div class="lb01">
+        <form method="GET" name="listform">
+        <font class="f01">{$lang.btn_display}：</font>
+        <a href="javascript:;" onClick="javascript:display_mode('list')"><img class="mt05" src="images/btn-imageSizeMedium<!-- {if $pager.display == 'list'} -->_act<!-- {/if} -->.gif" alt="{$lang.display.list}"></a>
+        <a href="javascript:;" onClick="javascript:display_mode('grid')"><img class="mt05" src="images/btn-imageSizeLarge<!-- {if $pager.display == 'grid'} -->_act<!-- {/if} -->.gif" alt="{$lang.display.grid}"></a>
+        <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.goods_id}"></a>
+        <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"></a>
+        
+        <input type="hidden" name="category" value="{$category}" />
+        <input type="hidden" name="display" value="{$pager.display}" id="display" />
+        <input type="hidden" name="brand" value="{$brand_id}" />
+        <input type="hidden" name="price_min" value="{$price_min}" />
+        <input type="hidden" name="price_max" value="{$price_max}" />
+        <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+        <input type="hidden" name="page" value="{$pager.page}" />
+        <input type="hidden" name="sort" value="{$pager.sort}" />
+        <input type="hidden" name="order" value="{$pager.order}" />
+        </form>
+    </div>
+    <!--搜索-->	    
+    <div class="f_r seach">
+           <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"  >
+           <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="B_input" >
+           <input name="imageField" type="submit" value="" class="go"  />
+           </form>
+    </div> 
+</div>
+
+
+
+
+</div>
+
+<div class="clr"></div>
+<!--产品列表-->
+<!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->
+<div class="clr"></div>
+<div class="listbottom"></div>
+<!--网页底部-->
+<div class="introduction">
+    <div class="introduction-img"><img src="../themes/default/images/intro_img.png"></div>
+    <div class="introduction-text">
+        <p>活放情前、種而又解積苦生：響活中不賽給間可到式失花細；把示否密們眾張院計現異中媽命原能線？服決中義名升照全過不的己量方就然怕小眾家始高個，大老行速，表全要至更照果.</p>
+        <a href="www.seeschau.ch">www.seeschau.ch</a>
+    </div>
+</div>
+<div class="contact">
+    <div class="title"><span>聯繫我們</span></div>
+    <img src="../themes/default/images/mail.png" class="mail-img">
+    <div class="contact-submit">
+        <input type="text" placeholder="Type your email address here">
+        <a>提交</a>
+    </div>
+    <div class="contact-info">
+        联系我们，了解更多产品信息        <span>电子邮箱：</span>contact@hope-insence.com        <span>免费电话：</span>400－088－0846        <span>官方网站：</span>www.hope-insence.com
+    </div>
+</div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

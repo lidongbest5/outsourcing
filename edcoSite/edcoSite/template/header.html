@@ -1,0 +1,42 @@
+<header>
+	<div class="header-container">
+		<div class="logo-container">
+			{% if user != None %}
+				<p><a href="/member/" class="user">Hi,{{ user.name }}</a><a href="/logout/" class="logout">[logout]</a></p>
+			{% else %}
+				{% if language == None or language == 'chinese' %}
+					<p><a class="login" href="/login/">登录</a><a class="register" href="/register/">注册</a></p>
+				{% else %}
+					<p><a class="login" href="/login/">LOGIN</a><a class="register" href="/register/">REGISTER</a></p>
+				{% endif %}
+			{% endif %}
+			<p><a class="english" href="/language/en/">EN</a>/<a class="chinese" href="/language/ch/">中文</a></p>
+			<a href=""><img src="/static/images/logo.png"></a>
+		</div>
+		{% if language != None and language == 'chinese' %}
+			<ul class="nav ch">
+				<a href="/"><li {%if type == 'home'%}class="cur"{%endif%}>主页</li><i></i></a>
+				<a href="/products/"><li {%if type == 'products'%}class="cur"{%endif%}>产品</li><i></i></a>
+				<a href="/brandStory/"><li {%if type == 'brandStory'%}class="cur"{%endif%}>品牌故事</li><i></i></a>
+				<a href="/culture/"><li {%if type == 'culture'%}class="cur"{%endif%}>品牌文化</li><i></i></a>
+				<a href="/technology/"><li {%if type == 'technology'%}class="cur"{%endif%}>产品科技</li><i></i></a>
+				<a href="/brandPromotion/"><li {%if type == 'brandPromotion'%}class="cur"{%endif%}>品牌推广</li><i></i></a>
+				<a href="/contact/"><li {%if type == 'contact'%}class="cur"{%endif%}>联系我们</li><i></i></a>
+				<a href="/member/"><li {%if type == 'member'%}class="cur"{%endif%}>会员</li></a>
+			</ul>
+		{% else %}
+			<ul class="nav">
+				<a href="/"><li {%if type == 'home'%}class="cur"{%endif%}>HOME</li><i></i></a>
+				<a href="/products/"><li {%if type == 'products'%}class="cur"{%endif%}>PRODUCTS</li><i></i></a>
+				<a href="/brandStory/"><li {%if type == 'brandStory'%}class="cur"{%endif%}>BRAND STORY</li><i></i></a>
+				<a href="/culture/"><li {%if type == 'culture'%}class="cur"{%endif%}>CULTURE</li><i></i></a>
+				<a href="/technology/"><li {%if type == 'technology'%}class="cur"{%endif%}>TECHNOLOGY</li><i></i></a>
+				<a href="/brandPromotion/"><li {%if type == 'brandPromotion'%}class="cur"{%endif%}>BRAND PROMOTION</li><i></i></a>
+				<a href="/contact/"><li {%if type == 'contact'%}class="cur"{%endif%}>CONTACT US</li><i></i></a>
+				<a href="/member/"><li {%if type == 'member'%}class="cur"{%endif%}>MEMBER</li></a>
+			</ul>
+		{% endif %}
+		<a class="header-btn" href="javascript:;"></a>
+	</div>
+</header>
+		

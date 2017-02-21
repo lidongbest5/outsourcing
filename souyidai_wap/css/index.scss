@@ -1,0 +1,667 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html{color:#000;background:#FFF;font-family: 'Microsoft Yahei';-webkit-font-smoothing: antialiased;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-size:medium;font-style:normal;font-weight:normal;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block;}
+
+/* =General
+-----------------------------------------------------------------------------*/
+/*** Location ***/
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin:0 auto;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+/* Class for clearing floats */
+.clearfix:after {content:"."; height:0; visibility:hidden; display:block; clear:both;}
+* html .clear {height:1%;}
+.clearfix {display:block;}
+/* End clearing floats */
+.vm{vertical-align:middle;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.zoom{zoom:1;}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+a:link, a:visited{ text-decoration: none;}
+
+.main{
+	.inner{
+		width: 85%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.rule-btn{
+		width: 120px;
+		height: 40px;
+		display: block;
+		background: url(../images/rule-btn.png) no-repeat;
+		background-size: 100%;
+		margin: 10px 0;
+	}
+
+	.top{
+		position: relative;
+
+		> img{
+			width: 100%;
+		}
+
+		.lottery{
+			position: absolute;
+			width: 226px;
+			height: 128px;
+			background: url(../images/card-bg.png) repeat;
+			top: 200px;
+			left: 34px;
+			border-radius: 5px;
+			padding-left: 14px;
+			padding-top: 10px;
+			padding-right: 14px;
+			color: white;
+
+			.lottery-container{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 99;
+				display: none;
+
+				#container{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+
+				.lottery-prize{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					border-radius: 5px;
+					top: 0;
+					left: 0;
+					z-index: 0;
+					background: white;
+
+					div{
+						height: 95px;
+						margin-top: 15px;
+						width: 100%;
+						text-align: center;
+						font-size: 40px;
+						color: #fff59f;
+						font-weight: 700;
+
+						&.prize1{
+							background: url(../images/award-bg.png) center center no-repeat;
+							background-size: contain;
+							padding-top:30px;
+							height: 65px;
+						}
+
+						&.prize2{
+							background: url(../images/iphone.png) center center no-repeat;
+							background-size: contain;
+						}
+
+						&.prize3{
+							background: url(../images/ipad.png) center center no-repeat;
+							background-size: contain;
+						}
+
+						&.prize4{
+							background: url(../images/aigo.png) center center no-repeat;
+							background-size: contain;
+						}
+					}
+				}
+			}
+
+			.lottery-info{
+				p{
+					font-size: 14px;
+					margin-bottom: 5px;
+
+					a{
+						font-size: 13px;
+						color: #f8f66a;
+						margin-left: 5px;
+						text-decoration: underline;
+					}
+				}
+
+				.start-btn{
+					width: 125px;
+					height: 40px;
+					display: block;
+					background: url(../images/start-btn.png) no-repeat;
+					background-size: 100%;
+					margin: 12px auto 0 auto;
+				}
+
+				.before-login{
+					p{
+						text-align: center;
+						color: #fff98c;
+						font-size: 13px;
+						margin-top: 30px;
+					}
+				}
+
+				.login-btn{
+					width: 126px;
+					height: 40px;
+					background: url(../images/login-btn.png) no-repeat;
+					background-size: 100%;
+					display: block;
+					margin: 10px auto 0 auto;
+				}
+
+				> div{
+					display: none;
+				}
+			}
+		}
+	}
+
+	.middle{
+		width: 100%;
+		background: #48256a;
+		margin-top: -10px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		.rule{
+			p{
+				font-size: 15px;
+				color: #fff98c;
+				line-height: 22px;
+				margin-bottom: 5px;
+			}
+		}
+
+		.prize-list{
+			width: 100%;
+			height: 205px;
+			overflow: hidden;
+			background: #603783;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		.list{
+			.list-top{
+				width: 90%;
+				padding: 5px 0 5px 10%;
+				background: #f8f66a;
+				color: #48256a;
+				font-weight: 700;
+				font-size: 18px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+
+			ul{
+				width: 80%;
+				padding-left: 10%;
+				font-size: 16px;
+				color: white;
+				padding-top: 15px;
+				padding-bottom: 10px;
+				position: relative;
+				top: 0;
+
+				li{
+					margin-bottom: 15px;
+
+					span{
+						float: right;
+						display: inline-block;
+						width: 100px;
+					}
+				}
+			}
+		}
+	}
+
+	.bottom{
+		width: 100%;
+		background: url(../images/flag-bg.png) top center no-repeat;
+		background-size: 100%;
+		background-color: #7241a2;
+		padding-top: 30px;
+		padding-bottom: 10px;
+
+		img{
+			width: 100%;
+		}
+
+		.prize{
+			p{
+				font-size: 16px;
+				color: #fff98c;
+				line-height: 22px;
+				margin: 0px 0 10px 0;
+			}
+		}
+
+		.rank{
+			.rank-top{
+				width: 95%;
+				padding: 5px 0 5px 5%;
+				background: #f8f66a;
+				color: #48256a;
+				font-weight: 700;
+				font-size: 18px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+
+				span{
+					font-size: 12px;
+				}
+			}
+
+			ul{
+				width: 90%;
+				font-size: 16px;
+				color: white;
+				padding: 15px 5% 10px 5%;;
+				background: #48256a;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+
+				li{
+					padding-bottom: 5px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid #64388d;
+
+					span{
+						float: right;
+						display: inline-block;
+						width: 100px;
+						text-align: right;
+
+					}
+
+					i{
+						width: 20px;
+						height: 20px;
+						text-align: center;
+						display: inline-block;
+						border-radius: 20px;
+						font-style: normal;
+						background: #65388d;
+						margin-right: 7%;
+					}
+
+					&.rank-header{
+						font-size: 0;
+
+						span{
+							display: inline-block;
+							font-size: 14px;
+							float: none;
+							width: auto;
+							text-align: left;
+
+							&.header1{
+								width: 15%;
+							}
+							&.header2{
+								width: 45%;
+							}
+							&.header3{
+								width: 40%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.backTop{
+			width: 90px;
+			height: 55px;
+			background: url(../images/back-top.png) no-repeat;
+			background-size: 100%;
+			display: block;
+			margin: 10px auto;
+			// position: fixed;
+			// left: 50%;
+			// margin-left: -45px;
+			// bottom: 10px;
+		}
+	}
+
+	.wechat-modal{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: url(../images/modal-bg.png) repeat;
+		display: none;
+
+		img{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 236px;
+		}
+	}
+
+	.modal{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: url(../images/modal-bg.png) repeat;
+		display: none;
+
+		.modal1, .modal2, .modal3, .modal4, .modal5{
+			width: 278px;
+			height: 357px;
+			padding-top: 100px;
+			background: url(../images/modal.png) no-repeat;
+			background-size: 100%;
+			margin: 30px auto 0 auto;
+			text-align: center;
+			display: none;
+			position: relative;
+
+			.close-btn{
+				width: 22px;
+				height: 22px;
+				background: url(../images/close.png) no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: -5px;
+				right: 0;
+			}
+
+			> img{
+				width: 230px;
+				margin-top: 10px;
+			}
+		}
+
+		.modal5{
+			.red{
+				padding: 30px 0 20px 0;
+			}
+		}
+
+		.modal-prize{
+			width: 63px;
+			height: 60px;
+			background: url(../images/award-bg.png) no-repeat;
+			background-size: 100%;
+			margin: 0px auto 10px auto;
+			text-align: center;
+			padding-top: 25px;
+			font-size: 40px;
+			color: #fff59f;
+			font-weight: 700;
+		}
+
+		p{
+			font-size: 16px;
+			margin-bottom: 5px;
+
+			span{
+				font-size: 18px;
+				font-weight: 700;
+				color: #e63e26;
+			}
+
+			&.red{
+				color: #e63e26;
+			}
+		}
+
+		.continue-btn{
+			width: 126px;
+			height: 40px;
+			display: block;
+			background: url(../images/continue-btn.png) no-repeat;
+			background-size: 100%;
+			margin: 8px auto;
+		}
+
+		.invest-btn{
+			width: 126px;
+			height: 40px;
+			display: block;
+			background: url(../images/invest-btn.png) no-repeat;
+			background-size: 100%;
+			margin: 8px auto;
+		}
+
+		.share{
+			text-align: left;
+			font-size: 14px;
+			margin-left: 20px;
+
+			a{
+				display: inline-block;
+				vertical-align: bottom;
+				width: 45px;
+				height: 23px;
+				background: url(../images/share.png) no-repeat;
+
+				&.weibo{
+					background-position: 0 0;
+					margin-left: 10px;
+				}
+				&.wechat{
+					background-position: -50px 0;
+				}
+				&.qqzone{
+					background-position: -102px 0;
+				}
+			}
+		}
+
+		.modal-gift{
+			img{
+				height: 95px;
+			}
+		}
+
+		.rule{
+			width: 70%;
+			padding: 15px 5%;
+			height: 300px;
+			margin: 50px auto 0 auto;
+			background: white;
+			border: 5px solid #ff660d;
+			border-radius: 5px;
+			display: none;
+
+			.rule-container{
+				width: 100%;
+				height: 260px;
+				overflow: scroll;
+
+				.red{
+					padding-bottom: 5px;
+					border-bottom: 1px dashed #a99ab9;
+				}
+			}
+
+			h2{
+				font-size: 14px;
+				color: #e63e26;
+			}
+
+			p{
+				font-size: 12px;
+				line-height: 20px;
+			}
+
+			.close-btn{
+				width: 100px;
+				height: 35px;
+				display: block;
+				background: url(../images/done-btn.png) no-repeat;
+				background-size: 100%;
+				margin: 10px auto 0 auto;
+			}
+		}
+
+		.login{
+			width: 70%;
+			padding: 15px 5%;
+			height: auto;
+			margin: 50px auto 0 auto;
+			background: white;
+			border: 5px solid #ff660d;
+			border-radius: 5px;
+			position: relative;
+			display: none;
+
+			.login-line{
+				width: 100%;
+				height: 1px;
+				background: #dcdcdc;
+				position: absolute;
+				left: 0;
+				top: 30px;
+			}
+
+			.close-btn{
+				width: 22px;
+				height: 22px;
+				background: url(../images/close.png) no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: -25px;
+				right: -25px;
+			}
+
+			.login-register{
+				font-size: 12px;
+				margin-bottom: 6px;
+				text-align: center;
+
+				a{
+					font-size: 12px;
+					color: #ea421d;
+				}
+			}
+
+			.modal-title{
+				font-size: 18px;
+				padding-bottom: 10px;
+				background: white;
+				position: relative;
+				z-index: 10;
+				text-align: center;
+			}
+
+			.modal-line{
+				top: 80px;
+			}
+
+			p input[type="text"], p input[type="password"]{
+				width: 140px;
+				height: 19px;
+				border: 1px solid #c2c2c2;
+				margin-left: 8px;
+				padding: 4px;
+				border-radius: 3px;
+			}
+
+			p{
+				margin-bottom: 10px;
+				padding-left: 20px;
+				text-align: left;
+				font-size: 14px;
+				position: relative;
+				z-index: 1;
+			}
+
+			.login-tip{
+				font-size: 13px;
+				width: 83%;
+				margin-left: 20px;
+				text-align: left;
+				padding: 0;
+
+				a{
+					float: right;
+				}
+			}
+
+			.fild-group{
+				display: none;
+			}
+
+			.login-btn{
+				display: block;
+				width: 83%;
+				height: 42px;
+				background: url(../images/login.png) no-repeat;
+				background-size: 100%;
+				margin-left: 20px;
+				cursor: pointer;
+				text-align: center;
+			}
+
+			.login-msg {
+				display: none;
+				margin-left: 20px;
+				margin-bottom: 10px;
+				font-size: 12px;
+				color: #666;
+				border: 1px solid #f5d8a7;
+				padding: 8px 9px 7px 9px;
+				width: 150px;
+				line-height: 17px;
+				border-radius: 3px;
+				-moz-border-radius: 3px;
+				background-color: #fff6db;
+			}
+
+			.login-msg .ico-error-mark {
+				display: block;
+				float: left;
+				width: 16px;
+				height: 19px;
+				background-position: -99px 0;
+				margin-right: 9px;
+				background-image: url("https://static.souyidai.com/www/images/reg-ico.png");
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	.preload{
+		background: url(../images/1.png) no-repeat -9999px -9999px;
+	}
+}

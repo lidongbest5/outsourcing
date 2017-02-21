@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/media/css/index.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/media/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="hasSession">
+		<header>
+			<span class="mobile-nav"></span>
+			<div>
+				<i></i>欢迎<a class="user">{{ user.name }}</a><a class="logout" href="/media/logout/">退出</a>
+			</div>
+		</header>
+		<nav>
+			<a href="/media/"><img src="/static/media/images/main_logo.png" class="main-logo"></a>
+			<ul>
+				<li class="border"></li>
+				<li class="nav1 nav"><a href="/media/"><i></i>接单汇总表</a></li>
+				<li class="border"></li>
+				<li class="nav2 nav"><a href="/media/change/"><i></i>账户信息修改</a></li>
+				<li class="border"></li>
+				<li class="nav3 nav"><a href="/media/changePwd/"><i></i>密码修改</a></li>
+				<li class="border"></li>
+				<li class="nav4 nav cur"><a href="/media/bank/"><i></i>银行卡信息</a></li>
+				<li class="border"></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<section class="bank-info">
+				<div class="break"><a href="/media/">联盟成员收入管理系统</a>&gt;<a>银行卡信息</a></div>
+				<div class="main">
+					<div class="main-header">
+						银行卡信息
+					</div>
+					<div class="main-container bank-con">
+						<div class="bank-list">
+							<span>开户银行：</span>
+							<ul>
+								<li>
+									<input type="radio" name="bank" value="1" data="中国银行">
+									<img src="/static/media/images/bank1.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="2" data="中国工商银行">
+									<img src="/static/media/images/bank2.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="3" data="招商银行">
+									<img src="/static/media/images/bank3.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="4" data="中国建设银行">
+									<img src="/static/media/images/bank4.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="5" data="交通银行">
+									<img src="/static/media/images/bank5.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="6" data="中国农业银行">
+									<img src="/static/media/images/bank6.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="7" data="上海浦东发展银行">
+									<img src="/static/media/images/bank7.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="8" data="中国光大银行">
+									<img src="/static/media/images/bank8.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="9" data="中国民生银行">
+									<img src="/static/media/images/bank9.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="10" data="华夏银行">
+									<img src="/static/media/images/bank10.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="11" data="北京银行">
+									<img src="/static/media/images/bank11.png">
+								</li>
+								<li>
+									<input type="radio" name="bank" value="12" data="中国邮政">
+									<img src="/static/media/images/bank12.png">
+								</li>
+							</ul>
+						</div>
+						<div class="bank-other">
+							<span>开户银行：</span>
+							<input type="text" placeholder="若上述列表未找到您的开户行，请在此填写银行名称" {% if user.bank %}value="{{ user.bank }}"{% endif %}>
+						</div>
+						<div class="full-name">
+							<span>开户行全称：</span>
+							<input type="text" placeholder="例如：山东省潍坊市分行奎文支行" {% if user.bankname %}value="{{ user.bankname }}"{% endif %}>
+						</div>
+						<div class="bank-number">
+							<span>银行卡号：</span>
+							<input type="text" placeholder="注意：请认真填写银行卡号，卡号有误会造成付款不成功" {% if user.banknumber %}value="{{ user.banknumber }}"{% endif %}>
+						</div>
+						<div class="actions">
+							<a class="submit bank-button">确认提交</a>注意：为了您自身的利益，请您认真填写以上信息
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="container">
+				京ICP备13045368号-2 /北京市公安局朝阳分局 Copyright@2006-2015
+			</div>
+		</footer>
+		<script src="/static/media/js/jquery.js"></script>
+		<script src="/static/media/js/min/index-min.js"></script>
+		<script src="/static/media/js/placeholders.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}黑鹿角西餐 - 修改和添加地址{% endblock %}
+{% block content %}
+	<section class="address-container">
+		<div class="container">
+			<h3>我的地址管理</h3>
+			<div class="address-con">
+				<h4>新增收货地址</h4>
+				<p>
+					<span>所在地区<i>*</i></span>
+					<select><option>北京</option></select>
+					<select name="userVo.city" class="district" id="city"><option value="朝阳区">朝阳区</option><option value="海淀区">海淀区</option><option value="西城区">西城区</option><option value="东城区">东城区</option><option value="崇文区">崇文区</option><option value="宣武区">宣武区</option><option value="丰台区">丰台区</option><option value="石景山区">石景山区</option><option value="门头沟">门头沟</option><option value="房山区">房山区</option><option value="通州区">通州区</option><option value="大兴区">大兴区</option><option value="顺义区">顺义区</option><option value="怀柔区">怀柔区</option><option value="密云区">密云区</option><option value="昌平区">昌平区</option><option value="平谷区">平谷区</option><option value="延庆县">延庆县</option></select>
+				</p>
+				<p>
+					<span>详细地址<i>*</i></span>
+					<textarea placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息" class="address"> {% if type = 2 %}{{ current.address }}{% endif %}</textarea>
+				</p>
+				<p>
+					<span>邮政编码</span>
+					<input type="text" class="postcode" {% if type = 2 %}value="{{ current.postcode }}"{% endif %}>
+				</p>
+				<p>
+					<span>收货人姓名<i>*</i></span>
+					<input type="text" class="name" {% if type = 2 %}value="{{ current.name }}"{% endif %}>
+				</p>
+				<p>
+					<span>手机号码<i>*</i></span>
+					<input type="text" class="phone" {% if type = 2 %}value="{{ current.phone }}"{% endif %}>
+				</p>
+				<input type="checkbox" class="default" checked class="default">设置为默认收货地址
+				{% if len < 6 %}
+					<a class="{% if type = 2 %}change{% else %}save{% endif %}" {% if type = 2 %}data-id="{{ current.id }}"{% endif %}>保存</a>
+				{% endif %}
+			</div>
+			<div class="address-table">
+				<p>
+					{% if len > 5 %}
+						已保存了{{ len }}个地址，不能保存新地址</p>
+					{% else %}
+						已保存了{{ len }}个地址，还能保存{{ remain }}个地址</p>
+					{% endif %}
+				<table>
+					<thead>
+						<tr>
+							<th>收货人</th>
+							<th>所在地区</th>
+							<th>详细地址</th>
+							<th>邮编</th>
+							<th>手机</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in address %}
+							<tr>
+								<td>{{ item.name }}</td>
+								<td>{{ item.district }}</td>
+								<td>{{ item.address }}</td>
+								<td>{{ item.postcode }}</td>
+								<td>{{ item.phone }}</td>
+								<td><a class="delete-address" data-id="{{ item.id }}">删除</a></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+{% endblock %}

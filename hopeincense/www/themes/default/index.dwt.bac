@@ -1,0 +1,99 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="../themes/default/css/common.css" rel="stylesheet" type="text/css" />
+<style>
+#galleria{height:451px;}
+.footer-span{margin-left: 10px;}
+</style>
+<!-- load jQuery -->
+<script src="../themes/default/js/jquery.js"></script>
+
+<!-- load Galleria -->
+<script src="../themes/default/js/galleria-1.2.4.js" type="text/javascript" charset="gb2312"></script>
+		
+</head>
+<body>
+<div class="top-bar textr wind975" id="ECS_MEMBERZONE">{insert name='member_info'}</div>
+<div class="wind975">
+	<div class="wind680 left">
+		<div class="logo" style="margin-top:30px;">
+			<ul>
+				<li><img src="images/logo1.gif" /></li>
+			</ul>
+            
+               <div class="topnav">
+			<ul>
+				<li><span><a href="/article_cat.php?id=7" >关于我们</a></span><br /><a href="/article_cat.php?id=4">BRAND STORY</a></li>
+				<li><span><a href="/category.php?id=1" >香系列</a></span><br /><a href="/category.php?id=1">MORE INCENSE</a></li>
+				<li><span><a href="/article_cat.php?id=6" >香道文化</a></span><br /><a href="/category.php?id=4">INCENSE CULTURE</a></li>
+			</ul>
+				<div class="clr"></div>
+		</div>
+		</div>
+        
+     
+		<div class="clr"></div>
+		
+
+	</div>
+<div class="clr"></div>
+</div>
+<div class="wind975 mtop10">
+<div id="galleria">
+<a href="/images/index/pic-1.jpg"><img src="/images/index/pic-1.jpg" border="0" /></a>
+<a href="/images/index/pic-2.jpg"><img src="/images/index/pic-2.jpg" border="0" /></a>
+<a href="/images/index/pic-3.jpg"><img src="/images/index/pic-3.jpg" border="0" /></a>
+<a href="/images/index/pic-4.jpg"><img src="/images/index/pic-4.jpg" border="0" /></a>
+<a href="/images/index/pic-5.jpg"><img src="/images/index/pic-5.jpg" border="0" /></a>
+</div>
+</div>
+
+
+    <script>
+    // Load the classic theme
+    Galleria.loadTheme('../themes/default/js/galleria.classic.js');
+    
+    // Initialize Galleria
+    $('#galleria').galleria();
+
+    </script>
+
+
+<!--网页底部-->
+
+
+
+<div class="foot wind975">
+	<div class="copyrightleft left">
+		<div><img src="images/fx.gif" style="padding-bottom:5px;"></div>
+		<div class="copyrightleft01"><a href="#">关于我们 </a>&nbsp;|&nbsp;<a href="#">媒体报道</a>&nbsp;|&nbsp;<a href="#">招贤纳士</a>&nbsp;|&nbsp;<a href="#">联系我们 </a><br />
+		<a href="#">帮助</a>&nbsp;|&nbsp;<a href="#">客服中心</a>&nbsp;|&nbsp;<a href="#">新手指南</a>&nbsp;|&nbsp;<a href="#">支付方式 </a>&nbsp;|&nbsp;<a href="#">配送方式</a>&nbsp;|&nbsp;<a href="#">投诉建议</a> 
+		</div>
+	</div>
+	<div class="copyrightright right">
+		<div class="copyrightright01">
+			<UL>
+				<li><a href="#"><img src="images/b1.gif" border="0" /></a></li>
+				<li><a href="#"><img src="images/b2.gif" border="0" /></a></li>
+				<li><a href="#"><img src="images/b3.gif" border="0" /></a></li>
+				<li><a href="#"><img src="images/b4.gif" border="0" /></a></li>
+				<li><a href="#"><img src="images/b5.gif" border="0" /></a></li>
+				<li><a href="#"><img src="images/b6.gif" border="0" /></a></li>
+				<li><a href="#"><img src="images/b7.gif" border="0" /></a></li>
+				<li><a href="#"><img src="images/b8.gif" border="0" /></a></li>
+			</UL>
+		</div>
+		<div class="clr"></div>
+		@2011-XXccccccc版权所有<span class="footer-span">京ICP备13043294号-1</span><span class="footer-span">京公网安备11010502026236</span>
+	</div>
+</div>
+
+</body>
+</html>

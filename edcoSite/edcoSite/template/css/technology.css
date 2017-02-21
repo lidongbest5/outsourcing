@@ -1,0 +1,12 @@
+body{
+	background: url(/static/images/grey-bg.png) repeat;
+}
+section{
+	padding-top: 150px;
+}
+section img{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	display: block;
+}

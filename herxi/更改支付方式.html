@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<img src="images/bg.jpg" style="width: 100%;">
+		<div class="modal">
+			<div class="modal-container">
+				<div class="payment-modal">
+					<img src="images/payment.png" class="payment-img">
+					<div class="title">选择支付方式</div>
+					<div class="content"></div>
+					<div class="title">使用储蓄卡支付</div>
+					<div class="content">
+						<div id="bank" class="clearfix">
+							<ul>
+									    <li><label for="lab_ICBC"><a href="#linebank" onclick="document.getElementById('lab_ICBC').checked=true;changeDiv('lab_ICBC', true);"><input type="radio" name="bankId" value="ICBC" class="banking" id="lab_ICBC" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_icbc.gif?version=1" alt="ICBC"></a></label></li>
+									    <li><label for="lab_CCB"><a href="#linebank" onclick="document.getElementById('lab_CCB').checked=true;changeDiv('lab_CCB', true);"><input type="radio" name="bankId" value="CCB" class="banking" id="lab_CCB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_ccb.gif?version=1" alt="CCB"></a></label></li>
+									    <li><label for="lab_ABC"><a href="#linebank" onclick="document.getElementById('lab_ABC').checked=true;changeDiv('lab_ABC', true);"><input type="radio" name="bankId" value="ABC" class="banking" id="lab_ABC" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_abc.gif?version=1" alt="ABC"></a></label></li>
+									    <li><label for="lab_CMB"><a href="#linebank" onclick="document.getElementById('lab_CMB').checked=true;changeDiv('lab_CMB', true);"><input type="radio" name="bankId" value="CMB" class="banking" id="lab_CMB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_cmb.gif?version=1" alt="CMB"></a></label></li>
+								    	<li><label for="lab_BOC"><a href="#linebank" onclick="document.getElementById('lab_BOC').checked=true;changeDiv('lab_BOC', true);"><input type="radio" name="bankId" value="BOC" class="banking" id="lab_BOC" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_boc.gif?version=1" alt="BOC"></a></label></li>
+								    	<!-- removed by Scotto.Zhou 2009-05-05
+									    <li><label for="lab_BOC"><a href="#linebank" onclick="document.getElementById('lab_BOC').checked=true;changeDiv('lab_BOC', true);"><input type="radio" name="bankId" value="BOC" class="banking" id="lab_BOC""/><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_boc.gif?version=1" alt="BOC" /></a>
+									       <ol id="bankingS" class="disappear" >
+										    <li class="bankS"> 
+										    <a id="shanghai">
+										    <label for="shanghai1" onclick="changeDiv('shanghai', true)">
+											    <input type="radio" name="bankId_boc" value="BOC_SH" id="shanghai1" 
+											    style="float:none;"/>
+													    上海 
+										    </label>
+										    </a> 
+										    <a id="guangdong">
+											    <label for="guangdong1" onclick="changeDiv('guangdong', true)">
+											    <input type="radio" name="bankId_boc" value="BOC_GZ" id="guangdong1" 
+											    style="float:none;"/>
+													    广东
+										    </label>
+													    </a> 
+										    </li>
+										    </ol>
+											</label>
+									    </li>
+									    -->
+									    <li><label for="lab_SPDB"><a href="#linebank" onclick="document.getElementById('lab_SPDB').checked=true;changeDiv('lab_SPDB', true);"><input type="radio" name="bankId" value="SPDB" class="banking" id="lab_SPDB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_spdb.gif?version=1" alt="SPDB"></a></label></li>
+									    <li><label for="lab_BCOM"><a href="#linebank" onclick="document.getElementById('lab_BCOM').checked=true;changeDiv('lab_BCOM', true);"><input type="radio" name="bankId" value="BCOM" class="banking" id="lab_BCOM" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_bcom.gif?version=1" alt="BCOM"></a></label></li>
+									    <li><label for="lab_GDB"><a href="#linebank" onclick="document.getElementById('lab_GDB').checked=true;changeDiv('lab_GDB', true);"><input type="radio" name="bankId" value="GDB" class="banking" id="lab_GDB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_gdb.gif?version=1" alt="GDB"></a></label></li>
+									    <li><label for="lab_CMBC"><a href="#linebank" onclick="document.getElementById('lab_CMBC').checked=true;changeDiv('lab_CMBC', true);"><input type="radio" name="bankId" value="CMBC" class="banking" id="lab_CMBC" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_cmbc.gif?version=1" alt="CMBC"></a></label></li>
+									    <li><label for="lab_CIB"><a href="#linebank" onclick="document.getElementById('lab_CIB').checked=true;changeDiv('lab_CIB', true);"><input type="radio" name="bankId" value="CIB" class="banking" id="lab_CIB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_cib.gif?version=1" alt="CIB"></a></label></li>
+									    <li><label for="lab_CEB"><a href="#linebank" onclick="document.getElementById('lab_CEB').checked=true;changeDiv('lab_CEB', true);"><input type="radio" name="bankId" value="CEB" class="banking" id="lab_CEB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_ceb.gif?version=1" alt="CEB"></a></label></li>
+									    <li><label for="lab_CITIC"><a href="#linebank" onclick="document.getElementById('lab_CITIC').checked=true;changeDiv('lab_CITIC', true);"><input type="radio" name="bankId" value="CITIC" class="banking" id="lab_CITIC" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_citic.gif?version=1" alt="CITIC"></a></label></li>
+									    <li><label for="lab_PSBC"><a href="#linebank" onclick="document.getElementById('lab_PSBC').checked=true;changeDiv('lab_PSBC', true);"><input type="radio" name="bankId" value="PSBC" class="banking" id="lab_PSBC" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_psbc.gif?version=1" alt="PSBC"></a></label></li>
+									    <li><label for="lab_POST"><a href="#linebank" onclick="document.getElementById('lab_POST').checked=true;changeDiv('lab_POST', true);"><input type="radio" name="bankId" value="POST" class="banking" id="lab_POST" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_post.gif?version=1" alt="POST"></a></label></li>
+									    <li><label for="lab_SHB"><a href="#linebank" onclick="document.getElementById('lab_SHB').checked=true;changeDiv('lab_SHB', true);"><input type="radio" name="bankId" value="SHB" class="banking" id="lab_SHB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_shb.gif?version=1" alt="SHB"></a></label></li>
+									    <li><label for="lab_PAB"><a href="#linebank" onclick="document.getElementById('lab_PAB').checked=true;changeDiv('lab_PAB', true);"><input type="radio" name="bankId" value="PAB" class="banking" id="lab_PAB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_pab.gif?version=1" alt="PAB"></a></label></li>
+									    <li><label for="lab_SDB"><a href="#linebank" onclick="document.getElementById('lab_SDB').checked=true;changeDiv('lab_SDB', true);"><input type="radio" name="bankId" value="SDB" class="banking" id="lab_SDB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_sdb.gif?version=1" alt="SDB"></a></label></li>
+									    <li><label for="lab_BJRCB"><a href="#linebank" onclick="document.getElementById('lab_BJRCB').checked=true;changeDiv('lab_BJRCB', true);"><input type="radio" name="bankId" value="BJRCB" class="banking" id="lab_BJRCB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_bjrcb.gif?version=1" alt="BJRCB"></a></label></li>
+									    <li><label for="lab_BOB"><a href="#linebank" onclick="document.getElementById('lab_BOB').checked=true;changeDiv('lab_BOB', true);"><input type="radio" name="bankId" value="BOB" class="banking" id="lab_BOB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_bob.gif?version=1" alt="BOB"></a></label></li>
+									    <li><label for="lab_NBCB"><a href="#linebank" onclick="document.getElementById('lab_NBCB').checked=true;changeDiv('lab_NBCB', true);"><input type="radio" name="bankId" value="NBCB" class="banking" id="lab_NBCB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_nbcb.gif?version=1" alt="NBCB"></a></label></li>
+									    <li><label for="lab_HSB"><a href="#linebank" onclick="document.getElementById('lab_HSB').checked=true;changeDiv('lab_HSB', true);"><input type="radio" name="bankId" value="HSB" class="banking" id="lab_HSB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_hsb.gif?version=1" alt="HSB"></a></label></li>
+									    <li><label for="lab_HXB"><a href="#linebank" onclick="document.getElementById('lab_HXB').checked=true;changeDiv('lab_HXB', true);"><input type="radio" name="bankId" value="HXB" class="banking" id="lab_HXB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_hxb.gif?version=1" alt="HXB"></a></label></li>
+									    <li><label for="lab_NJCB"><a href="#linebank" onclick="document.getElementById('lab_NJCB').checked=true;changeDiv('lab_NJCB', true);"><input type="radio" name="bankId" value="NJCB" class="banking" id="lab_NJCB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_njcb.gif?version=1" alt="NJCB"></a></label></li>
+									    <li><label for="lab_CBHB"><a href="#linebank" onclick="document.getElementById('lab_CBHB').checked=true;changeDiv('lab_CBHB', true);"><input type="radio" name="bankId" value="CBHB" class="banking" id="lab_CBHB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_cbhb.gif?version=1" alt="CBHB"></a></label></li>
+									    <li><label for="lab_HZB"><a href="#linebank" onclick="document.getElementById('lab_HZB').checked=true;changeDiv('lab_HZB', true);"><input type="radio" name="bankId" value="HZB" class="banking" id="lab_HZB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_hzb.gif?version=1" alt="HZB"></a></label></li>
+									    <li><label for="lab_BEA"><a href="#linebank" onclick="document.getElementById('lab_BEA').checked=true;changeDiv('lab_BEA', true);"><input type="radio" name="bankId" value="BEA" class="banking" id="lab_BEA" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_bea.gif?version=1" alt="BEA"></a></label></li>
+									    <li><label for="lab_SRCB"><a href="#linebank" onclick="document.getElementById('lab_SRCB').checked=true;changeDiv('lab_SRCB', true);"><input type="radio" name="bankId" value="SRCB" class="banking" id="lab_SRCB" "=""><img src="https://img.99bill.com/seashell/gateway/img/bank/bank_srcb.gif?version=1" alt="SRCB"></a></label></li>
+									    
+							    </ul>    
+						</div>
+					</div>
+					<div class="title">使用信用卡支付</div>
+					<div class="content"></div>
+					<div class="payment-footer">
+						<a>提交订单</a>
+						<p>商品总价<span>￥2790</span></p>
+					</div>
+				</div>
+				<a class="modal-close"></a>
+			</div>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/min/index-min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,363 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF;
+  font-family: 'Microsoft Yahei';
+  width: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.none {
+  display: none; }
+
+a {
+  cursor: pointer; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+html, body, .main {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.page0 {
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .page0 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -32px; }
+
+.rule-modal, .prize-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  overflow: auto; }
+  .rule-modal a, .prize-modal a {
+    color: white;
+    text-decoration: underline; }
+  .rule-modal h3, .prize-modal h3 {
+    color: #347e39;
+    font-size: 18px;
+    width: 90%;
+    margin: 15% auto 10px auto; }
+  .rule-modal p, .prize-modal p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 13px;
+    color: white;
+    line-height: 28px; }
+  .rule-modal .prize, .prize-modal .prize {
+    display: block;
+    width: 90%;
+    margin: 5px auto; }
+  .rule-modal .close, .prize-modal .close {
+    width: 14%;
+    display: block;
+    margin: 30px auto; }
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/bg.gif) no-repeat;
+  background-size: 100%; }
+  .page .b4 {
+    width: 20%;
+    position: absolute;
+    top: 15px;
+    left: 0; }
+  .page .b5, .page .b11 {
+    width: 20%;
+    position: absolute;
+    top: 15px;
+    right: 0; }
+  .page .t3 {
+    width: 17%;
+    position: absolute;
+    top: 3%;
+    left: 41%; }
+  .page.page1 {
+    background: none; }
+    .page.page1 .con {
+      overflow: auto;
+      width: 100%;
+      position: relative; }
+      .page.page1 .con .page1-bg {
+        width: 100%;
+        vertical-align: top; }
+      .page.page1 .con .btns {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 35%; }
+        .page.page1 .con .btns .b1, .page.page1 .con .btns .b2 {
+          width: 64%;
+          display: block;
+          margin: 5px auto; }
+        .page.page1 .con .btns .t2 {
+          width: 37%; }
+        .page.page1 .con .btns p {
+          font-size: 24px;
+          line-height: 40px;
+          margin: 15% 0;
+          text-align: center;
+          color: #e5f1ce; }
+        .page.page1 .con .btns .list {
+          margin-top: 5%; }
+          .page.page1 .con .btns .list .t1 {
+            width: 100%; }
+          .page.page1 .con .btns .list ul {
+            width: 85%;
+            margin: 2% auto 0 auto;
+            max-height: 228px;
+            overflow: auto; }
+            .page.page1 .con .btns .list ul li {
+              color: #e5f1ce;
+              padding: 8px 0;
+              border-bottom: 1px solid #1d582b;
+              text-align: left; }
+              .page.page1 .con .btns .list ul li span {
+                float: right;
+                font-size: 13px; }
+  .page.page2 .lottery {
+    width: 315px;
+    height: 185px;
+    position: absolute;
+    left: 50%;
+    margin-left: -157.5px;
+    bottom: 100px;
+    background: url(../images/p1.png) no-repeat;
+    background-size: 100%; }
+    .page.page2 .lottery .lottery-container {
+      width: 280px;
+      height: 150px;
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 99; }
+      .page.page2 .lottery .lottery-container #container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; }
+      .page.page2 .lottery .lottery-container .lottery-prize {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: #008c3d;
+        text-align: center;
+        display: none; }
+        .page.page2 .lottery .lottery-container .lottery-prize .prize1 {
+          display: none; }
+          .page.page2 .lottery .lottery-container .lottery-prize .prize1 .p2 {
+            width: 40px;
+            display: block;
+            margin: 10px auto; }
+          .page.page2 .lottery .lottery-container .lottery-prize .prize1 h3 {
+            color: white;
+            font-size: 16px; }
+          .page.page2 .lottery .lottery-container .lottery-prize .prize1 .b6 {
+            display: block;
+            margin: 10px auto 0 auto; }
+        .page.page2 .lottery .lottery-container .lottery-prize .prize2 {
+          display: none;
+          color: white;
+          text-align: center; }
+          .page.page2 .lottery .lottery-container .lottery-prize .prize2 h3 {
+            font-size: 28px;
+            margin: 30px 0 10px 0; }
+          .page.page2 .lottery .lottery-container .lottery-prize .prize2 p {
+            font-size: 18px; }
+  .page.page3 .info {
+    width: 80%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%; }
+    .page.page3 .info p {
+      color: white;
+      margin: 15px 0 8px 0; }
+    .page.page3 .info .input {
+      width: 100%;
+      height: 40px;
+      background: #e1f7b1;
+      border: 1px solid #024d27;
+      border-radius: 3px;
+      position: relative; }
+      .page.page3 .info .input input {
+        width: 90%;
+        margin-left: 2%;
+        height: 100%;
+        background: none;
+        border: none;
+        outline: none; }
+      .page.page3 .info .input .get {
+        height: 30px;
+        position: absolute;
+        right: 5px;
+        top: 5px; }
+    .page.page3 .info .b3 {
+      width: 70%;
+      display: block;
+      margin: 30px auto 0 auto; }
+  .page.page4 .result {
+    width: 80%;
+    position: absolute;
+    bottom: 20px;
+    left: 10%; }
+    .page.page4 .result section {
+      position: relative; }
+      .page.page4 .result section .re {
+        width: 100%; }
+      .page.page4 .result section > div {
+        width: 90%;
+        position: absolute;
+        top: 0;
+        left: 5%; }
+        .page.page4 .result section > div h2 {
+          text-align: center;
+          margin: 40px 0 15px 0;
+          font-size: 20px; }
+        .page.page4 .result section > div ul {
+          margin-bottom: 20px; }
+          .page.page4 .result section > div ul li {
+            padding: 12px;
+            border-bottom: 1px dashed #c8c8c8;
+            font-weight: 500; }
+        .page.page4 .result section > div .b9, .page.page4 .result section > div .b10 {
+          width: 35%;
+          display: block;
+          margin: 0 auto; }
+        .page.page4 .result section > div .b9 {
+          margin: 0 8% 0 10%; }
+    .page.page4 .result footer {
+      margin-top: 10px; }
+      .page.page4 .result footer .b7 {
+        width: 35%;
+        float: left; }
+      .page.page4 .result footer .b8 {
+        width: 23%;
+        float: right; }
+  .page.page4 .process-modal, .page.page4 .share-modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    display: none; }
+    .page.page4 .process-modal a, .page.page4 .share-modal a {
+      color: white;
+      text-decoration: underline; }
+    .page.page4 .process-modal h3, .page.page4 .share-modal h3 {
+      color: #347e39;
+      font-size: 18px;
+      width: 90%;
+      margin: 15% auto 10px auto; }
+    .page.page4 .process-modal p, .page.page4 .share-modal p {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 13px;
+      color: white;
+      line-height: 28px; }
+    .page.page4 .process-modal .close, .page.page4 .share-modal .close {
+      width: 14%;
+      display: block;
+      margin: 30px auto; }
+    .page.page4 .process-modal .share, .page.page4 .share-modal .share {
+      width: 37%;
+      position: absolute;
+      top: 0;
+      right: 0; }

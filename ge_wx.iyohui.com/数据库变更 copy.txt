@@ -1,0 +1,73 @@
+##2014-06-24
+CREATE TABLE IF NOT EXISTS `txzj_testimony` (
+  `id` int(11) NOT NULL auto_increment COMMENT '自然序号',
+  `column` tinyint(2) default NULL COMMENT '栏目',
+  `title` varchar(200) default NULL COMMENT '标题',
+  `content` text COMMENT '内容',
+  `addtime` int(11) default NULL COMMENT '添加时间',
+  `humantime` timestamp NOT NULL default CURRENT_TIMESTAMP COMMENT '人类可读时间',
+  `prize_count` int(11) default '0' COMMENT '点赞数量',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='领导层证言' AUTO_INCREMENT=1 
+
+CREATE TABLE IF NOT EXISTS `txzj_testimony_priseinfo` (
+  `id` bigint(20) NOT NULL auto_increment COMMENT '自然序号',
+  `testimony_id` bigint(20) default NULL COMMENT '领导层证言表ID',
+  `uid` bigint(20) default NULL COMMENT '用户表UID',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='领导层证言点赞表' AUTO_INCREMENT=1 ;
+
+#########################################################
+
+DROP TABLE IF EXISTS `txzj_media`;
+CREATE TABLE IF NOT EXISTS `txzj_media` (
+  `id` int(11) NOT NULL auto_increment COMMENT '自然序号',
+  `relative_id` int(11) default NULL COMMENT '对应的id(分享id或者证言id)',
+  `ssoid` varchar(200) default NULL COMMENT '用户ssoid',
+  `type` tinyint(2) default '1' COMMENT '媒体类型，1为图片，2为视频，3每季新鲜上传作品',
+  `file_name` varchar(100) default NULL COMMENT '媒体名称',
+  `file_name_small` varchar(100) NOT NULL COMMENT '缩小图片名称',
+  `file_name_detail` varchar(100) NOT NULL COMMENT '详情页图片名称',
+  `preview_name` varchar(100) default NULL COMMENT '视频截图文件名称',
+  `addtime` int(11) default NULL COMMENT '自然时间',
+  `humantime` timestamp NOT NULL default CURRENT_TIMESTAMP COMMENT '人类可读时间',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='客户之旅媒体表' AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `txzj_prize` (
+  `id` int(11) NOT NULL auto_increment COMMENT '自然序号',
+  `uid` int(11) NOT NULL COMMENT '用户id',
+  `ssoid` varchar(20) NOT NULL COMMENT '用户ssoid',
+  `source` tinyint(3) NOT NULL COMMENT '获奖来源 1简之美摄影比赛',
+  `relative_id` int(11) NOT NULL COMMENT '相应ID',
+  `types` tinyint(3) NOT NULL COMMENT '奖品类型 一二三等奖',
+  `score` int(5) NOT NULL COMMENT '奖品积分',
+  `prize` varchar(100) NOT NULL COMMENT '奖品实物',
+  `addtime` int(11) NOT NULL COMMENT '添加时间',
+  `humantime` timestamp NOT NULL default CURRENT_TIMESTAMP COMMENT '人类可读时间',
+  PRIMARY KEY  (`id`),
+  KEY `uid` (`uid`,`ssoid`,`source`),
+  KEY `relative_id` (`relative_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `txzj_season` (
+  `id` int(11) NOT NULL auto_increment COMMENT '自然序号',
+  `uid` bigint(20) default NULL COMMENT '用户id',
+  `ssoid` varchar(200) default NULL COMMENT '用户ssoid',
+  `addtime` int(11) default NULL COMMENT '添加时间',
+  `humantime` timestamp NOT NULL default CURRENT_TIMESTAMP COMMENT '人类可读时间',
+  `content` varchar(200) NOT NULL COMMENT '照片描述',
+  `prize_count` int(11) default '0' COMMENT '点赞数量',
+  `status` tinyint(3) NOT NULL default '0' COMMENT '状态 0未处理 1评奖 2扣分',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='每季新鲜表' AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `txzj_season_priseinfo` (
+  `id` bigint(20) NOT NULL auto_increment COMMENT '自然序号',
+  `season_id` bigint(20) default NULL COMMENT '每季新鲜表ID',
+  `ssoid` bigint(20) default NULL COMMENT '用户SSOID',
+  `uid` bigint(20) default NULL COMMENT '用户表UID',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='每季新鲜点赞表' AUTO_INCREMENT=1 ;
+
+ALTER TABLE `userscorelog` ADD `source` TINYINT( 3 ) NOT NULL COMMENT '分数来源 1我的客户之旅，2摄影比赛' AFTER `entityId` ;

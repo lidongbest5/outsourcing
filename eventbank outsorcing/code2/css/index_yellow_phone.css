@@ -1,0 +1,235 @@
+.icon{
+	float: left;
+	width: 40px;
+	height: 40px;
+	display: block;
+	margin: 0 10px;
+}
+.con{
+	padding-left: 60px;
+	padding-right: 10px;
+}
+header{
+	padding: 0.5em 0;
+}
+header img{
+	margin-left: 1em;
+}
+header .language{
+	font-size: 0.9em;
+	color: #004c90;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 25px;
+	margin-right: 1em;
+	background: url(../images/phone-arrow.png) 28px 5px no-repeat;
+	position: relative;
+}
+.languageDown{
+	width: 100%;
+	position: absolute;
+	top: 0.9em;
+	left: 0;
+	display: none;
+}
+.languageDown a{
+	display: block;
+	padding: 3px 0;
+	text-align: center;
+}
+.detail{
+	padding: 1em 10px;
+	background: #fbfbfb;
+}
+.detail span{
+	display: inline-block;
+	color: white;
+	font-size: 1em;
+	font-weight: 700;
+	background: #ffc200;
+	padding: 0.3em;
+	margin-bottom: 0.5em;
+}
+.detail h1{
+	color: #ffc200;
+	font-size: 2.2em;
+	margin-bottom: 0.2em;
+}
+.detail p{
+	font-size: 1em;
+	color: #ffc200;
+}
+.time,.location{
+	width: 50%;
+	background: #38b1eb;
+	float: left;
+	padding: 1em 0;
+	color: white;
+	font-size: 1em;
+	height: 4em;
+}
+.location{
+	background: #ff9c00;
+}
+.summary{
+	clear: both;
+	padding: 1em 0;
+}
+.summary span,.speaker span,.agenda span,.file span,.tickets span{
+	color: #ffc200;
+	font-weight: 700;
+	font-size: 1.2em;
+	display: block;
+	margin-bottom: 0.5em;
+}
+.summary p{
+	line-height: 1.4em;
+}
+.speaker-item{
+	margin-bottom: 8px;
+	min-height: 70px;
+}
+.speaker-item img{
+	width: 90px;
+	float: left;
+}
+.speaker-item .speaker-detail{
+	margin-left: 100px;
+	width: auto;
+}
+.speaker-item .speaker-detail h3{
+	font-size: 1.2em;
+	margin: 6px 0;
+}
+.speaker-item .speaker-detail p{
+	font-size: 0.9em;
+	line-height: 1.2em;
+}
+.agenda-item{
+	width: 100%;
+	margin-bottom: 0.8em;
+	font-size: 1em;
+}
+.agenda-item-l{
+	width: 30%;
+	float: left;
+}
+.agenda-item-r{
+	width: 70%;
+	float: left;
+}
+.file ul li{
+	border: 1px solid #ffc200;
+	width: 100%;
+	padding: 0.5em 0;
+	border-radius: 4px;
+	margin-bottom: 0.5em;
+	font-size: 0.8em;
+}
+.file ul li span{
+	vertical-align: top;
+	margin-top: 5px;
+	margin-left: 1.5em;
+	display: inline-block;
+	color: black;
+}
+.file ul li a{
+	margin-right: 1.5em;
+	width: 15px;
+	height: 21px;
+	display: block;
+	background: url(../images/file-arrow.png) 0 5px no-repeat;
+	background-size: 100%;
+}
+.tickets{
+	clear: both;
+}
+.tickets-top{
+	background: #f6f0e5;
+	padding: 1em 0;
+	width: 100%;
+	position: relative;
+	border-radius: 2px;
+	margin-bottom: 1.5em;
+}
+.tickets-top h3{
+	font-size: 1em;
+	font-weight: 700;
+	margin-bottom: 1em;
+	padding-left: 1.5em;
+}
+.tickets-top p, .currency{
+	padding-left: 1.5em;
+}
+.currency{
+	margin-top: 1em;
+}
+.currency b{
+	font-size: 1em;
+	margin-bottom: 10px;
+	display: inline-block;
+	text-align: right;
+}
+.tickets table{
+	width: 100%;
+	text-align: right;
+}
+.tickets table thead th{
+	font-size: 1em;
+	font-weight: 700;
+	text-align: right;
+}
+.tickets table thead th:first-child{
+	text-align: left;
+}
+.tickets table tbody tr{
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+.tickets table tbody tr td{
+	padding: 1em 0;
+}
+.tickets table tbody tr td:first-child{
+	text-align: left;
+}
+.tickets-total{
+	text-align: right;
+	font-size: 1em;
+	margin-bottom: 1.5em;
+}
+.tickets-register{
+	color: black;
+	padding: 0 1.5em;
+	height: 1.8em;
+	padding-top: 0.6em;
+	background: #ffd266;
+	border-radius: 4px;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

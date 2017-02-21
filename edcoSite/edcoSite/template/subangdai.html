@@ -1,0 +1,82 @@
+<html>
+    <head>
+	<style>
+	td{padding: 10px;}
+	tr{border: 1px solid #ececec;}
+    	</style>
+    </head>
+    <body>
+        <h1>电影</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>id</th>
+                    <th>时间</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>照片</th>
+                </tr>
+                {% for item in r1 %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.date|date:"Y - n - j" }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.phone }}</td>
+                        <td><img width="100" src="http://www.magiceyes.com.cn/projects/subangdai/images/project1/uploads/{{ item.img }}.jpeg"></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h1>春晚</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>id</th>
+                    <th>时间</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>code</th>
+                </tr>
+                {% for item in r2 %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.date|date:"Y - n - j" }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.phone }}</td>
+                        <td>{{ item.code }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h1>初五破五</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>id</th>
+                    <th>ownerid</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>invite1_id</th>
+                    <th>invite2_id</th>
+                    <th>invite3_id</th>
+                    <th>invite4_id</th>
+                    <th>invite5_id</th>
+                </tr>
+                {% for item in r3 %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.ownerid }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.phone }}</td>
+                        <td>{{ item.guest1 }}</td>
+                        <td>{{ item.guest2 }}</td>
+                        <td>{{ item.guest3 }}</td>
+                        <td>{{ item.guest4 }}</td>
+                        <td>{{ item.guest5 }}</td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

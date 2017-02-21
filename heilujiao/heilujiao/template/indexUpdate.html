@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>黑鹿角西餐 - 添加菜品</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/admin.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/admin.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/uploadify.css">
+		<!--[if IE]>
+		<script type="text/javascript" src="/static/js/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<img src="/static/images/header-left.jpg" class="header-left">
+				<img src="/static/images/header-right.jpg" class="header-right">
+				<img src="/static/images/header-logo.jpg" class="header-logo">
+				<nav>
+					<a class="home left {% if type == 'index' %}cur{% endif %}" href="/"></a>
+					<a class="menu left {% if type == 'menu' %}cur{% endif %}" href="/menu/">精选菜单</a>
+					<a class="blog left {% if type == 'blog' %}cur{% endif %}" href="/blog/">美食日志</a>
+					<a class="cart right {% if type == 'cart' %}cur{% endif %}" href="/cart/"></a>
+					<span class="user right">
+						{% if user %}
+							<a href="/address/">您好，{{ user.phone }}</a>
+						{% else %}
+							<a class="login">登录</a>/<a class="register">注册</a>
+						{% endif %}
+					</span>
+					<a class="about right {% if type == 'about' %}cur{% endif %}" href="/about/">关于我们</a>
+				</nav>
+			</div>
+		</header>
+		<div class="root-nav">
+			<div class="container">
+				{% include 'rootmenu.html' %}
+			</div>
+		</div>
+		<section class="add-container">
+			<div class="container">
+				<div><span>首页幻灯片数目：</span><input type="text" class="num" value="{{ slide.num }}"></div>
+				<div><span>首页幻灯片1：</span><input type="text" class="slide1" value="{{ slide.slide1 }}"></div>
+				<div><span>首页幻灯片2：</span><input type="text" class="slide2" value="{{ slide.slide2 }}"></div>
+				<div><span>首页幻灯片3：</span><input type="text" class="slide3" value="{{ slide.slide3 }}"></div>
+				<div><span>首页幻灯片4：</span><input type="text" class="slide4" value="{{ slide.slide4 }}"></div>
+				<div><span>首页幻灯片5：</span><input type="text" class="slide5" value="{{ slide.slide5 }}"></div>
+				<div><span>首页幻灯片6：</span><input type="text" class="slide6" value="{{ slide.slide6 }}"></div>
+				<div><span>首页幻灯片7：</span><input type="text" class="slide7" value="{{ slide.slide7 }}"></div>
+				<div><span>首页幻灯片8：</span><input type="text" class="slide8" value="{{ slide.slide8 }}"></div>
+				<div><span>首页幻灯片9：</span><input type="text" class="slide9" value="{{ slide.slide9 }}"></div>
+				<div><span>首页幻灯片10：</span><input type="text" class="slide10" value="{{ slide.slide10 }}"></div>
+				<a class="slide-add">确定</a>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="footer-section1">
+					<img src="/static/images/wechat.png">
+					<p>官方订阅号：heilujiao<br/>
+					探寻世界各国美食<br/>
+					分享每月精选菜单</p>
+				</div>
+				<div class="footer-section2">
+					<p>欢迎您对我们的服务提出宝贵建议<br/>
+					<span>请发邮件至 service@heilujiao.com</span></p>
+				</div>
+				<div class="footer-section3">
+					<h3>www.heilujiao.com</h3>
+					<p>工作时间：10:00—18:00<br/>
+					售后QQ：3198875820<br/>
+					厨师/美食达人：food@heilujiao.com<br/>
+					商业洽谈：business@heilujiao.com</p>
+				</div>
+			</div>
+			<div class="copyright">
+				<i></i>
+				<span>© Copyright 2014 black antler.com</span>
+			</div>
+		</footer>
+		<div class="user-modal">
+			<div class="login">
+				<a class="close"></a>
+				<img src="/static/images/logo.png" class="logo">
+				<div class="tab">
+					<a class="login-btn cur">登录</a>
+					<a class="register-btn">手机注册</a>
+				</div>
+				<input class="phone input" type="text" placeholder="请输入手机号">
+				<input class="password input" type="password" placeholder="请输入密码">
+				<a class="submit">登录</a>
+			</div>
+			<div class="register">
+				<a class="close"></a>
+				<img src="/static/images/logo.png" class="logo">
+				<div class="tab">
+					<a class="login-btn">登录</a>
+					<a class="register-btn cur">手机注册</a>
+				</div>
+				<input class="phone input" type="text" placeholder="请输入正确手机号">
+				<input class="password input" type="password" placeholder="设置密码  6-20个大小写英文字母、符号或数字">
+				<input class="repassword input" type="password" placeholder="确认密码  再次输入密码">
+				<div class="info">
+					<input type="checkbox" checked><span>我已阅读并同意 《黑鹿角服务协议》</span>
+				</div>
+				<a class="submit">注册</a>	
+				<a><span>忘记密码</span></a>		
+			</div>
+		</div>
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/min/TweenLite-min.js"></script>
+		<script src="/static/js/min/index-min.js"></script>
+		<script src="/static/js/uploadify.js"></script>
+		<script src="/static/js/ckeditor.js"></script>
+		<script src="/static/js/jquery.cookie.js"></script>
+		<script src="/static/js/min/admin-min.js"></script>
+	</body>
+</html>

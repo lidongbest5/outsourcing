@@ -1,0 +1,81 @@
+body{
+	background: url(/static/images/bj.jpg) repeat;
+}
+.contact{
+	background: url(/static/images/bj.jpg) repeat;
+	width: 100%;
+	padding: 50px 0;
+	padding-top: 250px;
+	font-family: 'Arial';
+}
+.contact-container{
+	width: 70%;
+	margin: 0 auto;
+}
+.contact-l{
+	width: 40%;
+	margin-right: 10%;
+	float: left;
+}
+.contact-r{
+	width: 50%;
+	float: left;
+}
+.contact-l h2{
+	font-size: 2em;
+	color: #bf881e;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+.contact-l h3{
+	color: #cbcbcb;
+	font-size: 1.2em;
+}
+.contact-l p{
+	color: #898989;
+	font-size: 0.8em;
+	margin-bottom: 2em;
+	line-height: 1.5em;
+}
+.contact-l h3.address{
+	background: url(/static/images/contact-a.png) top left no-repeat;
+	padding-left: 35px;
+	padding-top: 15px;
+	height: 36px;
+}
+.contact-l h3.telphone{
+	height: 36px;
+	padding-left: 45px;
+	padding-top: 15px;
+	background: url(/static/images/contact-t.png) top left no-repeat;
+}
+.contact-r{
+	color: #898989;
+	font-size: 1em;
+}
+.contact-r p{
+	margin-bottom: 1em;
+}
+.contact-r span{
+	width: 25%;
+	display: inline-block;
+}
+.contact-r input,.contact-r textarea{
+	width: 60%;
+	background: #1f1f1f;
+	border: none;
+}
+.contact-r textarea{
+	height: 100px;
+}
+.contact-r a{
+	width: 90px;
+	height: 30px;
+	background: #bf881e;
+	color: white;
+	text-align: center;
+	line-height: 28px;
+	font-size: 1em;
+	float: right;
+	margin-right: 14%;
+}

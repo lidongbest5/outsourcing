@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+	</head>
+	<body>
+		{%include "header.html"%}
+		<section class="slide">
+			<div class="slide-container">
+				<ul class="clearfix">
+					{% if slide.img1 %}
+					<li><img src="/static/upload/images/{{ slide.img1 }}"></li>
+					{% endif %}
+					{% if slide.img2 %}
+					<li><img src="/static/upload/images/{{ slide.img2 }}"></li>
+					{% endif %}
+					{% if slide.img3 %}
+					<li><img src="/static/upload/images/{{ slide.img3 }}"></li>
+					{% endif %}
+					{% if slide.img4 %}
+					<li><img src="/static/upload/images/{{ slide.img4 }}"></li>
+					{% endif %}
+					{% if slide.img5 %}
+					<li><img src="/static/upload/images/{{ slide.img5 }}"></li>
+					{% endif %}
+					{% if slide.img6 %}
+					<li><img src="/static/upload/images/{{ slide.img6 }}"></li>
+					{% endif %}
+				</ul>
+			</div>
+			<a href="javascript:;" class="pre"></a>
+			<a href="javascript:;" class="next"></a>
+		</section>
+		<section class="product">
+			<ul class="pro-list clearfix">
+				{% for item in items %}
+					<li>
+						<a href="/product/{{ item.id }}/" target="_blank">
+							<div class="product-img"><img src="/static/upload/images/m_{{ item.img1 }}"></div>
+							<ul class="color-list clearfix">
+								{% if item.color1_name %}
+									<li style="background:{{ item.color1_name }}"></li>
+								{% endif %}
+								{% if item.color2_name %}
+									<li style="background:{{ item.color2_name }}"></li>
+								{% endif %}
+								{% if item.color3_name %}
+									<li style="background:{{ item.color3_name }}"></li>
+								{% endif %}
+								{% if item.color4_name %}
+									<li style="background:{{ item.color4_name }}"></li>
+								{% endif %}
+								{% if item.color5_name %}
+									<li style="background:{{ item.color5_name }}"></li>
+								{% endif %}
+								{% if item.color6_name %}
+									<li style="background:{{ item.color6_name }}"></li>
+								{% endif %}
+								{% if item.color7_name %}
+									<li style="background:{{ item.color7_name }}"></li>
+								{% endif %}
+								{% if item.color8_name %}
+									<li style="background:{{ item.color8_name }}"></li>
+								{% endif %}
+								{% if item.color9_name %}
+									<li style="background:{{ item.color9_name }}"></li>
+								{% endif %}
+								{% if item.color10_name %}
+									<li style="background:{{ item.color10_name }}"></li>
+								{% endif %}
+							</ul>
+							{% if language != None and language == 'chinese' %}
+									<h3>{{ item.name_ch }}</h3>
+								{% else %}
+									<h3>{{ item.name }}</h3>
+								{% endif %}
+							<h4>${{ item.price }}</h4>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</section>
+		<section class="brand">
+			<div class="brand-container">
+				<div class="brand-img">
+					<img src="/static/images/brand.jpg">
+				</div>
+				{% if language != None and language == 'chinese' %}
+					<div class="brand-detail clearfix brand-ch">
+						<div class="brand-l">
+							<h2>品牌故事</h2>
+							<h3>背景故事
+								<br/>老兵故事
+								<br/>救援俱乐部</h3>
+						</div>
+						<div class="brand-r">
+							<h4>背景故事</h4>
+							<p>2009年我们独自在7号洲际公路上做横穿美国的旅行，记得那是个晴朗炎热的夏日，虽然露营休息了一整晚,仍无法消解旅途的倦意，准备启动 车时发现电瓶已经耗尽，只好走到公路上找过路的车辆“搭线” ，一辆大切诺基在我身旁停下，一位两鬓斑白，但精神矍铄的老者摇下车窗，然后很爽快的帮了忙。他叫philips，他要回迈阿密，我们问可否同行，他指着车背后喷涂的白色大写字体——EDCO，说跟着这个logo就可以了。自此，一次漫无目的的自驾游变成了灵魂洗涤之旅。。。</p>
+						</div>
+					</div>
+				{% else %}
+					<div class="brand-detail clearfix">
+						<div class="brand-l">
+							<h2>BRAND STORY</h2>
+							<h3>Background story
+								<br/>Veteran story
+								<br/>Rescue club</h3>
+						</div>
+						<div class="brand-r">
+							<h4>Background story</h4>
+							<p>In 2009 we do across the American traveling on interstate 7, remember that it was a sunny and hot summer, although camping rest a night, still can not dispel the journey tired, ready to start the car found the power has run out, had to walk up the road to find passing vehicles, a "line" the Grand Cherokee stopped beside me, a whit hair, but the spirit is hale and hearty old roll down the window, and then very generous help. His name is Philips, he will return to Miami, we asked whether peers, he pointed to the car behind the spray of white letters -- EDCO, logo can be said to follow this. Since then, an aimless self driving tour becomes a soul journey. </p>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</section>
+		<section class="culture">
+			{% if language != None and language == 'chinese' %}
+				<div class="culture-container clearfix">
+				<img src="/static/images/culture-l-ch.jpg" class="culture-l">
+				<img src="/static/images/culture-r-ch.jpg" class="culture-r">
+			</div>
+			{% else %}
+				<div class="culture-container clearfix">
+				<img src="/static/images/culture-l.jpg" class="culture-l">
+				<img src="/static/images/culture-r.jpg" class="culture-r">
+			</div>
+			{% endif %}
+		</section>
+		<section class="contact">
+			{% if language != None and language == 'chinese' %}
+			<div class="contact-container clearfix">
+				<div class="contact-l">
+					<h2>联系我们</h2>
+					<h3 class="address">地址</h3>
+					<p>中国北京市东城区南竹杆胡同2号银河SOHO中心B座20810室</p>
+					<h3 class="telphone">联系方式</h3>
+					<p>电话：+86 10 5957 6189<br/>传真：+86 10 5957 6190</p>
+				</div>
+				<div class="contact-r">
+					<p><span>姓名</span><input type="text"></p>
+					<p><span>电话</span><input type="text"></p>
+					<p><span>邮箱</span><input type="text"></p>
+					<p><span>信息</span><textarea></textarea></p>
+					<a href="javascript:;" class="submit">发送</a>
+				</div>
+				<p class="company-info">公司名称：艾德克（北京）户外用品有限公司<br/>营业执照号：110101015781739<br/>
+ 公司简介：艾德克（北京）户外用品有限公司成立于2013年，是“EDCO及三角形商标”在中国的品牌持有人，是美国 American EDCO outdoor products co., ltd在中国唯一的“EDCO及三角形商标“的授权人。公司以经营专业户外产品为主，主要产品涵盖登山，徒步，露营，滑雪等户外服装，鞋及装备产品。“EDCO”品牌致力于在中国发展户外运动行业，提供高质量，环保的的户外产品，为中国开拓户外运动贡献自己的微薄之力。</p>
+			</div>
+			{% else %}
+			<div class="contact-container clearfix">
+				<div class="contact-l">
+					<h2>CONTACT US</h2>
+					<h3 class="address">ADDRESS</h3>
+					<p>20810 room,Yinhe SOHO tower B,No.2 nanzhugan hutong,chaoyangmen nei street,Dongcheng district,Beijing city,China.</p>
+					<h3 class="telphone">TELPHONE</h3>
+					<p>TEL:+86 10 5957 6189<br/>FAX:+86 10 5957 6190</p>
+				</div>
+				<div class="contact-r">
+					<p><span>NAME</span><input type="text"></p>
+					<p><span>PHONE</span><input type="text"></p>
+					<p><span>EMAIL</span><input type="text"></p>
+					<p><span>MESSAGE</span><textarea></textarea></p>
+					<a href="javascript:;" class="submit">SEND</a>
+				</div>
+				<p class="company-info">Company: 
+EDCO(Beijing) outdoor products co., ltd<br/>
+Enterprise Entity Business License: 110101015781739<br/>
+
+Introduction: EDCO(Beijing) outdoor products co., ltd was founded in 2013, and that is "EDCO and triangle trademark" in Chinese brand holders and American EDCO outdoor products Co., Ltd in Chinese only "EDCO" and triangle trademark authorization. EDCO to operate professional outdoor products, the main products include climbing, hiking, camping, skiing and other outdoor clothing, shoes and equipment products. "EDCO" brand is committed to the development of outdoor sports industry in China, provide high quality, environmentally friendly outdoor products, as China develop outdoor sports contribute my own strength.</p>
+			</div>
+			{% endif %}
+		</section>
+		{%include "footer.html"%}
+		<div class="flag">
+			<ul class="clearfix">
+				<li class="flag1" data="1"></li>
+				<li data="2"></li>
+				<li data="3"></li>
+				<li data="4"></li>
+				<li data="5"></li>
+			</ul>
+		</div>
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+		<script src="/static/js/index.js"></script>
+	</body>
+</html>

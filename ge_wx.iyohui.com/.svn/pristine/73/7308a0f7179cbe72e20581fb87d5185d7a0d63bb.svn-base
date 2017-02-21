@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="css/p1.css" />
+<title>p1</title>
+</head>
+
+<body>
+<div id="pagewrap">
+	<article>
+		<header class="sso_header">
+			<h1 class="sso_h1">当前SSO绑定人数<span class="red_span">287</span></h1>
+			<h1 class="sso_h1">还差<span class="red_span">13</span>人，天上就会开始掉“苹果”</h1>
+		</header>
+		<figure class="sso_img">
+			<img src="images/apple_more.jpg" />
+		</figure>
+	</article>
+	<div class="sso_main">
+		<div class="sso_btn">
+			<input type="image" src="images/qiang_grey.png" width="100%" height="100%"/>
+		</div>
+		<div class="sso_code">
+			<a href="#">查看我的兑奖码</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

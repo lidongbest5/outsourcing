@@ -1,0 +1,50 @@
+/*全局属性*/
+body { text-align: center; margin:0; padding:0; background:url(../images/bg2.jpg) repeat-y center; font-size:12px;color:#333;font-family:"微软雅黑"}
+body > div { text-align:center; margin-right:auto; margin-left:auto;} 
+div,form,img,ul,ol,li,p,dl,dt,dd { margin: 0; padding: 0; border: 0;}
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0; font-size:12px; font-weight:normal;}
+ul,li { list-style: none;text-align:left;}
+.yahei{font-family:"微软雅黑"}
+
+/* 链接颜色 */
+a {color: #333; text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+/*通用属性*/
+.left { float: left;}
+.right { float: right;}
+.area:after,.clear:after{content:".";display:block;visibility:hidden;height:0;clear:both;}
+.clear,.area{zoom:1}
+.fb{font-weight:bold}
+/* 通用栏宽*/
+.area {width:1000px; clear:both; height:auto;margin:0 auto}
+
+.full-box{height:462px;}
+.global-box{background:url(../images/bg.jpg) no-repeat center top;}
+/* 导航区 */
+.nav-box{height:35px;background:url("../images/nav_bg.png") no-repeat;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="images/nav_bg.png");
+_background:none;margin-bottom:26px;}
+.nav-box .item{font-size:14px;color:#fff;float:left;padding-top:7px;position:relative;height:28px;cursor:pointer;z-index:10}
+.nav-box .item .nav-item{color:#fff;}
+.nav-box .item-1{width:98px;}
+.nav-box .item-2{width:114px;}
+.nav-box .item-3{width:110px;}
+.nav-box .item-4{width:112px;}
+.nav-box .item-5{width:99px;}
+.nav-box .item-6{width:102px;}
+.nav-box .item-7{width:90px;}
+.nav-box .item-8{width:92px;float:right;color:#999;font-size:12px;text-decoration:underline;padding-top:9px;}
+.nav-box .arrow{width:14px;height:14px;background:url("../images/nav_arrow.png") no-repeat;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="images/nav_arrow.png");
+_background:none;position:absolute;top:35px;left:40%;display:none;}
+.nav-box .active{color:#319778}
+.nav-box .active .arrow{display:block;}
+.nav-box img{vertical-align:middle;margin-left:4px;}
+.nav-box .item .drop-box{display:none;width:80px;padding:1px;background:#00A27A;border-top:1px solid #A3DFD0;position:absolute;top:35px;left:10px}
+.nav-box .item .drop-box a{display:block;height:23px;padding-top:5px;text-align:left;width:68px;padding-left:12px;color:#fff;font-size:12px;}
+.nav-box .item .drop-box a:hover{background:#fff url(../images/i.gif) no-repeat 65px 9px;text-decoration:none;color:#48BE9A}
+
+
+.foot-box{padding:55px 0 50px;line-height:24px;color:#fff;}
+.foot-box a{color:#fff}

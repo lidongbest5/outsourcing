@@ -1,0 +1,353 @@
+.main{
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 100px;
+	background: url(../images/bg.jpg) center center no-repeat;
+	background-size: 100%;
+	background-color: #10366a;
+
+	.game{
+		width: 1109px;
+		height: 841px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		background: url(../images/game-bg.png) no-repeat;
+		position: relative;
+
+		.tip{
+			font-size: 14px;
+			color: white;
+			position: absolute;
+
+			&.login-tip{
+				top: 213px;
+				left: 30px;
+			}
+			&.prize-tip{
+				top: 278px;
+				left: 30px;
+			}
+			&.join-tip{
+				top: 152px;
+				left: 979px;
+			}
+			&.gift-tip{
+				top: 215px;
+				left: 979px;
+			}
+		}
+
+		.start{
+			width: 314px;
+			height: 107px;
+			background: url(../images/start.png) no-repeat;
+			display: block;
+			position: absolute;
+			top: 390px;
+			left: 410px;
+		}
+
+		.level{
+			position: absolute;
+			top: 147px;
+			left: 540px;
+
+			.level1{
+				width: 30px;
+				height: 50px;
+				background: url(../images/number.png) no-repeat;
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				-webkit-transition: all 0.5s ease 0s;
+				-moz-transition: all 0.5s ease 0s;
+				-o-transition: all 0.5s ease 0s;
+				-ms-transition: all 0.5s ease 0s;
+				transition: all 0.5s ease 0s;
+			}
+			.level2{
+				width: 30px;
+				height: 50px;
+				background: url(../images/number.png) 0 -56px no-repeat;
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				-webkit-transition: all 0.5s ease 0s;
+				-moz-transition: all 0.5s ease 0s;
+				-o-transition: all 0.5s ease 0s;
+				-ms-transition: all 0.5s ease 0s;
+				transition: all 0.5s ease 0s;
+			}
+		}
+
+		.progress{
+			width: 27px;
+			height: 386px;
+			position: absolute;
+			bottom: 175px;
+			left: 546px;
+
+			.progress-top{
+				width: 27px;
+				height: 10px;
+				background: url(../images/progress-top.png) no-repeat;
+				background-size: 100%;
+			}
+			.progress-middle{
+				width: 27px;
+				height: 364px;
+				background: url(../images/progress-bg.png) repeat-y;
+				background-size: 100%;
+			}
+			.progress-bottom{
+				width: 27px;
+				height: 12px;
+				background: url(../images/progress-bottom.png) no-repeat;
+				background-size: 100%;
+			}
+		}
+
+		.time{
+			position: absolute;
+			top: 230px;
+			left: 542px;
+			color: white;
+			font-weight: 700;
+			font-size: 30px;
+		}
+
+		.image-1{
+			width: 303px;
+			height: 427px;
+			position: absolute;
+			top: 239px;
+			left: 216px;
+			border-radius: 25px;
+		}
+
+		.image-2{
+			width: 303px;
+			height: 427px;
+			position: absolute;
+			top: 239px;
+			left: 602px;
+			border-radius: 25px;
+
+			a{
+				position: absolute;
+				display: block;
+				cursor: default;
+			}
+		}
+
+		.close{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: block;
+			width: 62px;
+			height: 62px;
+		}
+
+		.modal1{
+			width: 598px;
+			height: 236px;
+			background: url(../images/modal1.png) no-repeat;
+			position: absolute;
+			top: 315px;
+			left: 256px;
+			display: none;
+
+			.modal1-share{
+				width: 207px;
+				height: 51px;
+				position: absolute;
+				top: 148px;
+				left: 63px;
+			}
+			.modal1-prize{
+				width: 207px;
+				height: 51px;
+				position: absolute;
+				top: 148px;
+				left: 308px;
+			}
+		}
+
+		.modal2{
+			width: 600px;
+			height: 236px;
+			background: url(../images/modal2.png) no-repeat;
+			position: absolute;
+			top: 315px;
+			left: 256px;
+			display: none;
+
+			.modal2-btn{
+				width: 253px;
+				height: 53px;
+				position: absolute;
+				top: 148px;
+				left: 168px;
+			}
+		}
+
+		.rule{
+			width: 600px;
+			height: 335px;
+			background: url(../images/rule.png) no-repeat;
+			position: absolute;
+			top: 258px;
+			left: 255px;
+			display: none;
+		}
+
+		.sign{
+			width: 600px;
+			height: 280px;
+			background: url(../images/sign.png) no-repeat;
+			position: absolute;
+			top: 315px;
+			left: 255px;
+			display: none;
+
+			.sign-btn{
+				width: 253px;
+				height: 53px;
+				position: absolute;
+				top: 197px;
+				left: 168px;
+			}
+
+			.deadline{
+				top: 124px;
+				left: 435px;
+			}
+		}
+
+		.success{
+			width: 605px;
+			height: 286px;
+			background: url(../images/success.png) no-repeat;
+			position: absolute;
+			top: 315px;
+			left: 255px;
+			display: none;
+
+			.success-btn{
+				width: 253px;
+				height: 53px;
+				position: absolute;
+				top: 197px;
+				left: 168px;
+			}
+		}
+
+		.deadline{
+			color: #e70000;
+			font-size: 21px;
+			font-weight: 700;
+			position: absolute;
+			top: 122px;
+			left: 438px;
+			display: block;
+		}
+
+		.btn1, .btn2, .btn3, .btn4{
+			width: 72px;
+			height: 72px;
+			display: block;
+			position: absolute;
+			bottom: 5px;
+			left: 302px;
+		}
+
+		.btn2{
+			left: 378px;
+		}
+
+		.btn3{
+			left: 675px;
+		}
+
+		.btn4{
+			left: 751px;
+		}
+
+		.link{
+			width: 215px;
+			height: 64px;
+			display: block;
+			position: absolute;
+			bottom: 5px;
+			left: 455px;
+		}
+	}
+
+	.round{
+		width: 981px;
+		height: 596px;
+		margin: 0 auto;
+		background: url(../images/round-bg.png) no-repeat;
+		position: relative;
+
+		.list-container{
+			position: absolute;
+			top: 343px;
+			left: 110px;
+			overflow: hidden;
+			height: 145px;
+
+			ul{
+				li{
+					font-size: 18px;
+					color: white;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	.laoban{
+		width: 981px;
+		height: 832px;
+		margin: 0 auto;
+		margin-bottom: 100px;
+		background: url(../images/laoban-bg.png) no-repeat;
+	}
+
+	.promotion{
+		width: 876px;
+		height: 922px;
+		margin: 0 auto;
+		background: url(../images/11-bg.png) no-repeat;
+		position: relative;
+
+		ul{
+			padding-left: 7px;
+			font-size: 0;
+
+			&.list1{
+				position: absolute;
+				top: 175px;
+				left: 17px;
+			}
+
+			&.list2{
+				position: absolute;
+				top: 496px;
+				left: 17px;
+			}
+
+			li{
+				width: 200px;
+				height: 280px;
+				margin: 7px 7px 0 0;
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				font-size: 14px;
+			}
+		}
+	}
+}

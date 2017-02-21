@@ -1,0 +1,1 @@
+require.config({paths:{jquery:"jquery"}}),require(["math"],function(e){e.foo()});

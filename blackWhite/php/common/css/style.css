@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+.ks-waterfall {
+	position: absolute;
+	overflow: hidden;
+	text-align: center;
+	left: -9999px;
+	top: -9999px;
+	border:none;
+	padding:0;
+	margin:0;
+	width: 130px;
+}
+#ColumnContainer {
+	position: relative;
+	min-width: 270px;
+	min-height: 100px;
+	margin: 0 auto;
+}
+.image {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background-color: white;
+	border: 1px solid white;
+}
+
+/*@media screen and (max-width:359px) {
+	.ks-waterfall{
+		width: 130px;
+	}
+}
+@media screen and (min-width:360px) and (max-width:479px) {
+	.ks-waterfall{
+		width: 150px;
+	}
+}
+@media screen and (min-width:480px) and (max-width:749px) {
+	.ks-waterfall{
+		width: 170px;
+	}
+}
+@media screen and (min-width:750px) {
+	.ks-waterfall{
+		width: 190px;
+	}
+}*/
+
+/*.bt{
+	background:url(/common/images/upload_bt.png) no-repeat;
+}*/
+.bt{
+	float:right;
+	display:block;
+	margin-right:0.5em;
+	text-align:left;
+	font-size:2.2em;
+	text-decoration:underline;
+	color: #666;
+	cursor:pointer;
+}
+#upload_message{
+	width:300px;
+	height:171px;
+	margin:0 auto;
+	background:url(/common/images/upload_bg.png) no-repeat center;
+}
+#layer_message{
+	width:300px;
+	height:171px;
+	margin:0 auto;
+	background:url(/common/images/layer_bg_min.png) no-repeat center;
+}
+#layer_close{
+	width:25px;
+	height:26px;
+	float:right;
+	margin-top:10px;
+	margin-right:10px;
+	background:url(/common/images/layer_close.png) no-repeat;
+}
+#layer_content_text{
+	width:260px;
+	height:100px;
+	padding-top:30px;
+	color:#00A0E9;
+	font-weight:bold;
+	font-size:20px;
+	line-height:30px;
+}
+
+
+#delete_message{
+	width:410px;
+	height:233px;
+	margin:0 auto;
+	background:url(/common/images/delete_bg.png) no-repeat center;
+}
+#delete_close{
+	width:25px;
+	height:26px;
+	float:right;
+	margin-top:15px;
+	margin-right:20px;
+	cursor:pointer;
+	background:url(/common/images/layer_close.png) no-repeat;
+}
+#delete_content_text{
+	width:260px;
+	height:30px;
+	padding-top:80px;
+	color:#00A0E9;
+	font-weight:bold;
+	font-size:20px;
+	line-height:30px;
+}
+#delete_content_bt{
+	padding-top:15px;
+	width:260px;
+	height:40px;
+}
+#delete_bt_queding{
+	width:123px;
+	height:39px;
+	cursor:pointer;
+	float:left;
+	background:url(/common/images/queding.png) no-repeat;
+}
+#delete_bt_quxiao{
+	width:123px;
+	height:39px;
+	cursor:pointer;
+	float:right;
+	background:url(/common/images/quxiao.png) no-repeat;
+}

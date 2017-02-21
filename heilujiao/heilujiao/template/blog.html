@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}黑鹿角西餐 - 美食日记{% endblock %}
+{% block content %}
+	<div class="blog-container">
+		<div class="container">
+			<div class="blog-left">
+				<div class="blog-category">
+					{% for item in blog %}
+						<a {% if forloop.counter == 1 %}class="cur"{% endif %}>{{ item.title }}</a>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="blog-right">
+				<div class="blog-content">
+					<div class="blog-con clearfix">
+						{% for item in blog %}
+							<li>
+									<div class="blog-title">{{ item.title }}<span>{{ item.date|date:"Y-m-d" }}</span></div>
+									{{ item.content|safe }}
+							</li>
+						{% endfor %}		
+					</div>
+				</div>
+				<div class="blog-dot">
+					{% for item in range %}
+						<a {% if forloop.counter == 1 %}class="cur"{% endif %} data-id="{{ forloop.counter }}"></a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="tips6">
+		<div class="container">
+			<img src="/static/images/index-tip3.jpg">
+		</div>
+	</section>
+{% endblock %}

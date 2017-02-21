@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="css/p0.css" />
+<title>p0</title>
+</head>
+
+<body>
+<div id="pagewrap">
+	<div id="content">
+		<article>
+			<header>
+				<h1 class="apple_title">天上掉"苹果"啦！我们喊你来拣苹果！</h1>
+			</header>
+			<figure class="apple_img">
+				<img src="images/apple.jpg" />
+			</figure>
+			<p class="apple_text"><span class="stress_span">一大波"苹果"正在从天上快速靠近！</span>每个苹果都有特别惊喜。点击微信下方菜单栏"热点活动天上掉苹果"，绑定SSO号，大家一起拣苹果！</p>
+		</article>
+	</div>
+	<div class="enter_div">
+		<div class="read_all">阅读全文</div>
+		<div class="arrow"><a href="#"><img src="images/arrow.gif" width="12" height="18"></a></div>
+		<div style="clear:both"></div>
+	</div>
+</div>
+</body>
+</html>

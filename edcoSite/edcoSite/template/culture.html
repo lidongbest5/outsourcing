@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/culture.css">
+	</head>
+	<body>
+		{%include "header.html"%}
+		{% if language != None and language == 'chinese' %}
+		<section class="culture1">
+			<img src="/static/images/culture-t-ch.jpg">
+		</section>
+		<section class="culture2">
+			<img src="/static/images/culture-b-ch.jpg">
+		</section>
+		{% else %}
+		<section class="culture1">
+			<img src="/static/images/culture-t.jpg">
+		</section>
+		<section class="culture2">
+			<img src="/static/images/culture-b.jpg">
+		</section>
+		{% endif %}
+		{%include "footer.html"%}
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+	</body>
+</html>

@@ -1,0 +1,278 @@
+/* slide */
+.slide{
+	position: relative;
+	margin-bottom: 25px;
+	width: 100%;
+	margin-top: 67px;
+}
+.slide-container{
+	width: 100%;
+	overflow: hidden;
+}
+.slide ul{
+	width: 9999px;
+	position: relative;
+	left: 0px;
+}
+.slide li{
+	float: left;
+}
+.slide a:nth-child(1){
+	display: block;
+}
+.slide .pre,.slide .next{
+	width: 78px;
+	height: 105px;
+	position: absolute;
+	top: 40%;
+	display: none;
+}
+.slide .pre{
+	left: 0;
+	background: url(/static/images/slide_left.png) no-repeat;
+}
+.slide .next{
+	right: 0;
+	background: url(/static/images/slide_right.png) no-repeat;
+}
+/* product */
+.product{
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.product img{
+	width: 100%;
+}
+.product ul.pro-list{
+	width: 100%;
+}
+.product ul.pro-list>li{
+	width: 17%;
+	padding: 2%;
+	float: left;
+	text-align: center;
+	border: 1px solid white;
+	margin-right: 4%;
+}
+.product ul.pro-list>li:nth-child(4n){
+	margin-right: 0;
+}
+.product ul.pro-list>li:hover{
+	border: 1px solid #b1b1b1;
+}
+.product ul.color-list{
+	width: 100%;
+	margin: 10px 0;
+	height: 15px;
+	overflow: hidden;
+	text-align: center;
+}
+.product ul.color-list li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 7px;
+}
+.product ul.color-list li.red{
+	background: red;
+}
+.product ul.color-list li.yellow{
+	background: yellow;
+}
+.product ul.color-list li.grey{
+	background: grey;
+}
+.product ul.color-list li.blue{
+	background: blue;
+}
+.product ul.color-list li.black{
+	background: black;
+}
+.product ul.pro-list li h3{
+	color: #7f7f7f;
+	font-size: 0.8em;
+	margin-bottom: 0.5em;
+	height: 2.4em;
+	overflow: hidden;
+}
+.product ul.pro-list li h4{
+	font-size: 1em;
+	color: #454545;
+}
+/* brand */
+.brand{
+	background: url(/static/images/bj.jpg) repeat;
+	width: 100%;
+	padding: 50px 0;
+	font-family: 'Arial';
+}
+.brand-container{
+	width: 70%;
+	margin: 0 auto;
+}
+.brand-img img{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.brand-l,.brand-r{
+	width: 50%;
+	float: left;
+}
+.brand-detail h2{
+	font-size: 2em;
+	color: #99cc00;
+	font-weight: bold;
+}
+.brand-detail h3{
+	font-size: 1.5em;
+	color: #727272;
+}
+.brand-detail h4{
+	font-size: 1em;
+	margin-bottom: 1em;
+	color: white;
+}
+.brand-detail p{
+	font-size: 0.8em;
+	line-height: 1.25em;
+	color: #c0c0c0;
+}
+/* culture */
+.culture{
+	background: url(/static/images/bj.jpg) repeat;
+	width: 100%;
+	padding: 50px 0;
+}
+.culture-container{
+	width: 70%;
+	margin: 0 auto;
+}
+.culture-l{
+	float: left;
+	width: 30%;
+}
+.culture-r{
+	float: left;
+	width: 70%;
+}
+/* contact */
+.contact{
+	background: url(/static/images/bj.jpg) repeat;
+	width: 100%;
+	padding: 50px 0;
+	font-family: 'Arial';
+}
+.contact-container{
+	width: 70%;
+	margin: 0 auto;
+}
+.contact-l{
+	width: 40%;
+	margin-right: 10%;
+	float: left;
+}
+.contact-r{
+	width: 50%;
+	float: left;
+}
+.contact-l h2{
+	font-size: 2em;
+	color: #bf881e;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+.contact-l h3{
+	color: #cbcbcb;
+	font-size: 1.2em;
+}
+.contact-l p{
+	color: #898989;
+	font-size: 0.8em;
+	margin-bottom: 2em;
+	line-height: 1.5em;
+}
+.contact-l h3.address{
+	background: url(/static/images/contact-a.png) top left no-repeat;
+	padding-left: 35px;
+	padding-top: 15px;
+	height: 36px;
+}
+.contact-l h3.telphone{
+	height: 36px;
+	padding-left: 45px;
+	padding-top: 15px;
+	background: url(/static/images/contact-t.png) top left no-repeat;
+}
+.contact-r{
+	color: #898989;
+	font-size: 1em;
+}
+.contact-r p{
+	margin-bottom: 1em;
+}
+.contact-r span{
+	width: 25%;
+	display: inline-block;
+}
+.contact-r input,.contact-r textarea{
+	width: 60%;
+	background: #1f1f1f;
+	border: none;
+}
+.contact-r textarea{
+	height: 100px;
+}
+.contact-r a{
+	width: 90px;
+	height: 30px;
+	background: #bf881e;
+	color: white;
+	text-align: center;
+	line-height: 28px;
+	font-size: 1em;
+	float: right;
+	margin-right: 14%;
+}
+/* flag */
+.flag{
+	position: fixed;
+	top: 50%;
+	right: 25px;
+}
+.flag li{
+	width: 13px;
+	height: 13px;
+	margin-bottom: 10px;
+	background: url(/static/images/flag_white.png) no-repeat;
+	cursor: pointer;
+}
+.flag li.flag1{
+	background: url(/static/images/flag_pink.png) no-repeat;
+}
+.flag li.flag2{
+	background: url(/static/images/flag_orange.png) no-repeat;
+}
+.flag li.flag3{
+	background: url(/static/images/flag_green.png) no-repeat;
+}
+.flag li.flag4{
+	background: url(/static/images/flag_blue.png) no-repeat;
+}
+.flag li.flag5{
+	background: url(/static/images/flag_grey.png) no-repeat;
+}
+.company-info{
+	color: #898989;
+	padding-top: 20px;
+	font-size: 0.85em;
+	clear: both;
+	line-height: 1.5em;
+	width: 90%;
+}
+.brand-ch .brand-detail p{
+	line-height: 1.6em;
+}
+.brand-ch .brand-detail h2{
+	margin-bottom: 0.5em;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/member.css">
+	</head>
+	<body>
+		{%include "header.html"%}
+		<section class="main">
+			<img src="/static/images/member-bg.jpg" class="member-img">
+			{% if language != None and language == 'chinese' %}
+			<div class="member">
+				<div class="member-header clearfix">
+					<a href="/login/"><div class="member-login {% if status == "login" %}cur{% endif %}">用户登录</div></a>
+					<a href="/register/"><div class="member-register {% if status == "register" %}cur{% endif %}">用户注册</div></a>
+				</div>
+				<div class="member-main">
+					<div class="errors">
+						{% if error == 1 %}
+							<p>两次密码输入不一致</p>
+						{% elif error == 2 %}
+							<p>验证码错误</p>
+						{% elif error == 3 %}
+							{% for errors in form.errors %}
+							    {% if errors == 'mail' %}
+							    	<p>邮箱未填写或不符合要求</p>
+							    {% elif errors == 'pwd' %}
+							    	<p>密码未填写或不符合要求</p>
+							    {% elif errors == 'repwd' %}
+							    	<p>确认密码未填写或不符合要求</p>
+							    {% elif errors == 'code' %}
+							    	<p>验证码未填写</p>
+							    {% endif %}
+							{% endfor %}
+						{% elif error == 4 %}
+							{% for errors in form.errors %}
+							    {% if errors == 'mail' %}
+							    	<p>邮箱未填写或不符合要求</p>
+							    {% elif errors == 'pwd' %}
+							    	<p>密码未填写或不符合要求</p>
+							    {% endif %}
+							{% endfor %}
+						{% elif error == 5 %}
+							<p>用户名或密码错误</p>
+						{% endif %}
+					</div>
+					<div class="login" {% if status == "register" %}style="display:none;"{% endif %}>
+						<form action="/loginValidate/" method="post"> 
+							<div class="member-name"><i></i><input type="text" class="input-text" placeholder="登录用户邮箱" name="mail"></div>
+							<div class="member-password"><i></i><input type="password" class="input-text" placeholder="密码" name="pwd"><a href="">忘记密码？</a></div>
+							<input type="submit" class="member-submit" value="登&nbsp;录"><a href="/register/" class="new-reg">注册新用户<i></i></a>
+						</form>
+					</div>
+					<div class="register" {% if status == "login" %}style="display:none;"{% endif %}>
+						<form action="/registerValidate/" method="post">
+							<div class="member-mail"><i></i><input type="text" class="input-text" placeholder="注册邮箱" name="mail"><span>邮箱将用于账户激活</span></div>
+							<div class="member-password"><i></i><input type="password" class="input-text" placeholder="密码" name="pwd"><span>8-32个字符</span></div>
+							<div class="member-repassword"><i></i><input type="password" class="input-text" placeholder="确认密码" name="repwd"><span>确认密码</span></div>
+							<div class="member-captcha"><i></i><input type="text" class="input-text" placeholder="验证码" name="code"><img src="/code/" class="code-container"><a href="javascript:;" class="code-change">看不清,换一张</a></div>
+							<p><input type="checkbox" checked="checked">我已阅读并同意网站用户注册服务条款</p>
+							<input type="submit" class="member-submit" value="提交注册">
+						</form>
+					</div>
+				</div>
+			</div>
+			{% else %}
+			<div class="member">
+				<div class="member-header clearfix">
+					<a href="/login/"><div class="member-login {% if status == "login" %}cur{% endif %}">Login</div></a>
+					<a href="/register/"><div class="member-register {% if status == "register" %}cur{% endif %}">Register</div></a>
+				</div>
+				<div class="member-main">
+					<div class="errors">
+						{% if error == 1 %}
+							<p>password do not match</p>
+						{% elif error == 2 %}
+							<p>code error</p>
+						{% elif error == 3 %}
+							{% for errors in form.errors %}
+							    {% if errors == 'mail' %}
+							    	<p>email is error and require</p>
+							    {% elif errors == 'pwd' %}
+							    	<p>password is error and require</p>
+							    {% elif errors == 'repwd' %}
+							    	<p>validate password is error and require</p>
+							    {% elif errors == 'code' %}
+							    	<p>code is requeir</p>
+							    {% endif %}
+							{% endfor %}
+						{% elif error == 4 %}
+							{% for errors in form.errors %}
+							    {% if errors == 'mail' %}
+							    	<p>email is error and require</p>
+							    {% elif errors == 'pwd' %}
+							    	<p>password is error and require</p>
+							    {% endif %}
+							{% endfor %}
+						{% elif error == 5 %}
+							<p>name or password error</p>
+						{% endif %}
+					</div>
+					<div class="login" {% if status == "register" %}style="display:none;"{% endif %}>
+						<form action="/loginValidate/" method="post"> 
+							<div class="member-name"><i></i><input type="text" class="input-text" placeholder="e-mail" name="mail"></div>
+							<div class="member-password"><i></i><input type="password" class="input-text" placeholder="password" name="pwd"><a href="">forget password？</a></div>
+							<input type="submit" class="member-submit" value="Login"><a href="/register/" class="new-reg">Register<i></i></a>
+						</form>
+					</div>
+					<div class="register" {% if status == "login" %}style="display:none;"{% endif %}>
+						<form action="/registerValidate/" method="post">
+							<div class="member-mail"><i></i><input type="text" class="input-text" placeholder="e-mail" name="mail"><span>for active account</span></div>
+							<div class="member-password"><i></i><input type="password" class="input-text" placeholder="password" name="pwd"><span>8-32 chars</span></div>
+							<div class="member-repassword"><i></i><input type="password" class="input-text" placeholder="validate password" name="repwd"><span>validate password</span></div>
+							<div class="member-captcha"><i></i><input type="text" class="input-text" placeholder="code" name="code"><img src="/code/" class="code-container"><a href="javascript:;" class="code-change">change code</a></div>
+							<p><input type="checkbox" checked="checked">I have read and agree to the terms of service website user registration</p>
+							<input type="submit" class="member-submit" value="Register">
+						</form>
+					</div>
+				</div>
+			</div>
+			{% endif %}
+		</section>
+		{%include "footer.html"%}
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+		<script src="/static/js/member.js"></script>
+	</body>
+</html>

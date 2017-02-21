@@ -1,0 +1,427 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF;
+  font-family: 'Microsoft Yahei'; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.none {
+  display: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+html {
+  width: 100%;
+  height: 100%; }
+  html body {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    html body img {
+      width: 100%;
+      display: block;
+      margin: 0 auto; }
+    html body > div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      background: url(../images/bg.jpg) repeat;
+      background-size: 100%;
+      overflow: hidden; }
+    html body .pt-page-current {
+      visibility: visible; }
+    html body .loading {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      background: url(../images/loading.gif) center center no-repeat;
+      background-color: white; }
+    html body .index-page {
+      z-index: 9; }
+      html body .index-page .index-img {
+        width: 100%;
+        margin-top: 20px; }
+      html body .index-page a {
+        display: block;
+        width: 190px;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        margin-left: -95px; }
+    html body .photo-page {
+      z-index: 1; }
+      html body .photo-page > div {
+        width: 228px;
+        height: 435px;
+        position: absolute;
+        top: 50%;
+        margin-top: -218px;
+        left: 50%;
+        margin-left: -114px; }
+      html body .photo-page .photo-title {
+        width: 76px;
+        margin-bottom: 10px; }
+      html body .photo-page .photo-container {
+        width: 100%;
+        height: 394px;
+        background: url(../images/photos.jpg) no-repeat;
+        background-size: 100%;
+        font-size: 0; }
+        html body .photo-page .photo-container > div {
+          display: inline-block;
+          width: 50%;
+          height: 131px; }
+    html body .dragend-container {
+      z-index: 8; }
+      html body .dragend-container .dragend-page {
+        position: relative; }
+        html body .dragend-container .dragend-page .container {
+          width: 85%;
+          margin: 0 auto; }
+          html body .dragend-container .dragend-page .container > div {
+            margin-bottom: 10px;
+            position: relative; }
+            html body .dragend-container .dragend-page .container > div.selected i {
+              width: 15px;
+              height: 12px;
+              background: url(../images/selected.png) no-repeat;
+              background-size: 15px;
+              position: absolute;
+              top: 50%;
+              margin-top: -6px;
+              left: -15px; }
+          html body .dragend-container .dragend-page .container .title {
+            margin-top: 10px; }
+      html body .dragend-container .page2 .container > div {
+        margin-bottom: 5px; }
+      html body .dragend-container .page2 .container .title {
+        margin-top: 10px; }
+      html body .dragend-container .page7 .sub {
+        margin-top: 20px; }
+      html body .dragend-container .page7 .sub-btn {
+        margin-top: 40px; }
+        html body .dragend-container .page7 .sub-btn img {
+          width: 80%;
+          display: block;
+          margin: 0 auto; }
+      html body .dragend-container .cheat {
+        width: 227px;
+        height: 25px;
+        background: url(../images/cheat.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        margin-left: -114px;
+        display: block; }
+      html body .dragend-container .arrow {
+        width: 17px;
+        height: 23px;
+        background: url(../images/slide.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        margin-left: -9px;
+        display: block;
+        -webkit-animation: twinkling 1.5s infinite ease-in-out; }
+    html body .cheat-page {
+      z-index: 1; }
+      html body .cheat-page .container {
+        width: 85%;
+        margin: 0 auto; }
+        html body .cheat-page .container .cheat {
+          margin: 10px 0; }
+        html body .cheat-page .container .cheat-btn img {
+          width: 80%;
+          display: block;
+          margin: 0 auto; }
+    html body .final-page {
+      z-index: 6; }
+      html body .final-page img {
+        width: 100%;
+        height: 100%; }
+    html body .result-page {
+      z-index: 7; }
+      html body .result-page .container {
+        width: 85%;
+        margin: 0 auto; }
+        html body .result-page .container .result {
+          margin: 20px 0; }
+        html body .result-page .container .result-btn img {
+          width: 80%;
+          display: block;
+          margin: 0 auto; }
+      html body .result-page .corner {
+        width: 47px;
+        height: 46px;
+        background: url(../images/right-corner.jpg) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        right: 0; }
+    html body .modal-page {
+      z-index: 1;
+      background-image: none; }
+      html body .modal-page .modal-bg {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: rgba(0, 0, 0, 0.6); }
+        html body .modal-page .modal-bg > div {
+          display: none; }
+        html body .modal-page .modal-bg .modal1 {
+          width: 213px;
+          height: 68px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -34px;
+          margin-left: -107px;
+          background: url(../images/modal1.png) no-repeat;
+          background-size: 100%; }
+        html body .modal-page .modal-bg .modal2 {
+          width: 215px;
+          height: 43px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -22px;
+          margin-left: -108px;
+          background: url(../images/modal2.png) no-repeat;
+          background-size: 100%; }
+        html body .modal-page .modal-bg .modal3 {
+          width: 210px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -10px;
+          margin-left: -105px;
+          background: url(../images/modal3.png) no-repeat;
+          background-size: 100%; }
+        html body .modal-page .modal-bg .modal4 {
+          width: 217px;
+          height: 44px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -22px;
+          margin-left: -109px;
+          background: url(../images/modal4.png) no-repeat;
+          background-size: 100%; }
+        html body .modal-page .modal-bg .modal5 {
+          width: 218px;
+          height: 43px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -22px;
+          margin-left: -109px;
+          background: url(../images/modal5.png) no-repeat;
+          background-size: 100%; }
+        html body .modal-page .modal-bg .modal6 {
+          width: 260px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -10px;
+          margin-left: -130px;
+          background: url(../images/modal6.png) no-repeat;
+          background-size: 100%; }
+        html body .modal-page .modal-bg .modal7 {
+          width: 164px;
+          height: 113px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: url(../images/share-modal.png) no-repeat;
+          background-size: 100%; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 0;
+    bottom: 5px; }
+  100% {
+    opacity: 1;
+    bottom: 15px; } }
+.pt-page-scaleDown {
+  -webkit-animation: scaleDown .7s ease both;
+  animation: scaleDown .7s ease both; }
+
+@-webkit-keyframes scaleDown {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.8); } }
+@keyframes scaleDown {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); } }
+.pt-page-moveFromBottom {
+  -webkit-animation: moveFromBottom .6s ease both;
+  animation: moveFromBottom .6s ease both; }
+
+@-webkit-keyframes moveFromBottom {
+  from {
+    -webkit-transform: translateY(100%); } }
+@keyframes moveFromBottom {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); } }
+.pt-page-delay200 {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
+
+@-webkit-keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.rollIn1 {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.rollIn2 {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+.rollIn3 {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+.rollIn4 {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }

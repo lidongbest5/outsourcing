@@ -1,0 +1,1 @@
+!function(){var n=$(window).width(),t=function(){i(),a()},i=function(){$(".banner-item").width(n)},e=function(){var t=$(this),i=parseInt(t.attr("data-index"));t.addClass("current").siblings().removeClass("current"),TweenLite.to($(".banner"),.5,{left:-i*n})},a=function(){$(".banner-dot a").on("click",e)};$(t)}();

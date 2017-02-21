@@ -1,0 +1,17 @@
+body{
+	background: url(/static/images/grey-bg.png) repeat;
+}
+.culture1,.culture2{
+	width: 80%;
+	margin: 0 auto;
+}
+.culture1{
+	padding-top: 250px;
+	padding-bottom: 100px;
+}
+.culture2{
+	padding-bottom: 100px;
+}
+.culture1 img,.culture2 img{
+	width: 100%;
+}

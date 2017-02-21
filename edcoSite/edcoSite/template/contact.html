@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDCO</title>
+		{%include "meta.html"%}
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/contact.css">
+	</head>
+	<body>
+		{%include "header.html"%}
+		<section class="contact">
+			{% if language != None and language == 'chinese' %}
+			<div class="contact-container clearfix">
+				<div class="contact-l">
+					<h2>联系我们</h2>
+					<h3 class="address">地址</h3>
+					<p>中国北京市东城区南竹杆胡同2号银河SOHO中心B座20810室</p>
+					<h3 class="telphone">联系方式</h3>
+					<p>电话：+86 10 5957 6189<br/>传真：+86 10 5957 6190</p>
+				</div>
+				<div class="contact-r">
+					<p><span>姓名</span><input type="text"></p>
+					<p><span>电话</span><input type="text"></p>
+					<p><span>邮箱</span><input type="text"></p>
+					<p><span>信息</span><textarea></textarea></p>
+					<a href="javascript:;" class="submit">发送</a>
+				</div>
+			</div>
+			{% else %}
+			<div class="contact-container clearfix">
+				<div class="contact-l">
+					<h2>CONTACT US</h2>
+					<h3 class="address">ADDRESS</h3>
+					<p>20810 room,Yinhe SOHO tower B,No.2 nanzhugan hutong,chaoyangmen nei street,Dongcheng district,Beijing city,China.</p>
+					<h3 class="telphone">TELPHONE</h3>
+					<p>TEL:+86 10 5957 6189<br/>FAX:+86 10 5957 6190</p>
+				</div>
+				<div class="contact-r">
+					<p><span>NAME</span><input type="text"></p>
+					<p><span>PHONE</span><input type="text"></p>
+					<p><span>EMAIL</span><input type="text"></p>
+					<p><span>MESSAGE</span><textarea></textarea></p>
+					<a href="javascript:;" class="submit">SEND</a>
+				</div>
+			</div>
+			{% endif %}
+		</section>
+		{%include "footer.html"%}
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/common.js"></script>
+	</body>
+</html>

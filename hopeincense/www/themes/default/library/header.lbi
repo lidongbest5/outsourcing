@@ -1,0 +1,27 @@
+<header>
+	<div class="container clearfix">
+		<a class="header-logo"><img src="../themes/default/images/logo_big.png"></a>
+		<div class=""></div>
+		<nav>
+			<a class="home" href="/"></a>
+			<a href="/article_cat.php?id=6">慈香文化</a>                
+			<a href="/category.php?id=1">慈香產品</a>                
+			<a href="charity.php">為愛焚香</a>                
+			<a href="about.php">聯繫我</a>
+			<div class="header-right">
+				<div id="append_parent"></div>
+				<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+				{if $user_info}
+				{$lang.hello}，<font class="f4_b">{$user_info.username}</font>, {$lang.welcome_return}！
+				<a href="user.php">{$lang.user_center}</a>|
+				<a href="user.php?act=logout">{$lang.user_logout}</a>
+				{else}
+				 <a href="user.php">登录</a>
+				 <a href="user.php?act=register">注册</a>
+				 <a href="/flow.php">购物袋</a>
+				 <a href="/message.php">留言板</a>
+				{/if}
+			</div>
+		</nav>
+	</div>
+</header>
